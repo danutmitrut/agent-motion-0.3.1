@@ -1,0 +1,28 @@
+{
+  "sablon": "overlay-filmare",
+  "versiune_schema": 1,
+  "format": "orizontal",
+  "filmare": { "fisier": "active/filmare-lucru.mp4" },
+  "stil": { "tema": "hartie", "ritm": "calm" },
+  "corecturi": [
+    { "cuvinte": "w2", "din": "încep", "in": "începi" },
+    { "cuvinte": "w10", "din": "lucrări", "in": "lucruri," },
+    { "cuvinte": "w14-w16", "din": "pa și scris", "in": "pașii scriși," },
+    { "cuvinte": "w31-w32", "din": "pa și", "in": "pașii" }
+  ],
+  "subtitrari": { "pozitie": "mijloc", "marime": "S" },
+  "elemente": [
+    { "tip": "titlu", "la": 0.2, "eticheta": "Ghid rapid", "titlu": ["Primii pași cu un agent"] },
+    {
+      "tip": "lista",
+      "ancora": { "fraza": "trei lucruri" },
+      "titlu": ["Ai nevoie de"],
+      "puncte": [
+        { "text": "O singură sarcină", "ancora": { "fraza": "singură sarcină" } },
+        { "text": "Pașii scriși", "ancora": { "fraza": "pașii scriși" } },
+        { "text": "O săptămână de probă", "ancora": { "fraza": "o săptămână" } }
+      ]
+    },
+    { "tip": "citat", "ancora": { "fraza": "scrie pașii exact" }, "text": "Scrie pașii exact cum îi faci tu" }
+  ]
+}

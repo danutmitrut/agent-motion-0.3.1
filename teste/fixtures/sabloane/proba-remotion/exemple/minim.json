@@ -1,0 +1,11 @@
+{
+  "sablon": "proba-remotion",
+  "versiune_schema": 1,
+  "format": "vertical",
+  "brand": null,
+  "stil": { "tema": "noapte" },
+  "scene": [
+    { "tip": "titlu", "titlu": ["Primul rând", "cu *accent*"] },
+    { "tip": "titlu", "titlu": ["Ăîâșț ĂÎÂȘȚ"] }
+  ]
+}

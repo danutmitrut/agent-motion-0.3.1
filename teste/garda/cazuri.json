@@ -1,0 +1,6763 @@
+[
+  {
+    "nume": "stdin gol",
+    "intrare": "",
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "JSON invalid",
+    "intrare": "{\"hook_event_name\": \"PreToolUse\", \"tool_name\": \"Write\"",
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "eveniment necunoscut",
+    "intrare": {
+      "hook_event_name": "EvenimentInventat"
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "hook_event_name lipsă",
+    "intrare": {
+      "tool_name": "Write",
+      "tool_input": {
+        "file_path": "C:\\agent-motion\\video\\p\\date.json",
+        "content": "{}"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "JSON care nu e obiect",
+    "intrare": "[1, 2, 3]",
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "unealtă necunoscută în PreToolUse",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Read",
+      "tool_input": {
+        "file_path": "C:\\agent-motion\\nucleu\\mg.mjs"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Write fără file_path",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Write",
+      "tool_input": {
+        "content": "x"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Edit fără new_string",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Edit",
+      "tool_input": {
+        "file_path": "C:\\agent-motion\\video\\p\\jurnal.md",
+        "old_string": "a"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Write nucleu/mg.mjs, cale C:\\",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Write",
+      "tool_input": {
+        "file_path": "C:\\agent-motion\\nucleu\\mg.mjs",
+        "content": "x\n"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Write nucleu/mg.mjs, cale c:/",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Write",
+      "tool_input": {
+        "file_path": "c:/agent-motion/nucleu/mg.mjs",
+        "content": "x\n"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Write nucleu/mg.mjs, cale /c/",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Write",
+      "tool_input": {
+        "file_path": "/c/agent-motion/nucleu/mg.mjs",
+        "content": "x\n"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Write nucleu/mg.mjs, majuscule la disc și în foldere",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Write",
+      "tool_input": {
+        "file_path": "C:\\AGENT-MOTION\\Nucleu\\MG.MJS",
+        "content": "x\n"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Write nucleu/mg.mjs, rădăcina cu c: mic",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Write",
+      "tool_input": {
+        "file_path": "C:\\agent-motion\\nucleu\\mg.mjs",
+        "content": "x\n"
+      }
+    },
+    "radacina": "c:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Write nucleu/mg.mjs, Mac",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Write",
+      "tool_input": {
+        "file_path": "/Users/x/agent motion/nucleu/mg.mjs",
+        "content": "x\n"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Edit nucleu/lib/erori.mjs, cale C:\\",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Edit",
+      "tool_input": {
+        "file_path": "C:\\agent-motion\\nucleu\\lib\\erori.mjs",
+        "old_string": "a",
+        "new_string": "b",
+        "replace_all": false
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Edit nucleu/lib/erori.mjs, Mac",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Edit",
+      "tool_input": {
+        "file_path": "/Users/x/agent motion/nucleu/lib/erori.mjs",
+        "old_string": "a",
+        "new_string": "b",
+        "replace_all": false
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Write motoare/, rădăcina pe D:\\",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Write",
+      "tool_input": {
+        "file_path": "D:\\Proiecte\\agent-motion\\motoare\\hyperframes\\package.json",
+        "content": "x\n"
+      }
+    },
+    "radacina": "D:\\Proiecte\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Write biblioteci/, cale /d/ cu rădăcina pe D:\\",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Write",
+      "tool_input": {
+        "file_path": "/d/Proiecte/agent-motion/biblioteci/catalog.json",
+        "content": "x\n"
+      }
+    },
+    "radacina": "D:\\Proiecte\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Edit motoare/, cale d:/ cu majuscule",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Edit",
+      "tool_input": {
+        "file_path": "d:/PROIECTE/Agent-Motion/motoare/comun/teme/noapte.json",
+        "old_string": "a",
+        "new_string": "b",
+        "replace_all": false
+      }
+    },
+    "radacina": "D:\\Proiecte\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Write pe C:\\ cu rădăcina pe D:\\ e în afara agentului",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Write",
+      "tool_input": {
+        "file_path": "C:\\agent-motion\\nucleu\\mg.mjs",
+        "content": "x\n"
+      }
+    },
+    "radacina": "D:\\Proiecte\\agent-motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "Write nucleu/.canar, cale C:\\",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Write",
+      "tool_input": {
+        "file_path": "C:\\agent-motion\\nucleu\\.canar",
+        "content": "test\n"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Edit nucleu/.canar, Mac",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Edit",
+      "tool_input": {
+        "file_path": "/Users/x/agent motion/nucleu/.canar",
+        "old_string": "canar",
+        "new_string": "test",
+        "replace_all": false
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Write nucleu/.canar, cale /c/",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Write",
+      "tool_input": {
+        "file_path": "/c/agent-motion/nucleu/.canar",
+        "content": "test\n"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Write nucleu cu punct final (Windows îl ignoră)",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Write",
+      "tool_input": {
+        "file_path": "C:\\agent-motion\\nucleu.\\mg.mjs",
+        "content": "x\n"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Write nucleu cu spațiu final (Windows îl ignoră)",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Write",
+      "tool_input": {
+        "file_path": "C:\\agent-motion\\nucleu \\mg.mjs",
+        "content": "x\n"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Write cu flux alternativ NTFS",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Write",
+      "tool_input": {
+        "file_path": "C:\\agent-motion\\nucleu\\mg.mjs::$DATA",
+        "content": "x\n"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Write cu .. care urcă în nucleu",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Write",
+      "tool_input": {
+        "file_path": "C:\\agent-motion\\video\\..\\nucleu\\mg.mjs",
+        "content": "x\n"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Write cu prefixul \\\\?\\",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Write",
+      "tool_input": {
+        "file_path": "\\\\?\\C:\\agent-motion\\nucleu\\mg.mjs",
+        "content": "x\n"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Write video/p/build/index.html",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Write",
+      "tool_input": {
+        "file_path": "C:\\agent-motion\\video\\p\\build\\index.html",
+        "content": "x\n"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Write video/p/build/cronologie.json, Mac",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Write",
+      "tool_input": {
+        "file_path": "/Users/x/agent motion/video/p/build/cronologie.json",
+        "content": "x\n"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Write video/p/active/desen/od-chilling.svg",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Write",
+      "tool_input": {
+        "file_path": "C:\\agent-motion\\video\\p\\active\\desen\\od-chilling.svg",
+        "content": "x\n"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Write video/p/cadre/foaie-1.jpg",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Write",
+      "tool_input": {
+        "file_path": "C:\\agent-motion\\video\\p\\cadre\\foaie-1.jpg",
+        "content": "x\n"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Write video/p/cadre/foaie-1.json",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Write",
+      "tool_input": {
+        "file_path": "C:\\agent-motion\\video\\p\\cadre\\foaie-1.json",
+        "content": "x\n"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Write video/p/cadre/predare-1.png",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Write",
+      "tool_input": {
+        "file_path": "C:\\agent-motion\\video\\p\\cadre\\predare-1.png",
+        "content": "x\n"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Write video/p/cadre/revizie-1.md",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Write",
+      "tool_input": {
+        "file_path": "C:\\agent-motion\\video\\p\\cadre\\revizie-1.md",
+        "content": "Verdict: TRECE\n"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Write video/p/cadre/revizie-schita-2.md, Mac",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Write",
+      "tool_input": {
+        "file_path": "/Users/x/agent motion/video/p/cadre/revizie-schita-2.md",
+        "content": "Verdict: TRECE\n"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Write revizie-3.md în afara cadre/",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Write",
+      "tool_input": {
+        "file_path": "C:\\agent-motion\\video\\p\\revizie-3.md",
+        "content": "Verdict: TRECE\n"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Write video/p/verificare.json",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Write",
+      "tool_input": {
+        "file_path": "C:\\agent-motion\\video\\p\\verificare.json",
+        "content": "{\"ok\": true}\n"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Edit video/p/verificare.json, Mac",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Edit",
+      "tool_input": {
+        "file_path": "/Users/x/agent motion/video/p/verificare.json",
+        "old_string": "\"ok\": false",
+        "new_string": "\"ok\": true",
+        "replace_all": false
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Write video/p/motor.lock",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Write",
+      "tool_input": {
+        "file_path": "C:\\agent-motion\\video\\p\\motor.lock",
+        "content": "{}\n"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Edit video/p/motor.lock, Mac",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Edit",
+      "tool_input": {
+        "file_path": "/Users/x/agent motion/video/p/motor.lock",
+        "old_string": "\"aprobare\": null",
+        "new_string": "\"aprobare\": {}",
+        "replace_all": false
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Write video/p/p.mp4",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Write",
+      "tool_input": {
+        "file_path": "C:\\agent-motion\\video\\p\\p.mp4",
+        "content": "x\n"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Write video/p/resurse/vechi.MP4 (majuscule)",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Write",
+      "tool_input": {
+        "file_path": "C:\\agent-motion\\video\\p\\resurse\\vechi.MP4",
+        "content": "x\n"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Write video/p/serie/manifest.json",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Write",
+      "tool_input": {
+        "file_path": "C:\\agent-motion\\video\\p\\serie\\manifest.json",
+        "content": "{}\n"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Write video/p/serie/01-ana.mp4, Mac",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Write",
+      "tool_input": {
+        "file_path": "/Users/x/agent motion/video/p/serie/01-ana.mp4",
+        "content": "x\n"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Write .claude/settings.json, cale C:\\",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Write",
+      "tool_input": {
+        "file_path": "C:\\agent-motion\\.claude\\settings.json",
+        "content": "{}\n"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Edit .claude/settings.json, Mac",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Edit",
+      "tool_input": {
+        "file_path": "/Users/x/agent motion/.claude/settings.json",
+        "old_string": "\"deny\"",
+        "new_string": "\"allow\"",
+        "replace_all": false
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Write .claude/settings.local.json, Mac",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Write",
+      "tool_input": {
+        "file_path": "/Users/x/agent motion/.claude/settings.local.json",
+        "content": "{}\n"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Write .claude/agents/revizor-cadre.md, majuscule și punct final",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Write",
+      "tool_input": {
+        "file_path": "C:\\AGENT-MOTION\\.Claude.\\Agents\\Revizor-Cadre.md",
+        "content": "---\nname: revizor-cadre\n---\n"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Edit .claude/agents/revizor-cadre.md, cale /c/",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Edit",
+      "tool_input": {
+        "file_path": "/c/agent-motion/.claude/agents/revizor-cadre.md",
+        "old_string": "a",
+        "new_string": "b",
+        "replace_all": false
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Write video/p/date.json e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Write",
+      "tool_input": {
+        "file_path": "C:\\agent-motion\\video\\p\\date.json",
+        "content": "{\"sablon\": \"reel-ilustrat\"}\n"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "Write video/p/date.json e permis, Mac",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Write",
+      "tool_input": {
+        "file_path": "/Users/x/agent motion/video/p/date.json",
+        "content": "{\"sablon\": \"reel-ilustrat\"}\n"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "Edit video/p/date.json e permis, cale /c/",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Edit",
+      "tool_input": {
+        "file_path": "/c/agent-motion/video/p/date.json",
+        "old_string": "\"durata\": 25",
+        "new_string": "\"durata\": 30",
+        "replace_all": false
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "Write video/p/jurnal.md e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Write",
+      "tool_input": {
+        "file_path": "C:\\agent-motion\\video\\p\\jurnal.md",
+        "content": "# Jurnal\n"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "Write video/p/resurse/sigla.png e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Write",
+      "tool_input": {
+        "file_path": "C:\\agent-motion\\video\\p\\resurse\\sigla.png",
+        "content": "x\n"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "Write branduri/studio-lemn/vizual.md e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Write",
+      "tool_input": {
+        "file_path": "C:\\agent-motion\\branduri\\studio-lemn\\vizual.md",
+        "content": "---\nmg: 1\n---\n"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "Write USER.md e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Write",
+      "tool_input": {
+        "file_path": "/Users/x/agent motion/USER.md",
+        "content": "# Despre cursant\n"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "Write scenariu.md nou, fără bloc mg, e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Write",
+      "tool_input": {
+        "file_path": "C:\\agent-motion\\video\\nou\\scenariu.md",
+        "content": "# Scenariu: nou\n\n## Scena 1\n"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "Write scenariu.md nou care creează un bloc mg",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Write",
+      "tool_input": {
+        "file_path": "C:\\agent-motion\\video\\nou\\scenariu.md",
+        "content": "# Scenariu\n<!-- mg:start -->\n## Ce apare pe ecran\n<!-- mg:end -->\n"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Write scenariu.md nou cu un marcaj mg desperecheat",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Write",
+      "tool_input": {
+        "file_path": "C:\\agent-motion\\video\\nou\\scenariu.md",
+        "content": "# Scenariu\n<!-- mg:start -->\n"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "cheie sk-ant- în content",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Write",
+      "tool_input": {
+        "file_path": "C:\\agent-motion\\video\\p\\date.json",
+        "content": "{\"nota\": \"sk-ant-test-000000000000000000000000\"}\n"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "cheie generică în new_string, Mac",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Edit",
+      "tool_input": {
+        "file_path": "/Users/x/agent motion/video/p/jurnal.md",
+        "old_string": "x",
+        "new_string": "KIE_API_KEY=abcdefghijklmnopqrstuvwxyz012345",
+        "replace_all": false
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "cheie Google în content",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Write",
+      "tool_input": {
+        "file_path": "/Users/x/agent motion/branduri/b/vizual.md",
+        "content": "cheia: AIzaBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB\n"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Stop cu JSON invalid și Predare: blochează oprirea",
+    "intrare": "{\"hook_event_name\": \"Stop\", \"last_assistant_message\": \"Predare: video/p/p.mp4\"",
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": true
+    }
+  },
+  {
+    "nume": "Stop cu JSON invalid fără Predare: nu blochează",
+    "intrare": "{\"hook_event_name\": \"Stop\", \"last_assistant_message\": \"Am terminat.\"",
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "UserPromptSubmit cu JSON invalid nu blochează mesajul",
+    "intrare": "{\"hook_event_name\": \"UserPromptSubmit\", \"prompt\": \"aprob\"",
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "SubagentStop cu JSON invalid nu face nimic",
+    "intrare": "{\"hook_event_name\": \"SubagentStop\", \"agent_type\": \"revizor-cadre\"",
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "Bash: echo x > nucleu/mg.mjs",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "echo x > nucleu/mg.mjs"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "PowerShell: Set-Content nucleu\\mg.mjs x",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "Set-Content nucleu\\mg.mjs x"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Bash: npx hyperframes render",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "npx hyperframes render"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Bash: hyperframes upgrade",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "hyperframes upgrade"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Bash: npx skills add hyperframes",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "npx skills add hyperframes"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Bash: remotion upgrade",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "remotion upgrade"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Bash: npm update",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "npm update"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Bash: hyperframes feedback",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "hyperframes feedback"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Bash: node unelte/raport.mjs --file-issue",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "node unelte/raport.mjs --file-issue"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Bash: hyperframes publish",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "hyperframes publish"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Bash: git push",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "git push"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Bash: npm publish",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "npm publish"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "PowerShell: npx hyperframes render",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "npx hyperframes render"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "PowerShell: hyperframes upgrade",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "hyperframes upgrade"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "PowerShell: npx skills add hyperframes",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "npx skills add hyperframes"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "PowerShell: remotion upgrade",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "remotion upgrade"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "PowerShell: npm update",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "npm update"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "PowerShell: hyperframes feedback",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "hyperframes feedback"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "PowerShell: node unelte/raport.mjs --file-issue",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "node unelte/raport.mjs --file-issue"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "PowerShell: hyperframes publish",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "hyperframes publish"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "PowerShell: git push",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "git push"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "PowerShell: npm publish",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "npm publish"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Bash: mg genereaza cere aprobare",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "node nucleu/mg.mjs genereaza desen x \"y\" --proiect p"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": "ask",
+      "block": false
+    }
+  },
+  {
+    "nume": "PowerShell: mg genereaza cere aprobare",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "node nucleu/mg.mjs genereaza desen x \"y\" --proiect p"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": "ask",
+      "block": false
+    }
+  },
+  {
+    "nume": "Bash: mg genereaza --estimeaza e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "node nucleu/mg.mjs genereaza desen p-x \"y\" --etichete \"a,b,c,d\" --estimeaza"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "Bash: mg genereaza cu --estimeaza după -- cere aprobare",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "node nucleu/mg.mjs genereaza desen p-x \"y\" -- --estimeaza"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": "ask",
+      "block": false
+    }
+  },
+  {
+    "nume": "Bash: cheie.py citeste e refuzat",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "unelte/python/bin/python nucleu/cheie.py citeste kie"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Bash: cheie.py verifica e refuzat (agentul folosește doctor --generare)",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "unelte/python/bin/python nucleu/cheie.py verifica kie"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Bash: keyring.get_password în linie e refuzat",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "unelte/python/bin/python -c \"import keyring; print(keyring.get_password('agent-motion', 'kie'))\""
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "PowerShell: mg genereaza --estimeaza e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "node nucleu/mg.mjs genereaza desen p-x \"y\" --etichete \"a,b,c,d\" --estimeaza"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "PowerShell: mg genereaza cu --estimeaza după -- cere aprobare",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "node nucleu/mg.mjs genereaza desen p-x \"y\" -- --estimeaza"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": "ask",
+      "block": false
+    }
+  },
+  {
+    "nume": "PowerShell: cheie.py citeste e refuzat",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": ".\\unelte\\python\\Scripts\\python.exe nucleu/cheie.py citeste kie"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "PowerShell: cheie.py verifica e refuzat (agentul folosește doctor --generare)",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": ".\\unelte\\python\\Scripts\\python.exe nucleu/cheie.py verifica kie"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "PowerShell: keyring.get_password în linie e refuzat",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": ".\\unelte\\python\\Scripts\\python.exe -c \"import keyring; print(keyring.get_password('agent-motion', 'kie'))\""
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Bash: mg randeaza e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "node nucleu/mg.mjs randeaza p"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "PowerShell: mg randeaza e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "node nucleu/mg.mjs randeaza p"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "Bash: cat nucleu/mg.mjs e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "cat nucleu/mg.mjs"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "PowerShell: Get-Content nucleu\\mg.mjs e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "Get-Content nucleu\\mg.mjs"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "Bash: ghilimele neînchise",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "echo \"neînchis"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "PowerShell: ghilimele neînchise",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "echo \"neînchis"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Bash: cheie API în comandă",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "export KIE_API_KEY=abcdefghijklmnopqrstuvwxyz123456"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "PowerShell: scriere în motor.lock prin Out-File",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "echo x | Out-File video\\p\\motor.lock"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Bash: sed -i pe scenariu.md e refuzat",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "sed -i s/a/b/ video/p/scenariu.md"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "PowerShell: Set-Content pe scenariu.md e refuzat",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "Set-Content video\\p\\scenariu.md x"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Bash: echo {} > .claude/settings.json",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "echo {} > .claude/settings.json"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "PowerShell: Set-Content .claude\\settings.local.json x",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "Set-Content .claude\\settings.local.json x"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Bash: rm -rf .claude/agents",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "rm -rf .claude/agents"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Bash: cat .claude/settings.json e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "cat .claude/settings.json"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "Stop: mesaj fără Predare: trece",
+    "intrare": {
+      "hook_event_name": "Stop",
+      "stop_hook_active": false,
+      "last_assistant_message": "Am nevoie de o nouă aprobare: scrie „aprob”."
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "Stop: Predare: fără verificare.json blochează",
+    "intrare": {
+      "hook_event_name": "Stop",
+      "stop_hook_active": false,
+      "last_assistant_message": "Predare: video/programari/programari.mp4"
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": true
+    }
+  },
+  {
+    "nume": "Stop: JSON invalid cu Predare: blochează",
+    "intrare": "{\"hook_event_name\": \"Stop\", \"last_assistant_message\": \"Predare: video/p/p.mp4\"",
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": true
+    }
+  },
+  {
+    "nume": "SubagentStop: alt agent_type nu face nimic",
+    "intrare": {
+      "hook_event_name": "SubagentStop",
+      "agent_type": "Explore",
+      "last_assistant_message": "Verdict: TRECE"
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "SubagentStop: revizor fără foaie în așteptare nu face nimic",
+    "intrare": {
+      "hook_event_name": "SubagentStop",
+      "agent_type": "revizor-cadre",
+      "last_assistant_message": "Am terminat."
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "PostToolUse: SubagentHandback fără foaie în așteptare nu face nimic",
+    "intrare": {
+      "hook_event_name": "PostToolUse",
+      "agent_type": "revizor-cadre",
+      "tool_name": "SubagentHandback",
+      "tool_input": {
+        "message": "Verdict: TRECE"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "Write: agentul principal nu scrie revizie-1.md",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Write",
+      "tool_input": {
+        "file_path": "C:\\agent-motion\\video\\p\\cadre\\revizie-1.md",
+        "content": "Verdict: TRECE\n"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F8: Write în nucleu/mg.mjs (kit), rădăcina NFD și calea NFC",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Write",
+      "tool_input": {
+        "file_path": "/Users/ion/Desktop/Învățare/agent-motion/nucleu/mg.mjs",
+        "content": "x"
+      }
+    },
+    "radacina": "/Users/ion/Desktop/Învățare/agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F8: Write în .claude/settings.json (configurație), rădăcina NFD și calea NFC",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Write",
+      "tool_input": {
+        "file_path": "/Users/ion/Desktop/Învățare/agent-motion/.claude/settings.json",
+        "content": "x"
+      }
+    },
+    "radacina": "/Users/ion/Desktop/Învățare/agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F8: Write în video/x/build/a.html (generat), rădăcina NFD și calea NFC",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Write",
+      "tool_input": {
+        "file_path": "/Users/ion/Desktop/Învățare/agent-motion/video/x/build/a.html",
+        "content": "x"
+      }
+    },
+    "radacina": "/Users/ion/Desktop/Învățare/agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F8: Bash cu cale absolută în kit, rădăcina NFD și calea NFC",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "echo x > \"/Users/ion/Desktop/Învățare/agent-motion/nucleu/mg.mjs\""
+      }
+    },
+    "radacina": "/Users/ion/Desktop/Învățare/agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F8: Write în nucleu/mg.mjs (kit), rădăcina NFC și calea NFD",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Write",
+      "tool_input": {
+        "file_path": "/Users/ion/Desktop/Învățare/agent-motion/nucleu/mg.mjs",
+        "content": "x"
+      }
+    },
+    "radacina": "/Users/ion/Desktop/Învățare/agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F8: Write în .claude/settings.json (configurație), rădăcina NFC și calea NFD",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Write",
+      "tool_input": {
+        "file_path": "/Users/ion/Desktop/Învățare/agent-motion/.claude/settings.json",
+        "content": "x"
+      }
+    },
+    "radacina": "/Users/ion/Desktop/Învățare/agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F8: Write în video/x/build/a.html (generat), rădăcina NFC și calea NFD",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Write",
+      "tool_input": {
+        "file_path": "/Users/ion/Desktop/Învățare/agent-motion/video/x/build/a.html",
+        "content": "x"
+      }
+    },
+    "radacina": "/Users/ion/Desktop/Învățare/agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F8: Bash cu cale absolută în kit, rădăcina NFC și calea NFD",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "echo x > \"/Users/ion/Desktop/Învățare/agent-motion/nucleu/mg.mjs\""
+      }
+    },
+    "radacina": "/Users/ion/Desktop/Învățare/agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F2: Bash, rm în then",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "if [ -d video/p/build ]; then rm -rf video/p/build; fi"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F2: Bash, rm în do",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "for f in a; do rm -rf video/p/build; done"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F2: Bash, rm în { ...; }",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "{ rm nucleu/mg.mjs; }"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F2: Bash, ! rm",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "! rm nucleu/mg.mjs"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F2: PowerShell, Remove-Item în if (Test-Path) { }",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "if (Test-Path video\\p\\build) { Remove-Item -Recurse -Force video\\p\\build }"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F2: PowerShell, Remove-Item în try { } catch {}",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "try { Remove-Item video\\p\\verificare.json } catch {}"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F2: PowerShell, %{sc ...}",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "1|%{sc nucleu\\mg.mjs x}"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F2: PowerShell, & { Set-Content ... }",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "& { Set-Content nucleu\\mg.mjs x }"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F2: PowerShell, Start-Job { sc ... }",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "Start-Job { sc nucleu\\mg.mjs x }"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F2: PowerShell, configurația în if ($true) { }",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "if ($true) { Set-Content .claude\\settings.json \"{}\" }"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F2: Bash, echo în do rămâne permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "for f in video/*/date.json; do echo $f; done"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "F2: PowerShell, ForEach-Object { $_.Name } rămâne permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "Get-ChildItem video | ForEach-Object { $_.Name }"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "F6: PowerShell, \"a\\\" nu scapă ghilimeaua",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "Set-Content -Value \"a\\\" nucleu\\mg.mjs #\""
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F6: PowerShell, x; nu scapă separatorul",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "echo x; Remove-Item -Recurse -Force nucleu"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F6: PowerShell, comentariu cu ghilimele",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "echo hi # \"\nRemove-Item -Recurse -Force nucleu\n# \""
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F6: PowerShell, ghilimele tipografice",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "echo “ ' ”; Remove-Item -Recurse -Force nucleu; echo “ ' ”"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F6: Bash, comentariu cu ghilimele",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "echo hi # \"\nrm -rf nucleu\n# \""
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F1: Bash, cd nucleu && echo x > mg.mjs",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "cd nucleu && echo x > mg.mjs"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F1: Bash, cd video/p && rm -rf build",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "cd video/p && rm -rf build"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F1: Bash, cd .claude && echo {} > settings.json",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "cd .claude && echo {} > settings.json"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F1: PowerShell, Set-Location nucleu; Set-Content mg.mjs x",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "Set-Location nucleu; Set-Content mg.mjs x"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F1: PowerShell, Push-Location .claude; Remove-Item settings.json",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "Push-Location .claude; Remove-Item settings.json"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F1: Bash, cwd video/p din intrare și rm -rf build",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "cwd": "/Users/x/agent motion/video/p",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "rm -rf build"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F1: PowerShell, cwd video\\p din intrare și Remove-Item build",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "cwd": "C:\\agent-motion\\video\\p",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "Remove-Item build -Recurse"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F1: Bash, cwd nucleu din intrare și echo x > mg.mjs",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "cwd": "/Users/x/agent motion/nucleu",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "echo x > mg.mjs"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F1: Bash, cwd video/p din intrare și echo x > note.txt e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "cwd": "/Users/x/agent motion/video/p",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "echo x > note.txt"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "F1: Bash, cd video/p && cat date.json e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "cd video/p && cat date.json"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "D2: Bash, cd neliteral și scriere relativă",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "cd $X && echo x > a.txt"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "D2: PowerShell, Set-Location $env:TEMP și Remove-Item relativ",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "Set-Location $env:TEMP; Remove-Item x"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F5: Bash, $PWD în țintă",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "echo x > $PWD/nucleu/mg.mjs"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F5: Bash, ~ în țintă",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "echo x > ~/PROIECTE/nucleu/mg.mjs"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F5: Bash, {a,b} în țintă",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "echo x | tee {nucleu,tmp}/mg.mjs"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F5: PowerShell, $PWD în țintă",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "Set-Content \"$PWD\\nucleu\\mg.mjs\" x"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F5: PowerShell, (Join-Path ...) ca țintă",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "Set-Content (Join-Path nucleu mg.mjs) x"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F5: PowerShell, ${env:CLAUDE_PROJECT_DIR} în țintă",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "Set-Content ${env:CLAUDE_PROJECT_DIR}\\nucleu\\mg.mjs x"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "D2: PowerShell, ținta din pipeline",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "Get-ChildItem video\\p\\build | Remove-Item"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "D2: PowerShell, ținta $_ din ForEach-Object",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "Get-ChildItem video\\p\\build | ForEach-Object { Remove-Item $_.FullName }"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "D2: Bash, echo $HOME e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "echo $HOME"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "D2: Bash, cat \"$PWD/nucleu/mg.mjs\" e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "cat \"$PWD/nucleu/mg.mjs\""
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "D2: PowerShell, -Value $json cu cale literală e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "Set-Content -Path video\\p\\date.json -Value $json"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "D2: PowerShell, > $null e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "node nucleu/mg.mjs randeaza p > $null"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "F3: Bash, cp verificare.json în folderul proiectului",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "cp /tmp/verificare.json video/p/"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F3: Bash, mv motor.lock în folderul proiectului",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "mv /tmp/motor.lock video/p"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F3: Bash, cp -r build în folderul proiectului",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "cp -r /tmp/build video/p/"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F3: Bash, cp settings.json în .claude/",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "cp /tmp/settings.json .claude/"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F3: Bash, cp -r agents în .claude/",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "cp -r /tmp/agents .claude/"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F3: PowerShell, Copy-Item verificare.json în video\\p\\",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "Copy-Item C:\\tmp\\verificare.json video\\p\\"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F3: PowerShell, Copy-Item resurse în video\\p\\resurse\\ e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "Copy-Item resurse\\a.png video\\p\\resurse\\"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "F7: Bash, find -delete în kit",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "find nucleu -delete"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F7: Bash, find -exec rm din rădăcină",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "find . -name \"*.mjs\" -exec rm {} +"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F7: Bash, git checkout -- nucleu/mg.mjs",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "git checkout -- nucleu/mg.mjs"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F7: Bash, unzip -d nucleu",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "unzip -o x.zip -d nucleu"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F7: Bash, rsync în nucleu/",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "rsync -a x/ nucleu/"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F7: Bash, perl -pi în kit",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "perl -pi -e s/a/b/ nucleu/mg.mjs"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F7: Bash, sed cu comanda w",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "sed \"w nucleu/mg.mjs\" x"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F7: PowerShell, robocopy /MIR în nucleu",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "robocopy C:\\tmp nucleu /MIR"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F7: PowerShell, Expand-Archive în nucleu",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "Expand-Archive x.zip -DestinationPath nucleu"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F7: PowerShell, Get-ChildItem | Remove-Item pe cadre",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "Get-ChildItem video\\p\\cadre | Remove-Item"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F7: Bash, find -name în kit e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "find nucleu -name x"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "F7: Bash, git diff pe kit e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "git diff nucleu"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "F7: Bash, sed -n e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "sed -n 1p nucleu/mg.mjs"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "F17: PowerShell, Tee-Object în kit",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "echo x | Tee-Object nucleu/mg.mjs"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F17: PowerShell, Tee-Object în configurație",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "echo x | Tee-Object .claude\\settings.local.json"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F17: PowerShell, WriteAllText în kit",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "[System.IO.File]::WriteAllText(\"nucleu/mg.mjs\",\"x\")"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F17: PowerShell, WriteAllText în configurație",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "[System.IO.File]::WriteAllText(\".claude\\settings.json\",\"{}\")"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F17: PowerShell, Invoke-WebRequest -OutFile în kit",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "Invoke-WebRequest https://e.com -OutFile nucleu\\x"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F17: PowerShell, curl -o în kit",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "curl -o nucleu/x https://e.com"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F17: PowerShell, wget -O în kit",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "wget -O nucleu/x https://e.com"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F17: PowerShell, Expand-Archive -DestinationPath nucleu",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "Expand-Archive a.zip -DestinationPath nucleu"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F17: Bash, curl -o în kit",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "curl -o nucleu/x https://e.com"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F17: PowerShell, curl -o out.mp4 e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "curl -o out.mp4 https://e.com"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "F17: PowerShell, Get-Content nucleu\\mg.mjs e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "Get-Content nucleu\\mg.mjs"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "F14: Bash, npm install --prefix motoare/hyperframes",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "npm install hyperframes@latest --prefix motoare/hyperframes"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F14: PowerShell, npm i -C motoare/hyperframes",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "npm i hyperframes@0.9.1 -C motoare/hyperframes"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F14: Bash, cd nucleu && npm install",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "cd nucleu && npm install left-pad"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F14: PowerShell, Set-Location motoare\\hyperframes; npm i",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "Set-Location motoare\\hyperframes; npm i hyperframes@latest"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F14: Bash, npm ci cu cwd motoare/hyperframes din intrare",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "cwd": "/Users/x/agent motion/motoare/hyperframes",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "npm ci"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F14: Bash, npm install în rădăcină e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "npm install left-pad"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "NOU: Bash, cwd .claude din intrare și rm -rf *",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "cwd": "/Users/x/agent motion/.claude",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "rm -rf *"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "NOU: Bash, cwd .claude din intrare și rm -rf ./*",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "cwd": "/Users/x/agent motion/.claude",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "rm -rf ./*"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "NOU: Bash, cwd .claude din intrare și rm -f *.json",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "cwd": "/Users/x/agent motion/.claude",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "rm -f *.json"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "NOU: PowerShell, cwd .claude din intrare și Remove-Item * -Recurse",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "cwd": "C:\\agent-motion\\.claude",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "Remove-Item * -Recurse"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "NOU: Bash, rm -rf .claude/*",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "rm -rf .claude/*"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "NOU: Bash, rm -f .claude/*.json",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "rm -f .claude/*.json"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "NOU: PowerShell, Remove-Item .claude\\*.json",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "Remove-Item .claude\\*.json"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "NOU: Bash, rm -f video/p/*.json",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "rm -f video/p/*.json"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "NOU: Bash, rm -f video/p/verificare.*",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "rm -f video/p/verificare.*"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "NOU: Bash, cwd video/p din intrare și rm verificare*",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "cwd": "/Users/x/agent motion/video/p",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "rm verificare*"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "NOU: Bash, cwd video/p/build din intrare și rm -rf ../*",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "cwd": "/Users/x/agent motion/video/p/build",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "rm -rf ../*"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "NOU: Bash, redirecționare spre .claude/*.json",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "echo x > .claude/*.json"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "NOU: Bash, cwd video/p din intrare și redirecționare spre verificare.*",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "cwd": "/Users/x/agent motion/video/p",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "echo x > verificare.*"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "NOU: Bash, rm -f video/p/resurse/*.png e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "rm -f video/p/resurse/*.png"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "NOU: Bash, cwd video/p/resurse din intrare și rm *.png e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "cwd": "/Users/x/agent motion/video/p/resurse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "rm *.png"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "NOU: PowerShell, Remove-Item video\\p\\resurse\\*.png e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "Remove-Item video\\p\\resurse\\*.png"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "NOU: Bash, rm -f video/p/note-*.txt e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "rm -f video/p/note-*.txt"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "NOU: Bash, cat video/p/*.json (citire) e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "cat video/p/*.json"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "NOU: Bash, cwd .claude din intrare și cat *.json (citire) e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "cwd": "/Users/x/agent motion/.claude",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "cat *.json"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "NOU: Bash, ls .claude/* (citire) e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "ls .claude/*"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "F2: PowerShell, $null = Remove-Item nucleu\\mg.mjs",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "$null = Remove-Item nucleu\\mg.mjs"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F2: PowerShell, $null=Remove-Item nucleu\\mg.mjs, fără spații",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "$null=Remove-Item nucleu\\mg.mjs"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F2: PowerShell, $null = New-Item -ItemType File nucleu\\x.txt -Force",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "$null = New-Item -ItemType File nucleu\\x.txt -Force"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F2: PowerShell, $null = Set-Content .claude\\settings.json",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "$null = Set-Content .claude\\settings.json '{}'"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F2: PowerShell, $x = Set-Content nucleu\\mg.mjs x",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "$x = Set-Content nucleu\\mg.mjs x"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F2: PowerShell, $r = Copy-Item C:\\tmp\\verificare.json video\\p\\ -PassThru",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "$r = Copy-Item C:\\tmp\\verificare.json video\\p\\ -PassThru"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F2: PowerShell, . rm nucleu\\mg.mjs",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": ". rm nucleu\\mg.mjs"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F2: Bash, timeout 5 rm nucleu/mg.mjs",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "timeout 5 rm nucleu/mg.mjs"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F2: Bash, nice -n 5 rm nucleu/mg.mjs",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "nice -n 5 rm nucleu/mg.mjs"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F2: Bash, builtin rm nucleu/mg.mjs",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "builtin rm nucleu/mg.mjs"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F2: Bash, eval rm nucleu/mg.mjs",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "eval rm nucleu/mg.mjs"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F2: Bash, eval \"rm nucleu/mg.mjs\"",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "eval \"rm nucleu/mg.mjs\""
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F2: Bash, stdbuf -o0 rm nucleu/mg.mjs",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "stdbuf -o0 rm nucleu/mg.mjs"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F2: Bash, watch rm nucleu/mg.mjs",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "watch rm nucleu/mg.mjs"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F2: Bash, caffeinate rm nucleu/mg.mjs",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "caffeinate rm nucleu/mg.mjs"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F2: Bash, coproc rm nucleu/mg.mjs",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "coproc rm nucleu/mg.mjs"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F2: Bash, builtin cd nucleu && rm mg.mjs",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "builtin cd nucleu && rm mg.mjs"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F2: Bash, eval cd nucleu && rm mg.mjs",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "eval cd nucleu && rm mg.mjs"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F2: Bash, env -C nucleu rm mg.mjs",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "env -C nucleu rm mg.mjs"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F2: Bash, env --chdir=nucleu rm mg.mjs",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "env --chdir=nucleu rm mg.mjs"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F2: PowerShell, $null = node nucleu/mg.mjs randeaza p e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "$null = node nucleu/mg.mjs randeaza p"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "F2: PowerShell, $json = Get-Content video\\p\\date.json e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "$json = Get-Content video\\p\\date.json"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "F2: PowerShell, $null = New-Item -ItemType Directory video\\p\\resurse -Force e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "$null = New-Item -ItemType Directory video\\p\\resurse -Force"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "F2: PowerShell, $r = Copy-Item resurse\\a.png video\\p\\resurse\\ -PassThru e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "$r = Copy-Item resurse\\a.png video\\p\\resurse\\ -PassThru"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "F2: Bash, timeout 600 node nucleu/mg.mjs randeaza p e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "timeout 600 node nucleu/mg.mjs randeaza p"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "F2: Bash, nice -n 10 node nucleu/mg.mjs randeaza p e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "nice -n 10 node nucleu/mg.mjs randeaza p"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "F2: Bash, timeout 5 cat nucleu/mg.mjs (citire) e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "timeout 5 cat nucleu/mg.mjs"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "F2: Bash, eval echo gata e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "eval echo gata"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "F2: Bash, env -C video/p cat date.json e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "env -C video/p cat date.json"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "F2: Bash, builtin cd video/p && echo x > note.txt e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "builtin cd video/p && echo x > note.txt"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "F17 rămas: New-Item -Path .claude -Name settings.json",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "New-Item -Path .claude -Name settings.json -Value '{}' -Force"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F17 rămas: New-Item -Path .claude -Name settings.local.json",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "New-Item -Path .claude -Name settings.local.json -ItemType File -Force"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F17 rămas: New-Item -Path video\\p -Name verificare.json",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "New-Item -Path video\\p -Name verificare.json -Value '{}'"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F17 rămas: ni video\\p -Name verificare.json",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "ni video\\p -Name verificare.json"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F17 rămas: Rename-Item .claude\\x.json settings.json",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "Rename-Item .claude\\x.json settings.json"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F17 rămas: Rename-Item -Path .claude\\x.json -NewName settings.local.json",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "Rename-Item -Path .claude\\x.json -NewName settings.local.json"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F17 rămas: Rename-Item video\\p\\x.json -NewName verificare.json",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "Rename-Item video\\p\\x.json -NewName verificare.json"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F17 rămas: ren video\\p\\x.json verificare.json",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "ren video\\p\\x.json verificare.json"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F17 rămas: cmd /c ren video\\p\\x.json verificare.json",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "cmd /c ren video\\p\\x.json verificare.json"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F17 rămas: Rename-Item video\\p\\cadre_old cadre",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "Rename-Item video\\p\\cadre_old cadre"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F17 rămas: New-Item cu -Name liber în resurse e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "New-Item -Path video\\p\\resurse -Name nota.txt -Value 'x'"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "F17 rămas: New-Item -ItemType Directory -Name resurse e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "New-Item -ItemType Directory -Path video\\p -Name resurse -Force"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "F17 rămas: Rename-Item cu -NewName liber e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "Rename-Item video\\p\\resurse\\a.png -NewName b.png"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "F17 rămas: ren cu nume liber e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "ren video\\p\\note.txt note-vechi.txt"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "F14 rămas: npm audit fix cu cwd motoare/hyperframes",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "cwd": "/Users/x/agent motion/motoare/hyperframes",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "npm audit fix"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F14 rămas: cd motoare/hyperframes && npm audit fix --force",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "cd motoare/hyperframes && npm audit fix --force"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F14 rămas: npm pkg set --prefix nucleu",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "npm pkg set dependencies.x=1 --prefix nucleu"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F14 rămas: npm version patch --prefix nucleu",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "npm version patch --prefix nucleu"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F14 rămas: bun add x --cwd nucleu",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "bun add x --cwd nucleu"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F14 rămas: corepack pnpm add x -C nucleu",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "corepack pnpm add x -C nucleu"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F14 rămas: npm ls cu cwd motoare/hyperframes e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "cwd": "/Users/x/agent motion/motoare/hyperframes",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "npm ls"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "F14 rămas: npm audit fără fix e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "cwd": "/Users/x/agent motion/motoare/hyperframes",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "npm audit"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "F14 rămas: npm pkg get --prefix nucleu e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "npm pkg get dependencies --prefix nucleu"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "F14 rămas: npm version fără argument e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "cwd": "/Users/x/agent motion/nucleu",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "npm version"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "F14 rămas: bun --version e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "bun --version"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "F6 rămas: Get-ChildItem \"video\\\" e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "Get-ChildItem \"video\\\""
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "F6 rămas: Get-ChildItem \"$env:USERPROFILE\\Desktop\\\" e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "Get-ChildItem \"$env:USERPROFILE\\Desktop\\\""
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "F6 rămas: Remove-Item \"nucleu\\\" -Recurse rămâne refuzat",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "Remove-Item \"nucleu\\\" -Recurse"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F6 rămas: Remove-Item de la rădăcina discului, fără literă",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "Remove-Item \\agent-motion\\nucleu\\mg.mjs"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F6 rămas: Set-Content /agent-motion/.claude/settings.json",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "Set-Content /agent-motion/.claude/settings.json x"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F6 rămas: Set-Location \\agent-motion\\nucleu; Remove-Item mg.mjs",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "Set-Location \\agent-motion\\nucleu; Remove-Item mg.mjs"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F6 rămas: Set-Location \\nucleu duce în C:\\nucleu, în afara agentului",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "Set-Location \\nucleu; Remove-Item mg.mjs"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "F6 rămas: Remove-Item \\tmp\\x.txt e în afara agentului",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "Remove-Item \\tmp\\x.txt"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "F3 rămas: cp -r /tmp/x/ video/p",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "cp -r /tmp/x/ video/p"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F3 rămas: cp -R /tmp/x/ video/p/",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "cp -R /tmp/x/ video/p/"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F3 rămas: cp -r /tmp/x/ în resurse e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "cp -r /tmp/x/ video/p/resurse/"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "F3 rămas: cp -r /tmp/x fără slash în resurse e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "cp -r /tmp/x video/p/resurse"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "F7 rămas: xargs rm < list.txt",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "xargs rm < list.txt"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F7 rămas: [IO.File]::Copy cu ținta în variabilă",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "[IO.File]::Copy('C:\\tmp\\a', $p)"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F7 rămas: sort -o nucleu/x",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "sort -o nucleu/x a.txt"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F7 rămas: patch nucleu/mg.mjs < p.diff",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "patch nucleu/mg.mjs < p.diff"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F7 rămas: zip nucleu/a.zip",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "zip nucleu/a.zip x.txt"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F7 rămas: ditto /tmp/x nucleu/",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "ditto /tmp/x nucleu/"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F7 rămas: ditto /tmp/x video/p",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "ditto /tmp/x video/p"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F7 rămas: scp x nucleu/",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "scp x nucleu/"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F7 rămas: parallel rm ::: nucleu/mg.mjs",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "parallel rm ::: nucleu/mg.mjs"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F7 rămas: Compress-Archive -DestinationPath nucleu\\a.zip",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "Compress-Archive -Path x -DestinationPath nucleu\\a.zip"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F7 rămas: Start-BitsTransfer -Destination nucleu\\x",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "Start-BitsTransfer -Source https://exemplu.ro/x -Destination nucleu\\x"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F7 rămas: New-Object System.IO.StreamWriter \"nucleu\\mg.mjs\"",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "New-Object System.IO.StreamWriter \"nucleu\\mg.mjs\""
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "F7 rămas: xargs cat < list.txt e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "xargs cat < list.txt"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "F7 rămas: [IO.File]::Copy cu ținte literale libere e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "[IO.File]::Copy('C:\\tmp\\a.png', 'video\\p\\resurse\\a.png')"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "F7 rămas: sort -o în video/p e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "sort -o video/p/lista.txt lista.txt"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "F7 rămas: patch pe un fișier liber e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "patch video/p/note.txt < p.diff"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "F7 rămas: zip în video/p e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "zip -r video/p/resurse.zip video/p/resurse"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "F7 rămas: ditto în resurse e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "ditto /tmp/x video/p/resurse/"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "F7 rămas: scp din video/p spre alt calculator e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "scp video/p/out.png ion@gazda:/tmp/"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "F7 rămas: parallel echo e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "parallel echo ::: a b"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "F7 rămas: Compress-Archive în video\\p e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "Compress-Archive -Path video\\p\\resurse -DestinationPath video\\p\\resurse.zip"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "F7 rămas: New-Object StreamWriter în video\\p e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "New-Object System.IO.StreamWriter \"video\\p\\note.txt\""
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "CANAR rămas: garda rulată de mână prin Bash",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "echo '{\"hook_event_name\":\"PreToolUse\",\"tool_name\":\"Bash\",\"tool_input\":{\"command\":\"rm nucleu/.canar\"}}' | node nucleu/garda.mjs"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "CANAR rămas: garda rulată de mână prin PowerShell",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "'{\"hook_event_name\":\"PreToolUse\",\"tool_name\":\"Bash\",\"tool_input\":{\"command\":\"rm nucleu/.canar\"}}' | node nucleu\\garda.mjs"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "CANAR rămas: garda rulată de mână cu CLAUDE_PROJECT_DIR",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "node \"$CLAUDE_PROJECT_DIR/nucleu/garda.mjs\" < intrare.json"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "CANAR rămas: garda rulată de mână după cd nucleu",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "cd nucleu && node garda.mjs < intrare.json"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "CANAR rămas: cat nucleu/.canar-refuzuri",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "cat nucleu/.canar-refuzuri"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "CANAR rămas: Get-Content nucleu\\.canar-refuzuri",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "Get-Content nucleu\\.canar-refuzuri"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "CANAR rămas: node nucleu/mg.mjs doctor e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "node nucleu/mg.mjs doctor"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "CANAR rămas: citirea lui nucleu/garda.mjs e permisă",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "cat nucleu/garda.mjs"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "B00-6 rămas: env -C nucleu ls, apoi rm în video/p e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "env -C nucleu ls && rm video/p/note.txt"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "B00-6 rămas: env -C nucleu rm mg.mjs, apoi ls",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "env -C nucleu rm mg.mjs && ls"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "B00-6 rămas: mv cu tipar din .claude",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "mv .claude/*.json /tmp/"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "B00-6 rămas: mv cu tipar *.png în video/p e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "mv video/p/resurse/*.png video/p/arhiva/"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "B00-6 rămas: rm -rf video/p/resurse/* rămâne refuzat",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "rm -rf video/p/resurse/*"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "B00-7 corectură: env -C video/p ls > nucleu/x",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "env -C video/p ls > nucleu/x"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "B00-7 corectură: env -C video/p echo x > .claude/settings.json",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "env -C video/p echo x > .claude/settings.json"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "B00-7 corectură: env -C video/p ls >> nucleu/x",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "env -C video/p ls >> nucleu/x"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "B00-7 corectură: env -C video/p node -e 2> nucleu/err.txt",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "env -C video/p node -e \"1\" 2> nucleu/err.txt"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "B00-7 corectură: env -C nucleu ls > video/p/lista.txt e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "env -C nucleu ls > video/p/lista.txt"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "B00-7 corectură: tee cu \"<<\" citat nu ascunde ținta",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "echo x | tee \"<<\" nucleu/mg.mjs"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "B00-7 corectură: tee cu \"<\" citat nu ascunde ținta",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "echo x | tee '<' nucleu/mg.mjs"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "B00-7 corectură: New-Object StreamWriter cu $true în video\\p e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "New-Object System.IO.StreamWriter(\"video\\p\\x.txt\", $true)"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "B00-7 corectură: New-Object StreamWriter cu $true în nucleu",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "New-Object System.IO.StreamWriter(\"nucleu\\mg.mjs\", $true)"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "B13 UserPromptSubmit: „aprob” fără proiecte în așteptare cere precizare, nu blochează (POSIX)",
+    "intrare": {
+      "session_id": "abc123",
+      "transcript_path": "/Users/x/.claude/projects/agent-motion/t.jsonl",
+      "cwd": "/Users/x/agent motion",
+      "permission_mode": "default",
+      "hook_event_name": "UserPromptSubmit",
+      "prompt": "aprob"
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false,
+      "context": true
+    }
+  },
+  {
+    "nume": "B13 UserPromptSubmit: „Aprob” pe rădăcină Windows nu blochează",
+    "intrare": {
+      "session_id": "abc123",
+      "transcript_path": "C:\\Users\\Ana\\.claude\\projects\\C--agent-motion\\t.jsonl",
+      "cwd": "C:\\agent-motion",
+      "permission_mode": "default",
+      "hook_event_name": "UserPromptSubmit",
+      "prompt": "Aprob"
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false,
+      "context": true
+    }
+  },
+  {
+    "nume": "B13 UserPromptSubmit: „aprob, dar schimbă titlul” nu aprobă, nu blochează și spune forma corectă (felia 8)",
+    "intrare": {
+      "session_id": "abc123",
+      "transcript_path": "/Users/x/.claude/projects/agent-motion/t.jsonl",
+      "cwd": "/Users/x/agent motion",
+      "permission_mode": "default",
+      "hook_event_name": "UserPromptSubmit",
+      "prompt": "aprob, dar schimbă titlul"
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false,
+      "context": true
+    }
+  },
+  {
+    "nume": "B13 UserPromptSubmit: mesaj obișnuit trece fără efect",
+    "intrare": {
+      "session_id": "abc123",
+      "transcript_path": "/Users/x/.claude/projects/agent-motion/t.jsonl",
+      "cwd": "/Users/x/agent motion",
+      "permission_mode": "default",
+      "hook_event_name": "UserPromptSubmit",
+      "prompt": "Fă-mi un reel despre programări"
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "B13 UserPromptSubmit: „aprob programari” cu proiect inexistent nu blochează",
+    "intrare": {
+      "session_id": "abc123",
+      "transcript_path": "C:\\Users\\Ana\\.claude\\projects\\C--agent-motion\\t.jsonl",
+      "cwd": "C:\\agent-motion",
+      "permission_mode": "default",
+      "hook_event_name": "UserPromptSubmit",
+      "prompt": "aprob programari"
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false,
+      "context": true
+    }
+  },
+  {
+    "nume": "B13 UserPromptSubmit: „încă o rundă” fără proiecte la plafon cere precizare, nu blochează (POSIX)",
+    "intrare": {
+      "session_id": "abc123",
+      "transcript_path": "/Users/x/.claude/projects/agent-motion/t.jsonl",
+      "cwd": "/Users/x/agent motion",
+      "permission_mode": "default",
+      "hook_event_name": "UserPromptSubmit",
+      "prompt": "încă o rundă"
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false,
+      "context": true
+    }
+  },
+  {
+    "nume": "B13 UserPromptSubmit: „Încă o rundă schiță programari” pe rădăcină Windows nu blochează",
+    "intrare": {
+      "session_id": "abc123",
+      "transcript_path": "C:\\Users\\Ana\\.claude\\projects\\C--agent-motion\\t.jsonl",
+      "cwd": "C:\\agent-motion",
+      "permission_mode": "default",
+      "hook_event_name": "UserPromptSubmit",
+      "prompt": "Încă o rundă schiță programari"
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false,
+      "context": true
+    }
+  },
+  {
+    "nume": "B13 UserPromptSubmit (G5): „Aprob.” cu punct final e acceptat: cere precizare, nu blochează (POSIX)",
+    "intrare": {
+      "session_id": "abc123",
+      "transcript_path": "/Users/x/.claude/projects/agent-motion/t.jsonl",
+      "cwd": "/Users/x/agent motion",
+      "permission_mode": "default",
+      "hook_event_name": "UserPromptSubmit",
+      "prompt": "Aprob."
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false,
+      "context": true
+    }
+  },
+  {
+    "nume": "B13 UserPromptSubmit (G5): „aprob programari!” pe rădăcină Windows e acceptat: cere precizare, nu blochează",
+    "intrare": {
+      "session_id": "abc123",
+      "transcript_path": "C:\\Users\\Ana\\.claude\\projects\\C--agent-motion\\t.jsonl",
+      "cwd": "C:\\agent-motion",
+      "permission_mode": "default",
+      "hook_event_name": "UserPromptSubmit",
+      "prompt": "aprob programari!"
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false,
+      "context": true
+    }
+  },
+  {
+    "nume": "B13 UserPromptSubmit (G5): „aprob. schimbă titlul” are adaos, deci nu aprobă, nu blochează și spune forma corectă (felia 8)",
+    "intrare": {
+      "session_id": "abc123",
+      "transcript_path": "/Users/x/.claude/projects/agent-motion/t.jsonl",
+      "cwd": "/Users/x/agent motion",
+      "permission_mode": "default",
+      "hook_event_name": "UserPromptSubmit",
+      "prompt": "aprob. schimbă titlul"
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false,
+      "context": true
+    }
+  },
+  {
+    "nume": "B13 UserPromptSubmit (M3): „Încă o rundă.” cu punct final e acceptat: cere precizare, nu blochează (POSIX)",
+    "intrare": {
+      "session_id": "abc123",
+      "transcript_path": "/Users/x/.claude/projects/agent-motion/t.jsonl",
+      "cwd": "/Users/x/agent motion",
+      "permission_mode": "default",
+      "hook_event_name": "UserPromptSubmit",
+      "prompt": "Încă o rundă."
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false,
+      "context": true
+    }
+  },
+  {
+    "nume": "B13 UserPromptSubmit (M3): „încă o rundă schiță programari!” pe rădăcină Windows e acceptat: cere precizare, nu blochează",
+    "intrare": {
+      "session_id": "abc123",
+      "transcript_path": "C:\\Users\\Ana\\.claude\\projects\\C--agent-motion\\t.jsonl",
+      "cwd": "C:\\agent-motion",
+      "permission_mode": "default",
+      "hook_event_name": "UserPromptSubmit",
+      "prompt": "încă o rundă schiță programari!"
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false,
+      "context": true
+    }
+  },
+  {
+    "nume": "B13 aprobarea scrisă de agent prin Write în motor.lock e refuzată (POSIX)",
+    "intrare": {
+      "session_id": "abc123",
+      "transcript_path": "/Users/x/.claude/projects/agent-motion/t.jsonl",
+      "cwd": "/Users/x/agent motion",
+      "permission_mode": "default",
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Write",
+      "tool_use_id": "toolu_b13_1",
+      "tool_input": {
+        "file_path": "/Users/x/agent motion/video/programari/motor.lock",
+        "content": "{\"aprobare\": {\"mesaj\": \"aprob\"}}\n"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "B13 aprobarea scrisă de agent prin Edit în motor.lock e refuzată (Windows)",
+    "intrare": {
+      "session_id": "abc123",
+      "transcript_path": "C:\\Users\\Ana\\.claude\\projects\\C--agent-motion\\t.jsonl",
+      "cwd": "C:\\agent-motion",
+      "permission_mode": "default",
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Edit",
+      "tool_use_id": "toolu_b13_2",
+      "tool_input": {
+        "file_path": "C:\\agent-motion\\video\\programari\\motor.lock",
+        "old_string": "\"aprobare\": null",
+        "new_string": "\"aprobare\": {\"mesaj\": \"aprob\"}",
+        "replace_all": false
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "B13 aprobarea scrisă de agent prin Bash în motor.lock e refuzată",
+    "intrare": {
+      "session_id": "abc123",
+      "transcript_path": "/Users/x/.claude/projects/agent-motion/t.jsonl",
+      "cwd": "/Users/x/agent motion",
+      "permission_mode": "default",
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_use_id": "toolu_b13_3",
+      "tool_input": {
+        "command": "echo '{}' > video/programari/motor.lock"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "B13 aprobarea scrisă de agent prin PowerShell în motor.lock e refuzată",
+    "intrare": {
+      "session_id": "abc123",
+      "transcript_path": "C:\\Users\\Ana\\.claude\\projects\\C--agent-motion\\t.jsonl",
+      "cwd": "C:\\agent-motion",
+      "permission_mode": "default",
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_use_id": "toolu_b13_4",
+      "tool_input": {
+        "command": "Set-Content video\\programari\\motor.lock '{}'"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "B13 runda 1 (I1): o sesiune Claude Code imbricată prin Bash, claude -p aprob, e refuzată",
+    "intrare": {
+      "session_id": "abc123",
+      "transcript_path": "/Users/x/.claude/projects/agent-motion/t.jsonl",
+      "cwd": "/Users/x/agent motion",
+      "permission_mode": "default",
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_use_id": "toolu_b13_5",
+      "tool_input": {
+        "command": "claude -p aprob"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "B13 runda 1 (I1): echo aprob | claude -p e refuzat",
+    "intrare": {
+      "session_id": "abc123",
+      "transcript_path": "/Users/x/.claude/projects/agent-motion/t.jsonl",
+      "cwd": "/Users/x/agent motion",
+      "permission_mode": "default",
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_use_id": "toolu_b13_6",
+      "tool_input": {
+        "command": "echo aprob | claude -p"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "B13 runda 1 (I1): claude --print \"aprob\" e refuzat",
+    "intrare": {
+      "session_id": "abc123",
+      "transcript_path": "/Users/x/.claude/projects/agent-motion/t.jsonl",
+      "cwd": "/Users/x/agent motion",
+      "permission_mode": "default",
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_use_id": "toolu_b13_7",
+      "tool_input": {
+        "command": "claude --print \"aprob\""
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "B13 runda 1 (I1): o sesiune Claude Code imbricată prin PowerShell, claude -p \"aprob programari\", e refuzată",
+    "intrare": {
+      "session_id": "abc123",
+      "transcript_path": "C:\\Users\\Ana\\.claude\\projects\\C--agent-motion\\t.jsonl",
+      "cwd": "C:\\agent-motion",
+      "permission_mode": "default",
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_use_id": "toolu_b13_8",
+      "tool_input": {
+        "command": "claude -p \"aprob programari\""
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "B13 runda 1 (I1): claude.exe -p aprob prin PowerShell e refuzat",
+    "intrare": {
+      "session_id": "abc123",
+      "transcript_path": "C:\\Users\\Ana\\.claude\\projects\\C--agent-motion\\t.jsonl",
+      "cwd": "C:\\agent-motion",
+      "permission_mode": "default",
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_use_id": "toolu_b13_9",
+      "tool_input": {
+        "command": "claude.exe -p aprob"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "SEC-3 (2026-10-06): rm -rf .. din rădăcină șterge tot agentul și e refuzat",
+    "intrare": {
+      "session_id": "abc123",
+      "transcript_path": "/Users/x/.claude/projects/agent-motion/t.jsonl",
+      "cwd": "/Users/x/agent motion",
+      "permission_mode": "default",
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_use_id": "toolu_sec3_1",
+      "tool_input": {
+        "command": "rm -rf .."
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "SEC-3 (2026-10-06): rm -rf cu calea absolută a unui strămoș e refuzat",
+    "intrare": {
+      "session_id": "abc123",
+      "transcript_path": "/Users/x/.claude/projects/agent-motion/t.jsonl",
+      "cwd": "/Users/x/agent motion",
+      "permission_mode": "default",
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_use_id": "toolu_sec3_2",
+      "tool_input": {
+        "command": "rm -rf \"/Users/x\""
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "SEC-3 (2026-10-06): rm -rf / e refuzat",
+    "intrare": {
+      "session_id": "abc123",
+      "transcript_path": "/Users/x/.claude/projects/agent-motion/t.jsonl",
+      "cwd": "/Users/x/agent motion",
+      "permission_mode": "default",
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_use_id": "toolu_sec3_3",
+      "tool_input": {
+        "command": "rm -rf /"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "SEC-3 (2026-10-06): rm -rf ../* din rădăcină atinge folderul agentului și e refuzat",
+    "intrare": {
+      "session_id": "abc123",
+      "transcript_path": "/Users/x/.claude/projects/agent-motion/t.jsonl",
+      "cwd": "/Users/x/agent motion",
+      "permission_mode": "default",
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_use_id": "toolu_sec3_4",
+      "tool_input": {
+        "command": "rm -rf ../*"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "SEC-3 (2026-10-06): dintr-un proiect, rm -rf ../../.. e refuzat",
+    "intrare": {
+      "session_id": "abc123",
+      "transcript_path": "/Users/x/.claude/projects/agent-motion/t.jsonl",
+      "cwd": "/Users/x/agent motion/video/p",
+      "permission_mode": "default",
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_use_id": "toolu_sec3_5",
+      "tool_input": {
+        "command": "rm -rf ../../.."
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "SEC-3 (2026-10-06): Remove-Item -Recurse -Force .. e refuzat",
+    "intrare": {
+      "session_id": "abc123",
+      "transcript_path": "C:\\Users\\Ana\\.claude\\projects\\C--agent-motion\\t.jsonl",
+      "cwd": "C:\\agent-motion",
+      "permission_mode": "default",
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_use_id": "toolu_sec3_6",
+      "tool_input": {
+        "command": "Remove-Item -Recurse -Force .."
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "SEC-3 (2026-10-06): Remove-Item -Recurse C:\\ e refuzat",
+    "intrare": {
+      "session_id": "abc123",
+      "transcript_path": "C:\\Users\\Ana\\.claude\\projects\\C--agent-motion\\t.jsonl",
+      "cwd": "C:\\agent-motion",
+      "permission_mode": "default",
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_use_id": "toolu_sec3_7",
+      "tool_input": {
+        "command": "Remove-Item -Recurse -Force C:\\"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "SEC-3 (2026-10-06): rm -rf video/p (un proiect întreg) e refuzat",
+    "intrare": {
+      "session_id": "abc123",
+      "transcript_path": "/Users/x/.claude/projects/agent-motion/t.jsonl",
+      "cwd": "/Users/x/agent motion",
+      "permission_mode": "default",
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_use_id": "toolu_sec3_8",
+      "tool_input": {
+        "command": "rm -rf video/p"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "SEC-3 (2026-10-06): rm -rf video/p/ e refuzat",
+    "intrare": {
+      "session_id": "abc123",
+      "transcript_path": "/Users/x/.claude/projects/agent-motion/t.jsonl",
+      "cwd": "/Users/x/agent motion",
+      "permission_mode": "default",
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_use_id": "toolu_sec3_9",
+      "tool_input": {
+        "command": "rm -rf video/p/"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "SEC-3 (2026-10-06): din video/, rm -rf p e refuzat",
+    "intrare": {
+      "session_id": "abc123",
+      "transcript_path": "/Users/x/.claude/projects/agent-motion/t.jsonl",
+      "cwd": "/Users/x/agent motion/video",
+      "permission_mode": "default",
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_use_id": "toolu_sec3_10",
+      "tool_input": {
+        "command": "rm -rf p"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "SEC-3 (2026-10-06): Remove-Item -Recurse -Force video\\p e refuzat",
+    "intrare": {
+      "session_id": "abc123",
+      "transcript_path": "C:\\Users\\Ana\\.claude\\projects\\C--agent-motion\\t.jsonl",
+      "cwd": "C:\\agent-motion",
+      "permission_mode": "default",
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_use_id": "toolu_sec3_11",
+      "tool_input": {
+        "command": "Remove-Item -Recurse -Force video\\p"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "SEC-3 (2026-10-06): mv video/p /tmp/p (proiectul mutat din loc) e refuzat",
+    "intrare": {
+      "session_id": "abc123",
+      "transcript_path": "/Users/x/.claude/projects/agent-motion/t.jsonl",
+      "cwd": "/Users/x/agent motion",
+      "permission_mode": "default",
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_use_id": "toolu_sec3_12",
+      "tool_input": {
+        "command": "mv video/p /tmp/p"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "SEC-3 (2026-10-06): ștergerea unui folder din interiorul proiectului rămâne permisă",
+    "intrare": {
+      "session_id": "abc123",
+      "transcript_path": "/Users/x/.claude/projects/agent-motion/t.jsonl",
+      "cwd": "/Users/x/agent motion",
+      "permission_mode": "default",
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_use_id": "toolu_sec3_13",
+      "tool_input": {
+        "command": "rm -rf video/p/resurse/vechi"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "SEC-3 (2026-10-06): ștergerea unui folder vecin cu agentul rămâne permisă",
+    "intrare": {
+      "session_id": "abc123",
+      "transcript_path": "/Users/x/.claude/projects/agent-motion/t.jsonl",
+      "cwd": "/Users/x/agent motion",
+      "permission_mode": "default",
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_use_id": "toolu_sec3_14",
+      "tool_input": {
+        "command": "rm -rf ../alt-folder"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "SEC-3 (2026-10-06): mutarea unui fișier în folderul proiectului rămâne permisă",
+    "intrare": {
+      "session_id": "abc123",
+      "transcript_path": "/Users/x/.claude/projects/agent-motion/t.jsonl",
+      "cwd": "/Users/x/agent motion",
+      "permission_mode": "default",
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_use_id": "toolu_sec3_15",
+      "tool_input": {
+        "command": "mv /Users/x/Downloads/poza.png video/p/"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "SEC-3 (2026-10-06): Move-Item spre folderul proiectului rămâne permis",
+    "intrare": {
+      "session_id": "abc123",
+      "transcript_path": "C:\\Users\\Ana\\.claude\\projects\\C--agent-motion\\t.jsonl",
+      "cwd": "C:\\agent-motion",
+      "permission_mode": "default",
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_use_id": "toolu_sec3_16",
+      "tool_input": {
+        "command": "Move-Item C:\\Users\\Ana\\Downloads\\poza.png video\\p"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "Decizia din 2026-10-06 (cli.js): node …/@anthropic-ai/claude-code/cli.js -p aprob prin Bash e refuzat",
+    "intrare": {
+      "session_id": "abc123",
+      "transcript_path": "/Users/x/.claude/projects/agent-motion/t.jsonl",
+      "cwd": "/Users/x/agent motion",
+      "permission_mode": "default",
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_use_id": "toolu_clijs_1",
+      "tool_input": {
+        "command": "node /usr/local/lib/node_modules/@anthropic-ai/claude-code/cli.js -p aprob"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Decizia din 2026-10-06 (cli.js): echo aprob | node …/cli.js -p e refuzat",
+    "intrare": {
+      "session_id": "abc123",
+      "transcript_path": "/Users/x/.claude/projects/agent-motion/t.jsonl",
+      "cwd": "/Users/x/agent motion",
+      "permission_mode": "default",
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_use_id": "toolu_clijs_2",
+      "tool_input": {
+        "command": "echo aprob | node \"$HOME/.npm-global/lib/node_modules/@anthropic-ai/claude-code/cli.js\" -p"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Decizia din 2026-10-06 (cli.js): node.exe cu calea Windows a lui cli.js prin PowerShell e refuzat",
+    "intrare": {
+      "session_id": "abc123",
+      "transcript_path": "C:\\Users\\Ana\\.claude\\projects\\C--agent-motion\\t.jsonl",
+      "cwd": "C:\\agent-motion",
+      "permission_mode": "default",
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_use_id": "toolu_clijs_3",
+      "tool_input": {
+        "command": "node.exe C:\\Users\\Ana\\AppData\\Roaming\\npm\\node_modules\\@anthropic-ai\\claude-code\\cli.js -p aprob"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Decizia din 2026-10-06 (cli.js): & \"C:\\Program Files\\nodejs\\node.exe\" \"$env:APPDATA\\npm\\…\\cli.js\" e refuzat",
+    "intrare": {
+      "session_id": "abc123",
+      "transcript_path": "C:\\Users\\Ana\\.claude\\projects\\C--agent-motion\\t.jsonl",
+      "cwd": "C:\\agent-motion",
+      "permission_mode": "default",
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_use_id": "toolu_clijs_4",
+      "tool_input": {
+        "command": "& \"C:\\Program Files\\nodejs\\node.exe\" \"$env:APPDATA\\npm\\node_modules\\@anthropic-ai\\claude-code\\cli.js\" --print \"aprob\""
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Felia 2: Write corecturi/1/incercare-1.json",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Write",
+      "tool_input": {
+        "file_path": "/Users/x/agent motion/video/p/corecturi/1/incercare-1.json",
+        "content": "{}\n"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Felia 2: Edit corecturi/1/incercare-2.json, Windows",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Edit",
+      "tool_input": {
+        "file_path": "C:\\agent-motion\\video\\p\\corecturi\\1\\incercare-2.json",
+        "old_string": "a",
+        "new_string": "b"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Felia 2: Bash: rm corecturi/1/incercare-2.json",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "rm video/p/corecturi/1/incercare-2.json"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Felia 2: Bash: mv corecturi/1 în altă parte",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "mv video/p/corecturi/1 /tmp/vechi"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Felia 2: Bash: redirecționare în corecturi/",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "echo '{}' > video/p/corecturi/2/incercare-1.json"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Felia 2: Bash: node -e scrie în corecturi/",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "node -e \"require('fs').writeFileSync('video/p/corecturi/1/incercare-1.json','{}')\""
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Felia 2: Bash: .cache/mesaj-cursant.json falsificat",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "echo '{\"la\":\"2099-01-01T00:00:00Z\"}' > video/p/.cache/mesaj-cursant.json"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Felia 2: PowerShell: Remove-Item pe corecturi",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "Remove-Item -Recurse video\\p\\corecturi"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Felia 2: PowerShell: Set-Content în corecturi",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "Set-Content video\\p\\corecturi\\1\\incercare-1.json '{}'"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "B1 (felia 2): cp -r dintr-un folder din afară în video/q",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "cp -r /tmp/q video/q"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "B1 (felia 2): mv din afară în video/q",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "mv /tmp/q video/q"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "B1 (felia 2): ln -s spre un folder din afară",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "ln -s /tmp/q video/q"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "B1 (felia 2): tar -xf -C video",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "tar -xf q.tar -C video"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "B1 (felia 2): git clone în video/q",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "git clone /tmp/repo video/q"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "B1 (felia 2): cp -r video/p video/p2 (copia unui film predat)",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "cp -r video/p video/p2"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "B1 (felia 2): Copy-Item -Recurse în video\\q",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "Copy-Item -Recurse C:\\tmp\\q video\\q"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "B1 (felia 2): cp -r în video/p/resurse/ rămâne permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "cp -r ~/poze video/p/resurse/poze"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "B1 (felia 2): git clone în afara folderului rămâne permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "git clone https://github.com/x/y.git /tmp/y"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  },
+  {
+    "nume": "Bash: genereaza scris printr-o variabilă cere aprobare",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "X=genereaza; node nucleu/mg.mjs $X desen p-a \"un brutar\" --etichete \"a,b,c,d\""
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": "ask",
+      "block": false
+    }
+  },
+  {
+    "nume": "Bash: subcomanda mg prin substituție cere aprobare",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "node nucleu/mg.mjs $(echo genereaza) desen p-a x"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": "ask",
+      "block": false
+    }
+  },
+  {
+    "nume": "Bash: argumentele mg prin xargs cer aprobare",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "echo genereaza desen p-a x --etichete a,b,c,d | xargs node nucleu/mg.mjs"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": "ask",
+      "block": false
+    }
+  },
+  {
+    "nume": "Bash: node redefinit ca funcție e refuzat",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "node(){ command node \"${@/--estimeaza/}\"; }; node nucleu/mg.mjs genereaza desen p-a x --estimeaza"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Bash: python -m keyring get e refuzat",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "unelte/python/bin/python -m keyring get agent-motion kie"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Bash: glob peste cheie.py e refuzat",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "python nucleu/chei?.py citeste kie"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "PowerShell: subcomanda mg prin variabilă cere aprobare",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "$s=\"genereaza\"; node nucleu\\mg.mjs $s desen p-a x"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": "ask",
+      "block": false
+    }
+  },
+  {
+    "nume": "PowerShell: argumentele mg prin splat cer aprobare",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "node nucleu\\mg.mjs @(\"genereaza\",\"desen\")"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": "ask",
+      "block": false
+    }
+  },
+  {
+    "nume": "PowerShell: Start-Process cu mg cere aprobare",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": "Start-Process node -ArgumentList \"nucleu\\mg.mjs genereaza desen p-a x\""
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": "ask",
+      "block": false
+    }
+  },
+  {
+    "nume": "PowerShell: keyring.exe get e refuzat",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "PowerShell",
+      "tool_input": {
+        "command": ".\\unelte\\python\\Scripts\\keyring.exe get agent-motion kie"
+      }
+    },
+    "radacina": "C:\\agent-motion",
+    "asteptat": {
+      "cod": 2,
+      "decizie": "deny",
+      "block": false
+    }
+  },
+  {
+    "nume": "Bash: doctor --generare --instaleaza-keyring e permis",
+    "intrare": {
+      "hook_event_name": "PreToolUse",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "node nucleu/mg.mjs doctor --generare --instaleaza-keyring"
+      }
+    },
+    "radacina": "/Users/x/agent motion",
+    "asteptat": {
+      "cod": 0,
+      "decizie": null,
+      "block": false
+    }
+  }
+]

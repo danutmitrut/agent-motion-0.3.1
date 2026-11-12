@@ -1,0 +1,45 @@
+{
+  "formate": {
+    "vertical": { "latime": 1080, "inaltime": 1920, "zona": [96, 200, 888, 1390], "sigla": [360, 140] },
+    "patrat": { "latime": 1080, "inaltime": 1080, "zona": [108, 108, 864, 864], "sigla": [300, 110] }
+  },
+  "fps": 30,
+  "total": { "min": 5, "max": 60 },
+  "scene": { "durata_min": 1.5, "durata_max": 8, "final_min": 2.5, "final_max": 10 },
+  "marja_latime": 0.04,
+  "trepte": { "L": { "min": 1.15, "max": 1.3 }, "XL": { "min": 1.3, "max": 1.6, "maxCifra": 2 } },
+  "roluri": {
+    "mare": { "baza": 104, "min": 90, "font": "titlu", "inaltime_rand": 1.08, "spatiere": -0.02 },
+    "cifra": { "baza": 220, "min": 160, "font": "titlu", "inaltime_rand": 1, "spatiere": 0 },
+    "mediu": { "baza": 60, "min": 48, "font": "text", "greutate": 500, "inaltime_rand": 1.2, "spatiere": 0 },
+    "mic": { "baza": 36, "min": 36, "font": "text", "greutate": 500, "inaltime_rand": 1.3, "spatiere": 0 }
+  },
+  "greutate_titlu": { "montserrat": 800, "implicit": 700 },
+  "aliniere": { "noapte": "centru", "hartie": "stanga", "curat": "stanga", "contrast": "centru" },
+  "spatii": { "eticheta": 28, "bloc": 40, "puncte": 22, "mic": 18, "sigla": 56 },
+  "lista": { "marcaj_em": 0.9, "gol_em": 0.45 },
+  "sigla_max_octeti": 2097152,
+  "durate": {
+    "titlu": { "baza": 1.4, "pe": 0.3, "min": 2.2, "max": 5 },
+    "fraza": { "baza": 1.2, "pe": 0.45, "min": 2.5, "max": 6 },
+    "cuvinte": { "baza": 1.0, "pe": 0.9, "min": 2.8, "max": 6.5 },
+    "lista": { "baza": 1.2, "pe": 0.9, "cu_titlu": 0.5, "min": 3, "max": 7 },
+    "cifra": { "baza": 3.2, "cu_sursa": 0.6 },
+    "citat": { "baza": 1.6, "pe": 0.3, "min": 3.5, "max": 8 },
+    "final": { "baza": 3.5 }
+  },
+  "ritm": {
+    "calm": { "factor": 1.2, "intrare": 0.8, "pas_rand": 0.35, "pas_fraza": 0.22, "pas_cuvinte": 1.75, "pas_puncte": 0.55, "ease": "power3.out" },
+    "normal": { "factor": 1, "intrare": 0.7, "pas_rand": 0.3, "pas_fraza": 0.18, "pas_cuvinte": 1.6, "pas_puncte": 0.45, "ease": "power3.out" },
+    "alert": { "factor": 0.85, "intrare": 0.55, "pas_rand": 0.24, "pas_fraza": 0.14, "pas_cuvinte": 1.55, "pas_puncte": 0.35, "ease": "back.out(1.6)" }
+  },
+  "timpi": {
+    "inceput": 0.1, "eticheta_intrare": 0.5, "eticheta_avans": 0.25, "iesire": 0.45,
+    "cuvant_fraza": 0.5, "cuvant_intrare": 0.45, "cuvant_iesire": 0.3, "iesire_inainte": 0.3,
+    "numarare": 1.4, "text_cifra": 0.6, "aparitie_cifra": 0.3, "tastare_caracter": 0.045, "tastare": [0.6, 1.6],
+    "aparitie_mica": 0.5, "dupa_bloc": 0.1, "dupa_citat": 0.2, "bifa": 0.35, "bifa_dupa": 0.15, "aparitie_tastare": 0.15,
+    "citire_min": 0.8, "deriva": 12, "impingere": 1.03
+  },
+  "plafoane": { "eticheta": 28, "titlu": 28, "fraza": 70, "cuvant": 24, "punct": 40, "text_cifra": 40, "sursa": 60, "autor": 32, "rol": 40, "detaliu": 40, "cta": 32 },
+  "jetoane": { "linie": "text" }
+}

@@ -1,0 +1,203 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "mg:overlay-filmare/1",
+  "title": "date.json pentru overlay-filmare, versiunea 1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["sablon", "versiune_schema", "format", "filmare"],
+  "x-mesaj": {
+    "additionalProperties": "Câmpul nu există în overlay-filmare (muzica, sigla și scenele nu există aici; sunetul e vocea din filmare).",
+    "required": "Lipsește un câmp obligatoriu: sablon, versiune_schema, format sau filmare (le scrie mg nou)."
+  },
+  "properties": {
+    "sablon": { "const": "overlay-filmare", "x-mesaj": { "const": "Câmpul sablon trebuie să fie exact „overlay-filmare”." } },
+    "versiune_schema": { "type": "integer", "const": 1, "x-mesaj": { "const": "date.json e scris pentru altă versiune a șablonului; overlay-filmare acceptă doar versiune_schema 1." } },
+    "format": { "enum": ["vertical", "orizontal"], "x-mesaj": { "enum": "Formatul e vertical sau orizontal (pătratul nu există în v1)." } },
+    "limba": { "enum": ["en", "es", "fr", "de", "bg", "hr", "cs", "da", "nl", "et", "fi", "el", "hu", "it", "lv", "lt", "mt", "pl", "pt", "ro", "sk", "sl", "sv", "ru", "uk"], "x-mesaj": { "enum": "Limba e una dintre limbile transcrierii Parakeet: en es fr de bg hr cs da nl et fi el hu it lv lt mt pl pt ro sk sl sv ru uk." } },
+    "filmare": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["fisier"],
+      "x-mesaj": { "additionalProperties": "În filmare există doar fisier, start, sfarsit și focus_x.", "required": "filmare.fisier lipsește; îl scrie mg nou." },
+      "properties": {
+        "fisier": { "const": "active/filmare-lucru.mp4", "x-mesaj": { "const": "filmare.fisier e mereu „active/filmare-lucru.mp4” (copia de lucru făcută de mg nou); nu-l schimba." } },
+        "start": { "type": "number", "minimum": 0, "x-mesaj": { "minimum": "filmare.start e cel puțin 0 (secunde de la începutul filmării).", "type": "filmare.start e un număr de secunde." } },
+        "sfarsit": { "type": ["number", "null"], "exclusiveMinimum": 0, "x-mesaj": { "exclusiveMinimum": "filmare.sfarsit e un număr de secunde mai mare decât 0 sau null (până la capăt).", "type": "filmare.sfarsit e un număr de secunde sau null." } },
+        "focus_x": { "type": "number", "minimum": 0, "maximum": 100, "x-mesaj": { "minimum": "filmare.focus_x e un procent între 0 și 100.", "maximum": "filmare.focus_x e un procent între 0 și 100.", "type": "filmare.focus_x e un procent între 0 și 100." } }
+      }
+    },
+    "brand": { "type": ["string", "null"], "pattern": "^[a-z0-9-]{2,40}$", "x-mesaj": { "pattern": "Numele brandului are 2-40 de caractere: litere mici, cifre și cratimă." } },
+    "stil": { "$ref": "#/$defs/stil" },
+    "subtitrari": { "$ref": "#/$defs/subtitrari" },
+    "corecturi": { "type": "array", "maxItems": 60, "items": { "$ref": "#/$defs/corectura" }, "x-mesaj": { "maxItems": "Sunt cel mult 60 de corecturi." } },
+    "elemente": { "type": "array", "maxItems": 12, "items": { "$ref": "#/$defs/element" }, "x-mesaj": { "maxItems": "Sunt cel mult 12 elemente peste filmare." } }
+  },
+  "$defs": {
+    "hex": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$", "x-mesaj": { "pattern": "Culoarea se scrie în hex, cu 6 cifre: #RRGGBB.", "type": "Culoarea se scrie în hex, ca text: \"#RRGGBB\"." } },
+    "stil": {
+      "type": "object",
+      "additionalProperties": false,
+      "x-mesaj": { "additionalProperties": "Câmpul nu există în stil la overlay-filmare (atmosfera, granulația și fontul textului mic vin din temă)." },
+      "properties": {
+        "descriere": { "type": "string", "maxLength": 300, "x-mesaj": { "maxLength": "Descrierea stilului are cel mult 300 de caractere." } },
+        "tema": { "enum": ["noapte", "hartie", "curat"], "x-mesaj": { "enum": "Tema e una dintre: noapte, hartie, curat." } },
+        "culori": {
+          "type": "object",
+          "additionalProperties": false,
+          "x-mesaj": { "additionalProperties": "În culori se pot da doar fundal, text și accent; culoarea atenuată vine din temă." },
+          "properties": {
+            "fundal": { "$ref": "#/$defs/hex" },
+            "text": { "$ref": "#/$defs/hex" },
+            "accent": { "$ref": "#/$defs/hex" }
+          }
+        },
+        "opacitate_fundal": { "type": "number", "minimum": 0.45, "maximum": 1, "x-mesaj": { "minimum": "Opacitatea fundalului e între 0,45 și 1.", "maximum": "Opacitatea fundalului e între 0,45 și 1.", "type": "Opacitatea fundalului e un număr între 0,45 și 1." } },
+        "font_titlu": { "enum": ["fraunces", "instrument-sans", "inter", "montserrat", "playfair-display"], "x-mesaj": { "enum": "Fontul titlului e unul dintre: fraunces, instrument-sans, inter, montserrat, playfair-display." } },
+        "ritm": { "enum": ["calm", "normal", "alert"], "x-mesaj": { "enum": "Ritmul e calm, normal sau alert." } }
+      }
+    },
+    "subtitrari": {
+      "type": "object",
+      "additionalProperties": false,
+      "x-mesaj": { "additionalProperties": "Câmpul nu există în subtitrari; sunt doar activ, animatie, pozitie, marime, cuvinte_max, evidentiaza și majuscule." },
+      "properties": {
+        "activ": { "type": "boolean", "x-mesaj": { "type": "subtitrari.activ e true sau false." } },
+        "animatie": { "enum": ["cuvant-activ", "grup"], "x-mesaj": { "enum": "Animația subtitrărilor e cuvant-activ sau grup." } },
+        "pozitie": { "enum": ["jos", "mijloc", "jos-de-tot"], "x-mesaj": { "enum": "Poziția subtitrărilor e jos, mijloc sau jos-de-tot." } },
+        "marime": { "enum": ["S", "M", "L"], "x-mesaj": { "enum": "Mărimea subtitrărilor e S, M sau L." } },
+        "cuvinte_max": { "type": "integer", "minimum": 2, "maximum": 6, "x-mesaj": { "minimum": "Un grup de subtitrare are între 2 și 6 cuvinte.", "maximum": "Un grup de subtitrare are între 2 și 6 cuvinte.", "type": "cuvinte_max e un număr întreg între 2 și 6." } },
+        "evidentiaza": {
+          "type": "array",
+          "maxItems": 12,
+          "items": { "type": "string", "minLength": 1, "maxLength": 30, "pattern": "^\\S+( \\S+){0,2}$", "x-mesaj": { "minLength": "O expresie evidențiată are 1-3 cuvinte și cel mult 30 de caractere.", "maxLength": "O expresie evidențiată are 1-3 cuvinte și cel mult 30 de caractere.", "pattern": "O expresie evidențiată are 1-3 cuvinte și cel mult 30 de caractere." } },
+          "x-mesaj": { "maxItems": "Se evidențiază cel mult 12 expresii." }
+        },
+        "majuscule": { "type": "boolean", "x-mesaj": { "type": "subtitrari.majuscule e true sau false." } }
+      }
+    },
+    "corectura": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["cuvinte", "din", "in"],
+      "x-mesaj": { "additionalProperties": "O corectură are doar cuvinte, din și in.", "required": "O corectură are nevoie de cuvinte, din și in." },
+      "properties": {
+        "cuvinte": { "type": "string", "pattern": "^w(0|[1-9][0-9]*)(-w(0|[1-9][0-9]*))?$", "x-mesaj": { "pattern": "cuvinte e wN sau wN-wM, de exemplu „w21-w22”.", "type": "cuvinte e text: wN sau wN-wM." } },
+        "din": { "type": "string", "minLength": 1, "maxLength": 80, "x-mesaj": { "minLength": "Câmpul din nu poate fi gol; el copiază textul actual al cuvintelor.", "maxLength": "Câmpul din are cel mult 80 de caractere." } },
+        "in": { "type": "string", "minLength": 0, "maxLength": 40, "x-mesaj": { "maxLength": "Câmpul in are cel mult 40 de caractere (sau \"\" pentru a șterge cuvintele)." } }
+      }
+    },
+    "ancora": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["fraza"],
+      "x-mesaj": { "additionalProperties": "O ancoră are doar fraza și aparitia.", "required": "O ancoră are nevoie de fraza rostită." },
+      "properties": {
+        "fraza": { "type": "string", "minLength": 1, "maxLength": 60, "pattern": "^\\S+( \\S+){0,5}$", "x-mesaj": { "minLength": "Fraza de ancorare are 1-6 cuvinte și cel mult 60 de caractere.", "maxLength": "Fraza de ancorare are 1-6 cuvinte și cel mult 60 de caractere.", "pattern": "Fraza de ancorare are 1-6 cuvinte și cel mult 60 de caractere." } },
+        "aparitia": { "type": "integer", "minimum": 1, "x-mesaj": { "minimum": "aparitia începe de la 1 (prima apariție a frazei).", "type": "aparitia e un număr întreg, începând de la 1." } }
+      }
+    },
+    "rand": { "type": "string", "minLength": 1, "maxLength": 42, "x-mesaj": { "minLength": "Un rând nu poate fi gol.", "maxLength": "Un rând are cel mult 42 de caractere." } },
+    "la": { "type": "number", "minimum": 0, "x-mesaj": { "minimum": "la e un moment în secunde, cel puțin 0.", "type": "la e un număr de secunde." } },
+    "id": { "type": "string", "pattern": "^[a-z0-9-]{1,24}$", "x-mesaj": { "pattern": "Id-ul unui element are 1-24 de caractere: litere mici, cifre și cratimă." } },
+    "element": {
+      "type": "object",
+      "required": ["tip"],
+      "x-mesaj": { "required": "Fiecare element are un tip: titlu, nume, cifra, citat, lista sau final." },
+      "properties": {
+        "tip": { "enum": ["titlu", "nume", "cifra", "citat", "lista", "final"], "x-mesaj": { "enum": "Tipul elementului e unul dintre: titlu, nume, cifra, citat, lista, final." } }
+      },
+      "allOf": [
+        { "if": { "type": "object", "properties": { "tip": { "const": "titlu" } }, "required": ["tip"] }, "then": { "$ref": "#/$defs/elementTitlu" } },
+        { "if": { "type": "object", "properties": { "tip": { "const": "nume" } }, "required": ["tip"] }, "then": { "$ref": "#/$defs/elementNume" } },
+        { "if": { "type": "object", "properties": { "tip": { "const": "cifra" } }, "required": ["tip"] }, "then": { "$ref": "#/$defs/elementCifra" } },
+        { "if": { "type": "object", "properties": { "tip": { "const": "citat" } }, "required": ["tip"] }, "then": { "$ref": "#/$defs/elementCitat" } },
+        { "if": { "type": "object", "properties": { "tip": { "const": "lista" } }, "required": ["tip"] }, "then": { "$ref": "#/$defs/elementLista" } },
+        { "if": { "type": "object", "properties": { "tip": { "const": "final" } }, "required": ["tip"] }, "then": { "$ref": "#/$defs/elementFinal" } },
+        {
+          "if": { "type": "object", "properties": { "tip": { "enum": ["titlu", "nume", "cifra", "citat", "lista"] } }, "required": ["tip"] },
+          "then": {
+            "allOf": [
+              { "not": { "properties": { "la": true, "ancora": true }, "required": ["la", "ancora"] }, "x-mesaj": { "not": "Elementul are fie la (secunda de intrare), fie ancora (fraza rostită), nu amândouă." } },
+              { "not": { "not": { "properties": { "la": true, "ancora": true }, "anyOf": [{ "required": ["la"] }, { "required": ["ancora"] }] } }, "x-mesaj": { "not": "Elementul are fie la (secunda de intrare), fie ancora (fraza rostită), nu amândouă." } }
+            ]
+          }
+        },
+        {
+          "if": { "type": "object", "properties": { "tip": { "const": "final" } }, "required": ["tip"] },
+          "then": { "not": { "properties": { "la": true, "ancora": true }, "required": ["la", "ancora"] }, "x-mesaj": { "not": "Elementul are fie la (secunda de intrare), fie ancora (fraza rostită), nu amândouă." } }
+        }
+      ]
+    },
+    "elementTitlu": {
+      "type": "object", "additionalProperties": false, "required": ["tip", "titlu"],
+      "x-mesaj": { "additionalProperties": "Elementul titlu are doar tip, id, la, ancora, durata, eticheta și titlu.", "required": "Elementul titlu are nevoie de titlu (1-2 rânduri)." },
+      "properties": {
+        "tip": { "const": "titlu" }, "id": { "$ref": "#/$defs/id" }, "la": { "$ref": "#/$defs/la" }, "ancora": { "$ref": "#/$defs/ancora" },
+        "durata": { "type": "number", "minimum": 1.5, "maximum": 5, "x-mesaj": { "minimum": "Un titlu durează cel puțin 1,5 s.", "maximum": "Un titlu durează cel mult 5 s.", "type": "durata e un număr de secunde." } },
+        "eticheta": { "type": "string", "minLength": 1, "maxLength": 24, "x-mesaj": { "minLength": "Eticheta nu poate fi goală; scoate câmpul dacă nu o vrei.", "maxLength": "Eticheta are cel mult 24 de caractere." } },
+        "titlu": { "type": "array", "minItems": 1, "maxItems": 2, "items": { "$ref": "#/$defs/rand" }, "x-mesaj": { "minItems": "Titlul are cel puțin un rând.", "maxItems": "Titlul are cel mult 2 rânduri." } }
+      }
+    },
+    "elementNume": {
+      "type": "object", "additionalProperties": false, "required": ["tip", "nume"],
+      "x-mesaj": { "additionalProperties": "Elementul nume are doar tip, id, la, ancora, durata, nume și rol.", "required": "Elementul nume are nevoie de nume." },
+      "properties": {
+        "tip": { "const": "nume" }, "id": { "$ref": "#/$defs/id" }, "la": { "$ref": "#/$defs/la" }, "ancora": { "$ref": "#/$defs/ancora" },
+        "durata": { "type": "number", "minimum": 2, "maximum": 5, "x-mesaj": { "minimum": "Un nume durează cel puțin 2 s.", "maximum": "Un nume durează cel mult 5 s.", "type": "durata e un număr de secunde." } },
+        "nume": { "type": "string", "minLength": 1, "maxLength": 28, "x-mesaj": { "minLength": "Numele nu poate fi gol.", "maxLength": "Numele are cel mult 28 de caractere." } },
+        "rol": { "type": "string", "minLength": 1, "maxLength": 40, "x-mesaj": { "minLength": "Rolul nu poate fi gol; scoate câmpul dacă nu-l vrei.", "maxLength": "Rolul are cel mult 40 de caractere." } }
+      }
+    },
+    "elementCifra": {
+      "type": "object", "additionalProperties": false, "required": ["tip", "valoare"],
+      "x-mesaj": { "additionalProperties": "Elementul cifra are doar tip, id, la, ancora, durata, valoare, prefix, sufix, zecimale și text.", "required": "Elementul cifra are nevoie de valoare." },
+      "properties": {
+        "tip": { "const": "cifra" }, "id": { "$ref": "#/$defs/id" }, "la": { "$ref": "#/$defs/la" }, "ancora": { "$ref": "#/$defs/ancora" },
+        "durata": { "type": "number", "minimum": 1.5, "maximum": 5, "x-mesaj": { "minimum": "O cifră durează cel puțin 1,5 s.", "maximum": "O cifră durează cel mult 5 s.", "type": "durata e un număr de secunde." } },
+        "valoare": { "type": "number", "x-mesaj": { "type": "Valoarea cifrei e un număr, fără ghilimele." } },
+        "prefix": { "type": "string", "minLength": 1, "maxLength": 4, "x-mesaj": { "minLength": "Prefixul nu poate fi gol.", "maxLength": "Prefixul are cel mult 4 caractere." } },
+        "sufix": { "type": "string", "minLength": 1, "maxLength": 8, "x-mesaj": { "minLength": "Sufixul nu poate fi gol.", "maxLength": "Sufixul are cel mult 8 caractere." } },
+        "zecimale": { "type": "integer", "minimum": 0, "maximum": 2, "x-mesaj": { "minimum": "Zecimalele sunt 0, 1 sau 2.", "maximum": "Zecimalele sunt 0, 1 sau 2.", "type": "Zecimalele sunt 0, 1 sau 2." } },
+        "text": { "type": "string", "minLength": 1, "maxLength": 40, "x-mesaj": { "minLength": "Textul nu poate fi gol; scoate câmpul dacă nu-l vrei.", "maxLength": "Textul cifrei are cel mult 40 de caractere." } }
+      }
+    },
+    "elementCitat": {
+      "type": "object", "additionalProperties": false, "required": ["tip", "text"],
+      "x-mesaj": { "additionalProperties": "Elementul citat are doar tip, id, la, ancora, durata, text și autor.", "required": "Elementul citat are nevoie de text." },
+      "properties": {
+        "tip": { "const": "citat" }, "id": { "$ref": "#/$defs/id" }, "la": { "$ref": "#/$defs/la" }, "ancora": { "$ref": "#/$defs/ancora" },
+        "durata": { "type": "number", "minimum": 2.5, "maximum": 8, "x-mesaj": { "minimum": "Un citat durează cel puțin 2,5 s.", "maximum": "Un citat durează cel mult 8 s.", "type": "durata e un număr de secunde." } },
+        "text": { "type": "string", "minLength": 1, "maxLength": 120, "x-mesaj": { "minLength": "Citatul nu poate fi gol.", "maxLength": "Citatul are cel mult 120 de caractere; scurtează-l." } },
+        "autor": { "type": "string", "minLength": 1, "maxLength": 40, "x-mesaj": { "minLength": "Autorul nu poate fi gol; scoate câmpul dacă nu-l vrei.", "maxLength": "Autorul are cel mult 40 de caractere." } }
+      }
+    },
+    "elementLista": {
+      "type": "object", "additionalProperties": false, "required": ["tip", "puncte"],
+      "x-mesaj": { "additionalProperties": "Elementul lista are doar tip, id, la, ancora, durata, titlu și puncte.", "required": "Elementul lista are nevoie de puncte (2-4)." },
+      "properties": {
+        "tip": { "const": "lista" }, "id": { "$ref": "#/$defs/id" }, "la": { "$ref": "#/$defs/la" }, "ancora": { "$ref": "#/$defs/ancora" },
+        "durata": { "type": "number", "minimum": 3, "maximum": 8, "x-mesaj": { "minimum": "O listă durează cel puțin 3 s.", "maximum": "O listă durează cel mult 8 s.", "type": "durata e un număr de secunde." } },
+        "titlu": { "type": "array", "minItems": 1, "maxItems": 1, "items": { "type": "string", "minLength": 1, "maxLength": 28, "x-mesaj": { "minLength": "Titlul listei nu poate fi gol.", "maxLength": "Titlul listei are cel mult 28 de caractere." } }, "x-mesaj": { "minItems": "Titlul listei are un rând.", "maxItems": "Titlul listei are un singur rând." } },
+        "puncte": { "type": "array", "minItems": 2, "maxItems": 4, "items": { "$ref": "#/$defs/punct" }, "x-mesaj": { "minItems": "Lista are cel puțin 2 puncte.", "maxItems": "Lista are cel mult 4 puncte." } }
+      }
+    },
+    "punct": {
+      "type": "object", "additionalProperties": false, "required": ["text", "ancora"],
+      "x-mesaj": { "additionalProperties": "Un punct are doar text și ancora.", "required": "Un punct de listă are nevoie de text și ancora." },
+      "properties": {
+        "text": { "type": "string", "minLength": 1, "maxLength": 32, "x-mesaj": { "minLength": "Un punct nu poate fi gol.", "maxLength": "Un punct are cel mult 32 de caractere." } },
+        "ancora": { "$ref": "#/$defs/ancora" }
+      }
+    },
+    "elementFinal": {
+      "type": "object", "additionalProperties": false, "required": ["tip", "cta"],
+      "x-mesaj": { "additionalProperties": "Elementul final are doar tip, id, la, ancora, durata, cta și detaliu.", "required": "Elementul final are nevoie de cta." },
+      "properties": {
+        "tip": { "const": "final" }, "id": { "$ref": "#/$defs/id" }, "la": { "$ref": "#/$defs/la" }, "ancora": { "$ref": "#/$defs/ancora" },
+        "durata": { "type": "number", "minimum": 2, "maximum": 6, "x-mesaj": { "minimum": "Finalul durează cel puțin 2 s.", "maximum": "Finalul durează cel mult 6 s.", "type": "durata e un număr de secunde." } },
+        "cta": { "type": "string", "minLength": 1, "maxLength": 48, "x-mesaj": { "minLength": "Îndemnul nu poate fi gol.", "maxLength": "Îndemnul final are cel mult 48 de caractere." } },
+        "detaliu": { "type": "string", "minLength": 1, "maxLength": 40, "x-mesaj": { "minLength": "Detaliul nu poate fi gol; scoate câmpul dacă nu-l vrei.", "maxLength": "Detaliul are cel mult 40 de caractere." } }
+      }
+    }
+  }
+}

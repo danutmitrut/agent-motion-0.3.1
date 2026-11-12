@@ -1,0 +1,34 @@
+{
+  "sablon": "text-animat",
+  "versiune_schema": 1,
+  "format": "vertical",
+  "scene": [
+    {
+      "tip": "final",
+      "titlu": [
+        "Hai să-l construim",
+        "*împreună*."
+      ],
+      "detaliu": "exemplu.ro/atelier"
+    },
+    {
+      "tip": "titlu",
+      "eticheta": "Pentru soloprenori",
+      "titlu": [
+        "Lucrezi 12 ore",
+        "și tot *nu ajungi*?"
+      ]
+    },
+    {
+      "tip": "lista",
+      "titlu": [
+        "Unde se pierde:"
+      ],
+      "puncte": [
+        "E-mailuri de rutină",
+        "Programări și reveniri",
+        "Rapoarte copiate de mână"
+      ]
+    }
+  ]
+}

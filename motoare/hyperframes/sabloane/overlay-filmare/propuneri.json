@@ -1,0 +1,11 @@
+{
+  "versiune": 1,
+  "propuneri": [
+    { "cerere": "subtitrările în altă parte", "camp": "subtitrari.pozitie", "variante": ["jos", "jos-de-tot (doar pe vertical, lipite de marginea de jos)", "mijloc"] },
+    { "cerere": "subtitrări mai mari sau mai mici", "camp": "subtitrari.marime, subtitrari.cuvinte_max", "variante": ["S, M sau L", "mai puține cuvinte pe grup, ca să ocupe mai puțin"] },
+    { "cerere": "subtitrările altfel", "camp": "subtitrari.animatie, subtitrari.majuscule, subtitrari.activ", "variante": ["cuvântul rostit colorat sau tot grupul deodată", "cu majuscule", "fără subtitrări"] },
+    { "cerere": "un element mai devreme, mai târziu sau mai mult pe ecran", "camp": "elemente[i].la, elemente[i].ancora, elemente[i].durata", "variante": ["la altă secundă", "legat de altă frază", "mai lung, în limitele tipului"] },
+    { "cerere": "alte culori sau carduri mai transparente", "camp": "stil.tema, stil.culori, stil.opacitate_fundal", "variante": ["tema curat, hartie sau noapte", "altă culoare de accent", "cardurile mai transparente sau mai opace"] },
+    { "cerere": "tăieturi, zoom, B-roll, muzică", "camp": "nu există în overlay-filmare", "variante": ["tăiat doar începutul sau finalul (filmare.start, filmare.sfarsit)", "un element de text în plus, în locul unui efect"] }
+  ]
+}

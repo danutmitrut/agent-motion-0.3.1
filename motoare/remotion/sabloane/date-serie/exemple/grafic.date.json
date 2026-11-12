@@ -1,0 +1,31 @@
+{
+  "sablon": "date-serie",
+  "versiune_schema": 1,
+  "compozitie": "grafic",
+  "format": "vertical",
+  "brand": null,
+  "stil": { "descriere": "sobru, întunecat, tehnic", "tema": "noapte" },
+  "muzica": null,
+  "scene": [
+    { "tip": "titlu", "eticheta": "Primul semestru", "titlu": ["Cursul meu online,", "în cifre"], "subtitlu": "Ianuarie-iunie 2026", "durata": 3.8 },
+    { "tip": "cifra", "eticheta": "Cursanți", "valoare": 1248, "text": "oameni au terminat cel puțin un modul", "durata": 4 },
+    {
+      "tip": "bare", "titlu": ["Vânzări pe luni"], "unitate": "lei",
+      "valori": [
+        { "eticheta": "ian", "valoare": 8400 }, { "eticheta": "feb", "valoare": 9100 },
+        { "eticheta": "mar", "valoare": 12650 }, { "eticheta": "apr", "valoare": 11200 },
+        { "eticheta": "mai", "valoare": 15800 }, { "eticheta": "iun", "valoare": 21300 }
+      ],
+      "evidentiaza": "iun", "sursa": "Stripe, export 1 iulie 2026", "durata": 7.8
+    },
+    {
+      "tip": "comparatie", "titlu": ["Față de 2025"],
+      "valori": [
+        { "eticheta": "S1 2025", "valoare": 41200, "sufix": " lei" },
+        { "eticheta": "S1 2026", "valoare": 78450, "sufix": " lei" }
+      ],
+      "evidentiaza": "S1 2026", "durata": 4.6
+    },
+    { "tip": "final", "titlu": ["Următoarea grupă", "pe 15 octombrie"], "cta": "Link în bio", "durata": 3.8 }
+  ]
+}

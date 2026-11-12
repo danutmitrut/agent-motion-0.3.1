@@ -1,0 +1,17 @@
+{
+  "sablon": "date-serie",
+  "versiune_schema": 1,
+  "compozitie": "serie",
+  "stil": {
+    "tema": "noapte"
+  },
+  "serie": {
+    "fisier": "resurse/testimoniale.csv",
+    "poze": "resurse/poze",
+    "eticheta": "Ce spun cursanții",
+    "cta": "Înscrierile sunt deschise",
+    "scurtari": {
+      "Elena Dumitrescu": "La început credeam că e încă un curs pe care îl încep și nu-l termin. Dar fiecare atelier m-a lăsat cu ceva care merge a doua zi în afacerea mea (…). Am recuperat cam o zi pe săptămână și o folosesc pentru clienți."
+    }
+  }
+}

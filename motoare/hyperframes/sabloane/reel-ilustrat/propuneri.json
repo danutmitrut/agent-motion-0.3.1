@@ -1,0 +1,11 @@
+{
+  "versiune": 1,
+  "propuneri": [
+    { "cerere": "mai încet sau mai repede", "camp": "scene[i].durata, stil.ritm", "variante": ["1-2 s în plus sau în minus pe scena numită", "ritm calm sau alert pe tot filmul"] },
+    { "cerere": "desenul altfel", "camp": "scene[i].desen (id, marime, pozitie, oglindit)", "variante": ["alt desen din bibliotecă, arătat înainte", "mic, mediu sau mare", "în stânga, în centru sau în dreapta, oglindit"] },
+    { "cerere": "alte culori sau altă atmosferă", "camp": "stil.tema, stil.culori, stil.atmosfera", "variante": ["tema curat, hartie sau noapte", "altă culoare de accent", "fără ceață (plin)"] },
+    { "cerere": "alt text pe card", "camp": "scene[i] (titlu, cuvinte, eticheta)", "variante": ["textul tău, cuvânt cu cuvânt", "o formulare mai scurtă, propusă de agent"] },
+    { "cerere": "textul mai mare", "camp": "scene[i].marime (titlul: M, L, XL)", "variante": ["titlul cu o treaptă mai mare, L sau XL", "mai puține cuvinte pe rând, ca titlul să încapă mai mare", "textul mutat într-un reel text-animat, unde și cuvintele se pot mări"] },
+    { "cerere": "altă muzică", "camp": "muzica.fisier, muzica.volum", "variante": ["alt fișier adus de tine", "muzica mai încet", "fără muzică"] }
+  ]
+}

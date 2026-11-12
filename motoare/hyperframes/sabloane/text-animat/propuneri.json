@@ -1,0 +1,12 @@
+{
+  "versiune": 1,
+  "propuneri": [
+    { "cerere": "mai încet, să apuc să citesc", "camp": "scene[i].durata, stil.ritm", "variante": ["1-2 s în plus pe scena numită", "ritm calm pe tot filmul", "lista împărțită în două scene"] },
+    { "cerere": "mai mare, să se vadă", "camp": "scene[i].marime", "variante": ["treapta L", "treapta XL", "mai puțin text pe scenă, ca să încapă mai mare"] },
+    { "cerere": "alte culori", "camp": "stil.tema, stil.culori", "variante": ["tema curat (albă, luminoasă)", "tema hartie (crem, caldă)", "tema contrast (energică)", "altă culoare de accent, aleasă de tine"] },
+    { "cerere": "alt font sau altă așezare", "camp": "stil.font_titlu, stil.aliniere", "variante": ["inter, instrument-sans, montserrat sau playfair-display", "textul la stânga sau centrat"] },
+    { "cerere": "altă muzică sau alt volum", "camp": "muzica.fisier, muzica.volum", "variante": ["alt MP3 adus de tine", "muzica mai încet (volum 0,5)", "fără muzică"] },
+    { "cerere": "alt text", "camp": "scene[i] (titlu, text, puncte, cuvinte)", "variante": ["textul tău, cuvânt cu cuvânt", "o formulare mai scurtă, propusă de agent"] },
+    { "cerere": "efecte, emoji, iconițe, alt fundal pe o scenă", "camp": "nu există în text-animat", "variante": ["accentul *...* pe cuvintele importante", "atmosfera degrade sau ceata", "un reel ilustrat (reel-ilustrat), dacă vrei desene"] }
+  ]
+}

@@ -1,0 +1,266 @@
+{
+  "versiune": 1,
+  "sursa": "parakeet",
+  "limba": "ro",
+  "durata": 15.104,
+  "cuvinte": [
+    {
+      "id": "w0",
+      "text": "Vrei",
+      "start": 0.32,
+      "end": 0.64
+    },
+    {
+      "id": "w1",
+      "text": "să",
+      "start": 0.8,
+      "end": 0.96
+    },
+    {
+      "id": "w2",
+      "text": "încep",
+      "start": 0.96,
+      "end": 1.28
+    },
+    {
+      "id": "w3",
+      "text": "cu",
+      "start": 1.36,
+      "end": 1.52
+    },
+    {
+      "id": "w4",
+      "text": "un",
+      "start": 1.52,
+      "end": 1.68
+    },
+    {
+      "id": "w5",
+      "text": "agent,",
+      "start": 1.68,
+      "end": 2.24
+    },
+    {
+      "id": "w6",
+      "text": "ai",
+      "start": 2.24,
+      "end": 2.4
+    },
+    {
+      "id": "w7",
+      "text": "nevoie",
+      "start": 2.48,
+      "end": 2.8
+    },
+    {
+      "id": "w8",
+      "text": "de",
+      "start": 2.8,
+      "end": 2.96
+    },
+    {
+      "id": "w9",
+      "text": "trei",
+      "start": 2.96,
+      "end": 3.2
+    },
+    {
+      "id": "w10",
+      "text": "lucrări,",
+      "start": 3.2,
+      "end": 3.84
+    },
+    {
+      "id": "w11",
+      "text": "o",
+      "start": 3.84,
+      "end": 4
+    },
+    {
+      "id": "w12",
+      "text": "singură",
+      "start": 4,
+      "end": 4.32
+    },
+    {
+      "id": "w13",
+      "text": "sarcină,",
+      "start": 4.4,
+      "end": 5.12
+    },
+    {
+      "id": "w14",
+      "text": "pa",
+      "start": 5.12,
+      "end": 5.28
+    },
+    {
+      "id": "w15",
+      "text": "și",
+      "start": 5.36,
+      "end": 5.44
+    },
+    {
+      "id": "w16",
+      "text": "scris,",
+      "start": 5.6,
+      "end": 6
+    },
+    {
+      "id": "w17",
+      "text": "și",
+      "start": 6,
+      "end": 6.16
+    },
+    {
+      "id": "w18",
+      "text": "o",
+      "start": 6.16,
+      "end": 6.32
+    },
+    {
+      "id": "w19",
+      "text": "săptămână",
+      "start": 6.32,
+      "end": 6.64
+    },
+    {
+      "id": "w20",
+      "text": "de",
+      "start": 6.8,
+      "end": 6.96
+    },
+    {
+      "id": "w21",
+      "text": "probă,",
+      "start": 6.96,
+      "end": 7.44
+    },
+    {
+      "id": "w22",
+      "text": "alege",
+      "start": 7.44,
+      "end": 8
+    },
+    {
+      "id": "w23",
+      "text": "sarcina",
+      "start": 8,
+      "end": 8.48
+    },
+    {
+      "id": "w24",
+      "text": "care",
+      "start": 8.56,
+      "end": 8.72
+    },
+    {
+      "id": "w25",
+      "text": "te",
+      "start": 8.72,
+      "end": 8.88
+    },
+    {
+      "id": "w26",
+      "text": "obosește",
+      "start": 8.88,
+      "end": 9.52
+    },
+    {
+      "id": "w27",
+      "text": "în",
+      "start": 9.52,
+      "end": 9.6
+    },
+    {
+      "id": "w28",
+      "text": "fiecare",
+      "start": 9.6,
+      "end": 10
+    },
+    {
+      "id": "w29",
+      "text": "zi,",
+      "start": 10.08,
+      "end": 10.48
+    },
+    {
+      "id": "w30",
+      "text": "scrie",
+      "start": 10.48,
+      "end": 10.72
+    },
+    {
+      "id": "w31",
+      "text": "pa",
+      "start": 10.88,
+      "end": 11.12
+    },
+    {
+      "id": "w32",
+      "text": "și",
+      "start": 11.12,
+      "end": 11.28
+    },
+    {
+      "id": "w33",
+      "text": "exact",
+      "start": 11.28,
+      "end": 11.68
+    },
+    {
+      "id": "w34",
+      "text": "cum",
+      "start": 11.68,
+      "end": 11.84
+    },
+    {
+      "id": "w35",
+      "text": "îi",
+      "start": 11.84,
+      "end": 12
+    },
+    {
+      "id": "w36",
+      "text": "faci",
+      "start": 12,
+      "end": 12.32
+    },
+    {
+      "id": "w37",
+      "text": "tu,",
+      "start": 12.32,
+      "end": 12.48
+    },
+    {
+      "id": "w38",
+      "text": "și",
+      "start": 12.48,
+      "end": 12.64
+    },
+    {
+      "id": "w39",
+      "text": "lasă",
+      "start": 12.64,
+      "end": 12.88
+    },
+    {
+      "id": "w40",
+      "text": "agentul",
+      "start": 12.96,
+      "end": 13.44
+    },
+    {
+      "id": "w41",
+      "text": "să",
+      "start": 13.44,
+      "end": 13.6
+    },
+    {
+      "id": "w42",
+      "text": "lucreze.",
+      "start": 13.6,
+      "end": 14.72
+    }
+  ]
+}

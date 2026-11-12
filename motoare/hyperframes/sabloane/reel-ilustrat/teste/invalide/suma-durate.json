@@ -1,0 +1,35 @@
+{
+  "sablon": "reel-ilustrat",
+  "versiune_schema": 1,
+  "durata": 20,
+  "scene": [
+    {
+      "tip": "desen",
+      "durata": 6,
+      "desen": {
+        "id": "op-bust-telefon"
+      },
+      "titlu": [
+        "Faci totul singur."
+      ]
+    },
+    {
+      "tip": "retea",
+      "durata": 6,
+      "titlu": [
+        "Un sistem",
+        "*preia rutina.*"
+      ]
+    },
+    {
+      "tip": "final",
+      "durata": 6,
+      "desen": {
+        "id": "op-picioare-explica-ochelari"
+      },
+      "titlu": [
+        "Tu decizi."
+      ]
+    }
+  ]
+}

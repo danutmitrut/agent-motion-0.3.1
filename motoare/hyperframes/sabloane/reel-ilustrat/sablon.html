@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1080, height=1920">
+    <title>reel-ilustrat</title>
+    <script src="gsap.min.js"></script>
+    <style>
+/*MG_FONTURI*/
+/*MG_CULORI*/
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: var(--fundal); }
+      #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: var(--fundal); }
+      #stage { position: absolute; inset: 0; }
+
+      .glow { position: absolute; border-radius: 50%; filter: blur(90px); }
+      #glow-a { left: -380px; top: -300px; width: 1100px; height: 1000px; background: var(--ceata-a); }
+      #glow-b { left: -120px; top: 1360px; width: 1400px; height: 820px; background: var(--ceata-b); }
+      #root.plin .glow, #root.plin #grain { display: none; }
+
+      #art { position: absolute; inset: 0; width: 1080px; height: 1920px; overflow: visible; }
+      #art .w { fill: none; stroke: var(--linie); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+      #art .c { fill: none; stroke: var(--accent); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+      #art .node { fill: var(--fundal); stroke: var(--linie); stroke-width: 3; }
+      #art .hub { fill: var(--fundal); stroke: var(--accent); stroke-width: 3.5; }
+      #art .spark-core { fill: var(--accent); }
+      #art .spark-halo { fill: var(--accent); opacity: .5; }
+/*MG_ROLURI*/
+      #art .forma .ink :is(path, line, polyline, polygon, circle, ellipse, rect), #art .forma :is(path, line, polyline, polygon, circle, ellipse, rect).ink { stroke: var(--linie); stroke-linecap: butt; stroke-linejoin: round; }
+      #art .inversat .forma .ink :is(path, line, polyline, polygon, circle, ellipse, rect), #art .inversat .forma :is(path, line, polyline, polygon, circle, ellipse, rect).ink { stroke: var(--fundal); }
+      #art .pe-panou .forma .ink :is(path, line, polyline, polygon, circle, ellipse, rect), #art .pe-panou .forma :is(path, line, polyline, polygon, circle, ellipse, rect).ink, #art .pe-panou .w { stroke: var(--fundal); }
+
+      #grain { position: absolute; inset: 0; width: 1080px; height: 1920px; opacity: var(--granulatie); mix-blend-mode: overlay; pointer-events: none; }
+
+      .card { position: absolute; left: 96px; top: 200px; right: 96px; }
+      .label { font-family: var(--font-text); font-weight: 500; font-size: 28px; letter-spacing: var(--eticheta-spatiere); color: var(--atenuat); }
+      .mask { overflow: hidden; padding-bottom: 14px; margin-bottom: -14px; }
+      .h { font-family: var(--font-titlu); font-weight: 700; font-size: 96px; line-height: 1.08; letter-spacing: -.035em; color: var(--text); }
+      .h.accent { color: var(--accent); }
+      .gap { margin-top: 28px; }
+      .word { position: absolute; left: 0; top: 0; }
+      .words { position: relative; height: 118px; }
+      #cta { top: 560px; }
+      #cta .h { font-family: var(--font-text); font-weight: 500; font-size: 44px; line-height: 1.2; letter-spacing: 0; color: var(--accent); }
+      #sig { position: absolute; left: 96px; right: 96px; top: 1500px; font-family: var(--font-text); font-weight: 400; font-size: 27px; line-height: 1.55; color: var(--atenuat); white-space: pre; }
+    </style>
+  </head>
+  <body>
+    <div id="root" class="{{MG_ATMOSFERA}}" data-composition-id="main" data-start="0" data-duration="{{MG_DURATA}}" data-width="1080" data-height="1920">
+      <div id="stage" class="clip" data-start="0" data-duration="{{MG_DURATA}}" data-track-index="0">
+
+        <div class="glow" id="glow-a" data-layout-allow-overflow></div>
+        <div class="glow" id="glow-b" data-layout-allow-overflow></div>
+
+        <svg id="art" viewBox="0 0 1080 1920">
+          <defs><filter id="soft" x="-200%" y="-200%" width="500%" height="500%"><feGaussianBlur stdDeviation="9"/></filter></defs>
+          <g id="cam">
+<!--MG_SCENA-->
+          </g>
+        </svg>
+
+        <svg id="grain" viewBox="0 0 1080 1920" preserveAspectRatio="none">
+          <filter id="noise"><feTurbulence id="noise-t" type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="1" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter>
+          <rect width="1080" height="1920" filter="url(#noise)"/>
+        </svg>
+
+<!--MG_CARDURI-->
+
+        <div id="sig"><!--MG_SEMNATURA--></div>
+
+      </div><!--MG_AUDIO-->
+    </div>
+
+    <script>/*MG_LINIA*/</script>
+    <script>/*MG_DATE*/</script>
+    <script>/*MG_REGIZOR*/</script>
+  </body>
+</html>

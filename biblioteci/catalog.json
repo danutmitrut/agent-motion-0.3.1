@@ -1,0 +1,2737 @@
+{
+  "versiune": 1,
+  "surse": {
+    "open-doodles": {
+      "nume": "Open Doodles",
+      "autor": "Pablo Stanley",
+      "url": "https://www.opendoodles.com",
+      "descarcat_din": "S3",
+      "licenta": "CC0-1.0",
+      "licenta_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "dovada": [
+        "dovezi/cc0-1.0.txt",
+        "dovezi/open-doodles-about-2026-10-04.pdf"
+      ],
+      "nota": "",
+      "verificat": "2026-10-04"
+    },
+    "open-peeps": {
+      "nume": "Open Peeps",
+      "autor": "Pablo Stanley",
+      "url": "https://www.openpeeps.com",
+      "descarcat_din": "openpeeps.com (CDN Webflow)",
+      "licenta": "CC0-1.0",
+      "licenta_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "dovada": [
+        "dovezi/cc0-1.0.txt",
+        "dovezi/open-peeps-2026-10-04.pdf",
+        "dovezi/open-peeps-gumroad-2026-10-04.pdf"
+      ],
+      "nota": "",
+      "verificat": "2026-10-04"
+    },
+    "lucide": {
+      "nume": "Lucide",
+      "autor": "Lucide Contributors",
+      "url": "https://lucide.dev",
+      "descarcat_din": "npm lucide-static@1.49.0",
+      "licenta": "ISC",
+      "licenta_url": "https://github.com/lucide-icons/lucide/blob/main/LICENSE",
+      "dovada": [
+        "dovezi/LICENSE-lucide.txt"
+      ],
+      "nota": "",
+      "versiune": "1.49.0",
+      "catalog": "motoare/comun/iconite/lucide-1.49.0.json",
+      "verificat": "2026-10-04"
+    }
+  },
+  "piese": [
+    {
+      "id": "od-chilling",
+      "tip": "forma",
+      "familie": "cerneala",
+      "sursa": "open-doodles",
+      "original": "chilling.svg",
+      "fisier": "forme/od-chilling.svg",
+      "sha256": "0dbed0fbdab56d72657809c6dd229be29514c18b2871975a31d36107e4611d96",
+      "kb": 12.6,
+      "cutie": {
+        "w": 970,
+        "h": 618
+      },
+      "roluri": [
+        "ink",
+        "acc"
+      ],
+      "recolorabil": true,
+      "acoperire_cerneala": 0.351,
+      "personaj": {
+        "numar": 1,
+        "gen": "ambiguu",
+        "poza": "intins",
+        "orientare": "fata"
+      },
+      "etichete": [
+        "relaxare",
+        "pauză",
+        "odihnă",
+        "lenevit",
+        "întins",
+        "zâmbet",
+        "calm",
+        "timp liber",
+        "destins"
+      ],
+      "descriere": "O persoană stă întinsă pe jos, sprijinită într-un cot, și zâmbește relaxată.",
+      "noapte": "bun",
+      "teme_potrivite": [
+        "noapte",
+        "hartie",
+        "curat"
+      ],
+      "animatie": {
+        "implicit": "contur-umplere",
+        "alternative": [
+          "aparitie"
+        ],
+        "esalonare": 0.06,
+        "accent": "aparitie"
+      }
+    },
+    {
+      "id": "od-coffee",
+      "tip": "forma",
+      "familie": "cerneala",
+      "sursa": "open-doodles",
+      "original": "coffee.svg",
+      "fisier": "forme/od-coffee.svg",
+      "sha256": "69e37cf3fcbba3bcd5cf6932d2411b89b10514d628f2b3a7da1a3dcedea831b0",
+      "kb": 14.4,
+      "cutie": {
+        "w": 954,
+        "h": 736
+      },
+      "roluri": [
+        "ink",
+        "acc"
+      ],
+      "recolorabil": true,
+      "acoperire_cerneala": 0.284,
+      "personaj": {
+        "numar": 1,
+        "gen": "ambiguu",
+        "poza": "in-miscare",
+        "orientare": "stanga"
+      },
+      "etichete": [
+        "cafea",
+        "cană",
+        "dimineață",
+        "energie",
+        "grabă",
+        "entuziasm",
+        "băutură",
+        "pauză de cafea",
+        "cafea vărsată"
+      ],
+      "descriere": "O persoană aleargă ținând în brațe o cană uriașă din care se varsă cafeaua.",
+      "noapte": "bun",
+      "teme_potrivite": [
+        "noapte",
+        "hartie",
+        "curat"
+      ],
+      "animatie": {
+        "implicit": "contur-umplere",
+        "alternative": [
+          "aparitie"
+        ],
+        "esalonare": 0.06,
+        "accent": "aparitie"
+      }
+    },
+    {
+      "id": "od-dancing",
+      "tip": "forma",
+      "familie": "cerneala",
+      "sursa": "open-doodles",
+      "original": "dancing.svg",
+      "fisier": "forme/od-dancing.svg",
+      "sha256": "cba1dfda6fa74aea4365c3257d82ca227db03618cd65e2f1641c34c877cdcd9e",
+      "kb": 31.0,
+      "cutie": {
+        "w": 856,
+        "h": 723
+      },
+      "roluri": [
+        "ink",
+        "acc"
+      ],
+      "recolorabil": true,
+      "acoperire_cerneala": 0.182,
+      "personaj": {
+        "numar": 1,
+        "gen": "ambiguu",
+        "poza": "in-miscare",
+        "orientare": "fata"
+      },
+      "etichete": [
+        "dans",
+        "muzică",
+        "căști",
+        "bucurie",
+        "sărbătorire",
+        "energie",
+        "veselie",
+        "distracție"
+      ],
+      "descriere": "O persoană cu căști pe urechi dansează vesel, ținând în mână un aparat de muzică legat cu fir de căști.",
+      "noapte": "bun",
+      "teme_potrivite": [
+        "noapte",
+        "hartie",
+        "curat"
+      ],
+      "animatie": {
+        "implicit": "contur-umplere",
+        "alternative": [
+          "aparitie"
+        ],
+        "esalonare": 0.06,
+        "accent": "aparitie"
+      }
+    },
+    {
+      "id": "od-float",
+      "tip": "forma",
+      "familie": "cerneala",
+      "sursa": "open-doodles",
+      "original": "float.svg",
+      "fisier": "forme/od-float.svg",
+      "sha256": "641bda3f1ea37cea33de455757ce62ec83f421f2f706e8e94344662e4206f7c2",
+      "kb": 30.1,
+      "cutie": {
+        "w": 1066,
+        "h": 758
+      },
+      "roluri": [
+        "ink",
+        "acc"
+      ],
+      "recolorabil": true,
+      "acoperire_cerneala": 0.162,
+      "personaj": {
+        "numar": 1,
+        "gen": "ambiguu",
+        "poza": "in-miscare",
+        "orientare": "stanga"
+      },
+      "etichete": [
+        "plutire",
+        "cădere",
+        "visare",
+        "zbor",
+        "libertate",
+        "forme",
+        "haos",
+        "imponderabilitate"
+      ],
+      "descriere": "O persoană plutește în aer, aplecată înainte, înconjurată de forme geometrice mici.",
+      "noapte": "bun",
+      "teme_potrivite": [
+        "noapte",
+        "hartie",
+        "curat"
+      ],
+      "animatie": {
+        "implicit": "contur-umplere",
+        "alternative": [
+          "aparitie"
+        ],
+        "esalonare": 0.06,
+        "accent": "aparitie"
+      }
+    },
+    {
+      "id": "od-groovy",
+      "tip": "forma",
+      "familie": "cerneala",
+      "sursa": "open-doodles",
+      "original": "groovy.svg",
+      "fisier": "forme/od-groovy.svg",
+      "sha256": "e92f431356631cac2553174f0f544277aad6c25d7cde3984d3597aa2ecc211fd",
+      "kb": 14.3,
+      "cutie": {
+        "w": 936,
+        "h": 764
+      },
+      "roluri": [
+        "ink",
+        "acc"
+      ],
+      "recolorabil": true,
+      "acoperire_cerneala": 0.114,
+      "personaj": {
+        "numar": 1,
+        "gen": "ambiguu",
+        "poza": "in-miscare",
+        "orientare": "dreapta"
+      },
+      "etichete": [
+        "dans",
+        "pas de dans",
+        "mișcare",
+        "veselie",
+        "energie",
+        "ritm",
+        "bună dispoziție",
+        "brațe deschise"
+      ],
+      "descriere": "O persoană cu părul creț face un pas larg de dans, cu brațele întinse lateral.",
+      "noapte": "bun",
+      "teme_potrivite": [
+        "noapte",
+        "hartie",
+        "curat"
+      ],
+      "animatie": {
+        "implicit": "contur-umplere",
+        "alternative": [
+          "aparitie"
+        ],
+        "esalonare": 0.06,
+        "accent": "aparitie"
+      }
+    },
+    {
+      "id": "od-jumping",
+      "tip": "forma",
+      "familie": "cerneala",
+      "sursa": "open-doodles",
+      "original": "jumping.svg",
+      "fisier": "forme/od-jumping.svg",
+      "sha256": "f1753d122249d8a85acc3372c329264d459a6376e115f8726854293e717f9f19",
+      "kb": 13.7,
+      "cutie": {
+        "w": 870,
+        "h": 704
+      },
+      "roluri": [
+        "ink",
+        "acc"
+      ],
+      "recolorabil": true,
+      "acoperire_cerneala": 0.196,
+      "personaj": {
+        "numar": 1,
+        "gen": "ambiguu",
+        "poza": "in-miscare",
+        "orientare": "stanga"
+      },
+      "etichete": [
+        "săritură",
+        "salt",
+        "energie",
+        "entuziasm",
+        "bucurie",
+        "dinamism",
+        "mișcare",
+        "elan"
+      ],
+      "descriere": "O persoană sare în aer cu un picior întins înainte, plină de energie.",
+      "noapte": "bun",
+      "teme_potrivite": [
+        "noapte",
+        "hartie",
+        "curat"
+      ],
+      "animatie": {
+        "implicit": "contur-umplere",
+        "alternative": [
+          "aparitie"
+        ],
+        "esalonare": 0.06,
+        "accent": "aparitie"
+      }
+    },
+    {
+      "id": "od-laying",
+      "tip": "forma",
+      "familie": "cerneala",
+      "sursa": "open-doodles",
+      "original": "laying.svg",
+      "fisier": "forme/od-laying.svg",
+      "sha256": "bad5ebf777e7f9beebefca88d00667abe406a7401af172177c0d17a6178c908c",
+      "kb": 10.0,
+      "cutie": {
+        "w": 1003,
+        "h": 532
+      },
+      "roluri": [
+        "ink",
+        "acc"
+      ],
+      "recolorabil": true,
+      "acoperire_cerneala": 0.269,
+      "personaj": {
+        "numar": 1,
+        "gen": "ambiguu",
+        "poza": "intins",
+        "orientare": "stanga"
+      },
+      "etichete": [
+        "telefon",
+        "mobil",
+        "întins",
+        "pernă",
+        "odihnă",
+        "relaxare",
+        "mesaje",
+        "rețele sociale",
+        "lenevit"
+      ],
+      "descriere": "O persoană stă întinsă pe burtă pe o pernă și se uită în telefon, cu picioarele ridicate.",
+      "noapte": "bun",
+      "teme_potrivite": [
+        "noapte",
+        "hartie",
+        "curat"
+      ],
+      "animatie": {
+        "implicit": "contur-umplere",
+        "alternative": [
+          "aparitie"
+        ],
+        "esalonare": 0.06,
+        "accent": "aparitie"
+      }
+    },
+    {
+      "id": "od-levitate",
+      "tip": "forma",
+      "familie": "cerneala",
+      "sursa": "open-doodles",
+      "original": "levitate.svg",
+      "fisier": "forme/od-levitate.svg",
+      "sha256": "b9e723e922b8ba833a05456680a622d94974b20779e967971e7216c6f5e50375",
+      "kb": 8.6,
+      "cutie": {
+        "w": 1014,
+        "h": 559
+      },
+      "roluri": [
+        "ink",
+        "acc"
+      ],
+      "recolorabil": true,
+      "acoperire_cerneala": 0.261,
+      "personaj": {
+        "numar": 1,
+        "gen": "ambiguu",
+        "poza": "intins",
+        "orientare": "dreapta"
+      },
+      "etichete": [
+        "plutire",
+        "levitație",
+        "visare",
+        "relaxare",
+        "liniște",
+        "detașare",
+        "evadare",
+        "abandon"
+      ],
+      "descriere": "O persoană plutește pe spate în aer, arcuită, cu brațele și părul atârnând în jos.",
+      "noapte": "bun",
+      "teme_potrivite": [
+        "noapte",
+        "hartie",
+        "curat"
+      ],
+      "animatie": {
+        "implicit": "contur-umplere",
+        "alternative": [
+          "aparitie"
+        ],
+        "esalonare": 0.06,
+        "accent": "aparitie"
+      }
+    },
+    {
+      "id": "od-loving",
+      "tip": "forma",
+      "familie": "cerneala",
+      "sursa": "open-doodles",
+      "original": "loving.svg",
+      "fisier": "forme/od-loving.svg",
+      "sha256": "8426c07968764c576b79389fca4d76b3e4d82702b1069040bffb8ab60a9239f8",
+      "kb": 6.9,
+      "cutie": {
+        "w": 878,
+        "h": 627
+      },
+      "roluri": [
+        "ink",
+        "acc"
+      ],
+      "recolorabil": true,
+      "acoperire_cerneala": 0.425,
+      "personaj": {
+        "numar": 1,
+        "gen": "ambiguu",
+        "poza": "bust",
+        "orientare": "fata"
+      },
+      "etichete": [
+        "iubire",
+        "inimă",
+        "recunoștință",
+        "mulțumire",
+        "afecțiune",
+        "bucurie",
+        "apreciere",
+        "emoție"
+      ],
+      "descriere": "O persoană își duce mâinile la piept, unde strălucește o inimă, și zâmbește cu ochii închiși.",
+      "noapte": "bun",
+      "teme_potrivite": [
+        "noapte",
+        "hartie",
+        "curat"
+      ],
+      "animatie": {
+        "implicit": "contur-umplere",
+        "alternative": [
+          "aparitie"
+        ],
+        "esalonare": 0.06,
+        "accent": "aparitie"
+      }
+    },
+    {
+      "id": "od-meditating",
+      "tip": "forma",
+      "familie": "cerneala",
+      "sursa": "open-doodles",
+      "original": "meditating.svg",
+      "fisier": "forme/od-meditating.svg",
+      "sha256": "0417c003963ef4d65df4d761423e936af0e7f5d0616c9cf95ddd6969ab8fb885",
+      "kb": 23.1,
+      "cutie": {
+        "w": 897,
+        "h": 690
+      },
+      "roluri": [
+        "ink",
+        "acc"
+      ],
+      "recolorabil": true,
+      "acoperire_cerneala": 0.273,
+      "personaj": {
+        "numar": 1,
+        "gen": "ambiguu",
+        "poza": "asezat",
+        "orientare": "fata"
+      },
+      "etichete": [
+        "meditație",
+        "yoga",
+        "calm",
+        "liniște",
+        "echilibru",
+        "respirație",
+        "relaxare",
+        "pauză",
+        "concentrare",
+        "ochi închiși"
+      ],
+      "descriere": "O persoană stă în poziția lotus, cu ochii închiși și mâinile în gestul de meditație.",
+      "noapte": "bun",
+      "teme_potrivite": [
+        "noapte",
+        "hartie",
+        "curat"
+      ],
+      "animatie": {
+        "implicit": "contur-umplere",
+        "alternative": [
+          "aparitie"
+        ],
+        "esalonare": 0.06,
+        "accent": "aparitie"
+      }
+    },
+    {
+      "id": "od-plant",
+      "tip": "forma",
+      "familie": "cerneala",
+      "sursa": "open-doodles",
+      "original": "plant.svg",
+      "fisier": "forme/od-plant.svg",
+      "sha256": "0515965c97fb37c11daa3a9d921fc7eab400fdf6d9ff378a1e43f75a81ffce04",
+      "kb": 70.5,
+      "cutie": {
+        "w": 842,
+        "h": 789
+      },
+      "roluri": [
+        "ink",
+        "acc"
+      ],
+      "recolorabil": true,
+      "acoperire_cerneala": 0.217,
+      "personaj": {
+        "numar": 1,
+        "gen": "ambiguu",
+        "poza": "in-picioare",
+        "orientare": "fata"
+      },
+      "etichete": [
+        "plantă",
+        "ghiveci",
+        "grijă",
+        "creștere",
+        "natură",
+        "bucurie",
+        "îmbrățișare",
+        "dezvoltare"
+      ],
+      "descriere": "O persoană ține în brațe o plantă mare în ghiveci și zâmbește cu ochii închiși.",
+      "noapte": "bun",
+      "teme_potrivite": [
+        "noapte",
+        "hartie",
+        "curat"
+      ],
+      "animatie": {
+        "implicit": "contur-umplere",
+        "alternative": [
+          "aparitie"
+        ],
+        "esalonare": 0.06,
+        "accent": "aparitie"
+      }
+    },
+    {
+      "id": "od-reading",
+      "tip": "forma",
+      "familie": "cerneala",
+      "sursa": "open-doodles",
+      "original": "reading.svg",
+      "fisier": "forme/od-reading.svg",
+      "sha256": "27e1f87d62efb656fe3831cf5a4c91da521c31083ea40ceb516d68eda94cf995",
+      "kb": 26.5,
+      "cutie": {
+        "w": 618,
+        "h": 716
+      },
+      "roluri": [
+        "ink",
+        "acc"
+      ],
+      "recolorabil": true,
+      "acoperire_cerneala": 0.278,
+      "personaj": {
+        "numar": 1,
+        "gen": "ambiguu",
+        "poza": "asezat",
+        "orientare": "fata"
+      },
+      "etichete": [
+        "citit",
+        "carte",
+        "lectură",
+        "concentrare",
+        "studiu",
+        "învățare",
+        "documentare",
+        "pe jos"
+      ],
+      "descriere": "O persoană stă pe jos cu genunchii ridicați și citește o carte deschisă ținută în fața feței.",
+      "noapte": "bun",
+      "teme_potrivite": [
+        "noapte",
+        "hartie",
+        "curat"
+      ],
+      "animatie": {
+        "implicit": "contur-umplere",
+        "alternative": [
+          "aparitie"
+        ],
+        "esalonare": 0.06,
+        "accent": "aparitie"
+      }
+    },
+    {
+      "id": "od-reading-side",
+      "tip": "forma",
+      "familie": "cerneala",
+      "sursa": "open-doodles",
+      "original": "reading-side.svg",
+      "fisier": "forme/od-reading-side.svg",
+      "sha256": "ebb1dcc51035379b9ebafa4404e969bd2aacb02159fcf4df41ac13cbba5ae405",
+      "kb": 21.0,
+      "cutie": {
+        "w": 992,
+        "h": 614
+      },
+      "roluri": [
+        "ink",
+        "acc"
+      ],
+      "recolorabil": true,
+      "acoperire_cerneala": 0.214,
+      "personaj": {
+        "numar": 1,
+        "gen": "ambiguu",
+        "poza": "asezat",
+        "orientare": "dreapta"
+      },
+      "etichete": [
+        "citit",
+        "carte",
+        "lectură",
+        "relaxare",
+        "pauză",
+        "cană",
+        "plantă",
+        "timp liber",
+        "liniște"
+      ],
+      "descriere": "O persoană stă pe jos, rezemată cu spatele, și citește o carte, cu o cană și o plantă în ghiveci alături.",
+      "noapte": "bun",
+      "teme_potrivite": [
+        "noapte",
+        "hartie",
+        "curat"
+      ],
+      "animatie": {
+        "implicit": "contur-umplere",
+        "alternative": [
+          "aparitie"
+        ],
+        "esalonare": 0.06,
+        "accent": "aparitie"
+      }
+    },
+    {
+      "id": "od-roller-skating",
+      "tip": "forma",
+      "familie": "cerneala",
+      "sursa": "open-doodles",
+      "original": "roller-skating.svg",
+      "fisier": "forme/od-roller-skating.svg",
+      "sha256": "c0f26c2b6fbba4662a3ea120df82404896583a18f86e168097f264fcb6afac99",
+      "kb": 16.7,
+      "cutie": {
+        "w": 962,
+        "h": 721
+      },
+      "roluri": [
+        "ink",
+        "acc"
+      ],
+      "recolorabil": true,
+      "acoperire_cerneala": 0.12,
+      "personaj": {
+        "numar": 1,
+        "gen": "ambiguu",
+        "poza": "in-miscare",
+        "orientare": "dreapta"
+      },
+      "etichete": [
+        "role",
+        "patinaj",
+        "echilibru",
+        "mișcare",
+        "viteză",
+        "sport",
+        "libertate",
+        "grație"
+      ],
+      "descriere": "O persoană merge pe role într-un singur picior, cu brațele întinse pentru echilibru.",
+      "noapte": "bun",
+      "teme_potrivite": [
+        "noapte",
+        "hartie",
+        "curat"
+      ],
+      "animatie": {
+        "implicit": "contur-umplere",
+        "alternative": [
+          "aparitie"
+        ],
+        "esalonare": 0.06,
+        "accent": "aparitie"
+      }
+    },
+    {
+      "id": "od-running",
+      "tip": "forma",
+      "familie": "cerneala",
+      "sursa": "open-doodles",
+      "original": "running.svg",
+      "fisier": "forme/od-running.svg",
+      "sha256": "a9377cb2d7e52dc4b0d05e2b4e2325248970dd31a3ac96673f929376fb9cdf8a",
+      "kb": 13.0,
+      "cutie": {
+        "w": 963,
+        "h": 638
+      },
+      "roluri": [
+        "ink",
+        "acc"
+      ],
+      "recolorabil": true,
+      "acoperire_cerneala": 0.374,
+      "personaj": {
+        "numar": 1,
+        "gen": "ambiguu",
+        "poza": "in-miscare",
+        "orientare": "dreapta"
+      },
+      "etichete": [
+        "alergare",
+        "fugă",
+        "grabă",
+        "viteză",
+        "energie",
+        "mișcare",
+        "păr în vânt",
+        "determinare"
+      ],
+      "descriere": "O persoană cu părul foarte lung fluturând în vânt aleargă cu pași mari.",
+      "noapte": "bun",
+      "teme_potrivite": [
+        "noapte",
+        "hartie",
+        "curat"
+      ],
+      "animatie": {
+        "implicit": "contur-umplere",
+        "alternative": [
+          "aparitie"
+        ],
+        "esalonare": 0.06,
+        "accent": "aparitie"
+      }
+    },
+    {
+      "id": "od-selfie",
+      "tip": "forma",
+      "familie": "cerneala",
+      "sursa": "open-doodles",
+      "original": "selfie.svg",
+      "fisier": "forme/od-selfie.svg",
+      "sha256": "e14bc223764ddcb992e0ad5b18ec2da09fe6777d5b9f27158bda6541c101bf54",
+      "kb": 15.4,
+      "cutie": {
+        "w": 530,
+        "h": 756
+      },
+      "roluri": [
+        "ink",
+        "acc"
+      ],
+      "recolorabil": true,
+      "acoperire_cerneala": 0.238,
+      "personaj": {
+        "numar": 1,
+        "gen": "ambiguu",
+        "poza": "in-picioare",
+        "orientare": "dreapta"
+      },
+      "etichete": [
+        "selfie",
+        "telefon",
+        "fotografie",
+        "poză",
+        "salut",
+        "bucurie",
+        "rețele sociale",
+        "entuziasm",
+        "conținut"
+      ],
+      "descriere": "O persoană își face un selfie cu telefonul ridicat și salută cu cealaltă mână, într-un tricou pe care scrie „Hi”.",
+      "noapte": "bun",
+      "teme_potrivite": [
+        "noapte",
+        "hartie",
+        "curat"
+      ],
+      "animatie": {
+        "implicit": "contur-umplere",
+        "alternative": [
+          "aparitie"
+        ],
+        "esalonare": 0.06,
+        "accent": "aparitie"
+      }
+    },
+    {
+      "id": "od-sitting",
+      "tip": "forma",
+      "familie": "cerneala",
+      "sursa": "open-doodles",
+      "original": "sitting.svg",
+      "fisier": "forme/od-sitting.svg",
+      "sha256": "c4117d78d33d7ef64c13ddbf95be62d4223b54c9fa36d6e12317ab214c02e5e0",
+      "kb": 15.9,
+      "cutie": {
+        "w": 794,
+        "h": 733
+      },
+      "roluri": [
+        "ink",
+        "acc"
+      ],
+      "recolorabil": true,
+      "acoperire_cerneala": 0.241,
+      "personaj": {
+        "numar": 1,
+        "gen": "ambiguu",
+        "poza": "asezat",
+        "orientare": "dreapta"
+      },
+      "etichete": [
+        "pe jos",
+        "gânditor",
+        "îngândurat",
+        "reflecție",
+        "surprindere",
+        "pauză",
+        "așteptare",
+        "contemplare"
+      ],
+      "descriere": "O persoană stă pe jos, sprijinită cu cotul pe genunchi, și privește într-o parte, îngândurată.",
+      "noapte": "bun",
+      "teme_potrivite": [
+        "noapte",
+        "hartie",
+        "curat"
+      ],
+      "animatie": {
+        "implicit": "contur-umplere",
+        "alternative": [
+          "aparitie"
+        ],
+        "esalonare": 0.06,
+        "accent": "aparitie"
+      }
+    },
+    {
+      "id": "od-sitting-reading",
+      "tip": "forma",
+      "familie": "cerneala",
+      "sursa": "open-doodles",
+      "original": "sitting-reading.svg",
+      "fisier": "forme/od-sitting-reading.svg",
+      "sha256": "0346a5ce1b973c834db6d20d9f722e29e8c9ed22bfcfdf6fb100990056f3f17f",
+      "kb": 22.9,
+      "cutie": {
+        "w": 924,
+        "h": 732
+      },
+      "roluri": [
+        "ink",
+        "acc"
+      ],
+      "recolorabil": true,
+      "acoperire_cerneala": 0.212,
+      "personaj": {
+        "numar": 1,
+        "gen": "ambiguu",
+        "poza": "asezat",
+        "orientare": "stanga"
+      },
+      "etichete": [
+        "citit",
+        "carte",
+        "scaun",
+        "teanc de cărți",
+        "lectură",
+        "pauză",
+        "gânduri",
+        "relaxare",
+        "studiu"
+      ],
+      "descriere": "O persoană stă pe un scaun cu o carte în mâini și privește în altă parte, lângă un teanc de cărți.",
+      "noapte": "bun",
+      "teme_potrivite": [
+        "noapte",
+        "hartie",
+        "curat"
+      ],
+      "animatie": {
+        "implicit": "contur-umplere",
+        "alternative": [
+          "aparitie"
+        ],
+        "esalonare": 0.06,
+        "accent": "aparitie"
+      }
+    },
+    {
+      "id": "od-sprinting",
+      "tip": "forma",
+      "familie": "cerneala",
+      "sursa": "open-doodles",
+      "original": "sprinting.svg",
+      "fisier": "forme/od-sprinting.svg",
+      "sha256": "e123b55dd4df5747b86157c5fa30bc03e510de8968d4b95875addf6484d1cbf3",
+      "kb": 13.5,
+      "cutie": {
+        "w": 994,
+        "h": 646
+      },
+      "roluri": [
+        "ink",
+        "acc"
+      ],
+      "recolorabil": true,
+      "acoperire_cerneala": 0.264,
+      "personaj": {
+        "numar": 1,
+        "gen": "ambiguu",
+        "poza": "in-miscare",
+        "orientare": "dreapta"
+      },
+      "etichete": [
+        "sprint",
+        "alergare",
+        "grabă",
+        "viteză",
+        "start",
+        "competiție",
+        "determinare",
+        "șapcă",
+        "energie"
+      ],
+      "descriere": "O persoană cu șapcă se avântă înainte în plină alergare, cu brațul întins în față.",
+      "noapte": "bun",
+      "teme_potrivite": [
+        "noapte",
+        "hartie",
+        "curat"
+      ],
+      "animatie": {
+        "implicit": "contur-umplere",
+        "alternative": [
+          "aparitie"
+        ],
+        "esalonare": 0.06,
+        "accent": "aparitie"
+      }
+    },
+    {
+      "id": "od-strolling",
+      "tip": "forma",
+      "familie": "cerneala",
+      "sursa": "open-doodles",
+      "original": "strolling.svg",
+      "fisier": "forme/od-strolling.svg",
+      "sha256": "07d300c005cf59163ec9b7b6b054011e3925bfb55395a11d53c3486a3922cf2c",
+      "kb": 15.2,
+      "cutie": {
+        "w": 772,
+        "h": 747
+      },
+      "roluri": [
+        "ink",
+        "acc"
+      ],
+      "recolorabil": true,
+      "acoperire_cerneala": 0.162,
+      "personaj": {
+        "numar": 1,
+        "gen": "ambiguu",
+        "poza": "in-miscare",
+        "orientare": "dreapta"
+      },
+      "etichete": [
+        "plimbare",
+        "mers",
+        "relaxare",
+        "nepăsare",
+        "lejer",
+        "destindere",
+        "pauză",
+        "ochi închiși"
+      ],
+      "descriere": "O persoană merge relaxată, cu ochii închiși, balansând larg brațele.",
+      "noapte": "bun",
+      "teme_potrivite": [
+        "noapte",
+        "hartie",
+        "curat"
+      ],
+      "animatie": {
+        "implicit": "contur-umplere",
+        "alternative": [
+          "aparitie"
+        ],
+        "esalonare": 0.06,
+        "accent": "aparitie"
+      }
+    },
+    {
+      "id": "od-swinging",
+      "tip": "forma",
+      "familie": "cerneala",
+      "sursa": "open-doodles",
+      "original": "swinging.svg",
+      "fisier": "forme/od-swinging.svg",
+      "sha256": "bb7e76699fe21927fe50ef88a90a9ac352d1ce844b5c3eec92c3da5ad0ce939e",
+      "kb": 44.4,
+      "cutie": {
+        "w": 801,
+        "h": 752
+      },
+      "roluri": [
+        "ink",
+        "acc"
+      ],
+      "recolorabil": true,
+      "acoperire_cerneala": 0.209,
+      "personaj": {
+        "numar": 1,
+        "gen": "ambiguu",
+        "poza": "asezat",
+        "orientare": "fata"
+      },
+      "etichete": [
+        "leagăn",
+        "joacă",
+        "relaxare",
+        "copilărie",
+        "libertate",
+        "bucurie",
+        "detașare",
+        "pauză"
+      ],
+      "descriere": "O persoană se dă în leagăn, ținându-se de frânghii, cu ochii închiși și zâmbind.",
+      "noapte": "bun",
+      "teme_potrivite": [
+        "noapte",
+        "hartie",
+        "curat"
+      ],
+      "animatie": {
+        "implicit": "contur-umplere",
+        "alternative": [
+          "aparitie"
+        ],
+        "esalonare": 0.06,
+        "accent": "aparitie"
+      }
+    },
+    {
+      "id": "od-unboxing",
+      "tip": "forma",
+      "familie": "cerneala",
+      "sursa": "open-doodles",
+      "original": "unboxing.svg",
+      "fisier": "forme/od-unboxing.svg",
+      "sha256": "b36a1e3ecd631656f86195497499c2b6bc78090e5ce81820b098cba1f23b636a",
+      "kb": 24.3,
+      "cutie": {
+        "w": 867,
+        "h": 677
+      },
+      "roluri": [
+        "ink",
+        "acc"
+      ],
+      "recolorabil": true,
+      "acoperire_cerneala": 0.342,
+      "personaj": {
+        "numar": 1,
+        "gen": "ambiguu",
+        "poza": "in-picioare",
+        "orientare": "fata"
+      },
+      "etichete": [
+        "cutie",
+        "colet",
+        "despachetare",
+        "comandă",
+        "livrare",
+        "produs nou",
+        "surpriză",
+        "curiozitate"
+      ],
+      "descriere": "O persoană se apleacă peste o cutie deschisă și scotocește în ea.",
+      "noapte": "bun",
+      "teme_potrivite": [
+        "noapte",
+        "hartie",
+        "curat"
+      ],
+      "animatie": {
+        "implicit": "contur-umplere",
+        "alternative": [
+          "aparitie"
+        ],
+        "esalonare": 0.06,
+        "accent": "aparitie"
+      }
+    },
+    {
+      "id": "op-asezat-genunchi-la-piept",
+      "tip": "forma",
+      "familie": "cerneala",
+      "sursa": "open-peeps",
+      "original": "peep-sitting-1.svg",
+      "fisier": "forme/op-asezat-genunchi-la-piept.svg",
+      "sha256": "cf27ea5010e9e375d682ae3a5d5086b5c4146a9e44775a11dd2dc5ae312734bd",
+      "kb": 8.7,
+      "cutie": {
+        "w": 359,
+        "h": 529
+      },
+      "roluri": [
+        "ink",
+        "fond"
+      ],
+      "recolorabil": true,
+      "acoperire_cerneala": 0.242,
+      "personaj": {
+        "numar": 1,
+        "gen": "ambiguu",
+        "poza": "asezat",
+        "orientare": "dreapta"
+      },
+      "etichete": [
+        "pe jos",
+        "genunchi la piept",
+        "zâmbet",
+        "relaxare",
+        "pauză",
+        "bună dispoziție",
+        "geacă",
+        "liniște"
+      ],
+      "descriere": "O persoană cu părul afro, în geacă, stă pe jos cu genunchii strânși la piept și zâmbește.",
+      "noapte": "autocolant",
+      "teme_potrivite": [
+        "noapte",
+        "hartie",
+        "curat"
+      ],
+      "animatie": {
+        "implicit": "contur-umplere",
+        "alternative": [
+          "aparitie"
+        ],
+        "esalonare": 0.06,
+        "accent": "aparitie"
+      }
+    },
+    {
+      "id": "op-asezat-ghemuit",
+      "tip": "forma",
+      "familie": "cerneala",
+      "sursa": "open-peeps",
+      "original": "peep-sitting-4.svg",
+      "fisier": "forme/op-asezat-ghemuit.svg",
+      "sha256": "d0e5e65b7b7bb95a679b9e3061447a5b970a5d445db02cc4f49c12cc7e401f7e",
+      "kb": 10.3,
+      "cutie": {
+        "w": 352,
+        "h": 483
+      },
+      "roluri": [
+        "ink",
+        "fond"
+      ],
+      "recolorabil": true,
+      "acoperire_cerneala": 0.22,
+      "personaj": {
+        "numar": 1,
+        "gen": "ambiguu",
+        "poza": "asezat",
+        "orientare": "fata"
+      },
+      "etichete": [
+        "ghemuit",
+        "pe vine",
+        "zâmbet larg",
+        "bucurie",
+        "așteptare",
+        "entuziasm",
+        "lejer"
+      ],
+      "descriere": "O persoană cheală stă pe vine, cu brațele sprijinite pe genunchi, și zâmbește larg.",
+      "noapte": "autocolant",
+      "teme_potrivite": [
+        "noapte",
+        "hartie",
+        "curat"
+      ],
+      "animatie": {
+        "implicit": "contur-umplere",
+        "alternative": [
+          "aparitie"
+        ],
+        "esalonare": 0.06,
+        "accent": "aparitie"
+      }
+    },
+    {
+      "id": "op-asezat-in-genunchi",
+      "tip": "forma",
+      "familie": "cerneala",
+      "sursa": "open-peeps",
+      "original": "peep-sitting-10.svg",
+      "fisier": "forme/op-asezat-in-genunchi.svg",
+      "sha256": "2e64f1276f3b553ae5d76925302ef7e427205b8c75711603421bedcfb39df7af",
+      "kb": 11.0,
+      "cutie": {
+        "w": 336,
+        "h": 502
+      },
+      "roluri": [
+        "ink",
+        "fond"
+      ],
+      "recolorabil": true,
+      "acoperire_cerneala": 0.27,
+      "personaj": {
+        "numar": 1,
+        "gen": "ambiguu",
+        "poza": "asezat",
+        "orientare": "dreapta"
+      },
+      "etichete": [
+        "în genunchi",
+        "pe jos",
+        "zâmbet larg",
+        "bucurie",
+        "entuziasm",
+        "așteptare",
+        "coc"
+      ],
+      "descriere": "O persoană cu părul strâns în coc stă în genunchi pe jos, sprijinită într-o mână, și zâmbește larg.",
+      "noapte": "autocolant",
+      "teme_potrivite": [
+        "noapte",
+        "hartie",
+        "curat"
+      ],
+      "animatie": {
+        "implicit": "contur-umplere",
+        "alternative": [
+          "aparitie"
+        ],
+        "esalonare": 0.06,
+        "accent": "aparitie"
+      }
+    },
+    {
+      "id": "op-asezat-pe-jos",
+      "tip": "forma",
+      "familie": "cerneala",
+      "sursa": "open-peeps",
+      "original": "peep-sitting-12.svg",
+      "fisier": "forme/op-asezat-pe-jos.svg",
+      "sha256": "e5d6c8837801b7c87eee2be6c8ff5a631e410d8d3a6fde9c9e53b3bffa5c9d08",
+      "kb": 9.1,
+      "cutie": {
+        "w": 348,
+        "h": 523
+      },
+      "roluri": [
+        "ink",
+        "fond"
+      ],
+      "recolorabil": true,
+      "acoperire_cerneala": 0.245,
+      "personaj": {
+        "numar": 1,
+        "gen": "ambiguu",
+        "poza": "asezat",
+        "orientare": "dreapta"
+      },
+      "etichete": [
+        "pe jos",
+        "relaxare",
+        "zâmbet",
+        "pauză",
+        "bună dispoziție",
+        "lejer",
+        "afro",
+        "liniște"
+      ],
+      "descriere": "O persoană cu părul afro stă pe jos cu un genunchi ridicat și zâmbește cu ochii închiși.",
+      "noapte": "autocolant",
+      "teme_potrivite": [
+        "noapte",
+        "hartie",
+        "curat"
+      ],
+      "animatie": {
+        "implicit": "contur-umplere",
+        "alternative": [
+          "aparitie"
+        ],
+        "esalonare": 0.06,
+        "accent": "aparitie"
+      }
+    },
+    {
+      "id": "op-asezat-picior-peste-picior",
+      "tip": "forma",
+      "familie": "cerneala",
+      "sursa": "open-peeps",
+      "original": "peep-sitting-6.svg",
+      "fisier": "forme/op-asezat-picior-peste-picior.svg",
+      "sha256": "f7b820e28209df68f890a0c35e4d1ddfddc6e515c6f54666f8be868308a325c3",
+      "kb": 9.9,
+      "cutie": {
+        "w": 379,
+        "h": 600
+      },
+      "roluri": [
+        "ink",
+        "fond"
+      ],
+      "recolorabil": true,
+      "acoperire_cerneala": 0.175,
+      "personaj": {
+        "numar": 1,
+        "gen": "ambiguu",
+        "poza": "asezat",
+        "orientare": "fata"
+      },
+      "etichete": [
+        "picior peste picior",
+        "așezat",
+        "zâmbet larg",
+        "bucurie",
+        "relaxare",
+        "pulover",
+        "încredere",
+        "lejer"
+      ],
+      "descriere": "O persoană în pulover stă așezată cu un picior peste celălalt, ținându-și genunchiul, și zâmbește larg.",
+      "noapte": "autocolant",
+      "teme_potrivite": [
+        "noapte",
+        "hartie",
+        "curat"
+      ],
+      "animatie": {
+        "implicit": "contur-umplere",
+        "alternative": [
+          "aparitie"
+        ],
+        "esalonare": 0.06,
+        "accent": "aparitie"
+      }
+    },
+    {
+      "id": "op-asezat-scaun-rotile",
+      "tip": "forma",
+      "familie": "cerneala",
+      "sursa": "open-peeps",
+      "original": "peep-sitting-14.svg",
+      "fisier": "forme/op-asezat-scaun-rotile.svg",
+      "sha256": "b4f697dcd3456d1f8cc93800d9a2b12f8e0a9af68fa9c2248019c3e569780c27",
+      "kb": 19.3,
+      "cutie": {
+        "w": 480,
+        "h": 627
+      },
+      "roluri": [
+        "ink",
+        "fond"
+      ],
+      "recolorabil": true,
+      "acoperire_cerneala": 0.19,
+      "personaj": {
+        "numar": 1,
+        "gen": "ambiguu",
+        "poza": "asezat",
+        "orientare": "fata"
+      },
+      "etichete": [
+        "scaun cu rotile",
+        "dizabilitate",
+        "accesibilitate",
+        "incluziune",
+        "zâmbet",
+        "gest",
+        "explicație",
+        "bucurie"
+      ],
+      "descriere": "O persoană în scaun cu rotile zâmbește larg și gesticulează cu o mână ridicată.",
+      "noapte": "autocolant",
+      "teme_potrivite": [
+        "noapte",
+        "hartie",
+        "curat"
+      ],
+      "animatie": {
+        "implicit": "contur-umplere",
+        "alternative": [
+          "aparitie"
+        ],
+        "esalonare": 0.06,
+        "accent": "aparitie"
+      }
+    },
+    {
+      "id": "op-bust-cafea",
+      "tip": "forma",
+      "familie": "cerneala",
+      "sursa": "open-peeps",
+      "original": "peep-34.svg",
+      "fisier": "forme/op-bust-cafea.svg",
+      "sha256": "d4c3c57834cb949a8da405c245fbd05e3675fb15599852618d8647063937e8d8",
+      "kb": 8.2,
+      "cutie": {
+        "w": 172,
+        "h": 251
+      },
+      "roluri": [
+        "ink",
+        "fond"
+      ],
+      "recolorabil": true,
+      "acoperire_cerneala": 0.21,
+      "personaj": {
+        "numar": 1,
+        "gen": "barbat",
+        "poza": "bust",
+        "orientare": "fata"
+      },
+      "etichete": [
+        "cafea",
+        "cană",
+        "pălărie",
+        "mustață",
+        "dimineață",
+        "pauză de cafea",
+        "zâmbet",
+        "băutură"
+      ],
+      "descriere": "Un bărbat cu pălărie și mustață ține o cană în mână și zâmbește.",
+      "noapte": "autocolant",
+      "teme_potrivite": [
+        "noapte",
+        "hartie",
+        "curat"
+      ],
+      "animatie": {
+        "implicit": "contur-umplere",
+        "alternative": [
+          "aparitie"
+        ],
+        "esalonare": 0.06,
+        "accent": "aparitie"
+      }
+    },
+    {
+      "id": "op-bust-cafea-2",
+      "tip": "forma",
+      "familie": "cerneala",
+      "sursa": "open-peeps",
+      "original": "peep-38.svg",
+      "fisier": "forme/op-bust-cafea-2.svg",
+      "sha256": "1eecdde5c9b52ff6030f07647ea2ba8ff0519f3c11c296a57f0e38f4fff45383",
+      "kb": 8.3,
+      "cutie": {
+        "w": 172,
+        "h": 247
+      },
+      "roluri": [
+        "ink",
+        "fond"
+      ],
+      "recolorabil": true,
+      "acoperire_cerneala": 0.224,
+      "personaj": {
+        "numar": 1,
+        "gen": "femeie",
+        "poza": "bust",
+        "orientare": "fata"
+      },
+      "etichete": [
+        "cafea",
+        "cană",
+        "hijab",
+        "ochelari",
+        "dimineață",
+        "pauză de cafea",
+        "zâmbet",
+        "ceai"
+      ],
+      "descriere": "O femeie cu hijab și ochelari ține o cană în mână și zâmbește.",
+      "noapte": "autocolant",
+      "teme_potrivite": [
+        "noapte",
+        "hartie",
+        "curat"
+      ],
+      "animatie": {
+        "implicit": "contur-umplere",
+        "alternative": [
+          "aparitie"
+        ],
+        "esalonare": 0.06,
+        "accent": "aparitie"
+      }
+    },
+    {
+      "id": "op-bust-cafea-3",
+      "tip": "forma",
+      "familie": "cerneala",
+      "sursa": "open-peeps",
+      "original": "peep-102.svg",
+      "fisier": "forme/op-bust-cafea-3.svg",
+      "sha256": "00d793dc356176051fa8667a423aaf65f1a61fe1d3080a364c56a2b4bcf3f9da",
+      "kb": 8.4,
+      "cutie": {
+        "w": 172,
+        "h": 254
+      },
+      "roluri": [
+        "ink",
+        "fond"
+      ],
+      "recolorabil": true,
+      "acoperire_cerneala": 0.115,
+      "personaj": {
+        "numar": 1,
+        "gen": "ambiguu",
+        "poza": "bust",
+        "orientare": "fata"
+      },
+      "etichete": [
+        "cafea",
+        "cană",
+        "ochelari",
+        "coc",
+        "dimineață",
+        "pauză de cafea",
+        "zâmbet",
+        "ceai"
+      ],
+      "descriere": "O persoană cu ochelari și părul prins în coc ține o cană în mână și zâmbește.",
+      "noapte": "autocolant",
+      "teme_potrivite": [
+        "noapte",
+        "hartie",
+        "curat"
+      ],
+      "animatie": {
+        "implicit": "contur-umplere",
+        "alternative": [
+          "aparitie"
+        ],
+        "esalonare": 0.06,
+        "accent": "aparitie"
+      }
+    },
+    {
+      "id": "op-bust-explica",
+      "tip": "forma",
+      "familie": "cerneala",
+      "sursa": "open-peeps",
+      "original": "peep-4.svg",
+      "fisier": "forme/op-bust-explica.svg",
+      "sha256": "6d56e709fae9cb2f210a38bc7f0da8322055916ff89d46916da715da0d360141",
+      "kb": 7.8,
+      "cutie": {
+        "w": 158,
+        "h": 244
+      },
+      "roluri": [
+        "ink",
+        "fond"
+      ],
+      "recolorabil": true,
+      "acoperire_cerneala": 0.166,
+      "personaj": {
+        "numar": 1,
+        "gen": "barbat",
+        "poza": "bust",
+        "orientare": "dreapta"
+      },
+      "etichete": [
+        "explicație",
+        "gest",
+        "prezentare",
+        "mustață",
+        "barbă",
+        "vorbit",
+        "conversație",
+        "tricou în dungi"
+      ],
+      "descriere": "Un bărbat chel, cu mustață și barbă ascuțită, explică ceva cu palma deschisă.",
+      "noapte": "autocolant",
+      "teme_potrivite": [
+        "noapte",
+        "hartie",
+        "curat"
+      ],
+      "animatie": {
+        "implicit": "contur-umplere",
+        "alternative": [
+          "aparitie"
+        ],
+        "esalonare": 0.06,
+        "accent": "aparitie"
+      }
+    },
+    {
+      "id": "op-bust-explica-2",
+      "tip": "forma",
+      "familie": "cerneala",
+      "sursa": "open-peeps",
+      "original": "peep-57.svg",
+      "fisier": "forme/op-bust-explica-2.svg",
+      "sha256": "9a50401ad1ff2125a2dc44f03fd1840b1c6bf1cf2675249bbb55d9757636d04e",
+      "kb": 8.0,
+      "cutie": {
+        "w": 160,
+        "h": 264
+      },
+      "roluri": [
+        "ink",
+        "fond"
+      ],
+      "recolorabil": true,
+      "acoperire_cerneala": 0.372,
+      "personaj": {
+        "numar": 1,
+        "gen": "ambiguu",
+        "poza": "bust",
+        "orientare": "dreapta"
+      },
+      "etichete": [
+        "explicație",
+        "gest",
+        "conversație",
+        "îndoială",
+        "sceptic",
+        "păr creț",
+        "vorbit",
+        "tricou în dungi"
+      ],
+      "descriere": "O persoană cu părul creț și bogat explică ceva cu palma deschisă, cu o expresie sceptică.",
+      "noapte": "autocolant",
+      "teme_potrivite": [
+        "noapte",
+        "hartie",
+        "curat"
+      ],
+      "animatie": {
+        "implicit": "contur-umplere",
+        "alternative": [
+          "aparitie"
+        ],
+        "esalonare": 0.06,
+        "accent": "aparitie"
+      }
+    },
+    {
+      "id": "op-bust-explica-3",
+      "tip": "forma",
+      "familie": "cerneala",
+      "sursa": "open-peeps",
+      "original": "peep-62.svg",
+      "fisier": "forme/op-bust-explica-3.svg",
+      "sha256": "133dc103d19b31f36e1817008b6d11fd1163d33e6a6625aadb47eec61f5f3f67",
+      "kb": 8.5,
+      "cutie": {
+        "w": 158,
+        "h": 241
+      },
+      "roluri": [
+        "ink",
+        "fond"
+      ],
+      "recolorabil": true,
+      "acoperire_cerneala": 0.3,
+      "personaj": {
+        "numar": 1,
+        "gen": "ambiguu",
+        "poza": "bust",
+        "orientare": "dreapta"
+      },
+      "etichete": [
+        "explicație",
+        "gest",
+        "ochelari de soare",
+        "zâmbet larg",
+        "încredere",
+        "prezentare",
+        "vorbit",
+        "tricou în dungi"
+      ],
+      "descriere": "O persoană cu ochelari de soare zâmbește larg și explică ceva cu palma deschisă.",
+      "noapte": "autocolant",
+      "teme_potrivite": [
+        "noapte",
+        "hartie",
+        "curat"
+      ],
+      "animatie": {
+        "implicit": "contur-umplere",
+        "alternative": [
+          "aparitie"
+        ],
+        "esalonare": 0.06,
+        "accent": "aparitie"
+      }
+    },
+    {
+      "id": "op-bust-laptop",
+      "tip": "forma",
+      "familie": "cerneala",
+      "sursa": "open-peeps",
+      "original": "peep-46.svg",
+      "fisier": "forme/op-bust-laptop.svg",
+      "sha256": "585d1f68127555ada6e5be480a29efc0fe5486f93d42df2409a67d466cb76fd5",
+      "kb": 9.1,
+      "cutie": {
+        "w": 220,
+        "h": 245
+      },
+      "roluri": [
+        "ink",
+        "fond"
+      ],
+      "recolorabil": true,
+      "acoperire_cerneala": 0.12,
+      "personaj": {
+        "numar": 1,
+        "gen": "ambiguu",
+        "poza": "bust",
+        "orientare": "dreapta"
+      },
+      "etichete": [
+        "laptop",
+        "calculator",
+        "lucru",
+        "tastat",
+        "concentrare",
+        "birou",
+        "muncă",
+        "determinare",
+        "online"
+      ],
+      "descriere": "O persoană ține un laptop deschis și tastează, cu o privire concentrată și hotărâtă.",
+      "noapte": "autocolant",
+      "teme_potrivite": [
+        "noapte",
+        "hartie",
+        "curat"
+      ],
+      "animatie": {
+        "implicit": "contur-umplere",
+        "alternative": [
+          "aparitie"
+        ],
+        "esalonare": 0.06,
+        "accent": "aparitie"
+      }
+    },
+    {
+      "id": "op-bust-neutru",
+      "tip": "forma",
+      "familie": "cerneala",
+      "sursa": "open-peeps",
+      "original": "peep-2.svg",
+      "fisier": "forme/op-bust-neutru.svg",
+      "sha256": "efbfeb7cbfaf1c283d2e0cd2dd69f90ca125b4b18341f35a098db0c6ab284c22",
+      "kb": 8.1,
+      "cutie": {
+        "w": 256,
+        "h": 240
+      },
+      "roluri": [
+        "ink",
+        "fond"
+      ],
+      "recolorabil": true,
+      "acoperire_cerneala": 0.299,
+      "personaj": {
+        "numar": 1,
+        "gen": "ambiguu",
+        "poza": "bust",
+        "orientare": "fata"
+      },
+      "etichete": [
+        "ridicat din umeri",
+        "nu știu",
+        "nedumerire",
+        "îndoială",
+        "confuzie",
+        "neputință",
+        "ezitare",
+        "întrebare"
+      ],
+      "descriere": "O persoană ridică din umeri, cu palmele în sus și o expresie nedumerită.",
+      "noapte": "autocolant",
+      "teme_potrivite": [
+        "noapte",
+        "hartie",
+        "curat"
+      ],
+      "animatie": {
+        "implicit": "contur-umplere",
+        "alternative": [
+          "aparitie"
+        ],
+        "esalonare": 0.06,
+        "accent": "aparitie"
+      }
+    },
+    {
+      "id": "op-bust-neutru-2",
+      "tip": "forma",
+      "familie": "cerneala",
+      "sursa": "open-peeps",
+      "original": "peep-5.svg",
+      "fisier": "forme/op-bust-neutru-2.svg",
+      "sha256": "fc87486b115a0c8e0711f0cf6d7fd89eca497ed39ea68e924ab9127d38634ca0",
+      "kb": 7.5,
+      "cutie": {
+        "w": 176,
+        "h": 262
+      },
+      "roluri": [
+        "ink",
+        "fond"
+      ],
+      "recolorabil": true,
+      "acoperire_cerneala": 0.537,
+      "personaj": {
+        "numar": 1,
+        "gen": "ambiguu",
+        "poza": "bust",
+        "orientare": "fata"
+      },
+      "etichete": [
+        "turban",
+        "zâmbet larg",
+        "bucurie",
+        "entuziasm",
+        "veselie",
+        "pulover",
+        "bună dispoziție",
+        "portret"
+      ],
+      "descriere": "O persoană cu turban, în pulover, zâmbește larg cu ochii mijiți de bucurie.",
+      "noapte": "autocolant",
+      "teme_potrivite": [
+        "noapte",
+        "hartie",
+        "curat"
+      ],
+      "animatie": {
+        "implicit": "contur-umplere",
+        "alternative": [
+          "aparitie"
+        ],
+        "esalonare": 0.06,
+        "accent": "aparitie"
+      }
+    },
+    {
+      "id": "op-bust-neutru-3",
+      "tip": "forma",
+      "familie": "cerneala",
+      "sursa": "open-peeps",
+      "original": "peep-50.svg",
+      "fisier": "forme/op-bust-neutru-3.svg",
+      "sha256": "d22093babbf3815692ac5b282c24050470084ce44624be1e9fe0516e1f046d0c",
+      "kb": 9.4,
+      "cutie": {
+        "w": 169,
+        "h": 259
+      },
+      "roluri": [
+        "ink",
+        "fond"
+      ],
+      "recolorabil": true,
+      "acoperire_cerneala": 0.164,
+      "personaj": {
+        "numar": 1,
+        "gen": "ambiguu",
+        "poza": "bust",
+        "orientare": "dreapta"
+      },
+      "etichete": [
+        "petec pe ochi",
+        "zâmbet",
+        "încredere",
+        "sacou",
+        "stil",
+        "portret",
+        "calm",
+        "tricou în dungi"
+      ],
+      "descriere": "O persoană cu un petec pe ochi zâmbește ușor, îmbrăcată cu un sacou peste un tricou în dungi.",
+      "noapte": "autocolant",
+      "teme_potrivite": [
+        "noapte",
+        "hartie",
+        "curat"
+      ],
+      "animatie": {
+        "implicit": "contur-umplere",
+        "alternative": [
+          "aparitie"
+        ],
+        "esalonare": 0.06,
+        "accent": "aparitie"
+      }
+    },
+    {
+      "id": "op-bust-notite",
+      "tip": "forma",
+      "familie": "cerneala",
+      "sursa": "open-peeps",
+      "original": "peep-10.svg",
+      "fisier": "forme/op-bust-notite.svg",
+      "sha256": "f944f452082170cf778b72772fa69038ef77c7261d2ae23d530acebc4ec4245b",
+      "kb": 9.6,
+      "cutie": {
+        "w": 170,
+        "h": 243
+      },
+      "roluri": [
+        "ink",
+        "fond"
+      ],
+      "recolorabil": true,
+      "acoperire_cerneala": 0.501,
+      "personaj": {
+        "numar": 1,
+        "gen": "barbat",
+        "poza": "bust",
+        "orientare": "dreapta"
+      },
+      "etichete": [
+        "notițe",
+        "foaie",
+        "citit",
+        "surprindere",
+        "uimire",
+        "ochelari",
+        "barbă",
+        "listă"
+      ],
+      "descriere": "Un bărbat chel, cu barbă și ochelari, citește surprins de pe o foaie ținută în mâini.",
+      "noapte": "autocolant",
+      "teme_potrivite": [
+        "noapte",
+        "hartie",
+        "curat"
+      ],
+      "animatie": {
+        "implicit": "contur-umplere",
+        "alternative": [
+          "aparitie"
+        ],
+        "esalonare": 0.06,
+        "accent": "aparitie"
+      }
+    },
+    {
+      "id": "op-bust-notite-2",
+      "tip": "forma",
+      "familie": "cerneala",
+      "sursa": "open-peeps",
+      "original": "peep-32.svg",
+      "fisier": "forme/op-bust-notite-2.svg",
+      "sha256": "66286835223f7d45b1efa9de10c8e1410083be043cce6b18b66173e706f0bfdb",
+      "kb": 10.9,
+      "cutie": {
+        "w": 170,
+        "h": 284
+      },
+      "roluri": [
+        "ink",
+        "fond"
+      ],
+      "recolorabil": true,
+      "acoperire_cerneala": 0.705,
+      "personaj": {
+        "numar": 1,
+        "gen": "barbat",
+        "poza": "bust",
+        "orientare": "dreapta"
+      },
+      "etichete": [
+        "notițe",
+        "foaie",
+        "citit",
+        "ochelari",
+        "mustață",
+        "afro",
+        "listă",
+        "verificare"
+      ],
+      "descriere": "Un bărbat cu părul afro, ochelari și mustață citește de pe o foaie ținută în mâini.",
+      "noapte": "autocolant",
+      "teme_potrivite": [
+        "noapte",
+        "hartie",
+        "curat"
+      ],
+      "animatie": {
+        "implicit": "contur-umplere",
+        "alternative": [
+          "aparitie"
+        ],
+        "esalonare": 0.06,
+        "accent": "aparitie"
+      }
+    },
+    {
+      "id": "op-bust-notite-3",
+      "tip": "forma",
+      "familie": "cerneala",
+      "sursa": "open-peeps",
+      "original": "peep-39.svg",
+      "fisier": "forme/op-bust-notite-3.svg",
+      "sha256": "4872e0d6f16d0b61891f3cbeb7e6eef1139c857fe9e8d54c9e2cb0a574872ea3",
+      "kb": 12.1,
+      "cutie": {
+        "w": 170,
+        "h": 252
+      },
+      "roluri": [
+        "ink",
+        "fond"
+      ],
+      "recolorabil": true,
+      "acoperire_cerneala": 0.557,
+      "personaj": {
+        "numar": 1,
+        "gen": "barbat",
+        "poza": "bust",
+        "orientare": "dreapta"
+      },
+      "etichete": [
+        "notițe",
+        "foaie",
+        "citit",
+        "ochelari",
+        "mustață",
+        "codițe",
+        "listă",
+        "verificare"
+      ],
+      "descriere": "Un bărbat cu codițe împletite, ochelari și mustață citește de pe o foaie ținută în mâini.",
+      "noapte": "autocolant",
+      "teme_potrivite": [
+        "noapte",
+        "hartie",
+        "curat"
+      ],
+      "animatie": {
+        "implicit": "contur-umplere",
+        "alternative": [
+          "aparitie"
+        ],
+        "esalonare": 0.06,
+        "accent": "aparitie"
+      }
+    },
+    {
+      "id": "op-bust-notite-4",
+      "tip": "forma",
+      "familie": "cerneala",
+      "sursa": "open-peeps",
+      "original": "peep-64.svg",
+      "fisier": "forme/op-bust-notite-4.svg",
+      "sha256": "b5e47dbcb276902e8cf25b79351bf4a00a02547b30e011a275fcd06b760dc280",
+      "kb": 10.9,
+      "cutie": {
+        "w": 170,
+        "h": 246
+      },
+      "roluri": [
+        "ink",
+        "fond"
+      ],
+      "recolorabil": true,
+      "acoperire_cerneala": 0.474,
+      "personaj": {
+        "numar": 1,
+        "gen": "ambiguu",
+        "poza": "bust",
+        "orientare": "dreapta"
+      },
+      "etichete": [
+        "notițe",
+        "foaie",
+        "citit",
+        "îngrijorare",
+        "stres",
+        "neliniște",
+        "coadă",
+        "surpriză neplăcută"
+      ],
+      "descriere": "O persoană cu părul prins în coadă citește îngrijorată de pe o foaie, cu gura deschisă.",
+      "noapte": "autocolant",
+      "teme_potrivite": [
+        "noapte",
+        "hartie",
+        "curat"
+      ],
+      "animatie": {
+        "implicit": "contur-umplere",
+        "alternative": [
+          "aparitie"
+        ],
+        "esalonare": 0.06,
+        "accent": "aparitie"
+      }
+    },
+    {
+      "id": "op-bust-telefon",
+      "tip": "forma",
+      "familie": "cerneala",
+      "sursa": "open-peeps",
+      "original": "peep-43.svg",
+      "fisier": "forme/op-bust-telefon.svg",
+      "sha256": "b49bebf1b4e99735ca5a366ecdd5273bdbb31a20a410d656c778c0b12bb94589",
+      "kb": 10.4,
+      "cutie": {
+        "w": 164,
+        "h": 253
+      },
+      "roluri": [
+        "ink",
+        "fond"
+      ],
+      "recolorabil": true,
+      "acoperire_cerneala": 0.243,
+      "personaj": {
+        "numar": 1,
+        "gen": "barbat",
+        "poza": "bust",
+        "orientare": "dreapta"
+      },
+      "etichete": [
+        "telefon",
+        "mobil",
+        "mesaj",
+        "barbă",
+        "plictiseală",
+        "scepticism",
+        "neîncredere",
+        "citit"
+      ],
+      "descriere": "Un bărbat cu barbă bogată se uită sceptic la telefonul din mână.",
+      "noapte": "autocolant",
+      "teme_potrivite": [
+        "noapte",
+        "hartie",
+        "curat"
+      ],
+      "animatie": {
+        "implicit": "contur-umplere",
+        "alternative": [
+          "aparitie"
+        ],
+        "esalonare": 0.06,
+        "accent": "aparitie"
+      }
+    },
+    {
+      "id": "op-bust-telefon-2",
+      "tip": "forma",
+      "familie": "cerneala",
+      "sursa": "open-peeps",
+      "original": "peep-78.svg",
+      "fisier": "forme/op-bust-telefon-2.svg",
+      "sha256": "069f1ef11db8cd53846e1604a32dd7f00aa7d3163edf0f88ca5c3b63fcfa2c46",
+      "kb": 10.0,
+      "cutie": {
+        "w": 164,
+        "h": 241
+      },
+      "roluri": [
+        "ink",
+        "fond"
+      ],
+      "recolorabil": true,
+      "acoperire_cerneala": 0.176,
+      "personaj": {
+        "numar": 1,
+        "gen": "ambiguu",
+        "poza": "bust",
+        "orientare": "dreapta"
+      },
+      "etichete": [
+        "telefon",
+        "mobil",
+        "mesaj",
+        "zâmbet",
+        "ochelari",
+        "programare",
+        "notificare",
+        "mulțumire"
+      ],
+      "descriere": "O persoană cu ochelari ține un telefon în mână și zâmbește mulțumită.",
+      "noapte": "autocolant",
+      "teme_potrivite": [
+        "noapte",
+        "hartie",
+        "curat"
+      ],
+      "animatie": {
+        "implicit": "contur-umplere",
+        "alternative": [
+          "aparitie"
+        ],
+        "esalonare": 0.06,
+        "accent": "aparitie"
+      }
+    },
+    {
+      "id": "op-picioare-arata",
+      "tip": "forma",
+      "familie": "cerneala",
+      "sursa": "open-peeps",
+      "original": "peep-standing-16.svg",
+      "fisier": "forme/op-picioare-arata.svg",
+      "sha256": "91e953b3fb39902363cf8a522d476d3f8cd0bfbca8bd80fe8b9d51fee79f13a0",
+      "kb": 11.7,
+      "cutie": {
+        "w": 321,
+        "h": 677
+      },
+      "roluri": [
+        "ink",
+        "fond"
+      ],
+      "recolorabil": true,
+      "acoperire_cerneala": 0.249,
+      "personaj": {
+        "numar": 1,
+        "gen": "ambiguu",
+        "poza": "in-picioare",
+        "orientare": "dreapta"
+      },
+      "etichete": [
+        "arată",
+        "idee",
+        "atenție",
+        "sfat",
+        "deget ridicat",
+        "zâmbet",
+        "explicație",
+        "în picioare"
+      ],
+      "descriere": "O persoană stă în picioare și ridică arătătorul zâmbind, ca și cum ar avea o idee.",
+      "noapte": "autocolant",
+      "teme_potrivite": [
+        "noapte",
+        "hartie",
+        "curat"
+      ],
+      "animatie": {
+        "implicit": "contur-umplere",
+        "alternative": [
+          "aparitie"
+        ],
+        "esalonare": 0.06,
+        "accent": "aparitie"
+      }
+    },
+    {
+      "id": "op-picioare-brate-incrucisate",
+      "tip": "forma",
+      "familie": "cerneala",
+      "sursa": "open-peeps",
+      "original": "peep-standing-12.svg",
+      "fisier": "forme/op-picioare-brate-incrucisate.svg",
+      "sha256": "e3bb042ceea559d623d594537ceaf09e3c118542f41de3e3361de60daf1d1519",
+      "kb": 12.6,
+      "cutie": {
+        "w": 264,
+        "h": 738
+      },
+      "roluri": [
+        "ink",
+        "fond"
+      ],
+      "recolorabil": true,
+      "acoperire_cerneala": 0.251,
+      "personaj": {
+        "numar": 1,
+        "gen": "ambiguu",
+        "poza": "in-picioare",
+        "orientare": "fata"
+      },
+      "etichete": [
+        "brațe încrucișate",
+        "încredere",
+        "mândrie",
+        "zâmbet larg",
+        "hotărâre",
+        "în picioare",
+        "bentiță",
+        "siguranță"
+      ],
+      "descriere": "O persoană cu o bentiță cu fundă în păr stă în picioare cu brațele încrucișate și zâmbește larg.",
+      "noapte": "autocolant",
+      "teme_potrivite": [
+        "noapte",
+        "hartie",
+        "curat"
+      ],
+      "animatie": {
+        "implicit": "contur-umplere",
+        "alternative": [
+          "aparitie"
+        ],
+        "esalonare": 0.06,
+        "accent": "aparitie"
+      }
+    },
+    {
+      "id": "op-picioare-explica-ochelari",
+      "tip": "forma",
+      "familie": "cerneala",
+      "sursa": "open-peeps",
+      "original": "peep-standing-22.svg",
+      "fisier": "forme/op-picioare-explica-ochelari.svg",
+      "sha256": "30db9544453a3c6c0878d45b91ffa76fc48b90dfb673982866e713e887d5f0b1",
+      "kb": 11.4,
+      "cutie": {
+        "w": 334,
+        "h": 718
+      },
+      "roluri": [
+        "ink",
+        "fond"
+      ],
+      "recolorabil": true,
+      "acoperire_cerneala": 0.273,
+      "personaj": {
+        "numar": 1,
+        "gen": "ambiguu",
+        "poza": "in-miscare",
+        "orientare": "dreapta"
+      },
+      "etichete": [
+        "explicație",
+        "mers",
+        "gest",
+        "ochelari",
+        "zâmbet larg",
+        "conversație",
+        "prezentare",
+        "entuziasm"
+      ],
+      "descriere": "O persoană cu ochelari merge și explică ceva cu palma întinsă, zâmbind larg.",
+      "noapte": "autocolant",
+      "teme_potrivite": [
+        "noapte",
+        "hartie",
+        "curat"
+      ],
+      "animatie": {
+        "implicit": "contur-umplere",
+        "alternative": [
+          "aparitie"
+        ],
+        "esalonare": 0.06,
+        "accent": "aparitie"
+      }
+    },
+    {
+      "id": "op-picioare-explica-palarie",
+      "tip": "forma",
+      "familie": "cerneala",
+      "sursa": "open-peeps",
+      "original": "peep-standing-23.svg",
+      "fisier": "forme/op-picioare-explica-palarie.svg",
+      "sha256": "a713e907748dd33e5044c04ff08701a7724a8e038693410dfcd4ac0abe3b9b57",
+      "kb": 12.5,
+      "cutie": {
+        "w": 334,
+        "h": 726
+      },
+      "roluri": [
+        "ink",
+        "fond"
+      ],
+      "recolorabil": true,
+      "acoperire_cerneala": 0.102,
+      "personaj": {
+        "numar": 1,
+        "gen": "barbat",
+        "poza": "in-miscare",
+        "orientare": "dreapta"
+      },
+      "etichete": [
+        "explicație",
+        "mers",
+        "gest",
+        "pălărie",
+        "barbă",
+        "zâmbet",
+        "conversație",
+        "prezentare"
+      ],
+      "descriere": "Un bărbat cu pălărie și barbă merge și explică ceva cu palma întinsă, zâmbind.",
+      "noapte": "autocolant",
+      "teme_potrivite": [
+        "noapte",
+        "hartie",
+        "curat"
+      ],
+      "animatie": {
+        "implicit": "contur-umplere",
+        "alternative": [
+          "aparitie"
+        ],
+        "esalonare": 0.06,
+        "accent": "aparitie"
+      }
+    },
+    {
+      "id": "op-picioare-hijab",
+      "tip": "forma",
+      "familie": "cerneala",
+      "sursa": "open-peeps",
+      "original": "peep-standing-5.svg",
+      "fisier": "forme/op-picioare-hijab.svg",
+      "sha256": "60f5be04668081debed8a4469c2d857802ad0ba44ccaaf814efbbf9f68b26eea",
+      "kb": 8.4,
+      "cutie": {
+        "w": 314,
+        "h": 707
+      },
+      "roluri": [
+        "ink",
+        "fond"
+      ],
+      "recolorabil": true,
+      "acoperire_cerneala": 0.26,
+      "personaj": {
+        "numar": 1,
+        "gen": "femeie",
+        "poza": "in-picioare",
+        "orientare": "dreapta"
+      },
+      "etichete": [
+        "hijab",
+        "în picioare",
+        "zâmbet",
+        "calm",
+        "așteptare",
+        "încredere",
+        "relaxat",
+        "mâini pe șolduri"
+      ],
+      "descriere": "O femeie cu hijab stă în picioare, cu mâinile pe șolduri, și zâmbește calm.",
+      "noapte": "autocolant",
+      "teme_potrivite": [
+        "noapte",
+        "hartie",
+        "curat"
+      ],
+      "animatie": {
+        "implicit": "contur-umplere",
+        "alternative": [
+          "aparitie"
+        ],
+        "esalonare": 0.06,
+        "accent": "aparitie"
+      }
+    },
+    {
+      "id": "op-picioare-merge",
+      "tip": "forma",
+      "familie": "cerneala",
+      "sursa": "open-peeps",
+      "original": "peep-standing-25.svg",
+      "fisier": "forme/op-picioare-merge.svg",
+      "sha256": "af00aa8b4757edd67d1e59b4c44d8c6dd5c2e6560448026aec78b2c6a0b17557",
+      "kb": 9.7,
+      "cutie": {
+        "w": 256,
+        "h": 741
+      },
+      "roluri": [
+        "ink",
+        "fond"
+      ],
+      "recolorabil": true,
+      "acoperire_cerneala": 0.313,
+      "personaj": {
+        "numar": 1,
+        "gen": "ambiguu",
+        "poza": "in-miscare",
+        "orientare": "dreapta"
+      },
+      "etichete": [
+        "mers",
+        "plimbare",
+        "pe drum",
+        "afro",
+        "relaxat",
+        "lejer",
+        "sosire",
+        "pas"
+      ],
+      "descriere": "O persoană cu părul afro merge relaxată, în tricou și pantaloni lejeri.",
+      "noapte": "autocolant",
+      "teme_potrivite": [
+        "noapte",
+        "hartie",
+        "curat"
+      ],
+      "animatie": {
+        "implicit": "contur-umplere",
+        "alternative": [
+          "aparitie"
+        ],
+        "esalonare": 0.06,
+        "accent": "aparitie"
+      }
+    },
+    {
+      "id": "op-picioare-proteza",
+      "tip": "forma",
+      "familie": "cerneala",
+      "sursa": "open-peeps",
+      "original": "peep-standing-2.svg",
+      "fisier": "forme/op-picioare-proteza.svg",
+      "sha256": "b3ade27f4d5f45eaa344a9d518f4fce04522ec6a10d209dad39ec9fd5e440827",
+      "kb": 13.7,
+      "cutie": {
+        "w": 221,
+        "h": 762
+      },
+      "roluri": [
+        "ink",
+        "fond"
+      ],
+      "recolorabil": true,
+      "acoperire_cerneala": 0.421,
+      "personaj": {
+        "numar": 1,
+        "gen": "ambiguu",
+        "poza": "in-picioare",
+        "orientare": "dreapta"
+      },
+      "etichete": [
+        "proteză",
+        "dizabilitate",
+        "incluziune",
+        "accesibilitate",
+        "în picioare",
+        "ochelari",
+        "afro",
+        "încredere"
+      ],
+      "descriere": "O persoană cu părul afro și ochelari stă în picioare, cu o proteză la un picior, în cămașă și pantaloni scurți.",
+      "noapte": "autocolant",
+      "teme_potrivite": [
+        "noapte",
+        "hartie",
+        "curat"
+      ],
+      "animatie": {
+        "implicit": "contur-umplere",
+        "alternative": [
+          "aparitie"
+        ],
+        "esalonare": 0.06,
+        "accent": "aparitie"
+      }
+    },
+    {
+      "id": "op-picioare-sacou",
+      "tip": "forma",
+      "familie": "cerneala",
+      "sursa": "open-peeps",
+      "original": "peep-standing-18.svg",
+      "fisier": "forme/op-picioare-sacou.svg",
+      "sha256": "02e243747aa73a344a2423074535d83f9fdea2b5f29f792c91bed9975676f884",
+      "kb": 11.2,
+      "cutie": {
+        "w": 258,
+        "h": 706
+      },
+      "roluri": [
+        "ink",
+        "fond"
+      ],
+      "recolorabil": true,
+      "acoperire_cerneala": 0.289,
+      "personaj": {
+        "numar": 1,
+        "gen": "ambiguu",
+        "poza": "in-picioare",
+        "orientare": "dreapta"
+      },
+      "etichete": [
+        "sacou",
+        "încredere",
+        "profesionist",
+        "afaceri",
+        "ochelari",
+        "mână pe șold",
+        "în picioare",
+        "antreprenor"
+      ],
+      "descriere": "O persoană cu ochelari, în sacou, stă în picioare cu o mână pe șold, sigură pe ea.",
+      "noapte": "autocolant",
+      "teme_potrivite": [
+        "noapte",
+        "hartie",
+        "curat"
+      ],
+      "animatie": {
+        "implicit": "contur-umplere",
+        "alternative": [
+          "aparitie"
+        ],
+        "esalonare": 0.06,
+        "accent": "aparitie"
+      }
+    }
+  ],
+  "sinonime": {
+    "copleșit": [
+      "obosit",
+      "epuizat",
+      "stres"
+    ],
+    "cafea": [
+      "coffee",
+      "cană"
+    ],
+    "calm": [
+      "liniște",
+      "relaxat",
+      "meditație"
+    ],
+    "laptop": [
+      "calculator",
+      "birou",
+      "lucru"
+    ],
+    "telefon": [
+      "mobil",
+      "apel",
+      "mesaj"
+    ]
+  }
+}

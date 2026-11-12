@@ -1,0 +1,1475 @@
+{
+  "versiune": 1,
+  "sablon": "overlay-filmare",
+  "format": "vertical",
+  "latime": 1080,
+  "inaltime": 1920,
+  "fps": 30,
+  "durata": 22.912,
+  "start": 0,
+  "focus_x": 50,
+  "sursa": {
+    "latime": 1080,
+    "inaltime": 1920
+  },
+  "ritm": {
+    "intrare": 0.35,
+    "cuvinte": 4,
+    "avans": 0.15,
+    "ease": "power3.out"
+  },
+  "opacitate_fundal": 0.78,
+  "greutate_titlu": 700,
+  "subtitrari": {
+    "activ": true,
+    "animatie": "cuvant-activ",
+    "pozitie": "jos",
+    "marime": 64,
+    "majuscule": false,
+    "grupuri": [
+      {
+        "n": 1,
+        "id": "g1",
+        "start": 0.24,
+        "end": 2.8,
+        "marime": 64,
+        "randuri": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            3
+          ]
+        ],
+        "cuvinte": [
+          {
+            "id": "w0",
+            "text": "Bună,",
+            "start": 0.32,
+            "end": 1.2,
+            "evidentiat": false
+          },
+          {
+            "id": "w1",
+            "text": "sunt",
+            "start": 1.2,
+            "end": 1.44,
+            "evidentiat": false
+          },
+          {
+            "id": "w2",
+            "text": "Andreea",
+            "start": 1.44,
+            "end": 1.92,
+            "evidentiat": false
+          },
+          {
+            "id": "w3",
+            "text": "Popescu,",
+            "start": 1.92,
+            "end": 2.8,
+            "evidentiat": false
+          }
+        ],
+        "caseta": [
+          169.81,
+          1302.4,
+          662.38,
+          175.2
+        ]
+      },
+      {
+        "n": 2,
+        "id": "g2",
+        "start": 2.8,
+        "end": 4.56,
+        "marime": 64,
+        "randuri": [
+          [
+            0,
+            1,
+            2
+          ]
+        ],
+        "cuvinte": [
+          {
+            "id": "w4",
+            "text": "consultant",
+            "start": 2.8,
+            "end": 3.6,
+            "evidentiat": false
+          },
+          {
+            "id": "w5",
+            "text": "de",
+            "start": 3.6,
+            "end": 3.76,
+            "evidentiat": false
+          },
+          {
+            "id": "w6",
+            "text": "marketing.",
+            "start": 3.76,
+            "end": 4.56,
+            "evidentiat": false
+          }
+        ],
+        "caseta": [
+          85.72,
+          1339.2,
+          830.56,
+          101.6
+        ]
+      },
+      {
+        "n": 3,
+        "id": "g3",
+        "start": 4.56,
+        "end": 6.08,
+        "marime": 64,
+        "randuri": [
+          [
+            0,
+            1,
+            2,
+            3
+          ]
+        ],
+        "cuvinte": [
+          {
+            "id": "w7",
+            "text": "Anul",
+            "start": 4.56,
+            "end": 4.96,
+            "evidentiat": false
+          },
+          {
+            "id": "w8",
+            "text": "trecut",
+            "start": 4.96,
+            "end": 5.28,
+            "evidentiat": false
+          },
+          {
+            "id": "w9",
+            "text": "lucram",
+            "start": 5.36,
+            "end": 5.76,
+            "evidentiat": false
+          },
+          {
+            "id": "w10",
+            "text": "până",
+            "start": 5.76,
+            "end": 6.08,
+            "evidentiat": false
+          }
+        ],
+        "caseta": [
+          103,
+          1339.2,
+          796,
+          101.6
+        ]
+      },
+      {
+        "n": 4,
+        "id": "g4",
+        "start": 6.08,
+        "end": 7.04,
+        "marime": 64,
+        "randuri": [
+          [
+            0,
+            1
+          ]
+        ],
+        "cuvinte": [
+          {
+            "id": "w11",
+            "text": "seara",
+            "start": 6.08,
+            "end": 6.32,
+            "evidentiat": false
+          },
+          {
+            "id": "w12",
+            "text": "târziu.",
+            "start": 6.4,
+            "end": 7.04,
+            "evidentiat": false
+          }
+        ],
+        "caseta": [
+          281.28,
+          1339.2,
+          439.44,
+          101.6
+        ]
+      },
+      {
+        "n": 5,
+        "id": "g5",
+        "start": 7.04,
+        "end": 8.4,
+        "marime": 64,
+        "randuri": [
+          [
+            0,
+            1,
+            2,
+            3
+          ]
+        ],
+        "cuvinte": [
+          {
+            "id": "w13",
+            "text": "Acum",
+            "start": 7.04,
+            "end": 7.36,
+            "evidentiat": false
+          },
+          {
+            "id": "w14",
+            "text": "câștig",
+            "start": 7.36,
+            "end": 7.84,
+            "evidentiat": false
+          },
+          {
+            "id": "w15",
+            "text": "6",
+            "start": 7.84,
+            "end": 8.16,
+            "evidentiat": true
+          },
+          {
+            "id": "w16",
+            "text": "ore",
+            "start": 8.16,
+            "end": 8.4,
+            "evidentiat": true
+          }
+        ],
+        "caseta": [
+          195.19,
+          1339.2,
+          611.63,
+          101.6
+        ]
+      },
+      {
+        "n": 6,
+        "id": "g6",
+        "start": 8.4,
+        "end": 10.16,
+        "marime": 64,
+        "randuri": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            3
+          ]
+        ],
+        "cuvinte": [
+          {
+            "id": "w17",
+            "text": "în",
+            "start": 8.4,
+            "end": 8.56,
+            "evidentiat": false
+          },
+          {
+            "id": "w18",
+            "text": "fiecare",
+            "start": 8.56,
+            "end": 9.04,
+            "evidentiat": false
+          },
+          {
+            "id": "w19",
+            "text": "săptămână,",
+            "start": 9.04,
+            "end": 9.84,
+            "evidentiat": false
+          },
+          {
+            "id": "w20",
+            "text": "pentru",
+            "start": 9.84,
+            "end": 10.16,
+            "evidentiat": false
+          }
+        ],
+        "caseta": [
+          139.55,
+          1302.4,
+          722.91,
+          175.2
+        ]
+      },
+      {
+        "n": 7,
+        "id": "g7",
+        "start": 10.16,
+        "end": 11.12,
+        "marime": 64,
+        "randuri": [
+          [
+            0,
+            1,
+            2
+          ]
+        ],
+        "cuvinte": [
+          {
+            "id": "w21",
+            "text": "că",
+            "start": 10.16,
+            "end": 10.32,
+            "evidentiat": false
+          },
+          {
+            "id": "w22",
+            "text": "agentul",
+            "start": 10.32,
+            "end": 10.88,
+            "evidentiat": false
+          },
+          {
+            "id": "w23",
+            "text": "meu",
+            "start": 10.88,
+            "end": 11.12,
+            "evidentiat": false
+          }
+        ],
+        "caseta": [
+          238.15,
+          1339.2,
+          525.69,
+          101.6
+        ]
+      },
+      {
+        "n": 8,
+        "id": "g8",
+        "start": 17.6,
+        "end": 18.96,
+        "marime": 64,
+        "randuri": [
+          [
+            0,
+            1,
+            2,
+            3
+          ]
+        ],
+        "cuvinte": [
+          {
+            "id": "w38",
+            "text": "mai",
+            "start": 17.68,
+            "end": 17.84,
+            "evidentiat": false
+          },
+          {
+            "id": "w39",
+            "text": "mult,",
+            "start": 17.84,
+            "end": 18.24,
+            "evidentiat": false
+          },
+          {
+            "id": "w40",
+            "text": "lucrez",
+            "start": 18.24,
+            "end": 18.64,
+            "evidentiat": false
+          },
+          {
+            "id": "w41",
+            "text": "pe",
+            "start": 18.8,
+            "end": 18.96,
+            "evidentiat": false
+          }
+        ],
+        "caseta": [
+          182.47,
+          1339.2,
+          637.06,
+          101.6
+        ]
+      },
+      {
+        "n": 9,
+        "id": "g9",
+        "start": 18.96,
+        "end": 19.46,
+        "marime": 64,
+        "randuri": [
+          [
+            0
+          ]
+        ],
+        "cuvinte": [
+          {
+            "id": "w42",
+            "text": "ce",
+            "start": 18.96,
+            "end": 19.12,
+            "evidentiat": false
+          }
+        ],
+        "caseta": [
+          439.11,
+          1339.2,
+          123.78,
+          101.6
+        ]
+      }
+    ],
+    "suspendari": [
+      [
+        11.29,
+        17.35
+      ],
+      [
+        19.912,
+        22.912
+      ]
+    ],
+    "pasi": [
+      {
+        "efect": "grup",
+        "tinta": "#g1",
+        "t": 0.24,
+        "dur": 2.56,
+        "iesire": 0.12
+      },
+      {
+        "efect": "cuvant",
+        "tinta": "#c1-1",
+        "t": 0.32,
+        "dur": 0.88
+      },
+      {
+        "efect": "cuvant",
+        "tinta": "#c1-2",
+        "t": 1.2,
+        "dur": 0.24
+      },
+      {
+        "efect": "cuvant",
+        "tinta": "#c1-3",
+        "t": 1.44,
+        "dur": 0.48
+      },
+      {
+        "efect": "cuvant",
+        "tinta": "#c1-4",
+        "t": 1.92,
+        "dur": 0.88
+      },
+      {
+        "efect": "grup",
+        "tinta": "#g2",
+        "t": 2.8,
+        "dur": 1.76,
+        "iesire": 0.12
+      },
+      {
+        "efect": "cuvant",
+        "tinta": "#c2-1",
+        "t": 2.8,
+        "dur": 0.8
+      },
+      {
+        "efect": "cuvant",
+        "tinta": "#c2-2",
+        "t": 3.6,
+        "dur": 0.16
+      },
+      {
+        "efect": "cuvant",
+        "tinta": "#c2-3",
+        "t": 3.76,
+        "dur": 0.8
+      },
+      {
+        "efect": "grup",
+        "tinta": "#g3",
+        "t": 4.56,
+        "dur": 1.52,
+        "iesire": 0.12
+      },
+      {
+        "efect": "cuvant",
+        "tinta": "#c3-1",
+        "t": 4.56,
+        "dur": 0.4
+      },
+      {
+        "efect": "cuvant",
+        "tinta": "#c3-2",
+        "t": 4.96,
+        "dur": 0.32
+      },
+      {
+        "efect": "cuvant",
+        "tinta": "#c3-3",
+        "t": 5.36,
+        "dur": 0.4
+      },
+      {
+        "efect": "cuvant",
+        "tinta": "#c3-4",
+        "t": 5.76,
+        "dur": 0.32
+      },
+      {
+        "efect": "grup",
+        "tinta": "#g4",
+        "t": 6.08,
+        "dur": 0.96,
+        "iesire": 0.12
+      },
+      {
+        "efect": "cuvant",
+        "tinta": "#c4-1",
+        "t": 6.08,
+        "dur": 0.24
+      },
+      {
+        "efect": "cuvant",
+        "tinta": "#c4-2",
+        "t": 6.4,
+        "dur": 0.64
+      },
+      {
+        "efect": "grup",
+        "tinta": "#g5",
+        "t": 7.04,
+        "dur": 1.36,
+        "iesire": 0.12
+      },
+      {
+        "efect": "cuvant",
+        "tinta": "#c5-1",
+        "t": 7.04,
+        "dur": 0.32
+      },
+      {
+        "efect": "cuvant",
+        "tinta": "#c5-2",
+        "t": 7.36,
+        "dur": 0.48
+      },
+      {
+        "efect": "grup",
+        "tinta": "#g6",
+        "t": 8.4,
+        "dur": 1.76,
+        "iesire": 0.12
+      },
+      {
+        "efect": "cuvant",
+        "tinta": "#c6-1",
+        "t": 8.4,
+        "dur": 0.16
+      },
+      {
+        "efect": "cuvant",
+        "tinta": "#c6-2",
+        "t": 8.56,
+        "dur": 0.48
+      },
+      {
+        "efect": "cuvant",
+        "tinta": "#c6-3",
+        "t": 9.04,
+        "dur": 0.8
+      },
+      {
+        "efect": "cuvant",
+        "tinta": "#c6-4",
+        "t": 9.84,
+        "dur": 0.32
+      },
+      {
+        "efect": "grup",
+        "tinta": "#g7",
+        "t": 10.16,
+        "dur": 0.96,
+        "iesire": 0.12
+      },
+      {
+        "efect": "cuvant",
+        "tinta": "#c7-1",
+        "t": 10.16,
+        "dur": 0.16
+      },
+      {
+        "efect": "cuvant",
+        "tinta": "#c7-2",
+        "t": 10.32,
+        "dur": 0.56
+      },
+      {
+        "efect": "cuvant",
+        "tinta": "#c7-3",
+        "t": 10.88,
+        "dur": 0.24
+      },
+      {
+        "efect": "grup",
+        "tinta": "#g8",
+        "t": 17.6,
+        "dur": 1.36,
+        "iesire": 0.12
+      },
+      {
+        "efect": "cuvant",
+        "tinta": "#c8-1",
+        "t": 17.68,
+        "dur": 0.16
+      },
+      {
+        "efect": "cuvant",
+        "tinta": "#c8-2",
+        "t": 17.84,
+        "dur": 0.4
+      },
+      {
+        "efect": "cuvant",
+        "tinta": "#c8-3",
+        "t": 18.24,
+        "dur": 0.4
+      },
+      {
+        "efect": "cuvant",
+        "tinta": "#c8-4",
+        "t": 18.8,
+        "dur": 0.16
+      },
+      {
+        "efect": "grup",
+        "tinta": "#g9",
+        "t": 18.96,
+        "dur": 0.5,
+        "iesire": 0.12
+      },
+      {
+        "efect": "cuvant",
+        "tinta": "#c9-1",
+        "t": 18.96,
+        "dur": 0.16
+      }
+    ]
+  },
+  "elemente": [
+    {
+      "n": 1,
+      "id": "e1",
+      "camp": "elemente[0]",
+      "tip": "nume",
+      "banda": "nume",
+      "start": 1.05,
+      "complet": 1.6,
+      "sfarsit": 4.55,
+      "ancora": {
+        "fraza": "sunt andreea",
+        "aparitia": 1,
+        "gasita": true,
+        "t": 1.2
+      },
+      "aliniere": "stanga",
+      "blocuri": [
+        {
+          "id": "b1-1",
+          "fel": "card",
+          "x": 72,
+          "y": 1061.2,
+          "w": 487.24,
+          "h": 158.8
+        },
+        {
+          "id": "b1-2",
+          "fel": "rand",
+          "rol": "nume",
+          "x": 108,
+          "y": 1089.2,
+          "w": 415.24,
+          "h": 52.8,
+          "marime": 48,
+          "text": "Andreea Popescu",
+          "camp": "elemente[0].nume",
+          "text_id": "t1-1"
+        },
+        {
+          "id": "b1-3",
+          "fel": "rand",
+          "rol": "rol",
+          "x": 108,
+          "y": 1156,
+          "w": 347.37,
+          "h": 36,
+          "marime": 30,
+          "text": "consultant de marketing",
+          "camp": "elemente[0].rol",
+          "text_id": "t1-2"
+        }
+      ],
+      "pasi": [
+        {
+          "efect": "apare",
+          "tinta": "#b1-1",
+          "t": 1.05,
+          "dur": 0.35,
+          "x": 0,
+          "y": 16,
+          "ease": "power3.out"
+        },
+        {
+          "efect": "apare",
+          "tinta": "#b1-2",
+          "t": 1.17,
+          "dur": 0.35,
+          "x": 0,
+          "y": 12,
+          "ease": "power3.out"
+        },
+        {
+          "efect": "apare",
+          "tinta": "#b1-3",
+          "t": 1.25,
+          "dur": 0.35,
+          "x": 0,
+          "y": 12,
+          "ease": "power3.out"
+        },
+        {
+          "efect": "iese",
+          "tinta": "#e1",
+          "t": 4.3,
+          "dur": 0.25,
+          "x": 0,
+          "y": -12,
+          "ease": "power2.in"
+        }
+      ],
+      "texte": [
+        {
+          "id": "t1-1",
+          "text": "Andreea Popescu",
+          "camp": "elemente[0].nume",
+          "t": 1.52,
+          "caseta": [
+            108,
+            1089.2,
+            415.24,
+            52.8
+          ]
+        },
+        {
+          "id": "t1-2",
+          "text": "consultant de marketing",
+          "camp": "elemente[0].rol",
+          "t": 1.6,
+          "caseta": [
+            108,
+            1156,
+            347.37,
+            36
+          ]
+        }
+      ],
+      "permite_banda_subtitrari": false
+    },
+    {
+      "n": 2,
+      "id": "e2",
+      "camp": "elemente[1]",
+      "tip": "cifra",
+      "banda": "sus",
+      "start": 7.69,
+      "complet": 8.61,
+      "sfarsit": 10.19,
+      "ancora": {
+        "fraza": "6 ore",
+        "aparitia": 1,
+        "gasita": true,
+        "t": 7.84
+      },
+      "aliniere": "stanga",
+      "blocuri": [
+        {
+          "id": "b2-1",
+          "fel": "card",
+          "x": 72,
+          "y": 220,
+          "w": 527.53,
+          "h": 298
+        },
+        {
+          "id": "b2-2",
+          "fel": "cifra",
+          "rol": "cifra",
+          "x": 108,
+          "y": 248,
+          "w": 450.53,
+          "h": 180,
+          "marime": 180,
+          "text": "6 ore",
+          "camp": "elemente[1].valoare",
+          "text_id": "t2-1"
+        },
+        {
+          "id": "b2-3",
+          "fel": "rand",
+          "rol": "text_cifra",
+          "x": 108,
+          "y": 442,
+          "w": 455.53,
+          "h": 48,
+          "marime": 40,
+          "text": "câștigate pe săptămână",
+          "camp": "elemente[1].text",
+          "text_id": "t2-2"
+        }
+      ],
+      "pasi": [
+        {
+          "efect": "apare",
+          "tinta": "#b2-1",
+          "t": 7.69,
+          "dur": 0.35,
+          "x": 0,
+          "y": 16,
+          "ease": "power3.out"
+        },
+        {
+          "efect": "apare",
+          "tinta": "#b2-2",
+          "t": 7.81,
+          "dur": 0.35,
+          "x": 0,
+          "y": 12,
+          "ease": "power3.out"
+        },
+        {
+          "efect": "numara",
+          "tinta": "#t2-1",
+          "t": 7.81,
+          "dur": 0.8,
+          "valoare": 6,
+          "zecimale": 0,
+          "prefix": "",
+          "sufix": " ore"
+        },
+        {
+          "efect": "apare",
+          "tinta": "#b2-3",
+          "t": 7.89,
+          "dur": 0.35,
+          "x": 0,
+          "y": 12,
+          "ease": "power3.out"
+        },
+        {
+          "efect": "iese",
+          "tinta": "#e2",
+          "t": 9.94,
+          "dur": 0.25,
+          "x": 0,
+          "y": -12,
+          "ease": "power2.in"
+        }
+      ],
+      "texte": [
+        {
+          "id": "t2-1",
+          "text": "6 ore",
+          "camp": "elemente[1].valoare",
+          "t": 8.61,
+          "caseta": [
+            108,
+            248,
+            450.53,
+            180
+          ]
+        },
+        {
+          "id": "t2-2",
+          "text": "câștigate pe săptămână",
+          "camp": "elemente[1].text",
+          "t": 8.24,
+          "caseta": [
+            108,
+            442,
+            455.53,
+            48
+          ]
+        }
+      ],
+      "permite_banda_subtitrari": false
+    },
+    {
+      "n": 3,
+      "id": "e3",
+      "camp": "elemente[2]",
+      "tip": "lista",
+      "banda": "centru",
+      "start": 11.29,
+      "complet": 16.2,
+      "sfarsit": 17.35,
+      "ancora": {
+        "fraza": "trei lucruri",
+        "aparitia": 1,
+        "gasita": true,
+        "t": 11.44
+      },
+      "aliniere": "stanga",
+      "blocuri": [
+        {
+          "id": "b3-1",
+          "fel": "card",
+          "x": 246.94,
+          "y": 770.4,
+          "w": 586.13,
+          "h": 309.2
+        },
+        {
+          "id": "b3-2",
+          "fel": "rand",
+          "rol": "lista_titlu",
+          "x": 282.94,
+          "y": 798.4,
+          "w": 366.84,
+          "h": 52.8,
+          "marime": 48,
+          "text": "Ce face agentul",
+          "camp": "elemente[2].titlu[0]",
+          "text_id": "t3-1"
+        },
+        {
+          "id": "b3-3",
+          "fel": "punct",
+          "rol": "punct",
+          "x": 282.94,
+          "y": 865.2,
+          "w": 496.85,
+          "h": 52.8,
+          "marime": 44,
+          "text": "Răspunde la e-mailuri",
+          "camp": "elemente[2].puncte[0].text",
+          "text_id": "t3-2",
+          "marcaj": 39.6
+        },
+        {
+          "id": "b3-4",
+          "fel": "punct",
+          "rol": "punct",
+          "x": 282.94,
+          "y": 932,
+          "w": 514.13,
+          "h": 52.8,
+          "marime": 44,
+          "text": "Programează postările",
+          "camp": "elemente[2].puncte[1].text",
+          "text_id": "t3-3",
+          "marcaj": 39.6
+        },
+        {
+          "id": "b3-5",
+          "fel": "punct",
+          "rol": "punct",
+          "x": 282.94,
+          "y": 998.8,
+          "w": 441.34,
+          "h": 52.8,
+          "marime": 44,
+          "text": "Pregătește ofertele",
+          "camp": "elemente[2].puncte[2].text",
+          "text_id": "t3-4",
+          "marcaj": 39.6
+        }
+      ],
+      "pasi": [
+        {
+          "efect": "apare",
+          "tinta": "#b3-1",
+          "t": 11.29,
+          "dur": 0.35,
+          "x": 0,
+          "y": 16,
+          "ease": "power3.out"
+        },
+        {
+          "efect": "apare",
+          "tinta": "#b3-2",
+          "t": 11.41,
+          "dur": 0.35,
+          "x": 0,
+          "y": 12,
+          "ease": "power3.out"
+        },
+        {
+          "efect": "apare",
+          "tinta": "#b3-3",
+          "t": 12.89,
+          "dur": 0.35,
+          "x": 0,
+          "y": 12,
+          "ease": "power3.out"
+        },
+        {
+          "efect": "apare",
+          "tinta": "#b3-4",
+          "t": 14.33,
+          "dur": 0.35,
+          "x": 0,
+          "y": 12,
+          "ease": "power3.out"
+        },
+        {
+          "efect": "apare",
+          "tinta": "#b3-5",
+          "t": 15.85,
+          "dur": 0.35,
+          "x": 0,
+          "y": 12,
+          "ease": "power3.out"
+        },
+        {
+          "efect": "iese",
+          "tinta": "#e3",
+          "t": 17.1,
+          "dur": 0.25,
+          "x": 0,
+          "y": -12,
+          "ease": "power2.in"
+        }
+      ],
+      "texte": [
+        {
+          "id": "t3-1",
+          "text": "Ce face agentul",
+          "camp": "elemente[2].titlu[0]",
+          "t": 11.76,
+          "caseta": [
+            282.94,
+            798.4,
+            366.84,
+            52.8
+          ]
+        },
+        {
+          "id": "t3-2",
+          "text": "Răspunde la e-mailuri",
+          "camp": "elemente[2].puncte[0].text",
+          "t": 13.24,
+          "caseta": [
+            322.54,
+            865.2,
+            457.25,
+            52.8
+          ]
+        },
+        {
+          "id": "t3-3",
+          "text": "Programează postările",
+          "camp": "elemente[2].puncte[1].text",
+          "t": 14.68,
+          "caseta": [
+            322.54,
+            932,
+            474.53,
+            52.8
+          ]
+        },
+        {
+          "id": "t3-4",
+          "text": "Pregătește ofertele",
+          "camp": "elemente[2].puncte[2].text",
+          "t": 16.2,
+          "caseta": [
+            322.54,
+            998.8,
+            401.74,
+            52.8
+          ]
+        }
+      ],
+      "permite_banda_subtitrari": false
+    },
+    {
+      "n": 4,
+      "id": "e4",
+      "camp": "elemente[3]",
+      "tip": "final",
+      "banda": "centru",
+      "start": 19.912,
+      "complet": 20.462,
+      "sfarsit": 22.912,
+      "ancora": null,
+      "aliniere": "centru",
+      "blocuri": [
+        {
+          "id": "b4-1",
+          "fel": "card",
+          "x": 328.99,
+          "y": 838.8,
+          "w": 422.03,
+          "h": 172.4
+        },
+        {
+          "id": "b4-2",
+          "fel": "rand",
+          "rol": "cta",
+          "x": 364.99,
+          "y": 866.8,
+          "w": 350.03,
+          "h": 61.6,
+          "marime": 56,
+          "text": "Scrie AGENT",
+          "camp": "elemente[3].cta",
+          "text_id": "t4-1"
+        },
+        {
+          "id": "b4-3",
+          "fel": "rand",
+          "rol": "detaliu",
+          "x": 406.61,
+          "y": 942.4,
+          "w": 266.79,
+          "h": 40.8,
+          "marime": 34,
+          "text": "și îți trimit ghidul",
+          "camp": "elemente[3].detaliu",
+          "text_id": "t4-2"
+        }
+      ],
+      "pasi": [
+        {
+          "efect": "apare",
+          "tinta": "#b4-1",
+          "t": 19.912,
+          "dur": 0.35,
+          "x": 0,
+          "y": 16,
+          "ease": "power3.out"
+        },
+        {
+          "efect": "apare",
+          "tinta": "#b4-2",
+          "t": 20.032,
+          "dur": 0.35,
+          "x": 0,
+          "y": 12,
+          "ease": "power3.out"
+        },
+        {
+          "efect": "apare",
+          "tinta": "#b4-3",
+          "t": 20.112,
+          "dur": 0.35,
+          "x": 0,
+          "y": 12,
+          "ease": "power3.out"
+        }
+      ],
+      "texte": [
+        {
+          "id": "t4-1",
+          "text": "Scrie AGENT",
+          "camp": "elemente[3].cta",
+          "t": 20.382,
+          "caseta": [
+            364.99,
+            866.8,
+            350.03,
+            61.6
+          ]
+        },
+        {
+          "id": "t4-2",
+          "text": "și îți trimit ghidul",
+          "camp": "elemente[3].detaliu",
+          "t": 20.462,
+          "caseta": [
+            406.61,
+            942.4,
+            266.79,
+            40.8
+          ]
+        }
+      ],
+      "permite_banda_subtitrari": false
+    }
+  ],
+  "banda_subtitrari": [
+    72,
+    1240,
+    858,
+    300
+  ],
+  "rostit": [
+    {
+      "start": 0.32,
+      "end": 1.2,
+      "text": "Bună,"
+    },
+    {
+      "start": 1.2,
+      "end": 1.44,
+      "text": "sunt"
+    },
+    {
+      "start": 1.44,
+      "end": 1.92,
+      "text": "Andreea"
+    },
+    {
+      "start": 1.92,
+      "end": 2.8,
+      "text": "Popescu,"
+    },
+    {
+      "start": 2.8,
+      "end": 3.6,
+      "text": "consultant"
+    },
+    {
+      "start": 3.6,
+      "end": 3.76,
+      "text": "de"
+    },
+    {
+      "start": 3.76,
+      "end": 4.56,
+      "text": "marketing."
+    },
+    {
+      "start": 4.56,
+      "end": 4.96,
+      "text": "Anul"
+    },
+    {
+      "start": 4.96,
+      "end": 5.28,
+      "text": "trecut"
+    },
+    {
+      "start": 5.36,
+      "end": 5.76,
+      "text": "lucram"
+    },
+    {
+      "start": 5.76,
+      "end": 6.08,
+      "text": "până"
+    },
+    {
+      "start": 6.08,
+      "end": 6.32,
+      "text": "seara"
+    },
+    {
+      "start": 6.4,
+      "end": 7.04,
+      "text": "târziu."
+    },
+    {
+      "start": 7.04,
+      "end": 7.36,
+      "text": "Acum"
+    },
+    {
+      "start": 7.36,
+      "end": 7.84,
+      "text": "câștig"
+    },
+    {
+      "start": 7.84,
+      "end": 8.16,
+      "text": "6"
+    },
+    {
+      "start": 8.16,
+      "end": 8.4,
+      "text": "ore"
+    },
+    {
+      "start": 8.4,
+      "end": 8.56,
+      "text": "în"
+    },
+    {
+      "start": 8.56,
+      "end": 9.04,
+      "text": "fiecare"
+    },
+    {
+      "start": 9.04,
+      "end": 9.84,
+      "text": "săptămână,"
+    },
+    {
+      "start": 9.84,
+      "end": 10.16,
+      "text": "pentru"
+    },
+    {
+      "start": 10.16,
+      "end": 10.32,
+      "text": "că"
+    },
+    {
+      "start": 10.32,
+      "end": 10.88,
+      "text": "agentul"
+    },
+    {
+      "start": 10.88,
+      "end": 11.12,
+      "text": "meu"
+    },
+    {
+      "start": 11.12,
+      "end": 11.44,
+      "text": "face"
+    },
+    {
+      "start": 11.44,
+      "end": 11.68,
+      "text": "trei"
+    },
+    {
+      "start": 11.68,
+      "end": 12.32,
+      "text": "lucruri."
+    },
+    {
+      "start": 12.32,
+      "end": 12.88,
+      "text": "răspunde"
+    },
+    {
+      "start": 12.88,
+      "end": 13.04,
+      "text": "la"
+    },
+    {
+      "start": 13.04,
+      "end": 13.84,
+      "text": "e-mailuri,"
+    },
+    {
+      "start": 13.84,
+      "end": 14.48,
+      "text": "programează"
+    },
+    {
+      "start": 14.48,
+      "end": 15.04,
+      "text": "postările"
+    },
+    {
+      "start": 15.12,
+      "end": 15.28,
+      "text": "și"
+    },
+    {
+      "start": 15.28,
+      "end": 16,
+      "text": "pregătește"
+    },
+    {
+      "start": 16,
+      "end": 16.8,
+      "text": "ofertele."
+    },
+    {
+      "start": 16.8,
+      "end": 16.96,
+      "text": "Nu"
+    },
+    {
+      "start": 16.96,
+      "end": 17.2,
+      "text": "mai"
+    },
+    {
+      "start": 17.2,
+      "end": 17.52,
+      "text": "lucrez"
+    },
+    {
+      "start": 17.68,
+      "end": 17.84,
+      "text": "mai"
+    },
+    {
+      "start": 17.84,
+      "end": 18.24,
+      "text": "mult,"
+    },
+    {
+      "start": 18.24,
+      "end": 18.64,
+      "text": "lucrez"
+    },
+    {
+      "start": 18.8,
+      "end": 18.96,
+      "text": "pe"
+    },
+    {
+      "start": 18.96,
+      "end": 19.12,
+      "text": "ce"
+    },
+    {
+      "start": 19.12,
+      "end": 19.92,
+      "text": "contaază,"
+    },
+    {
+      "start": 19.92,
+      "end": 20.32,
+      "text": "scrie"
+    },
+    {
+      "start": 20.32,
+      "end": 20.64,
+      "text": "agent"
+    },
+    {
+      "start": 20.64,
+      "end": 20.72,
+      "text": "și"
+    },
+    {
+      "start": 20.88,
+      "end": 21.04,
+      "text": "îți"
+    },
+    {
+      "start": 21.12,
+      "end": 21.52,
+      "text": "primit"
+    },
+    {
+      "start": 21.52,
+      "end": 22.32,
+      "text": "gidul."
+    }
+  ]
+}

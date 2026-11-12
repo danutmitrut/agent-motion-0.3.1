@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1080, height=1080">
+    <title>text-animat</title>
+    <script src="gsap.min.js"></script>
+    <style>
+@font-face {
+  font-family: "MG Fraunces";
+  font-style: normal;
+  font-weight: 700;
+  font-display: block;
+  src: url("fonturi/fraunces-700-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+@font-face {
+  font-family: "MG Fraunces";
+  font-style: normal;
+  font-weight: 700;
+  font-display: block;
+  src: url("fonturi/fraunces-700-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+@font-face {
+  font-family: "MG Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-display: block;
+  src: url("fonturi/inter-500-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+@font-face {
+  font-family: "MG Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-display: block;
+  src: url("fonturi/inter-500-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+:root { --font-titlu: "MG Fraunces", sans-serif; --font-text: "MG Inter", sans-serif; }
+      :root {
+        --w: 1080px;
+        --h: 1080px;
+        --fundal: #F3EBDD;
+        --text: #2A2420;
+        --atenuat: #6B6157;
+        --accent: #C2410C;
+        --granulatie: 0.06;
+        --ceata-a: rgba(194, 65, 12, 0.273);
+        --ceata-b: rgba(42, 36, 32, 0.1274);
+        --degrade-a: rgba(239, 221, 204, 1);
+        --degrade-b: rgba(231, 223, 210, 1);
+        --eticheta-spatiere: 0.16em;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: var(--w); height: var(--h); overflow: hidden; background: var(--fundal); }
+      #root { position: relative; width: var(--w); height: var(--h); overflow: hidden; background: var(--fundal); hyphens: none; -webkit-hyphens: none; }
+      #stage { position: absolute; inset: 0; }
+
+      #degrade { position: absolute; left: 0; top: 0; width: var(--w); height: calc(var(--h) * 2); background: linear-gradient(180deg, var(--degrade-a) 0%, var(--degrade-b) 50%, var(--degrade-a) 100%); }
+      .glow { position: absolute; border-radius: 50%; filter: blur(90px); }
+      #glow-a { left: -35%; top: -16%; width: 100%; height: 52%; background: var(--ceata-a); }
+      #glow-b { left: -11%; top: 71%; width: 130%; height: 43%; background: var(--ceata-b); }
+      #grain { position: absolute; inset: 0; width: var(--w); height: var(--h); opacity: var(--granulatie); mix-blend-mode: overlay; pointer-events: none; }
+      #root:not(.degrade) #degrade, #root:not(.ceata) .glow, #root.plin #grain { display: none; }
+
+      #compozitie { position: absolute; inset: 0; }
+      .scena { position: absolute; inset: 0; }
+      .bloc { position: absolute; }
+      #root.centru .bloc { text-align: center; }
+      #root.stanga .bloc, #root .bloc.lista { text-align: left; }
+      .rand { display: block; white-space: pre; }
+      .p { display: inline-block; white-space: pre; }
+      .p.accent { color: var(--accent); }
+      .masca { overflow: hidden; padding-bottom: 14px; margin-bottom: -14px; }
+      .cuvinte .masca { position: absolute; left: 0; right: 0; top: 0; }
+      .punct { display: flex; align-items: center; }
+      .marcaj { flex: 0 0 auto; display: inline-flex; align-items: center; color: var(--accent); }
+      .marcaj svg { width: 0.9em; height: 0.9em; overflow: visible; }
+      .marcaj path { fill: none; stroke: var(--accent); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1; }
+      .mare { font-family: var(--font-titlu); font-weight: 700; line-height: 1.08; letter-spacing: -0.02em; color: var(--text); }
+      .cifra { font-family: var(--font-titlu); font-weight: 700; line-height: 1; letter-spacing: 0em; color: var(--accent); font-variant-numeric: tabular-nums; }
+      .mediu { font-family: var(--font-text); font-weight: 500; line-height: 1.2; letter-spacing: 0em; color: var(--text); }
+      .mic { font-family: var(--font-text); font-weight: 500; line-height: 1.3; letter-spacing: 0em; color: var(--atenuat); }
+      .eticheta { letter-spacing: var(--eticheta-spatiere); }
+      .cta { color: var(--accent); }
+      .punct + .punct { margin-top: 22px; }
+    </style>
+  </head>
+  <body>
+    <div id="root" class="ceata stanga" data-composition-id="main" data-start="0" data-duration="18" data-width="1080" data-height="1080">
+      <div id="stage" class="clip" data-start="0" data-duration="18" data-track-index="0">
+
+        <div id="degrade" data-layout-allow-overflow></div>
+        <div class="glow" id="glow-a" data-layout-allow-overflow></div>
+        <div class="glow" id="glow-b" data-layout-allow-overflow></div>
+
+        <svg id="grain" viewBox="0 0 1080 1080" preserveAspectRatio="none">
+          <filter id="noise"><feTurbulence id="noise-t" type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="1" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter>
+          <rect width="1080" height="1080" filter="url(#noise)"/>
+        </svg>
+
+        <div id="compozitie">
+          <div class="scena" id="s1">
+            <div class="bloc mic eticheta" id="b1-1" style="left:108px;top:390.28px;width:864px;font-size:36px"><div class="rand" id="r1-1"><span class="p" id="t1-1">ATELIER</span></div></div>
+            <div class="bloc mare" id="b1-2" style="left:108px;top:465.08px;width:864px;font-size:104px"><div class="masca" data-layout-allow-overflow><div class="rand" id="r1-2"><span class="p" id="t1-2">Ore</span> <span class="p accent" id="t1-3">înapoi</span></div></div><div class="masca" data-layout-allow-overflow><div class="rand" id="r1-3"><span class="p" id="t1-4">în fiecare zi</span></div></div></div>
+          </div>
+          <div class="scena" id="s2">
+            <div class="bloc cifra" id="b2-1" style="left:108px;top:330.6px;width:864px;font-size:220px"><div class="rand" id="r2-1"><span class="p" id="t2-1">3,5 ore</span></div></div>
+            <div class="bloc mediu" id="b2-2" style="left:108px;top:590.6px;width:864px;font-size:60px"><div class="rand" id="r2-2"><span class="p" id="t2-2">pe săptămână, în medie</span></div></div>
+            <div class="bloc mic" id="b2-3" style="left:108px;top:702.6px;width:864px;font-size:36px"><div class="rand" id="r2-3"><span class="p" id="t2-3">exemplu, fără sursă reală</span></div></div>
+          </div>
+          <div class="scena" id="s3">
+            <div class="bloc mare" id="b3-1" style="left:108px;top:333.84px;width:864px;font-size:104px"><div class="masca" data-layout-allow-overflow><div class="rand" id="r3-1"><span class="p" id="t3-1">Ce preia:</span></div></div></div>
+            <div class="bloc mediu lista" id="b3-2" style="left:108px;top:486.16px;width:657.09px;font-size:60px"><div class="punct" id="r3-2"><span class="marcaj" style="width:54px;margin-right:27px">1.</span><span class="rand"><span class="p" id="t3-2">E-mailurile de rutină</span></span></div><div class="punct" id="r3-3"><span class="marcaj" style="width:54px;margin-right:27px">2.</span><span class="rand"><span class="p" id="t3-3">Programările</span></span></div><div class="punct" id="r3-4"><span class="marcaj" style="width:54px;margin-right:27px">3.</span><span class="rand"><span class="p" id="t3-4">Rapoartele lunare</span></span></div></div>
+          </div>
+          <div class="scena" id="s4">
+            <div class="bloc mare" id="b4-1" style="left:108px;top:318.94px;width:864px;font-size:104px"><div class="masca" data-layout-allow-overflow><div class="rand" id="r4-1"><span class="p" id="t4-1">Începe</span> <span class="p accent" id="t4-2">azi</span><span class="p" id="t4-3">.</span></div></div></div>
+            <div class="bloc mediu cta" id="b4-2" style="left:108px;top:471.26px;width:864px;font-size:60px"><div class="rand" id="r4-2"><span class="p" id="t4-4">Înscrie-te la atelier</span></div></div>
+            <div class="bloc mic" id="b4-3" style="left:108px;top:583.26px;width:864px;font-size:36px"><div class="rand" id="r4-3"><span class="p" id="t4-5">exemplu.ro/atelier</span></div></div>
+            <img id="sigla" class="bloc" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNDAgNjAiPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcng9IjEyIiBmaWxsPSIjQzI0MTBDIi8+PHJlY3QgeD0iNzYiIHk9IjE4IiB3aWR0aD0iMTY0IiBoZWlnaHQ9IjI0IiByeD0iMTIiIGZpbGw9IiMxQzFCMTkiLz48L3N2Zz4K" width="300" height="75" style="left:108px;top:686.06px" alt="">
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <script>/* Mișcările șablonului text-animat: efectele pe timeline-ul GSAP al compoziției (window.__timelines.main).
+ * Regizorul (lib/regizor.js) le cheamă din plan, cu timpi absoluți; aici nu se calculează timpi și nu se iau decizii.
+ * Reguli (ca la linia.js din reel; le verifică teste/runtime.test.mjs): nimic aleator, nimic legat de ceasul sistemului,
+ * tween-uri fromTo cu valori absolute, iar numărarea, tastarea și granulația se calculează din timpul cadrului, în gata().
+ * Comentariile sunt doar de tip bloc.
+ *
+ *   var M = Miscari.start(durata);
+ *   M.atmosfera({ mod, impingere, inaltime });
+ *   M.scena(id, start, sfarsit, ultima, deriva, iesire);
+ *   M.apare(tinta, t, dur, x, y, ease);   M.masca(tinta, t, dur, ease);   M.iese(tinta, t, dur);
+ *   M.scala(tinta, t, dur, de);           M.bifa(tinta, t, dur);
+ *   M.numara(tinta, t, dur, { valoare, zecimale, prefix, sufix });   M.tasteaza(tinta, t, dur, text);
+ *   M.gata();
+ */
+(function () {
+  function clamp(v) { return v < 0 ? 0 : v > 1 ? 1 : v; }
+
+  /* formatarea românească scrisă de mână (copia lui formatRo din cifre.mjs; testul cifre.test.mjs le compară) */
+  function formatRo(x, zecimale) {
+    var parti = Math.abs(x).toFixed(zecimale || 0).split(".");
+    var grupat = parti[0].replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+    return (x < 0 ? "-" : "") + grupat + (parti[1] ? "," + parti[1] : "");
+  }
+
+  function start(durata) {
+    var tl = gsap.timeline({ paused: true });
+    window.__timelines = window.__timelines || {};
+    window.__timelines["main"] = tl;
+    var numaratori = [], tastari = [], api = {};
+
+    /* scena apare la start, derivă lent în sus pe toată fereastra ei, iar blocurile ies (0,45 s) înainte de sfârșit;
+     * după ieșire, autoAlpha 0. Ultima scenă nu iese. */
+    api.scena = function (id, start, sfarsit, ultima, deriva, iesire) {
+      var s = "#" + id;
+      gsap.set(s, { autoAlpha: 0 });
+      tl.set(s, { autoAlpha: 1 }, start);
+      tl.fromTo(s, { y: 0 }, { y: -deriva, duration: sfarsit - start, ease: "none", immediateRender: false }, start);
+      if (!ultima) {
+        tl.fromTo(s + " > .bloc", { y: 0, opacity: 1 }, { y: -24, opacity: 0, duration: iesire, ease: "power2.in", immediateRender: false }, sfarsit - iesire);
+        tl.set(s, { autoAlpha: 0 }, sfarsit);
+      }
+    };
+
+    api.apare = function (tinta, t, dur, x, y, ease) {
+      tl.fromTo(tinta, { autoAlpha: 0, x: x, y: y }, { autoAlpha: 1, x: 0, y: 0, duration: dur, ease: ease }, t);
+    };
+
+    api.masca = function (tinta, t, dur, ease) {
+      tl.fromTo(tinta, { yPercent: 105 }, { yPercent: 0, duration: dur, ease: ease }, t);
+    };
+
+    api.iese = function (tinta, t, dur) {
+      tl.fromTo(tinta, { yPercent: 0, autoAlpha: 1 }, { yPercent: -105, autoAlpha: 0, duration: dur, ease: "power2.in", immediateRender: false }, t);
+    };
+
+    api.scala = function (tinta, t, dur, de) {
+      tl.fromTo(tinta, { scale: de }, { scale: 1, duration: dur, ease: "power2.out" }, t);
+    };
+
+    api.bifa = function (tinta, t, dur) {
+      tl.fromTo(tinta, { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: dur, ease: "power2.out" }, t);
+    };
+
+    api.numara = function (tinta, t, dur, o) {
+      numaratori.push({ el: document.querySelector(tinta), t: t, dur: dur, o: o });
+    };
+
+    api.tasteaza = function (tinta, t, dur, text) {
+      tastari.push({ el: document.querySelector(tinta), t: t, dur: dur, litere: Array.from(text) });
+    };
+
+    /* împingerea lentă a compoziției (1 → impingere pe tot filmul), degradeul care urcă o înălțime de cadru,
+     * ceața care derivă (ca L.atmosfera din reel); pe „plin” rămâne doar împingerea */
+    api.atmosfera = function (o) {
+      tl.fromTo("#compozitie", { scale: 1 }, { scale: o.impingere, transformOrigin: "50% 50%", duration: durata, ease: "none" }, 0);
+      if (o.mod === "degrade") {
+        tl.fromTo("#degrade", { y: 0 }, { y: -o.inaltime, duration: durata, ease: "none" }, 0);
+      }
+      if (o.mod === "ceata") {
+        tl.fromTo("#glow-a", { x: 0, y: 0 }, { x: 60, y: 40, duration: durata / 2, ease: "sine.inOut", yoyo: true, repeat: 1 }, 0);
+        tl.fromTo("#glow-b", { x: 0 }, { x: -80, duration: durata / 2, ease: "sine.inOut", yoyo: true, repeat: 1 }, 0);
+      }
+    };
+
+    /* motorul pur de timp: numărarea, tastarea, granulația; se adaugă ultimul */
+    api.gata = function () {
+      var nt = document.getElementById("noise-t");
+      var cuGranulatie = document.getElementById("root").className.indexOf("plin") < 0;
+      function cadru(t) {
+        numaratori.forEach(function (n) {
+          var p = clamp((t - n.t) / n.dur);
+          var v = p >= 1 ? n.o.valoare : n.o.valoare * (1 - (1 - p) * (1 - p));
+          n.el.textContent = (n.o.prefix || "") + formatRo(v, n.o.zecimale) + (n.o.sufix || "");
+        });
+        tastari.forEach(function (s) {
+          var k = Math.floor(clamp((t - s.t) / s.dur) * s.litere.length);
+          s.el.textContent = s.litere.slice(0, k).join("");
+        });
+        if (nt && cuGranulatie) nt.setAttribute("seed", String(1 + (Math.floor(t * 12) % 8)));
+      }
+      cadru(0);
+      tl.to({}, { duration: durata, onUpdate: function () { cadru(tl.time()); } }, 0);
+    };
+    return api;
+  }
+
+  window.Miscari = { start: start, formatRo: formatRo };
+})();</script>
+    <script>window.__MG_PLAN = {"versiune":1,"sablon":"text-animat","format":"patrat","latime":1080,"inaltime":1080,"fps":30,"durata":18,"aliniere":"stanga","iesire":0.45,"atmosfera":{"mod":"ceata","granulatie":0.06,"impingere":1.03},"sigla":{"mime":"image/svg+xml","w":300,"h":75},"scene":[{"n":1,"id":"s1","camp":"scene[0]","tip":"titlu","start":0,"complet":1.5,"sfarsit":3.9,"ultima":false,"deriva":12,"blocuri":[{"id":"b1-1","rol":"mic","fel":"eticheta","camp":"scene[0].eticheta","masca":false,"x":108,"y":390.28,"w":864,"h":46.8,"marime":36,"randuri":[{"id":"r1-1","x":108,"y":390.28,"w":183.14,"h":46.8,"camp":"scene[0].eticheta","parti":[{"tip":"piesa","id":"t1-1","text":"ATELIER","accent":false,"dx":0,"w":183.14,"camp":"scene[0].eticheta","caseta":[108,390.28,183.14,46.8]}]}],"spatiere":0.16},{"id":"b1-2","rol":"mare","fel":"randuri","camp":"scene[0].titlu","masca":true,"x":108,"y":465.08,"w":864,"h":224.64,"marime":104,"randuri":[{"id":"r1-2","x":108,"y":465.08,"w":521.66,"h":112.32,"camp":"scene[0].titlu[0]","parti":[{"tip":"piesa","id":"t1-2","text":"Ore","accent":false,"dx":0,"w":186.06,"camp":"scene[0].titlu[0]","caseta":[108,465.08,186.06,112.32]},{"tip":"spatiu","text":" "},{"tip":"piesa","id":"t1-3","text":"înapoi","accent":true,"dx":205.87,"w":315.8,"camp":"scene[0].titlu[0]","caseta":[313.87,465.08,315.8,112.32]}]},{"id":"r1-3","x":108,"y":577.4,"w":568.72,"h":112.32,"camp":"scene[0].titlu[1]","parti":[{"tip":"piesa","id":"t1-4","text":"în fiecare zi","accent":false,"dx":0,"w":568.72,"camp":"scene[0].titlu[1]","caseta":[108,577.4,568.72,112.32]}]}]}],"pasi":[{"efect":"apare","tinta":"#r1-1","t":0.1,"dur":0.5,"x":0,"y":16,"ease":"power3.out"},{"efect":"masca","tinta":"#r1-2","t":0.35,"dur":0.8,"ease":"power3.out"},{"efect":"masca","tinta":"#r1-3","t":0.7,"dur":0.8,"ease":"power3.out"}],"texte":[{"id":"t1-1","text":"ATELIER","camp":"scene[0].eticheta","t":1.5,"caseta":[106.92,385.28,183.6,46.92]},{"id":"t1-2","text":"Ore","camp":"scene[0].titlu[0]","t":1.5,"caseta":[106.92,460.27,186.53,112.6]},{"id":"t1-3","text":"înapoi","camp":"scene[0].titlu[0]","t":1.5,"caseta":[313.3,460.27,316.59,112.6]},{"id":"t1-4","text":"în fiecare zi","camp":"scene[0].titlu[1]","t":1.5,"caseta":[106.92,572.87,570.14,112.6]}]},{"n":2,"id":"s2","camp":"scene[1]","tip":"cifra","start":3.9,"complet":5.9,"sfarsit":8.5,"ultima":false,"deriva":12,"blocuri":[{"id":"b2-1","rol":"cifra","fel":"cifra","camp":"scene[1].valoare","masca":false,"x":108,"y":330.6,"w":864,"h":220,"marime":220,"randuri":[{"id":"r2-1","x":108,"y":330.6,"w":788.48,"h":220,"camp":"scene[1].valoare","parti":[{"tip":"piesa","id":"t2-1","text":"3,5 ore","accent":false,"dx":0,"w":788.48,"camp":"scene[1].valoare","caseta":[108,330.6,788.48,220]}]}]},{"id":"b2-2","rol":"mediu","fel":"rupt","camp":"scene[1].text","masca":false,"x":108,"y":590.6,"w":864,"h":72,"marime":60,"randuri":[{"id":"r2-2","x":108,"y":590.6,"w":680.6,"h":72,"camp":"scene[1].text","parti":[{"tip":"piesa","id":"t2-2","text":"pe săptămână, în medie","accent":false,"dx":0,"w":680.6,"camp":"scene[1].text","caseta":[108,590.6,680.6,72]}]}]},{"id":"b2-3","rol":"mic","fel":"mic","camp":"scene[1].sursa","masca":false,"x":108,"y":702.6,"w":864,"h":46.8,"marime":36,"randuri":[{"id":"r2-3","x":108,"y":702.6,"w":433.06,"h":46.8,"camp":"scene[1].sursa","parti":[{"tip":"piesa","id":"t2-3","text":"exemplu, fără sursă reală","accent":false,"dx":0,"w":433.05,"camp":"scene[1].sursa","caseta":[108,702.6,433.05,46.8]}]}]}],"pasi":[{"efect":"apare","tinta":"#r2-1","t":4,"dur":0.3,"x":0,"y":0,"ease":"power2.out"},{"efect":"scala","tinta":"#r2-1","t":4,"dur":1.4,"de":0.9},{"efect":"numara","tinta":"#t2-1","t":4,"dur":1.4,"valoare":3.5,"zecimale":1,"prefix":"","sufix":" ore"},{"efect":"apare","tinta":"#r2-2","t":4.6,"dur":0.5,"x":0,"y":16,"ease":"power3.out"},{"efect":"apare","tinta":"#r2-3","t":5.4,"dur":0.5,"x":0,"y":16,"ease":"power3.out"}],"texte":[{"id":"t2-1","text":"3,5 ore","camp":"scene[1].valoare","t":5.9,"caseta":[103.75,323.27,796.23,222.16]},{"id":"t2-2","text":"pe săptămână, în medie","camp":"scene[1].text","t":5.9,"caseta":[103.75,585.83,687.29,72.71]},{"id":"t2-3","text":"exemplu, fără sursă reală","camp":"scene[1].sursa","t":5.9,"caseta":[103.75,698.93,437.31,47.26]}]},{"n":3,"id":"s3","camp":"scene[2]","tip":"lista","start":8.5,"complet":11.2,"sfarsit":13.8,"ultima":false,"deriva":12,"blocuri":[{"id":"b3-1","rol":"mare","fel":"randuri","camp":"scene[2].titlu","masca":true,"x":108,"y":333.84,"w":864,"h":112.32,"marime":104,"randuri":[{"id":"r3-1","x":108,"y":333.84,"w":436.33,"h":112.32,"camp":"scene[2].titlu[0]","parti":[{"tip":"piesa","id":"t3-1","text":"Ce preia:","accent":false,"dx":0,"w":436.33,"camp":"scene[2].titlu[0]","caseta":[108,333.84,436.33,112.32]}]}]},{"id":"b3-2","rol":"mediu","fel":"lista","camp":"scene[2].puncte","masca":false,"x":108,"y":486.16,"w":657.09,"h":260,"marime":60,"randuri":[{"id":"r3-2","x":189,"y":486.16,"w":576.09,"h":72,"camp":"scene[2].puncte[0]","parti":[{"tip":"piesa","id":"t3-2","text":"E-mailurile de rutină","accent":false,"dx":0,"w":576.09,"camp":"scene[2].puncte[0]","caseta":[189,486.16,576.09,72]}],"punct":1,"marcajId":null},{"id":"r3-3","x":189,"y":580.16,"w":367.5,"h":72,"camp":"scene[2].puncte[1]","parti":[{"tip":"piesa","id":"t3-3","text":"Programările","accent":false,"dx":0,"w":367.5,"camp":"scene[2].puncte[1]","caseta":[189,580.16,367.5,72]}],"punct":2,"marcajId":null},{"id":"r3-4","x":189,"y":674.16,"w":504.99,"h":72,"camp":"scene[2].puncte[2]","parti":[{"tip":"piesa","id":"t3-4","text":"Rapoartele lunare","accent":false,"dx":0,"w":504.99,"camp":"scene[2].puncte[2]","caseta":[189,674.16,504.99,72]}],"punct":3,"marcajId":null}],"marcaj":"numere","marcajW":54,"gol":27}],"pasi":[{"efect":"masca","tinta":"#r3-1","t":8.6,"dur":0.8,"ease":"power3.out"},{"efect":"apare","tinta":"#r3-2","t":9.3,"dur":0.8,"x":-24,"y":0,"ease":"power3.out"},{"efect":"apare","tinta":"#r3-3","t":9.85,"dur":0.8,"x":-24,"y":0,"ease":"power3.out"},{"efect":"apare","tinta":"#r3-4","t":10.4,"dur":0.8,"x":-24,"y":0,"ease":"power3.out"}],"texte":[{"id":"t3-1","text":"Ce preia:","camp":"scene[2].titlu[0]","t":11.2,"caseta":[99.94,323.76,444.47,114.42]},{"id":"t3-2","text":"E-mailurile de rutină","camp":"scene[2].puncte[0]","t":11.2,"caseta":[182.45,478.93,586.84,73.34]},{"id":"t3-3","text":"Programările","camp":"scene[2].puncte[1]","t":11.2,"caseta":[182.45,574.68,374.36,73.34]},{"id":"t3-4","text":"Rapoartele lunare","camp":"scene[2].puncte[2]","t":11.2,"caseta":[182.45,670.44,514.42,73.34]}]},{"n":4,"id":"s4","camp":"scene[3]","tip":"final","start":13.8,"complet":16.11,"sfarsit":18,"ultima":true,"deriva":12,"blocuri":[{"id":"b4-1","rol":"mare","fel":"randuri","camp":"scene[3].titlu","masca":true,"x":108,"y":318.94,"w":864,"h":112.32,"marime":104,"randuri":[{"id":"r4-1","x":108,"y":318.94,"w":528.48,"h":112.32,"camp":"scene[3].titlu[0]","parti":[{"tip":"piesa","id":"t4-1","text":"Începe","accent":false,"dx":0,"w":338,"camp":"scene[3].titlu[0]","caseta":[108,318.94,338,112.32]},{"tip":"spatiu","text":" "},{"tip":"piesa","id":"t4-2","text":"azi","accent":true,"dx":357.81,"w":141.75,"camp":"scene[3].titlu[0]","caseta":[465.81,318.94,141.75,112.32]},{"tip":"piesa","id":"t4-3","text":".","accent":false,"dx":499.56,"w":28.91,"camp":"scene[3].titlu[0]","caseta":[607.56,318.94,28.91,112.32]}]}]},{"id":"b4-2","rol":"mediu","fel":"cta","camp":"scene[3].cta","masca":false,"x":108,"y":471.26,"w":864,"h":72,"marime":60,"randuri":[{"id":"r4-2","x":108,"y":471.26,"w":535.25,"h":72,"camp":"scene[3].cta","parti":[{"tip":"piesa","id":"t4-4","text":"Înscrie-te la atelier","accent":false,"dx":0,"w":535.25,"camp":"scene[3].cta","caseta":[108,471.26,535.25,72]}]}]},{"id":"b4-3","rol":"mic","fel":"mic","camp":"scene[3].detaliu","masca":false,"x":108,"y":583.26,"w":864,"h":46.8,"marime":36,"randuri":[{"id":"r4-3","x":108,"y":583.26,"w":311.66,"h":46.8,"camp":"scene[3].detaliu","parti":[{"tip":"piesa","id":"t4-5","text":"exemplu.ro/atelier","accent":false,"dx":0,"w":311.66,"camp":"scene[3].detaliu","caseta":[108,583.26,311.66,46.8]}]}]},{"id":"b4-4","rol":null,"fel":"sigla","camp":"sigla","masca":false,"x":108,"y":686.06,"w":300,"h":75,"marime":null,"randuri":[]}],"pasi":[{"efect":"masca","tinta":"#r4-1","t":13.9,"dur":0.8,"ease":"power3.out"},{"efect":"apare","tinta":"#r4-2","t":14.8,"dur":0.5,"x":0,"y":16,"ease":"power3.out"},{"efect":"apare","tinta":"#r4-3","t":15.3,"dur":0.15,"x":0,"y":0,"ease":"none"},{"efect":"tasteaza","tinta":"#t4-5","t":15.3,"dur":0.81,"text":"exemplu.ro/atelier"},{"efect":"apare","tinta":"#sigla","t":14.8,"dur":0.6,"x":0,"y":16,"ease":"power3.out"}],"texte":[{"id":"t4-1","text":"Începe","camp":"scene[3].titlu[0]","t":16.11,"caseta":[96.4,306.23,347.08,115.34]},{"id":"t4-2","text":"azi","camp":"scene[3].titlu[0]","t":16.11,"caseta":[463.82,306.23,145.56,115.34]},{"id":"t4-3","text":".","camp":"scene[3].titlu[0]","t":16.11,"caseta":[609.37,306.23,29.69,115.34]},{"id":"t4-4","text":"Înscrie-te la atelier","camp":"scene[3].cta","t":16.11,"caseta":[96.4,462.64,549.62,73.93]},{"id":"t4-5","text":"exemplu.ro/atelier","camp":"scene[3].detaliu","t":16.11,"caseta":[96.4,577.64,320.03,48.06]}]}]};</script>
+    <script>/* Regizorul de la randare al lui text-animat: citește planul (window.__MG_PLAN, același conținut cu build/plan.json)
+ * și cheamă Miscari într-o ordine fixă: atmosfera, apoi fiecare scenă cu pașii ei, apoi gata. Nu calculează timpi:
+ * fiecare valoare vine din plan.mjs. */
+(function () {
+  var P = window.__MG_PLAN;
+  var M = window.Miscari.start(P.durata);
+  M.atmosfera({ mod: P.atmosfera.mod, impingere: P.atmosfera.impingere, inaltime: P.inaltime });
+  P.scene.forEach(function (s) {
+    M.scena(s.id, s.start, s.sfarsit, s.ultima, s.deriva, P.iesire);
+    s.pasi.forEach(function (p) {
+      switch (p.efect) {
+        case "apare": M.apare(p.tinta, p.t, p.dur, p.x, p.y, p.ease); break;
+        case "masca": M.masca(p.tinta, p.t, p.dur, p.ease); break;
+        case "iese": M.iese(p.tinta, p.t, p.dur); break;
+        case "scala": M.scala(p.tinta, p.t, p.dur, p.de); break;
+        case "bifa": M.bifa(p.tinta, p.t, p.dur); break;
+        case "numara": M.numara(p.tinta, p.t, p.dur, { valoare: p.valoare, zecimale: p.zecimale, prefix: p.prefix, sufix: p.sufix }); break;
+        case "tasteaza": M.tasteaza(p.tinta, p.t, p.dur, p.text); break;
+        default: throw new Error("Efect necunoscut în plan: " + p.efect);
+      }
+    });
+  });
+  M.gata();
+})();</script>
+  </body>
+</html>

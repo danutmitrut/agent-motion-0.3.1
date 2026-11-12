@@ -1,0 +1,28 @@
+{
+  "sablon": "text-animat",
+  "versiune_schema": 1,
+  "format": "vertical",
+  "scene": [
+    {
+      "tip": "titlu",
+      "eticheta": "Pentru soloprenori",
+      "titlu": [
+        "Lucrezi 12 ore",
+        "și tot *nu ajungi*?"
+      ]
+    },
+    {
+      "tip": "citat",
+      "text": "„Am recuperat o zi pe săptămână.”",
+      "autor": "Ioana Pop"
+    },
+    {
+      "tip": "final",
+      "titlu": [
+        "Hai să-l construim",
+        "*împreună*."
+      ],
+      "detaliu": "exemplu.ro/atelier"
+    }
+  ]
+}

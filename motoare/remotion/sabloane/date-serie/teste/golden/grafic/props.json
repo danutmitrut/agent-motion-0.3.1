@@ -1,0 +1,702 @@
+{
+  "versiune": 1,
+  "latime": 1080,
+  "inaltime": 1920,
+  "fps": 30,
+  "cadre": 672,
+  "tranzitie": 12,
+  "culori": {
+    "fundal": "#0E0F13",
+    "text": "#F2EFEA",
+    "atenuat": "#9A9AA3",
+    "accent": "#FF7A59"
+  },
+  "fonturi": [
+    {
+      "familie": "MG Inter",
+      "url": "fonturi/inter-500-latin-ext.woff2",
+      "greutate": "500",
+      "unicodeRange": "U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF"
+    },
+    {
+      "familie": "MG Inter",
+      "url": "fonturi/inter-500-latin.woff2",
+      "greutate": "500",
+      "unicodeRange": "U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD"
+    },
+    {
+      "familie": "MG Inter",
+      "url": "fonturi/inter-700-latin-ext.woff2",
+      "greutate": "700",
+      "unicodeRange": "U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF"
+    },
+    {
+      "familie": "MG Inter",
+      "url": "fonturi/inter-700-latin.woff2",
+      "greutate": "700",
+      "unicodeRange": "U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD"
+    }
+  ],
+  "familii": {
+    "titlu": "MG Inter",
+    "text": "MG Inter"
+  },
+  "atmosfera": "ceata",
+  "ceata": [
+    {
+      "culoare": "#FF7A59",
+      "alfa": 0.3
+    },
+    {
+      "culoare": "#F2EFEA",
+      "alfa": 0.14
+    }
+  ],
+  "muzica": null,
+  "sigla": null,
+  "scene": [
+    {
+      "ref": "Scena 1",
+      "tip": "titlu",
+      "cadre": 114,
+      "inceput": 0,
+      "intrare": 18,
+      "texte": [
+        {
+          "id": "eticheta",
+          "text": "PRIMUL SEMESTRU",
+          "randuri": [
+            "PRIMUL SEMESTRU"
+          ],
+          "x": 80,
+          "y": 697,
+          "latime": 527,
+          "inaltime": 53,
+          "marime": 44,
+          "font": "text",
+          "greutate": 700,
+          "culoare": "atenuat",
+          "spatiere": 0.16,
+          "aliniere": "stanga"
+        },
+        {
+          "id": "titlu",
+          "text": "Cursul meu online,\nîn cifre",
+          "randuri": [
+            "Cursul meu online,",
+            "în cifre"
+          ],
+          "x": 80,
+          "y": 774,
+          "latime": 880,
+          "inaltime": 230,
+          "marime": 96,
+          "font": "titlu",
+          "greutate": 700,
+          "culoare": "text",
+          "spatiere": 0,
+          "aliniere": "stanga"
+        },
+        {
+          "id": "subtitlu",
+          "text": "Ianuarie-iunie 2026",
+          "randuri": [
+            "Ianuarie-iunie 2026"
+          ],
+          "x": 80,
+          "y": 1044,
+          "latime": 413,
+          "inaltime": 53,
+          "marime": 44,
+          "font": "text",
+          "greutate": 500,
+          "culoare": "atenuat",
+          "spatiere": 0,
+          "aliniere": "stanga"
+        }
+      ],
+      "detalii": {}
+    },
+    {
+      "ref": "Scena 2",
+      "tip": "cifra",
+      "cadre": 120,
+      "inceput": 102,
+      "intrare": 45,
+      "texte": [
+        {
+          "id": "eticheta",
+          "text": "CURSANȚI",
+          "randuri": [
+            "CURSANȚI"
+          ],
+          "x": 80,
+          "y": 680,
+          "latime": 287,
+          "inaltime": 53,
+          "marime": 44,
+          "font": "text",
+          "greutate": 700,
+          "culoare": "atenuat",
+          "spatiere": 0.16,
+          "aliniere": "stanga"
+        },
+        {
+          "id": "valoare",
+          "text": "1.248",
+          "randuri": [
+            "1.248"
+          ],
+          "x": 80,
+          "y": 757,
+          "latime": 642,
+          "inaltime": 264,
+          "marime": 220,
+          "font": "titlu",
+          "greutate": 700,
+          "culoare": "accent",
+          "spatiere": 0,
+          "aliniere": "stanga"
+        },
+        {
+          "id": "text",
+          "text": "oameni au terminat cel puțin un modul",
+          "randuri": [
+            "oameni au terminat cel puțin un modul"
+          ],
+          "x": 80,
+          "y": 1061,
+          "latime": 803,
+          "inaltime": 53,
+          "marime": 44,
+          "font": "text",
+          "greutate": 500,
+          "culoare": "text",
+          "spatiere": 0,
+          "aliniere": "stanga"
+        }
+      ],
+      "detalii": {
+        "valoare": 1248,
+        "zecimale": 0,
+        "prefix": "",
+        "sufix": "",
+        "idText": "valoare"
+      }
+    },
+    {
+      "ref": "Scena 3",
+      "tip": "bare",
+      "cadre": 234,
+      "inceput": 210,
+      "intrare": 40,
+      "texte": [
+        {
+          "id": "titlu",
+          "text": "Vânzări pe luni",
+          "randuri": [
+            "Vânzări pe luni"
+          ],
+          "x": 80,
+          "y": 200,
+          "latime": 794,
+          "inaltime": 132,
+          "marime": 110,
+          "font": "titlu",
+          "greutate": 700,
+          "culoare": "text",
+          "spatiere": 0,
+          "aliniere": "stanga"
+        },
+        {
+          "id": "unitate",
+          "text": "lei",
+          "randuri": [
+            "lei"
+          ],
+          "x": 80,
+          "y": 356,
+          "latime": 49,
+          "inaltime": 53,
+          "marime": 44,
+          "font": "text",
+          "greutate": 500,
+          "culoare": "atenuat",
+          "spatiere": 0,
+          "aliniere": "stanga"
+        },
+        {
+          "id": "eticheta-0",
+          "text": "ian",
+          "randuri": [
+            "ian"
+          ],
+          "x": 128,
+          "y": 1461,
+          "latime": 57,
+          "inaltime": 48,
+          "marime": 40,
+          "font": "text",
+          "greutate": 500,
+          "culoare": "atenuat",
+          "spatiere": 0,
+          "aliniere": "centru"
+        },
+        {
+          "id": "valoare-0",
+          "text": "8.400",
+          "randuri": [
+            "8.400"
+          ],
+          "x": 98,
+          "y": 1019,
+          "latime": 117,
+          "inaltime": 48,
+          "marime": 40,
+          "font": "text",
+          "greutate": 700,
+          "culoare": "text",
+          "spatiere": 0,
+          "aliniere": "centru"
+        },
+        {
+          "id": "eticheta-1",
+          "text": "feb",
+          "randuri": [
+            "feb"
+          ],
+          "x": 279,
+          "y": 1461,
+          "latime": 63,
+          "inaltime": 48,
+          "marime": 40,
+          "font": "text",
+          "greutate": 500,
+          "culoare": "atenuat",
+          "spatiere": 0,
+          "aliniere": "centru"
+        },
+        {
+          "id": "valoare-1",
+          "text": "9.100",
+          "randuri": [
+            "9.100"
+          ],
+          "x": 252,
+          "y": 989,
+          "latime": 117,
+          "inaltime": 48,
+          "marime": 40,
+          "font": "text",
+          "greutate": 700,
+          "culoare": "text",
+          "spatiere": 0,
+          "aliniere": "centru"
+        },
+        {
+          "id": "eticheta-2",
+          "text": "mar",
+          "randuri": [
+            "mar"
+          ],
+          "x": 426,
+          "y": 1461,
+          "latime": 74,
+          "inaltime": 48,
+          "marime": 40,
+          "font": "text",
+          "greutate": 500,
+          "culoare": "atenuat",
+          "spatiere": 0,
+          "aliniere": "centru"
+        },
+        {
+          "id": "valoare-2",
+          "text": "12.650",
+          "randuri": [
+            "12.650"
+          ],
+          "x": 391,
+          "y": 834,
+          "latime": 144,
+          "inaltime": 48,
+          "marime": 40,
+          "font": "text",
+          "greutate": 700,
+          "culoare": "text",
+          "spatiere": 0,
+          "aliniere": "centru"
+        },
+        {
+          "id": "eticheta-3",
+          "text": "apr",
+          "randuri": [
+            "apr"
+          ],
+          "x": 585,
+          "y": 1461,
+          "latime": 63,
+          "inaltime": 48,
+          "marime": 40,
+          "font": "text",
+          "greutate": 500,
+          "culoare": "atenuat",
+          "spatiere": 0,
+          "aliniere": "centru"
+        },
+        {
+          "id": "valoare-3",
+          "text": "11.200",
+          "randuri": [
+            "11.200"
+          ],
+          "x": 545,
+          "y": 897,
+          "latime": 144,
+          "inaltime": 48,
+          "marime": 40,
+          "font": "text",
+          "greutate": 700,
+          "culoare": "text",
+          "spatiere": 0,
+          "aliniere": "centru"
+        },
+        {
+          "id": "eticheta-4",
+          "text": "mai",
+          "randuri": [
+            "mai"
+          ],
+          "x": 736,
+          "y": 1461,
+          "latime": 69,
+          "inaltime": 48,
+          "marime": 40,
+          "font": "text",
+          "greutate": 500,
+          "culoare": "atenuat",
+          "spatiere": 0,
+          "aliniere": "centru"
+        },
+        {
+          "id": "valoare-4",
+          "text": "15.800",
+          "randuri": [
+            "15.800"
+          ],
+          "x": 698,
+          "y": 697,
+          "latime": 144,
+          "inaltime": 48,
+          "marime": 40,
+          "font": "text",
+          "greutate": 700,
+          "culoare": "text",
+          "spatiere": 0,
+          "aliniere": "centru"
+        },
+        {
+          "id": "eticheta-5",
+          "text": "iun",
+          "randuri": [
+            "iun"
+          ],
+          "x": 894,
+          "y": 1461,
+          "latime": 59,
+          "inaltime": 48,
+          "marime": 40,
+          "font": "text",
+          "greutate": 500,
+          "culoare": "text",
+          "spatiere": 0,
+          "aliniere": "centru"
+        },
+        {
+          "id": "valoare-5",
+          "text": "21.300",
+          "randuri": [
+            "21.300"
+          ],
+          "x": 851,
+          "y": 457,
+          "latime": 144,
+          "inaltime": 48,
+          "marime": 40,
+          "font": "text",
+          "greutate": 700,
+          "culoare": "accent",
+          "spatiere": 0,
+          "aliniere": "centru"
+        },
+        {
+          "id": "sursa",
+          "text": "Stripe, export 1 iulie 2026",
+          "randuri": [
+            "Stripe, export 1 iulie 2026"
+          ],
+          "x": 80,
+          "y": 1541,
+          "latime": 535,
+          "inaltime": 53,
+          "marime": 44,
+          "font": "text",
+          "greutate": 500,
+          "culoare": "atenuat",
+          "spatiere": 0,
+          "aliniere": "stanga"
+        }
+      ],
+      "detalii": {
+        "orientare": "coloane",
+        "axa": {
+          "x": 80,
+          "y": 1445,
+          "latime": 920,
+          "inaltime": 2
+        },
+        "bare": [
+          {
+            "x": 109,
+            "y": 1079,
+            "latime": 95,
+            "inaltime": 366,
+            "accent": false,
+            "idEticheta": "eticheta-0",
+            "idValoare": "valoare-0",
+            "valoare": 8400,
+            "zecimale": 0,
+            "prefix": "",
+            "sufix": ""
+          },
+          {
+            "x": 263,
+            "y": 1049,
+            "latime": 95,
+            "inaltime": 396,
+            "accent": false,
+            "idEticheta": "eticheta-1",
+            "idValoare": "valoare-1",
+            "valoare": 9100,
+            "zecimale": 0,
+            "prefix": "",
+            "sufix": ""
+          },
+          {
+            "x": 416,
+            "y": 894,
+            "latime": 95,
+            "inaltime": 551,
+            "accent": false,
+            "idEticheta": "eticheta-2",
+            "idValoare": "valoare-2",
+            "valoare": 12650,
+            "zecimale": 0,
+            "prefix": "",
+            "sufix": ""
+          },
+          {
+            "x": 569,
+            "y": 957,
+            "latime": 95,
+            "inaltime": 488,
+            "accent": false,
+            "idEticheta": "eticheta-3",
+            "idValoare": "valoare-3",
+            "valoare": 11200,
+            "zecimale": 0,
+            "prefix": "",
+            "sufix": ""
+          },
+          {
+            "x": 723,
+            "y": 757,
+            "latime": 95,
+            "inaltime": 688,
+            "accent": false,
+            "idEticheta": "eticheta-4",
+            "idValoare": "valoare-4",
+            "valoare": 15800,
+            "zecimale": 0,
+            "prefix": "",
+            "sufix": ""
+          },
+          {
+            "x": 876,
+            "y": 517,
+            "latime": 95,
+            "inaltime": 928,
+            "accent": true,
+            "idEticheta": "eticheta-5",
+            "idValoare": "valoare-5",
+            "valoare": 21300,
+            "zecimale": 0,
+            "prefix": "",
+            "sufix": ""
+          }
+        ]
+      }
+    },
+    {
+      "ref": "Scena 4",
+      "tip": "comparatie",
+      "cadre": 138,
+      "inceput": 432,
+      "intrare": 36,
+      "texte": [
+        {
+          "id": "titlu",
+          "text": "Față de 2025",
+          "randuri": [
+            "Față de 2025"
+          ],
+          "x": 80,
+          "y": 562,
+          "latime": 700,
+          "inaltime": 132,
+          "marime": 110,
+          "font": "titlu",
+          "greutate": 700,
+          "culoare": "text",
+          "spatiere": 0,
+          "aliniere": "stanga"
+        },
+        {
+          "id": "eticheta-0",
+          "text": "S1 2025",
+          "randuri": [
+            "S1 2025"
+          ],
+          "x": 80,
+          "y": 734,
+          "latime": 168,
+          "inaltime": 53,
+          "marime": 44,
+          "font": "text",
+          "greutate": 500,
+          "culoare": "atenuat",
+          "spatiere": 0,
+          "aliniere": "stanga"
+        },
+        {
+          "id": "valoare-0",
+          "text": "41.200 lei",
+          "randuri": [
+            "41.200 lei"
+          ],
+          "x": 80,
+          "y": 795,
+          "latime": 704,
+          "inaltime": 168,
+          "marime": 140,
+          "font": "titlu",
+          "greutate": 700,
+          "culoare": "text",
+          "spatiere": 0,
+          "aliniere": "stanga"
+        },
+        {
+          "id": "eticheta-1",
+          "text": "S1 2026",
+          "randuri": [
+            "S1 2026"
+          ],
+          "x": 80,
+          "y": 1003,
+          "latime": 169,
+          "inaltime": 53,
+          "marime": 44,
+          "font": "text",
+          "greutate": 500,
+          "culoare": "atenuat",
+          "spatiere": 0,
+          "aliniere": "stanga"
+        },
+        {
+          "id": "valoare-1",
+          "text": "78.450 lei",
+          "randuri": [
+            "78.450 lei"
+          ],
+          "x": 80,
+          "y": 1064,
+          "latime": 704,
+          "inaltime": 168,
+          "marime": 140,
+          "font": "titlu",
+          "greutate": 700,
+          "culoare": "accent",
+          "spatiere": 0,
+          "aliniere": "stanga"
+        }
+      ],
+      "detalii": {
+        "randuri": [
+          {
+            "idEticheta": "eticheta-0",
+            "idValoare": "valoare-0",
+            "valoare": 41200,
+            "zecimale": 0,
+            "prefix": "",
+            "sufix": " lei",
+            "accent": false
+          },
+          {
+            "idEticheta": "eticheta-1",
+            "idValoare": "valoare-1",
+            "valoare": 78450,
+            "zecimale": 0,
+            "prefix": "",
+            "sufix": " lei",
+            "accent": true
+          }
+        ]
+      }
+    },
+    {
+      "ref": "Scena 5",
+      "tip": "final",
+      "cadre": 114,
+      "inceput": 558,
+      "intrare": 18,
+      "texte": [
+        {
+          "id": "titlu",
+          "text": "Următoarea grupă\npe 15 octombrie",
+          "randuri": [
+            "Următoarea grupă",
+            "pe 15 octombrie"
+          ],
+          "x": 80,
+          "y": 733,
+          "latime": 871,
+          "inaltime": 235,
+          "marime": 98,
+          "font": "titlu",
+          "greutate": 700,
+          "culoare": "text",
+          "spatiere": 0,
+          "aliniere": "stanga"
+        },
+        {
+          "id": "cta",
+          "text": "Link în bio",
+          "randuri": [
+            "Link în bio"
+          ],
+          "x": 80,
+          "y": 1008,
+          "latime": 217,
+          "inaltime": 53,
+          "marime": 44,
+          "font": "text",
+          "greutate": 700,
+          "culoare": "accent",
+          "spatiere": 0,
+          "aliniere": "stanga"
+        }
+      ],
+      "detalii": {}
+    }
+  ]
+}

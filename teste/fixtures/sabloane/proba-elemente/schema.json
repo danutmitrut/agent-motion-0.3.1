@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "date.json pentru șablonul de probă cu elemente",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["sablon", "versiune_schema", "elemente"],
+  "properties": {
+    "sablon": {
+      "type": "string",
+      "const": "proba-elemente",
+      "x-mesaj": { "const": "Câmpul sablon trebuie să fie „proba-elemente”." }
+    },
+    "versiune_schema": {
+      "type": "integer",
+      "const": 1,
+      "x-mesaj": { "const": "Șablonul de probă cu elemente are versiunea de schemă 1." }
+    },
+    "format": {
+      "type": "string",
+      "enum": ["vertical"],
+      "x-mesaj": { "enum": "Formatul poate fi doar vertical." }
+    },
+    "brand": {
+      "type": ["string", "null"],
+      "pattern": "^[a-z0-9-]{2,40}$",
+      "x-mesaj": { "pattern": "Numele brandului are 2-40 de litere mici, cifre sau cratime." }
+    },
+    "stil": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "tema": {
+          "type": "string",
+          "enum": ["noapte", "hartie", "curat"],
+          "x-mesaj": { "enum": "Tema poate fi noapte, hartie sau curat." }
+        }
+      }
+    },
+    "elemente": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 5,
+      "x-mesaj": { "minItems": "Videoul are cel puțin un element.", "maxItems": "Videoul are cel mult 5 elemente." },
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["text"],
+        "properties": {
+          "text": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 22,
+            "x-mesaj": { "minLength": "Textul elementului nu poate fi gol.", "maxLength": "Textul elementului are cel mult 22 de caractere." }
+          }
+        }
+      }
+    }
+  }
+}

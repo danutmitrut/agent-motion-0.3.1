@@ -1,0 +1,33 @@
+{
+  "sablon": "reel-ilustrat",
+  "versiune_schema": 1,
+  "scene": [
+    {
+      "tip": "desen",
+      "desen": {
+        "id": "op-bust-telefon"
+      },
+      "titlu": [
+        "Faci totul singur."
+      ]
+    },
+    {
+      "tip": "retea",
+      "durata": 4,
+      "eticheta": "Altfel, de mâine",
+      "titlu": [
+        "Un sistem care preia",
+        "*toate mesajele zilei.*"
+      ]
+    },
+    {
+      "tip": "final",
+      "desen": {
+        "id": "op-picioare-explica-ochelari"
+      },
+      "titlu": [
+        "Tu decizi."
+      ]
+    }
+  ]
+}

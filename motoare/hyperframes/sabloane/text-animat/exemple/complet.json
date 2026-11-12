@@ -1,0 +1,31 @@
+{
+  "sablon": "text-animat",
+  "versiune_schema": 1,
+  "format": "vertical",
+  "stil": {
+    "descriere": "cald, auriu, apăsat, modern",
+    "tema": "noapte",
+    "culori": { "accent": "#F2B84B" },
+    "font_titlu": "montserrat",
+    "ritm": "normal",
+    "atmosfera": "degrade",
+    "aliniere": "stanga"
+  },
+  "muzica": { "fisier": "resurse/exemplu-muzica.mp3", "volum": 0.4, "incepe_de_la": 4.0 },
+  "scene": [
+    { "tip": "titlu", "eticheta": "Pentru soloprenori",
+      "titlu": ["Lucrezi 12 ore", "și tot *nu ajungi*?"] },
+    { "tip": "fraza", "text": "Nu munca e problema. *Rutina* e." },
+    { "tip": "cifra", "valoare": 62, "sufix": "%",
+      "text": "din timp, pe sarcini repetitive",
+      "sursa": "sondajul meu, 40 de clienți, 2026" },
+    { "tip": "lista", "titlu": ["Unde se pierde:"], "marcaj": "numere",
+      "puncte": ["E-mailuri de rutină", "Programări și reveniri", "Rapoarte copiate de mână"] },
+    { "tip": "cuvinte", "titlu": ["Un agent le face"],
+      "cuvinte": ["zilnic.", "corect.", "*fără tine*."] },
+    { "tip": "citat", "text": "Am recuperat o zi pe săptămână încă din prima lună.",
+      "autor": "Ioana Pop", "rol": "fondatoare, Studio Lemn" },
+    { "tip": "final", "titlu": ["Hai să-l construim", "*împreună*."],
+      "detaliu": "exemplu.ro/atelier" }
+  ]
+}

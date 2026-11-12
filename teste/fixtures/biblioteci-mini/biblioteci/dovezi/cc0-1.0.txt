@@ -1,0 +1,2 @@
+Text sintetic de test, în locul textului licenței CC0 1.0.
+Generat de genereaza.mjs; nu e o dovadă reală de licență.

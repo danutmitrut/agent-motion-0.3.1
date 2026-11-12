@@ -1,0 +1,26 @@
+{
+  "format": { "latime": 1080, "inaltime": 1920, "fps": 30 },
+  "zone": { "text": [96, 200, 888, 280], "desen": [0, 760, 1080, 740], "limita_jos": 1594, "marja": 24 },
+  "titlu": { "px": 96, "plafon": 22, "trepte": { "L": [110, 124], "XL": [126, 154] }, "pas_treapta": 2, "marja_cta": 16 },
+  "eticheta": { "px": 28, "plafon": 24 },
+  "durata": { "min": 10, "max": 60, "implicita": 30, "pas": 0.1 },
+  "scene": { "min": 2, "max": 8, "secunde_pe_scena": 3.5, "durata_min": 2.5, "durata_max": 12 },
+  "tipuri": {
+    "desen": { "min": 3.0, "pondere": 1.0 },
+    "adunare": { "min": 2.0, "pe_iconita": 0.5, "pondere": 1.1 },
+    "retea": { "min": 4.0, "min_scanteie": 5.5, "pondere": 1.2 },
+    "card": { "min": 2.5, "pondere": 0.7 },
+    "final": { "min": 3.5, "pondere": 1.2 }
+  },
+  "ritm": {
+    "calm": { "desenare": 4.0, "retragere": 1.4, "pas_cuvinte": 1.3, "pas_iconite": 0.8 },
+    "normal": { "desenare": 3.4, "retragere": 1.2, "pas_cuvinte": 1.0, "pas_iconite": 0.6 },
+    "alert": { "desenare": 2.4, "retragere": 0.9, "pas_cuvinte": 0.8, "pas_iconite": 0.4 }
+  },
+  "retea": { "asezare": 1.7, "muchii": [1.4, 3.0], "traseu": [2.6, 4.0], "retragere": 1.2, "zona_y": [790, 1370], "centru": [540, 1080], "raza": 290 },
+  "reguli": { "pauza_carduri": 0.5, "dupa_retea": 1.0, "pauza_finala": 1.5, "semnatura_inainte": 3.5, "semnatura_durata": 2.0, "semnatura_ultim": 0.3, "ceata_fractie": 0.35, "ceata_fractie_scurt": 0.47, "prag_scurt": 20, "impingere": 1.04, "deriva_plin": 0.85 },
+  "citire": { "baza": 0.8, "pe_cuvant": 0.3, "cuvant_min": 0.8 },
+  "marimi": { "mic": 0.55, "mediu": 0.75, "mare": 0.95 },
+  "iconite": { "scara": 4.6, "max_vizibile": 6 },
+  "jetoane": { "linie": "text" }
+}

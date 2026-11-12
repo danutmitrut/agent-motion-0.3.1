@@ -1,0 +1,25 @@
+{
+  "sablon": "proba",
+  "versiune_schema": 1,
+  "format": "vertical",
+  "brand": null,
+  "stil": {
+    "tema": "noapte"
+  },
+  "scene": [
+    {
+      "tip": "titlu",
+      "titlu": [
+        "Primul rând",
+        "cu *accent*"
+      ],
+      "sigla": "sigla.png"
+    },
+    {
+      "tip": "titlu",
+      "titlu": [
+        "Ăîâșț ĂÎÂȘȚ"
+      ]
+    }
+  ]
+}

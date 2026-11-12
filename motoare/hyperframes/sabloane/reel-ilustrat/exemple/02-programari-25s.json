@@ -1,0 +1,87 @@
+{
+  "sablon": "reel-ilustrat",
+  "versiune_schema": 1,
+  "format": "vertical",
+  "durata": 25,
+  "stil": {
+    "descriere": "cald, prietenos, luminos",
+    "tema": "hartie",
+    "ritm": "normal",
+    "culori": {
+      "accent": "#D9486A"
+    },
+    "recolorare": "tema"
+  },
+  "semnatura": "Ana Pop,\ncoach de carieră",
+  "scene": [
+    {
+      "tip": "desen",
+      "durata": 4,
+      "desen": {
+        "id": "op-bust-telefon",
+        "marime": "mare",
+        "ramane_pana_la": 2
+      },
+      "eticheta": "Luni, 8:30",
+      "titlu": [
+        "Telefonul sună",
+        "*din nou.*"
+      ]
+    },
+    {
+      "tip": "adunare",
+      "durata": 4.5,
+      "iconite": [
+        "phone",
+        "message-circle",
+        "calendar-x",
+        "mail",
+        "bell"
+      ],
+      "eticheta": "Toată ziua",
+      "cuvinte": [
+        "Reprogramări.",
+        "Anulări.",
+        "Mesaje."
+      ]
+    },
+    {
+      "tip": "retea",
+      "durata": 6,
+      "scanteie": true,
+      "eticheta": "Altfel",
+      "titlu": [
+        "Un agent preia",
+        "*programările.*"
+      ]
+    },
+    {
+      "tip": "desen",
+      "durata": 5,
+      "desen": {
+        "id": "op-picioare-explica-ochelari",
+        "marime": "mare"
+      },
+      "eticheta": "Tu",
+      "titlu": [
+        "Ai timp pentru",
+        "*clienți.*"
+      ]
+    },
+    {
+      "tip": "final",
+      "durata": 5.5,
+      "desen": {
+        "id": "op-bust-cafea",
+        "marime": "mediu"
+      },
+      "linie_accent": true,
+      "eticheta": "Om + agent",
+      "titlu": [
+        "Tu decizi,",
+        "*agentul ține minte.*"
+      ],
+      "cta": "Scrie „AGENT” în comentarii"
+    }
+  ]
+}

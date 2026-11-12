@@ -1,0 +1,32 @@
+{
+  "durata": 18,
+  "scene": 4,
+  "texte": [
+    "ATELIER",
+    "Ore",
+    "înapoi",
+    "în fiecare zi",
+    "3,5 ore",
+    "pe săptămână, în medie",
+    "exemplu, fără sursă reală",
+    "Ce preia:",
+    "E-mailurile de rutină",
+    "Programările",
+    "Rapoartele lunare",
+    "Începe",
+    "azi",
+    ".",
+    "Înscrie-te la atelier",
+    "exemplu.ro/atelier"
+  ],
+  "momente": [
+    1.5,
+    3.9,
+    5.9,
+    8.5,
+    11.2,
+    13.8,
+    16.11,
+    17.967
+  ]
+}

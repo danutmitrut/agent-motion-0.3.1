@@ -1,0 +1,488 @@
+{
+  "versiune": 1,
+  "surse": {
+    "open-doodles": {
+      "nume": "Forme sintetice de test",
+      "autor": "teste",
+      "url": "",
+      "descarcat_din": "",
+      "licenta": "CC0-1.0",
+      "licenta_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "dovada": [
+        "dovezi/cc0-1.0.txt"
+      ],
+      "verificat": "2026-10-01",
+      "nota": "sintetic"
+    },
+    "open-peeps": {
+      "nume": "Forme sintetice de test",
+      "autor": "teste",
+      "url": "",
+      "descarcat_din": "",
+      "licenta": "CC0-1.0",
+      "licenta_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "dovada": [
+        "dovezi/cc0-1.0.txt"
+      ],
+      "verificat": "2026-10-01",
+      "nota": "sintetic"
+    },
+    "lucide": {
+      "nume": "Lucide",
+      "autor": "teste",
+      "url": "",
+      "descarcat_din": "",
+      "licenta": "ISC",
+      "licenta_url": "https://github.com/lucide-icons/lucide/blob/main/LICENSE",
+      "dovada": [
+        "dovezi/licenta-lucide.txt"
+      ],
+      "nota": "sintetic",
+      "versiune": "1.49.0",
+      "catalog": "motoare/comun/iconite/lucide-1.49.0.json",
+      "verificat": "2026-10-01"
+    }
+  },
+  "piese": [
+    {
+      "id": "od-meditating",
+      "tip": "forma",
+      "familie": "cerneala",
+      "sursa": "open-doodles",
+      "original": "sintetic/od-meditating.svg",
+      "fisier": "forme/od-meditating.svg",
+      "sha256": "bb08c980d40baa57ad3d5901a51daf0934f7442543c1e41c000982c121dd03d9",
+      "kb": 0.3,
+      "cutie": {
+        "w": 400,
+        "h": 400
+      },
+      "roluri": [
+        "ink",
+        "acc"
+      ],
+      "recolorabil": true,
+      "acoperire_cerneala": 0.08,
+      "personaj": {
+        "numar": 1,
+        "gen": "ambiguu",
+        "poza": "in-picioare",
+        "orientare": "fata"
+      },
+      "etichete": [
+        "meditație",
+        "calm",
+        "liniște",
+        "respirație"
+      ],
+      "descriere": "Pătrat sintetic cu triunghi de accent.",
+      "noapte": "autocolant",
+      "teme_potrivite": [
+        "noapte",
+        "hartie",
+        "curat"
+      ],
+      "animatie": {
+        "implicit": "contur-umplere",
+        "alternative": [
+          "aparitie"
+        ],
+        "esalonare": 0.06,
+        "accent": "aparitie"
+      }
+    },
+    {
+      "id": "op-picioare-arata",
+      "tip": "forma",
+      "familie": "cerneala",
+      "sursa": "open-peeps",
+      "original": "sintetic/op-picioare-arata.svg",
+      "fisier": "forme/op-picioare-arata.svg",
+      "sha256": "7d17fab83de38054d6e998296c6d4bd5915331c1126add46d1e76c2e67c8ea7d",
+      "kb": 0.3,
+      "cutie": {
+        "w": 300,
+        "h": 600
+      },
+      "roluri": [
+        "ink",
+        "acc"
+      ],
+      "recolorabil": true,
+      "acoperire_cerneala": 0.42,
+      "personaj": {
+        "numar": 1,
+        "gen": "ambiguu",
+        "poza": "in-picioare",
+        "orientare": "fata"
+      },
+      "etichete": [
+        "în picioare",
+        "arată",
+        "prezentare",
+        "explică"
+      ],
+      "descriere": "Dreptunghi sintetic plin de cerneală.",
+      "noapte": "evita",
+      "teme_potrivite": [
+        "hartie",
+        "curat"
+      ],
+      "animatie": {
+        "implicit": "contur-umplere",
+        "alternative": [
+          "aparitie"
+        ],
+        "esalonare": 0.06,
+        "accent": "aparitie"
+      }
+    },
+    {
+      "id": "op-bust-laptop",
+      "tip": "forma",
+      "familie": "cerneala",
+      "sursa": "open-peeps",
+      "original": "sintetic/op-bust-laptop.svg",
+      "fisier": "forme/op-bust-laptop.svg",
+      "sha256": "51bc667c1c54e16987a07f6d1db5ea9340bb92b0fd7c9ffcc4f222720019409b",
+      "kb": 1.6,
+      "cutie": {
+        "w": 220,
+        "h": 245
+      },
+      "roluri": [
+        "ink",
+        "fond"
+      ],
+      "recolorabil": true,
+      "acoperire_cerneala": 0.12,
+      "personaj": {
+        "numar": 1,
+        "gen": "ambiguu",
+        "poza": "bust",
+        "orientare": "dreapta"
+      },
+      "etichete": [
+        "laptop",
+        "calculator",
+        "lucru",
+        "tastat",
+        "concentrare"
+      ],
+      "descriere": "Bust sintetic la laptop, cu fond și cerneală.",
+      "noapte": "autocolant",
+      "teme_potrivite": [
+        "noapte",
+        "hartie",
+        "curat"
+      ],
+      "animatie": {
+        "implicit": "contur-umplere",
+        "alternative": [
+          "aparitie"
+        ],
+        "esalonare": 0.06,
+        "accent": "aparitie"
+      }
+    },
+    {
+      "id": "od-chilling",
+      "tip": "forma",
+      "familie": "cerneala",
+      "sursa": "open-doodles",
+      "original": "sintetic/od-chilling.svg",
+      "fisier": "forme/od-chilling.svg",
+      "sha256": "971a469dd7b40cdcd03619a64dec414a2b1b5ca1bb4197898c7496f21266696e",
+      "kb": 0.3,
+      "cutie": {
+        "w": 970,
+        "h": 618
+      },
+      "roluri": [
+        "ink",
+        "acc"
+      ],
+      "recolorabil": true,
+      "acoperire_cerneala": 0.351,
+      "personaj": {
+        "numar": 1,
+        "gen": "ambiguu",
+        "poza": "intins",
+        "orientare": "fata"
+      },
+      "etichete": [
+        "relaxare",
+        "pauză",
+        "odihnă",
+        "lenevit",
+        "întins"
+      ],
+      "descriere": "Formă sintetică lată, cu un singur traseu de cerneală.",
+      "noapte": "bun",
+      "teme_potrivite": [
+        "noapte",
+        "hartie",
+        "curat"
+      ],
+      "animatie": {
+        "implicit": "contur-umplere",
+        "alternative": [
+          "aparitie"
+        ],
+        "esalonare": 0.06,
+        "accent": "aparitie"
+      }
+    },
+    {
+      "id": "od-running",
+      "tip": "forma",
+      "familie": "cerneala",
+      "sursa": "open-doodles",
+      "original": "sintetic/od-running.svg",
+      "fisier": "forme/od-running.svg",
+      "sha256": "c6bad1962fb1ccc74f3249b863f5b4bb82b7de436f594f374be6e61a20019906",
+      "kb": 0.3,
+      "cutie": {
+        "w": 963,
+        "h": 638
+      },
+      "roluri": [
+        "ink",
+        "acc"
+      ],
+      "recolorabil": true,
+      "acoperire_cerneala": 0.374,
+      "personaj": {
+        "numar": 1,
+        "gen": "ambiguu",
+        "poza": "in-miscare",
+        "orientare": "dreapta"
+      },
+      "etichete": [
+        "alergare",
+        "fugă",
+        "grabă",
+        "viteză",
+        "energie"
+      ],
+      "descriere": "Formă sintetică în mișcare, cu un singur traseu de cerneală.",
+      "noapte": "bun",
+      "teme_potrivite": [
+        "noapte",
+        "hartie",
+        "curat"
+      ],
+      "animatie": {
+        "implicit": "contur-umplere",
+        "alternative": [
+          "aparitie"
+        ],
+        "esalonare": 0.06,
+        "accent": "aparitie"
+      }
+    },
+    {
+      "id": "od-strolling",
+      "tip": "forma",
+      "familie": "cerneala",
+      "sursa": "open-doodles",
+      "original": "sintetic/od-strolling.svg",
+      "fisier": "forme/od-strolling.svg",
+      "sha256": "5565e7f669ec99ff5e85b5fdca64fe308cab08441824f269cbab90aa98ec3c51",
+      "kb": 1.6,
+      "cutie": {
+        "w": 772,
+        "h": 747
+      },
+      "roluri": [
+        "ink",
+        "acc"
+      ],
+      "recolorabil": true,
+      "acoperire_cerneala": 0.162,
+      "personaj": {
+        "numar": 1,
+        "gen": "ambiguu",
+        "poza": "in-miscare",
+        "orientare": "dreapta"
+      },
+      "etichete": [
+        "plimbare",
+        "mers",
+        "relaxare",
+        "nepăsare",
+        "lejer"
+      ],
+      "descriere": "Formă sintetică cu patru trasee de cerneală.",
+      "noapte": "bun",
+      "teme_potrivite": [
+        "noapte",
+        "hartie",
+        "curat"
+      ],
+      "animatie": {
+        "implicit": "contur-umplere",
+        "alternative": [
+          "aparitie"
+        ],
+        "esalonare": 0.06,
+        "accent": "aparitie"
+      }
+    },
+    {
+      "id": "op-bust-telefon",
+      "tip": "forma",
+      "familie": "cerneala",
+      "sursa": "open-peeps",
+      "original": "sintetic/op-bust-telefon.svg",
+      "fisier": "forme/op-bust-telefon.svg",
+      "sha256": "b9e21fc3cdc096128ecdf29eac08a131e38fb0c313c92fe948a4751af6f878bf",
+      "kb": 1.5,
+      "cutie": {
+        "w": 164,
+        "h": 253
+      },
+      "roluri": [
+        "ink",
+        "fond"
+      ],
+      "recolorabil": true,
+      "acoperire_cerneala": 0.243,
+      "personaj": {
+        "numar": 1,
+        "gen": "barbat",
+        "poza": "bust",
+        "orientare": "dreapta"
+      },
+      "etichete": [
+        "telefon",
+        "mobil",
+        "mesaj",
+        "barbă",
+        "plictiseală"
+      ],
+      "descriere": "Bust sintetic cu telefonul, cu fond și cerneală.",
+      "noapte": "autocolant",
+      "teme_potrivite": [
+        "noapte",
+        "hartie",
+        "curat"
+      ],
+      "animatie": {
+        "implicit": "contur-umplere",
+        "alternative": [
+          "aparitie"
+        ],
+        "esalonare": 0.06,
+        "accent": "aparitie"
+      }
+    },
+    {
+      "id": "op-picioare-explica-ochelari",
+      "tip": "forma",
+      "familie": "cerneala",
+      "sursa": "open-peeps",
+      "original": "sintetic/op-picioare-explica-ochelari.svg",
+      "fisier": "forme/op-picioare-explica-ochelari.svg",
+      "sha256": "4962cdfda1cffca758c08efb56e690581693f79dfee79a9662db4cffabc01b58",
+      "kb": 1.7,
+      "cutie": {
+        "w": 334,
+        "h": 718
+      },
+      "roluri": [
+        "ink",
+        "fond"
+      ],
+      "recolorabil": true,
+      "acoperire_cerneala": 0.273,
+      "personaj": {
+        "numar": 1,
+        "gen": "ambiguu",
+        "poza": "in-miscare",
+        "orientare": "dreapta"
+      },
+      "etichete": [
+        "explicație",
+        "mers",
+        "gest",
+        "ochelari",
+        "zâmbet larg"
+      ],
+      "descriere": "Siluetă sintetică înaltă care explică, cu fond și cerneală.",
+      "noapte": "autocolant",
+      "teme_potrivite": [
+        "noapte",
+        "hartie",
+        "curat"
+      ],
+      "animatie": {
+        "implicit": "contur-umplere",
+        "alternative": [
+          "aparitie"
+        ],
+        "esalonare": 0.06,
+        "accent": "aparitie"
+      }
+    },
+    {
+      "id": "op-bust-cafea",
+      "tip": "forma",
+      "familie": "cerneala",
+      "sursa": "open-peeps",
+      "original": "sintetic/op-bust-cafea.svg",
+      "fisier": "forme/op-bust-cafea.svg",
+      "sha256": "ebde9a909253fee3cf7e19d176e4983a73fcaed5789c407594ab86585b64fcca",
+      "kb": 1.5,
+      "cutie": {
+        "w": 172,
+        "h": 251
+      },
+      "roluri": [
+        "ink",
+        "fond"
+      ],
+      "recolorabil": true,
+      "acoperire_cerneala": 0.21,
+      "personaj": {
+        "numar": 1,
+        "gen": "barbat",
+        "poza": "bust",
+        "orientare": "fata"
+      },
+      "etichete": [
+        "cafea",
+        "cană",
+        "pălărie",
+        "mustață",
+        "dimineață"
+      ],
+      "descriere": "Bust sintetic cu cafea, cu fond și cerneală.",
+      "noapte": "autocolant",
+      "teme_potrivite": [
+        "noapte",
+        "hartie",
+        "curat"
+      ],
+      "animatie": {
+        "implicit": "contur-umplere",
+        "alternative": [
+          "aparitie"
+        ],
+        "esalonare": 0.06,
+        "accent": "aparitie"
+      }
+    }
+  ],
+  "sinonime": {
+    "plictiseală": [
+      "obosit",
+      "epuizat",
+      "plictisit"
+    ],
+    "cafea": [
+      "coffee",
+      "cană"
+    ]
+  }
+}

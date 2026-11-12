@@ -1,0 +1,32 @@
+{
+  "sablon": "reel-ilustrat",
+  "versiune_schema": 1,
+  "format": "vertical",
+  "scene": [
+    {
+      "tip": "desen",
+      "desen": {
+        "id": "op-bust-laptop"
+      },
+      "titlu": [
+        "Faci totul singur."
+      ]
+    },
+    {
+      "tip": "retea",
+      "titlu": [
+        "Un sistem",
+        "*preia rutina.*"
+      ]
+    },
+    {
+      "tip": "final",
+      "desen": {
+        "id": "od-chilling"
+      },
+      "titlu": [
+        "Tu decizi."
+      ]
+    }
+  ]
+}

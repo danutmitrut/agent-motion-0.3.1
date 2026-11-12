@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Desen de test cu trei culori: cerneală, accent, umplere albă -->
+<svg xmlns="http://www.w3.org/2000/svg" width="200px" height="100px" viewBox="0 0 200 100">
+  <title>Desen de test</title>
+  <desc>Creat pentru testele mg desen adauga</desc>
+  <g id="strat-1">
+    <rect id="fundal" x="0" y="0" width="200" height="100" fill="#FFFFFF"/>
+    <circle cx="60" cy="50" r="30" style="fill:#E4572E;opacity:0.9"/>
+    <path id="contur" d="M10 90 C60 10, 140 10, 190 90" fill="none" stroke="#1A1A1A" stroke-width="4"/>
+    <path d="M120 40h40v40h-40z" fill="#1a1a1a"/>
+  </g>
+</svg>

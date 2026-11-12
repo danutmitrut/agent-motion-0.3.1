@@ -1,0 +1,273 @@
+{
+  "versiune": 1,
+  "durata": 25,
+  "fps": 30,
+  "latime": 1080,
+  "inaltime": 1920,
+  "atmosfera": {
+    "mod": "ceata",
+    "aprinde": 8.75,
+    "impingere": 1.04,
+    "granulatie": 0.06
+  },
+  "desene": [
+    {
+      "g": "g-d1",
+      "scena": 0,
+      "id": "op-bust-telefon",
+      "tip": "forma",
+      "familie": "cerneala",
+      "animatie": "contur-umplere",
+      "x": 312,
+      "y": 779,
+      "s": 2.779,
+      "oglindit": false,
+      "panou": null,
+      "cutie": [
+        312,
+        779,
+        456,
+        703
+      ],
+      "draw": [
+        0.3,
+        3.4
+      ],
+      "undraw": [
+        8.3,
+        1.2
+      ]
+    },
+    {
+      "g": "g-d4",
+      "scena": 3,
+      "id": "op-picioare-explica-ochelari",
+      "tip": "forma",
+      "familie": "cerneala",
+      "animatie": "contur-umplere",
+      "x": 377,
+      "y": 779,
+      "s": 0.979,
+      "oglindit": false,
+      "panou": null,
+      "cutie": [
+        377,
+        779,
+        327,
+        703
+      ],
+      "draw": [
+        15.7,
+        3.4
+      ],
+      "undraw": [
+        19.3,
+        1.2
+      ]
+    },
+    {
+      "g": "g-d5",
+      "scena": 4,
+      "id": "op-bust-cafea",
+      "tip": "forma",
+      "familie": "cerneala",
+      "animatie": "contur-umplere",
+      "x": 350,
+      "y": 853,
+      "s": 2.211,
+      "oglindit": false,
+      "panou": null,
+      "cutie": [
+        350,
+        853,
+        380,
+        555
+      ],
+      "draw": [
+        21,
+        2.5
+      ],
+      "undraw": null
+    }
+  ],
+  "iconite": [
+    {
+      "g": "g-i2",
+      "scena": 1,
+      "nume": [
+        "phone",
+        "message-circle",
+        "calendar-x",
+        "mail",
+        "bell"
+      ],
+      "pozitii": [
+        [
+          253,
+          756
+        ],
+        [
+          351,
+          652
+        ],
+        [
+          485,
+          613
+        ],
+        [
+          619,
+          652
+        ],
+        [
+          717,
+          756
+        ]
+      ],
+      "scara": 4.6,
+      "apar": [
+        4.3,
+        4.9,
+        5.5,
+        6.1,
+        6.7
+      ],
+      "tremura": 7.3,
+      "retrag": 8.15
+    }
+  ],
+  "retele": [
+    {
+      "g": "g-r3",
+      "scena": 2,
+      "din": "g-i2",
+      "noduri": 5,
+      "nastere": 9.1,
+      "scanteie": [
+        13.1,
+        1
+      ],
+      "retrag": 14.7,
+      "centru": [
+        540,
+        1080
+      ],
+      "raza": 290
+    }
+  ],
+  "linii": [
+    {
+      "id": "linie-accent",
+      "scena": 4,
+      "d": "M-40 1325 C 220 1315, 399 1149, 578 1019 C 773 909, 925 853, 1120 833",
+      "t": 22.25,
+      "dur": 2.2,
+      "clasa": "c"
+    }
+  ],
+  "carduri": [
+    {
+      "id": "c1",
+      "scena": 0,
+      "eticheta": "LUNI, 8:30",
+      "randuri": [
+        {
+          "text": "Telefonul sună",
+          "accent": false
+        },
+        {
+          "text": "din nou.",
+          "accent": true
+        }
+      ],
+      "cuvinte": null,
+      "intra": 0.9,
+      "iese": 3.8
+    },
+    {
+      "id": "c2",
+      "scena": 1,
+      "eticheta": "TOATĂ ZIUA",
+      "randuri": null,
+      "cuvinte": [
+        {
+          "text": "Reprogramări.",
+          "t": 4.3
+        },
+        {
+          "text": "Anulări.",
+          "t": 5.3
+        },
+        {
+          "text": "Mesaje.",
+          "t": 6.3
+        }
+      ],
+      "intra": 4.3,
+      "iese": 8.3
+    },
+    {
+      "id": "c3",
+      "scena": 2,
+      "eticheta": "ALTFEL",
+      "randuri": [
+        {
+          "text": "Un agent preia",
+          "accent": false
+        },
+        {
+          "text": "programările.",
+          "accent": true
+        }
+      ],
+      "cuvinte": null,
+      "intra": 8.8,
+      "iese": 14.3
+    },
+    {
+      "id": "c4",
+      "scena": 3,
+      "eticheta": "TU",
+      "randuri": [
+        {
+          "text": "Ai timp pentru",
+          "accent": false
+        },
+        {
+          "text": "clienți.",
+          "accent": true
+        }
+      ],
+      "cuvinte": null,
+      "intra": 15.4,
+      "iese": 19.3
+    },
+    {
+      "id": "c5",
+      "scena": 4,
+      "eticheta": "OM + AGENT",
+      "randuri": [
+        {
+          "text": "Tu decizi,",
+          "accent": false
+        },
+        {
+          "text": "agentul ține minte.",
+          "accent": true
+        }
+      ],
+      "cuvinte": null,
+      "intra": 20.1,
+      "iese": null
+    }
+  ],
+  "cta": {
+    "text": "Scrie „AGENT” în comentarii",
+    "intra": 21.6
+  },
+  "semnatura": {
+    "text": "Ana Pop,\ncoach de carieră",
+    "t": 21.5,
+    "dur": 2
+  },
+  "panouri": []
+}

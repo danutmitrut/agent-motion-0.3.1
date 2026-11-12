@@ -1,0 +1,10 @@
+{
+  "sablon": "date-serie",
+  "versiune_schema": 1,
+  "compozitie": "grafic",
+  "stil": { "tema": "noapte" },
+  "scene": [
+    { "tip": "cifra", "eticheta": "Clienți noi", "valoare": 120, "text": "în primul trimestru" },
+    { "tip": "final", "titlu": ["Mulțumim!"] }
+  ]
+}

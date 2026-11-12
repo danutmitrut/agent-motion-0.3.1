@@ -1,0 +1,141 @@
+name: ci
+
+on:
+  push:
+    branches: [stabil]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  windows:
+    name: windows-latest, cale cu spațiu și diacritice
+    runs-on: windows-latest
+    timeout-minutes: 150
+    defaults:
+      run:
+        shell: pwsh
+        working-directory: "Proiecte Ăîș test/agent-motion"
+    steps:
+      - name: Codul, într-o cale cu spațiu și diacritice
+        uses: actions/checkout@v7
+        with:
+          path: "Proiecte Ăîș test/agent-motion"
+
+      - name: Node 22
+        uses: actions/setup-node@v7
+        with:
+          node-version: 22
+
+      - name: Defender pornit (imaginea runner-ului îl oprește la construcție)
+        run: |
+          $ErrorActionPreference = 'Continue'
+          Set-MpPreference -DisableRealtimeMonitoring $false -DisableBehaviorMonitoring $false -DisableIOAVProtection $false -DisableScriptScanning $false -DisableArchiveScanning $false
+          Remove-MpPreference -ExclusionPath 'C:\', 'D:\'
+          $stare = Get-MpComputerStatus | Select-Object AMRunningMode, AntivirusEnabled, RealTimeProtectionEnabled
+          $stare | Format-List
+          "Defender în CI: mod $($stare.AMRunningMode), protecție în timp real $($stare.RealTimeProtectionEnabled)" >> $env:GITHUB_STEP_SUMMARY
+          exit 0
+
+      - name: Fără symlinkuri în repo
+        run: |
+          $legaturi = git ls-files -s | Select-String -Pattern '^120000'
+          if ($legaturi) {
+            $legaturi
+            Write-Error 'Repo-ul conține symlinkuri; pe o clonare Windows implicită devin fișiere text.'
+            exit 1
+          }
+
+      - name: mg doctor --ci
+        run: node nucleu/mg.mjs doctor --ci
+
+      - name: Teste unitare
+        run: node --test "teste/unitar/*.test.mjs"
+
+      - name: Suita gărzii
+        run: node --test teste/garda/garda.test.mjs
+
+      - name: Configurația agentului
+        run: node --test "teste/configuratie/*.test.mjs"
+
+      # Integrarea nu încape în 150 de minute pe windows-latest (rulările df20b2a și a505d75 au fost oprite la termen).
+      # Rulează doar la pornire manuală; suita completă rulează pe laptop înainte de fiecare versiune.
+      - name: Teste de integrare (HyperFrames, ffmpeg, Chrome reale), cu randarea exemplelor reel-ilustrat
+        if: github.event_name == 'workflow_dispatch'
+        env:
+          MG_TESTE_INTEGRARE: "1"
+          MG_TESTE_PIXELI_TEME: "0"
+        run: node --test --test-concurrency=1 "teste/integrare/*.test.mjs"
+
+      - name: Testele șablonului reel-ilustrat (golden, exemple, invalide)
+        run: node --test "motoare/hyperframes/sabloane/reel-ilustrat/teste/*.test.mjs"
+
+  # Părțile grele B-E din pixeli-teme (~18 minute fiecare) rulează doar la pornirea manuală, într-un job separat,
+  # în paralel cu cel de mai sus: împreună nu încap în 150 de minute (rularea 38156447241 a fost oprită la termen).
+  windows-pixeli-teme:
+    name: windows-latest, pixeli-teme complet (părțile grele B-E)
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: windows-latest
+    timeout-minutes: 150
+    defaults:
+      run:
+        shell: pwsh
+        working-directory: "Proiecte Ăîș test/agent-motion"
+    steps:
+      - name: Codul, într-o cale cu spațiu și diacritice
+        uses: actions/checkout@v7
+        with:
+          path: "Proiecte Ăîș test/agent-motion"
+
+      - name: Node 22
+        uses: actions/setup-node@v7
+        with:
+          node-version: 22
+
+      - name: Defender pornit (imaginea runner-ului îl oprește la construcție)
+        run: |
+          $ErrorActionPreference = 'Continue'
+          Set-MpPreference -DisableRealtimeMonitoring $false -DisableBehaviorMonitoring $false -DisableIOAVProtection $false -DisableScriptScanning $false -DisableArchiveScanning $false
+          Remove-MpPreference -ExclusionPath 'C:\', 'D:\'
+          exit 0
+
+      - name: mg doctor --ci
+        run: node nucleu/mg.mjs doctor --ci
+
+      - name: pixeli-teme, toate părțile (HyperFrames, ffmpeg, Chrome reale)
+        env:
+          MG_TESTE_INTEGRARE: "1"
+          MG_TESTE_PIXELI_TEME: "1"
+        run: node --test --test-concurrency=1 teste/integrare/pixeli-teme.test.mjs
+
+  golden-mac:
+    name: Golden reel-ilustrat pe macOS
+    runs-on: macos-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        shell: bash
+        working-directory: "Proiecte Ăîș test/agent-motion"
+    steps:
+      - name: Codul, într-o cale cu spațiu și diacritice
+        uses: actions/checkout@v7
+        with:
+          path: "Proiecte Ăîș test/agent-motion"
+
+      - name: Node 22
+        uses: actions/setup-node@v7
+        with:
+          node-version: 22
+
+      - name: Dependențele nucleului
+        working-directory: "Proiecte Ăîș test/agent-motion/nucleu"
+        run: npm ci --no-audit --no-fund
+
+      - name: Testele șablonului reel-ilustrat (golden byte cu byte)
+        run: node --test "motoare/hyperframes/sabloane/reel-ilustrat/teste/*.test.mjs"

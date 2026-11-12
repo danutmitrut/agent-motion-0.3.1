@@ -1,0 +1,940 @@
+{
+  "versiune": 1,
+  "sablon": "overlay-filmare",
+  "format": "orizontal",
+  "latime": 1920,
+  "inaltime": 1080,
+  "fps": 30,
+  "durata": 15.104,
+  "start": 0,
+  "focus_x": 50,
+  "sursa": {
+    "latime": 1920,
+    "inaltime": 1080
+  },
+  "ritm": {
+    "intrare": 0.5,
+    "cuvinte": 5,
+    "avans": 0.25,
+    "ease": "power2.out"
+  },
+  "opacitate_fundal": 0.86,
+  "greutate_titlu": 700,
+  "subtitrari": {
+    "activ": true,
+    "animatie": "cuvant-activ",
+    "pozitie": "mijloc",
+    "marime": 42,
+    "majuscule": false,
+    "grupuri": [
+      {
+        "n": 1,
+        "id": "g1",
+        "start": 0.24,
+        "end": 1.68,
+        "marime": 42,
+        "randuri": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        ],
+        "cuvinte": [
+          {
+            "id": "w0",
+            "text": "Vrei",
+            "start": 0.32,
+            "end": 0.64,
+            "evidentiat": false
+          },
+          {
+            "id": "w1",
+            "text": "să",
+            "start": 0.8,
+            "end": 0.96,
+            "evidentiat": false
+          },
+          {
+            "id": "w2",
+            "text": "începi",
+            "start": 0.96,
+            "end": 1.28,
+            "evidentiat": false
+          },
+          {
+            "id": "w3",
+            "text": "cu",
+            "start": 1.36,
+            "end": 1.52,
+            "evidentiat": false
+          },
+          {
+            "id": "w4",
+            "text": "un",
+            "start": 1.52,
+            "end": 1.68,
+            "evidentiat": false
+          }
+        ],
+        "caseta": [
+          735.25,
+          661.85,
+          449.5,
+          76.3
+        ]
+      },
+      {
+        "n": 2,
+        "id": "g2",
+        "start": 1.68,
+        "end": 2.4,
+        "marime": 42,
+        "randuri": [
+          [
+            0,
+            1
+          ]
+        ],
+        "cuvinte": [
+          {
+            "id": "w5",
+            "text": "agent,",
+            "start": 1.68,
+            "end": 2.24,
+            "evidentiat": false
+          },
+          {
+            "id": "w6",
+            "text": "ai",
+            "start": 2.24,
+            "end": 2.4,
+            "evidentiat": false
+          }
+        ],
+        "caseta": [
+          847.14,
+          661.85,
+          225.72,
+          76.3
+        ]
+      },
+      {
+        "n": 3,
+        "id": "g3",
+        "start": 7.41,
+        "end": 9.52,
+        "marime": 42,
+        "randuri": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        ],
+        "cuvinte": [
+          {
+            "id": "w22",
+            "text": "alege",
+            "start": 7.44,
+            "end": 8,
+            "evidentiat": false
+          },
+          {
+            "id": "w23",
+            "text": "sarcina",
+            "start": 8,
+            "end": 8.48,
+            "evidentiat": false
+          },
+          {
+            "id": "w24",
+            "text": "care",
+            "start": 8.56,
+            "end": 8.72,
+            "evidentiat": false
+          },
+          {
+            "id": "w25",
+            "text": "te",
+            "start": 8.72,
+            "end": 8.88,
+            "evidentiat": false
+          },
+          {
+            "id": "w26",
+            "text": "obosește",
+            "start": 8.88,
+            "end": 9.52,
+            "evidentiat": false
+          }
+        ],
+        "caseta": [
+          628.38,
+          661.85,
+          663.24,
+          76.3
+        ]
+      },
+      {
+        "n": 4,
+        "id": "g4",
+        "start": 9.52,
+        "end": 10.02,
+        "marime": 42,
+        "randuri": [
+          [
+            0,
+            1
+          ]
+        ],
+        "cuvinte": [
+          {
+            "id": "w27",
+            "text": "în",
+            "start": 9.52,
+            "end": 9.6,
+            "evidentiat": false
+          },
+          {
+            "id": "w28",
+            "text": "fiecare",
+            "start": 9.6,
+            "end": 10,
+            "evidentiat": false
+          }
+        ],
+        "caseta": [
+          837.84,
+          661.85,
+          244.33,
+          76.3
+        ]
+      }
+    ],
+    "suspendari": [
+      [
+        2.71,
+        7.41
+      ],
+      [
+        10.23,
+        14.23
+      ]
+    ],
+    "pasi": [
+      {
+        "efect": "grup",
+        "tinta": "#g1",
+        "t": 0.24,
+        "dur": 1.44,
+        "iesire": 0.12
+      },
+      {
+        "efect": "cuvant",
+        "tinta": "#c1-1",
+        "t": 0.32,
+        "dur": 0.32
+      },
+      {
+        "efect": "cuvant",
+        "tinta": "#c1-2",
+        "t": 0.8,
+        "dur": 0.16
+      },
+      {
+        "efect": "cuvant",
+        "tinta": "#c1-3",
+        "t": 0.96,
+        "dur": 0.32
+      },
+      {
+        "efect": "cuvant",
+        "tinta": "#c1-4",
+        "t": 1.36,
+        "dur": 0.16
+      },
+      {
+        "efect": "cuvant",
+        "tinta": "#c1-5",
+        "t": 1.52,
+        "dur": 0.16
+      },
+      {
+        "efect": "grup",
+        "tinta": "#g2",
+        "t": 1.68,
+        "dur": 0.72,
+        "iesire": 0.12
+      },
+      {
+        "efect": "cuvant",
+        "tinta": "#c2-1",
+        "t": 1.68,
+        "dur": 0.56
+      },
+      {
+        "efect": "cuvant",
+        "tinta": "#c2-2",
+        "t": 2.24,
+        "dur": 0.16
+      },
+      {
+        "efect": "grup",
+        "tinta": "#g3",
+        "t": 7.41,
+        "dur": 2.11,
+        "iesire": 0.12
+      },
+      {
+        "efect": "cuvant",
+        "tinta": "#c3-1",
+        "t": 7.44,
+        "dur": 0.56
+      },
+      {
+        "efect": "cuvant",
+        "tinta": "#c3-2",
+        "t": 8,
+        "dur": 0.48
+      },
+      {
+        "efect": "cuvant",
+        "tinta": "#c3-3",
+        "t": 8.56,
+        "dur": 0.16
+      },
+      {
+        "efect": "cuvant",
+        "tinta": "#c3-4",
+        "t": 8.72,
+        "dur": 0.16
+      },
+      {
+        "efect": "cuvant",
+        "tinta": "#c3-5",
+        "t": 8.88,
+        "dur": 0.64
+      },
+      {
+        "efect": "grup",
+        "tinta": "#g4",
+        "t": 9.52,
+        "dur": 0.5,
+        "iesire": 0.12
+      },
+      {
+        "efect": "cuvant",
+        "tinta": "#c4-1",
+        "t": 9.52,
+        "dur": 0.08
+      },
+      {
+        "efect": "cuvant",
+        "tinta": "#c4-2",
+        "t": 9.6,
+        "dur": 0.4
+      }
+    ]
+  },
+  "elemente": [
+    {
+      "n": 1,
+      "id": "e1",
+      "camp": "elemente[0]",
+      "tip": "titlu",
+      "banda": "sus",
+      "start": 0.2,
+      "complet": 0.9,
+      "sfarsit": 3.1,
+      "ancora": null,
+      "aliniere": "stanga",
+      "blocuri": [
+        {
+          "id": "b1-1",
+          "fel": "card",
+          "x": 192,
+          "y": 108,
+          "w": 773.9,
+          "h": 148.64
+        },
+        {
+          "id": "b1-2",
+          "fel": "eticheta",
+          "rol": "eticheta",
+          "x": 219,
+          "y": 129,
+          "w": 170.01,
+          "h": 27.6,
+          "marime": 23,
+          "text": "GHID RAPID",
+          "camp": "elemente[0].eticheta",
+          "text_id": "t1-1"
+        },
+        {
+          "id": "b1-3",
+          "fel": "rand",
+          "rol": "titlu",
+          "x": 219,
+          "y": 167.6,
+          "w": 719.9,
+          "h": 68.04,
+          "marime": 63,
+          "text": "Primii pași cu un agent",
+          "camp": "elemente[0].titlu[0]",
+          "text_id": "t1-2"
+        }
+      ],
+      "pasi": [
+        {
+          "efect": "apare",
+          "tinta": "#b1-1",
+          "t": 0.2,
+          "dur": 0.5,
+          "x": 0,
+          "y": 16,
+          "ease": "power2.out"
+        },
+        {
+          "efect": "apare",
+          "tinta": "#b1-2",
+          "t": 0.32,
+          "dur": 0.5,
+          "x": 0,
+          "y": 12,
+          "ease": "power2.out"
+        },
+        {
+          "efect": "apare",
+          "tinta": "#b1-3",
+          "t": 0.4,
+          "dur": 0.5,
+          "x": 0,
+          "y": 12,
+          "ease": "power2.out"
+        },
+        {
+          "efect": "iese",
+          "tinta": "#e1",
+          "t": 2.85,
+          "dur": 0.25,
+          "x": 0,
+          "y": -12,
+          "ease": "power2.in"
+        }
+      ],
+      "texte": [
+        {
+          "id": "t1-1",
+          "text": "GHID RAPID",
+          "camp": "elemente[0].eticheta",
+          "t": 0.82,
+          "caseta": [
+            219,
+            129,
+            170.01,
+            27.6
+          ]
+        },
+        {
+          "id": "t1-2",
+          "text": "Primii pași cu un agent",
+          "camp": "elemente[0].titlu[0]",
+          "t": 0.9,
+          "caseta": [
+            219,
+            167.6,
+            719.9,
+            68.04
+          ]
+        }
+      ],
+      "permite_banda_subtitrari": false
+    },
+    {
+      "n": 2,
+      "id": "e2",
+      "camp": "elemente[1]",
+      "tip": "lista",
+      "banda": "centru",
+      "start": 2.71,
+      "complet": 6.41,
+      "sfarsit": 7.41,
+      "ancora": {
+        "fraza": "trei lucruri",
+        "aparitia": 1,
+        "gasita": true,
+        "t": 2.96
+      },
+      "aliniere": "stanga",
+      "blocuri": [
+        {
+          "id": "b2-1",
+          "fel": "card",
+          "x": 739.85,
+          "y": 451.3,
+          "w": 440.3,
+          "h": 233.4
+        },
+        {
+          "id": "b2-2",
+          "fel": "rand",
+          "rol": "lista_titlu",
+          "x": 766.85,
+          "y": 472.3,
+          "w": 214.6,
+          "h": 39.6,
+          "marime": 36,
+          "text": "Ai nevoie de",
+          "camp": "elemente[1].titlu[0]",
+          "text_id": "t2-1"
+        },
+        {
+          "id": "b2-3",
+          "fel": "punct",
+          "rol": "punct",
+          "x": 766.85,
+          "y": 522.9,
+          "w": 304.93,
+          "h": 39.6,
+          "marime": 33,
+          "text": "O singură sarcină",
+          "camp": "elemente[1].puncte[0].text",
+          "text_id": "t2-2",
+          "marcaj": 29.7
+        },
+        {
+          "id": "b2-4",
+          "fel": "punct",
+          "rol": "punct",
+          "x": 766.85,
+          "y": 573.5,
+          "w": 196.91,
+          "h": 39.6,
+          "marime": 33,
+          "text": "Pașii scriși",
+          "camp": "elemente[1].puncte[1].text",
+          "text_id": "t2-3",
+          "marcaj": 29.7
+        },
+        {
+          "id": "b2-5",
+          "fel": "punct",
+          "rol": "punct",
+          "x": 766.85,
+          "y": 624.1,
+          "w": 386.3,
+          "h": 39.6,
+          "marime": 33,
+          "text": "O săptămână de probă",
+          "camp": "elemente[1].puncte[2].text",
+          "text_id": "t2-4",
+          "marcaj": 29.7
+        }
+      ],
+      "pasi": [
+        {
+          "efect": "apare",
+          "tinta": "#b2-1",
+          "t": 2.71,
+          "dur": 0.5,
+          "x": 0,
+          "y": 16,
+          "ease": "power2.out"
+        },
+        {
+          "efect": "apare",
+          "tinta": "#b2-2",
+          "t": 2.83,
+          "dur": 0.5,
+          "x": 0,
+          "y": 12,
+          "ease": "power2.out"
+        },
+        {
+          "efect": "apare",
+          "tinta": "#b2-3",
+          "t": 3.75,
+          "dur": 0.5,
+          "x": 0,
+          "y": 12,
+          "ease": "power2.out"
+        },
+        {
+          "efect": "apare",
+          "tinta": "#b2-4",
+          "t": 4.87,
+          "dur": 0.5,
+          "x": 0,
+          "y": 12,
+          "ease": "power2.out"
+        },
+        {
+          "efect": "apare",
+          "tinta": "#b2-5",
+          "t": 5.91,
+          "dur": 0.5,
+          "x": 0,
+          "y": 12,
+          "ease": "power2.out"
+        },
+        {
+          "efect": "iese",
+          "tinta": "#e2",
+          "t": 7.16,
+          "dur": 0.25,
+          "x": 0,
+          "y": -12,
+          "ease": "power2.in"
+        }
+      ],
+      "texte": [
+        {
+          "id": "t2-1",
+          "text": "Ai nevoie de",
+          "camp": "elemente[1].titlu[0]",
+          "t": 3.33,
+          "caseta": [
+            766.85,
+            472.3,
+            214.6,
+            39.6
+          ]
+        },
+        {
+          "id": "t2-2",
+          "text": "O singură sarcină",
+          "camp": "elemente[1].puncte[0].text",
+          "t": 4.25,
+          "caseta": [
+            796.55,
+            522.9,
+            275.23,
+            39.6
+          ]
+        },
+        {
+          "id": "t2-3",
+          "text": "Pașii scriși",
+          "camp": "elemente[1].puncte[1].text",
+          "t": 5.37,
+          "caseta": [
+            796.55,
+            573.5,
+            167.21,
+            39.6
+          ]
+        },
+        {
+          "id": "t2-4",
+          "text": "O săptămână de probă",
+          "camp": "elemente[1].puncte[2].text",
+          "t": 6.41,
+          "caseta": [
+            796.55,
+            624.1,
+            356.6,
+            39.6
+          ]
+        }
+      ],
+      "permite_banda_subtitrari": true
+    },
+    {
+      "n": 3,
+      "id": "e3",
+      "camp": "elemente[2]",
+      "tip": "citat",
+      "banda": "centru",
+      "start": 10.23,
+      "complet": 10.85,
+      "sfarsit": 14.23,
+      "ancora": {
+        "fraza": "scrie pașii exact",
+        "aparitia": 1,
+        "gasita": true,
+        "t": 10.48
+      },
+      "aliniere": "centru",
+      "blocuri": [
+        {
+          "id": "b3-1",
+          "fel": "card",
+          "x": 587.7,
+          "y": 521.7,
+          "w": 744.6,
+          "h": 92.6
+        },
+        {
+          "id": "b3-2",
+          "fel": "rand",
+          "rol": "citat",
+          "x": 614.7,
+          "y": 542.7,
+          "w": 690.6,
+          "h": 50.6,
+          "marime": 44,
+          "text": "„Scrie pașii exact cum îi faci tu”",
+          "camp": "elemente[2].text",
+          "text_id": "t3-1"
+        }
+      ],
+      "pasi": [
+        {
+          "efect": "apare",
+          "tinta": "#b3-1",
+          "t": 10.23,
+          "dur": 0.5,
+          "x": 0,
+          "y": 16,
+          "ease": "power2.out"
+        },
+        {
+          "efect": "apare",
+          "tinta": "#b3-2",
+          "t": 10.35,
+          "dur": 0.5,
+          "x": 0,
+          "y": 12,
+          "ease": "power2.out"
+        },
+        {
+          "efect": "iese",
+          "tinta": "#e3",
+          "t": 13.98,
+          "dur": 0.25,
+          "x": 0,
+          "y": -12,
+          "ease": "power2.in"
+        }
+      ],
+      "texte": [
+        {
+          "id": "t3-1",
+          "text": "„Scrie pașii exact cum îi faci tu”",
+          "camp": "elemente[2].text",
+          "t": 10.85,
+          "caseta": [
+            614.7,
+            542.7,
+            690.6,
+            50.6
+          ]
+        }
+      ],
+      "permite_banda_subtitrari": true
+    }
+  ],
+  "banda_subtitrari": [
+    192,
+    600,
+    1536,
+    200
+  ],
+  "rostit": [
+    {
+      "start": 0.32,
+      "end": 0.64,
+      "text": "Vrei"
+    },
+    {
+      "start": 0.8,
+      "end": 0.96,
+      "text": "să"
+    },
+    {
+      "start": 0.96,
+      "end": 1.28,
+      "text": "începi"
+    },
+    {
+      "start": 1.36,
+      "end": 1.52,
+      "text": "cu"
+    },
+    {
+      "start": 1.52,
+      "end": 1.68,
+      "text": "un"
+    },
+    {
+      "start": 1.68,
+      "end": 2.24,
+      "text": "agent,"
+    },
+    {
+      "start": 2.24,
+      "end": 2.4,
+      "text": "ai"
+    },
+    {
+      "start": 2.48,
+      "end": 2.8,
+      "text": "nevoie"
+    },
+    {
+      "start": 2.8,
+      "end": 2.96,
+      "text": "de"
+    },
+    {
+      "start": 2.96,
+      "end": 3.2,
+      "text": "trei"
+    },
+    {
+      "start": 3.2,
+      "end": 3.84,
+      "text": "lucruri,"
+    },
+    {
+      "start": 3.84,
+      "end": 4,
+      "text": "o"
+    },
+    {
+      "start": 4,
+      "end": 4.32,
+      "text": "singură"
+    },
+    {
+      "start": 4.4,
+      "end": 5.12,
+      "text": "sarcină,"
+    },
+    {
+      "start": 5.12,
+      "end": 6,
+      "text": "pașii scriși,"
+    },
+    {
+      "start": 6,
+      "end": 6.16,
+      "text": "și"
+    },
+    {
+      "start": 6.16,
+      "end": 6.32,
+      "text": "o"
+    },
+    {
+      "start": 6.32,
+      "end": 6.64,
+      "text": "săptămână"
+    },
+    {
+      "start": 6.8,
+      "end": 6.96,
+      "text": "de"
+    },
+    {
+      "start": 6.96,
+      "end": 7.44,
+      "text": "probă,"
+    },
+    {
+      "start": 7.44,
+      "end": 8,
+      "text": "alege"
+    },
+    {
+      "start": 8,
+      "end": 8.48,
+      "text": "sarcina"
+    },
+    {
+      "start": 8.56,
+      "end": 8.72,
+      "text": "care"
+    },
+    {
+      "start": 8.72,
+      "end": 8.88,
+      "text": "te"
+    },
+    {
+      "start": 8.88,
+      "end": 9.52,
+      "text": "obosește"
+    },
+    {
+      "start": 9.52,
+      "end": 9.6,
+      "text": "în"
+    },
+    {
+      "start": 9.6,
+      "end": 10,
+      "text": "fiecare"
+    },
+    {
+      "start": 10.08,
+      "end": 10.48,
+      "text": "zi,"
+    },
+    {
+      "start": 10.48,
+      "end": 10.72,
+      "text": "scrie"
+    },
+    {
+      "start": 10.88,
+      "end": 11.28,
+      "text": "pașii"
+    },
+    {
+      "start": 11.28,
+      "end": 11.68,
+      "text": "exact"
+    },
+    {
+      "start": 11.68,
+      "end": 11.84,
+      "text": "cum"
+    },
+    {
+      "start": 11.84,
+      "end": 12,
+      "text": "îi"
+    },
+    {
+      "start": 12,
+      "end": 12.32,
+      "text": "faci"
+    },
+    {
+      "start": 12.32,
+      "end": 12.48,
+      "text": "tu,"
+    },
+    {
+      "start": 12.48,
+      "end": 12.64,
+      "text": "și"
+    },
+    {
+      "start": 12.64,
+      "end": 12.88,
+      "text": "lasă"
+    },
+    {
+      "start": 12.96,
+      "end": 13.44,
+      "text": "agentul"
+    },
+    {
+      "start": 13.44,
+      "end": 13.6,
+      "text": "să"
+    },
+    {
+      "start": 13.6,
+      "end": 14.72,
+      "text": "lucreze."
+    }
+  ]
+}

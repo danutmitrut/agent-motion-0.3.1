@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "date.json pentru șablonul de probă Remotion",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["sablon", "versiune_schema", "scene"],
+  "properties": {
+    "sablon": {
+      "type": "string",
+      "const": "proba-remotion",
+      "x-mesaj": { "const": "Câmpul sablon trebuie să fie „proba-remotion”." }
+    },
+    "versiune_schema": {
+      "type": "integer",
+      "const": 1,
+      "x-mesaj": { "const": "Șablonul de probă Remotion are versiunea de schemă 1." }
+    },
+    "format": {
+      "type": "string",
+      "enum": ["vertical", "patrat"],
+      "x-mesaj": { "enum": "Formatul poate fi vertical sau patrat." }
+    },
+    "brand": {
+      "type": ["string", "null"],
+      "pattern": "^[a-z0-9-]{2,40}$",
+      "x-mesaj": { "pattern": "Numele brandului are 2-40 de litere mici, cifre sau cratime." }
+    },
+    "stil": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "tema": {
+          "type": "string",
+          "enum": ["noapte", "hartie", "curat"],
+          "x-mesaj": { "enum": "Tema poate fi noapte, hartie sau curat." }
+        }
+      }
+    },
+    "scene": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 10,
+      "x-mesaj": { "minItems": "Videoul are cel puțin o scenă.", "maxItems": "Videoul are cel mult 10 scene." },
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["tip", "titlu"],
+        "properties": {
+          "tip": {
+            "type": "string",
+            "const": "titlu",
+            "x-mesaj": { "const": "Șablonul de probă Remotion are doar scene de tip titlu." }
+          },
+          "titlu": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 2,
+            "x-mesaj": { "minItems": "Titlul are cel puțin un rând.", "maxItems": "Titlul are cel mult 2 rânduri." },
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 22,
+              "x-mesaj": { "minLength": "Rândul de titlu nu poate fi gol.", "maxLength": "Rândul de titlu are cel mult 22 de caractere." }
+            }
+          }
+        }
+      }
+    }
+  }
+}

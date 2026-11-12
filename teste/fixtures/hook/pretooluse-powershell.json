@@ -1,0 +1,13 @@
+{
+  "session_id": "abc123",
+  "transcript_path": "C:\\Users\\x\\.claude\\projects\\agent-motion\\abc123.jsonl",
+  "cwd": "C:\\agent-motion",
+  "permission_mode": "default",
+  "hook_event_name": "PreToolUse",
+  "tool_name": "PowerShell",
+  "tool_input": {
+    "command": "Set-Content nucleu\\mg.mjs x",
+    "description": "Scrie în mg.mjs"
+  },
+  "tool_use_id": "toolu_01ABC124"
+}

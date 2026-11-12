@@ -1,0 +1,10 @@
+{
+  "id": "curat",
+  "nume": "Curat",
+  "culori": { "fundal": "#FFFFFF", "text": "#111418", "atenuat": "#5B6470", "accent": "#2563EB" },
+  "font_titlu": "inter",
+  "font_text": "inter",
+  "atmosfera": "plin",
+  "granulatie": 0,
+  "eticheta": { "majuscule": true, "spatiere": 0.16, "prefix": "" }
+}

@@ -1,0 +1,285 @@
+name: pas0-vectorizare
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  vectorizare:
+    name: vectorizarea pe Windows, ca utilizator fără drepturi de administrator
+    runs-on: windows-latest
+    timeout-minutes: 30
+    defaults:
+      run:
+        shell: pwsh
+        working-directory: "Proiecte Ăîș test/agent-motion"
+    steps:
+      - name: Codul, într-o cale cu spațiu și diacritice
+        uses: actions/checkout@v7
+        with:
+          path: "Proiecte Ăîș test/agent-motion"
+
+      - name: Node 22
+        uses: actions/setup-node@v7
+        with:
+          node-version: 22
+
+      - name: Verifică release-ul autotrace și descarcă instalatorul win64
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $rel = gh api repos/autotrace/autotrace/releases/latest | ConvertFrom-Json
+          if ($rel.tag_name -ne '0.31.10') { throw "Ultimul release autotrace e $($rel.tag_name), nu 0.31.10; testul trebuie revăzut." }
+          $asset = $rel.assets | Where-Object { $_.name -eq 'autotrace-20240129-win64-setup.exe' }
+          if (-not $asset -or $asset.size -ne 1408394) { throw 'Instalatorul win64 lipsește din release sau are altă mărime.' }
+          New-Item -ItemType Directory -Force -Path descarcari | Out-Null
+          gh release download 0.31.10 -R autotrace/autotrace -p autotrace-20240129-win64-setup.exe -D descarcari --clobber
+          $hash = (Get-FileHash descarcari/autotrace-20240129-win64-setup.exe -Algorithm SHA256).Hash.ToLower()
+          if ($hash -ne '07ac6a0f6b776714d0f35ce9a1ff59ad545dafe7c35678e373fb1215651124c1') { throw "sha256 diferit: $hash" }
+          "Instalator autotrace 0.31.10 verificat: $hash" >> $env:GITHUB_STEP_SUMMARY
+
+      - name: Starea UAC și 7-Zip pe runner
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $uac = Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System'
+          $sevenZip = (Get-Command 7z).Source
+          "UAC: EnableLUA $($uac.EnableLUA), ConsentPromptBehaviorAdmin $($uac.ConsentPromptBehaviorAdmin), ConsentPromptBehaviorUser $($uac.ConsentPromptBehaviorUser). 7-Zip: $sevenZip" >> $env:GITHUB_STEP_SUMMARY
+          "MG_7Z=$sevenZip" >> $env:GITHUB_ENV
+
+      - name: Creează utilizatorul local mgtest, fără drepturi de administrator
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $parola = 'Mg' + [guid]::NewGuid().ToString('N').Substring(0, 8) + '!a9Z'
+          "::add-mask::$parola"
+          net user mgtest $parola /add | Out-Null
+          if ($LASTEXITCODE -ne 0) { throw 'net user a eșuat.' }
+          $membri = net localgroup Administrators
+          if ($membri -match '^mgtest$') { throw 'mgtest a ajuns în grupul Administrators.' }
+          icacls $env:GITHUB_WORKSPACE /grant 'mgtest:(OI)(CI)M' /T /Q | Out-Null
+          if ($LASTEXITCODE -ne 0) { throw "icacls pe workspace a ieșit cu $LASTEXITCODE." }
+
+          # Rularea 37104947380: sarcina a stat 20 de minute la 0x41303, fără niciun proces. O sarcină cu parolă
+          # pornește doar dacă utilizatorul are dreptul „Log on as a batch job” (SeBatchLogonRight), pe care un cont
+          # din Users nu îl are implicit; Register-ScheduledTask nu îl acordă (întoarce SCHED_S_BATCH_LOGON_PROBLEM,
+          # un cod de succes, deci fără eroare). Acordăm doar acest drept de logon, fără vreun grup: tokenul lui
+          # mgtest nu primește niciun privilegiu în plus, iar sonda verifică în continuare lipsa grupului Administratori.
+          $sid = (Get-LocalUser mgtest).SID.Value
+          $inf = Join-Path $env:RUNNER_TEMP 'drepturi-batch.inf'
+          secedit /export /cfg $inf /areas USER_RIGHTS | Out-Null
+          if ($LASTEXITCODE -ne 0) { throw "secedit /export a ieșit cu $LASTEXITCODE." }
+          $vechi = Get-Content $inf | Where-Object { $_ -match '^SeBatchLogonRight\s*=' } | Select-Object -First 1
+          $nou = if ($vechi) { "$vechi,*$sid" } else { "SeBatchLogonRight = *$sid" }
+          @('[Unicode]', 'Unicode=yes', '[Version]', 'signature="$CHICAGO$"', 'Revision=1', '[Privilege Rights]', $nou) | Set-Content -Path $inf -Encoding Unicode
+          secedit /configure /db (Join-Path $env:RUNNER_TEMP 'drepturi-batch.sdb') /cfg $inf /areas USER_RIGHTS /quiet | Out-Null
+          $codSecedit = $LASTEXITCODE
+          secedit /export /cfg $inf /areas USER_RIGHTS | Out-Null
+          if ($LASTEXITCODE -ne 0) { throw "secedit /export a ieșit cu $LASTEXITCODE." }
+          $drepturi = Get-Content $inf | Where-Object { $_ -match '^(SeBatchLogonRight|SeDenyBatchLogonRight)\s*=' }
+          $drepturi | ForEach-Object { Write-Host $_ }
+          Write-Host "SID mgtest: $sid"
+          function Membri([string]$Drept) {
+            $l = $drepturi | Where-Object { $_ -match "^$Drept\s*=" } | Select-Object -First 1
+            if ($l) { ($l -split '=', 2)[1] -split ',' | ForEach-Object { $_.Trim() } }
+          }
+          # secedit /export scrie conturile locale după nume (ca `Guest`), nu după SID, deci mgtest poate apărea
+          # ca *<SID>, ca mgtest sau ca <MAȘINĂ>\mgtest; -contains compară fără să țină cont de majuscule.
+          $eu = @("*$sid", 'mgtest', "$env:COMPUTERNAME\mgtest")
+          if (-not (@(Membri 'SeBatchLogonRight') | Where-Object { $eu -contains $_ })) { throw "mgtest nu are SeBatchLogonRight (secedit /configure a ieșit cu $codSecedit)." }
+          $blocat = @($eu + @('*S-1-5-32-545', '*S-1-1-0', '*S-1-5-11', '*S-1-5-113')) | Where-Object { @(Membri 'SeDenyBatchLogonRight') -contains $_ }
+          if ($blocat) { throw "SeDenyBatchLogonRight blochează logonul batch al lui mgtest prin: $($blocat -join ', ')." }
+
+          # Verificarea directă, înaintea oricărei sarcini: un logon de tip batch (4), cel pe care îl face Task Scheduler.
+          Add-Type -Namespace MgTest -Name Logon -MemberDefinition @'
+          [DllImport("advapi32.dll", SetLastError = true, CharSet = CharSet.Unicode)]
+          public static extern bool LogonUser(string user, string domain, string password, int type, int provider, out IntPtr token);
+          [DllImport("kernel32.dll", SetLastError = true)]
+          public static extern bool CloseHandle(IntPtr handle);
+          '@
+          $jeton = [IntPtr]::Zero
+          if (-not [MgTest.Logon]::LogonUser('mgtest', '.', $parola, 4, 0, [ref]$jeton)) {
+            $eroare = [Runtime.InteropServices.Marshal]::GetLastWin32Error()
+            throw "Logonul de tip batch al lui mgtest eșuează: eroarea $eroare ($([ComponentModel.Win32Exception]::new($eroare).Message))."
+          }
+          [MgTest.Logon]::CloseHandle($jeton) | Out-Null
+          Write-Host 'Logonul de tip batch al lui mgtest merge.'
+
+          # node.exe copiat într-un folder cu nume ASCII din workspace, care moștenește dreptul M al lui mgtest;
+          # sarcina nu mai depinde de ACL-urile din hostedtoolcache. Rămâne node pornit direct, deci codul lui de ieșire
+          # ajunge tot în LastTaskResult.
+          $dirNode = Join-Path $env:GITHUB_WORKSPACE 'mg-node'
+          New-Item -ItemType Directory -Force -Path $dirNode | Out-Null
+          $nodeMgtest = Join-Path $dirNode 'node.exe'
+          Copy-Item -LiteralPath (Get-Command node).Source -Destination $nodeMgtest -Force
+          $acces = (Get-Acl -LiteralPath $nodeMgtest).Access | Where-Object { ($_.IdentityReference.Value -like '*\mgtest') -and ($_.AccessControlType -eq 'Allow') }
+          if (-not $acces) { throw "mgtest nu are acces la $nodeMgtest." }
+          $versiune = & $nodeMgtest --version
+          if ($LASTEXITCODE -ne 0) { throw "Copia lui node ($nodeMgtest) nu pornește." }
+          Write-Host "node pentru mgtest: $nodeMgtest ($versiune)"
+          "MG_NODE=$nodeMgtest" >> $env:GITHUB_ENV
+          "MG_PAROLA=$parola" >> $env:GITHUB_ENV
+
+      - name: Sonda și testul de vectorizare, ca mgtest
+        run: |
+          $ErrorActionPreference = 'Stop'
+          Add-Type -Namespace MgTest -Name Logon -MemberDefinition @'
+          [DllImport("advapi32.dll", SetLastError = true, CharSet = CharSet.Unicode)]
+          public static extern bool LogonUser(string user, string domain, string password, int type, int provider, out IntPtr token);
+          [DllImport("kernel32.dll", SetLastError = true)]
+          public static extern bool CloseHandle(IntPtr handle);
+          '@
+
+          # Diagnosticul unei sarcini care n-a pornit sau a ieșit cu cod nenul: îl scrie în jurnalul job-ului și în
+          # pas0-lucru/diagnostic-<nume>.txt (deci și în artefact). Nicio secțiune nu oprește diagnosticul dacă pică.
+          function Scrie-Diagnostic([string]$Nume, [datetime]$De, $LastRunTimeInainte) {
+            $text = [System.Text.StringBuilder]::new()
+            function Sectiune([string]$Titlu, [scriptblock]$Bloc) {
+              $continut = try { & $Bloc 2>&1 | Out-String -Width 4096 } catch { "Eroare la citire: $($_.Exception.Message)" }
+              [void]$text.AppendLine("===== $Titlu =====").AppendLine("$continut".TrimEnd()).AppendLine()
+            }
+            $aici = (Get-Location).Path
+            Sectiune 'Sarcina' { "Nume: $Nume"; "Înregistrată la: $($De.ToString('o'))"; "LastRunTime înainte de Start: $LastRunTimeInainte"; "Acum: $((Get-Date).ToString('o'))" }
+            Sectiune 'Get-ScheduledTaskInfo' {
+              $i = Get-ScheduledTaskInfo -TaskName $Nume
+              $i | Format-List *
+              'LastTaskResult în hex: 0x{0:X}' -f $i.LastTaskResult
+            }
+            Sectiune 'Starea sarcinii' { (Get-ScheduledTask -TaskName $Nume).State }
+            Sectiune 'Principalul' { (Get-ScheduledTask -TaskName $Nume).Principal | Format-List * }
+            Sectiune 'Setările' { (Get-ScheduledTask -TaskName $Nume).Settings | Format-List * }
+            Sectiune 'Acțiunea' { (Get-ScheduledTask -TaskName $Nume).Actions | Format-List Execute, Arguments, WorkingDirectory }
+            Sectiune 'Evenimentele Task Scheduler (Operational) pentru sarcină' {
+              $ev = @(Get-WinEvent -FilterHashtable @{ LogName = 'Microsoft-Windows-TaskScheduler/Operational'; StartTime = $De } -ErrorAction SilentlyContinue)
+              $alSarcinii = @($ev | Where-Object { "$($_.Message)" -match [regex]::Escape($Nume) })
+              if ($alSarcinii.Count -gt 0) {
+                $alSarcinii | Sort-Object TimeCreated | Format-List TimeCreated, Id, LevelDisplayName, Message
+              } else {
+                "Niciun eveniment cu numele sarcinii; toate evenimentele de la înregistrare ($($ev.Count)):"
+                $ev | Sort-Object TimeCreated | Select-Object -Last 50 | Format-List TimeCreated, Id, LevelDisplayName, Message
+              }
+            }
+            Sectiune 'Logonuri eșuate (Security 4625)' {
+              Get-WinEvent -FilterHashtable @{ LogName = 'Security'; Id = 4625; StartTime = $De } -ErrorAction SilentlyContinue | Format-List TimeCreated, Id, Message
+            }
+            Sectiune 'Profilul lui mgtest (User Profiles Service și Win32_UserProfile)' {
+              Get-WinEvent -FilterHashtable @{ LogName = 'Application'; ProviderName = 'Microsoft-Windows-User Profiles Service'; StartTime = $De } -ErrorAction SilentlyContinue | Format-List TimeCreated, Id, Message
+              Get-CimInstance Win32_UserProfile | Where-Object { $_.LocalPath -like '*mgtest*' } | Format-List LocalPath, SID, Loaded, Status
+            }
+            Sectiune 'SeBatchLogonRight și SeDenyBatchLogonRight' {
+              $inf = Join-Path $env:RUNNER_TEMP "drepturi-$Nume.inf"
+              secedit /export /cfg $inf /areas USER_RIGHTS | Out-Null
+              "secedit /export: $LASTEXITCODE"
+              "SID mgtest: $((Get-LocalUser mgtest).SID.Value)"
+              Get-Content $inf | Where-Object { $_ -match '^(SeBatchLogonRight|SeDenyBatchLogonRight)\s*=' }
+            }
+            Sectiune 'LogonUser ca mgtest (4 = batch, 2 = interactiv)' {
+              foreach ($tip in 4, 2) {
+                $h = [IntPtr]::Zero
+                $ok = [MgTest.Logon]::LogonUser('mgtest', '.', $env:MG_PAROLA, $tip, 0, [ref]$h)
+                $eroare = [Runtime.InteropServices.Marshal]::GetLastWin32Error()
+                if ($ok) { [MgTest.Logon]::CloseHandle($h) | Out-Null; "tip ${tip}: reușit" } else { "tip ${tip}: eroarea $eroare ($([ComponentModel.Win32Exception]::new($eroare).Message))" }
+              }
+            }
+            Sectiune 'Contul mgtest (net user)' { net user mgtest }
+            Sectiune 'icacls pe node și pe folderul lui' { icacls $env:MG_NODE; icacls (Split-Path $env:MG_NODE) }
+            Sectiune 'icacls pe WorkingDirectory și pe pas0-lucru' { icacls $aici; icacls (Join-Path $aici 'pas0-lucru') }
+            Sectiune 'Bateria (gol înseamnă fără baterie)' { Get-CimInstance Win32_Battery | Format-List Name, BatteryStatus, EstimatedChargeRemaining }
+            $continut = $text.ToString()
+            Set-Content -LiteralPath (Join-Path $aici "pas0-lucru/diagnostic-$Nume.txt") -Value $continut -Encoding utf8
+            Write-Host "::group::Diagnosticul sarcinii $Nume"
+            Write-Host $continut
+            Write-Host '::endgroup::'
+          }
+
+          # Rulează node ca mgtest printr-o sarcină programată cu RunLevel Limited; întoarce codul de ieșire.
+          function Invoke-CaMgtest([string]$Nume, [string[]]$Argumente) {
+            $linie = ($Argumente | ForEach-Object { '"' + $_ + '"' }) -join ' '
+            # Jurnalul Operational al Task Scheduler e oprit implicit; fără el, o pornire eșuată nu lasă nicio urmă.
+            wevtutil sl Microsoft-Windows-TaskScheduler/Operational /e:true | Out-Null
+            if ($LASTEXITCODE -ne 0) { throw "wevtutil a ieșit cu $LASTEXITCODE." }
+            # Auditul logonurilor eșuate (subcategoria Logon), pentru evenimentul 4625 din diagnostic.
+            auditpol /set /subcategory:'{0CCE9215-69AE-11D9-BED3-505054503030}' /failure:enable | Out-Null
+            $de = Get-Date
+            $actiune = New-ScheduledTaskAction -Execute $env:MG_NODE -Argument $linie -WorkingDirectory (Get-Location).Path
+            # Fără -AllowStartIfOnBatteries și -DontStopIfGoingOnBatteries, sarcina nu pornește dacă mașina raportează baterie.
+            $setari = New-ScheduledTaskSettingsSet -ExecutionTimeLimit (New-TimeSpan -Minutes 20) -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries -MultipleInstances IgnoreNew
+            Register-ScheduledTask -TaskName $Nume -Action $actiune -Settings $setari -User 'mgtest' -Password $env:MG_PAROLA -RunLevel Limited -Force | Out-Null
+            $inainte = (Get-ScheduledTaskInfo -TaskName $Nume).LastRunTime
+            Start-ScheduledTask -TaskName $Nume | Out-Null
+            $pornire = Get-Date
+            $limita = $pornire.AddMinutes(20)
+            $nuAPornit = $false
+            do {
+              Start-Sleep -Seconds 2
+              $stare = (Get-ScheduledTask -TaskName $Nume).State
+              $info = Get-ScheduledTaskInfo -TaskName $Nume
+              $rezultat = $info.LastTaskResult
+              # 267009 = 0x41301 (rulează), 267011 = 0x41303 (n-a rulat încă)
+              # Eșec rapid: după 90 s, Ready cu 0x41303 înseamnă că procesul node nu a fost creat deloc.
+              if (($stare -eq 'Ready') -and ($rezultat -eq 267011) -and (((Get-Date) - $pornire).TotalSeconds -ge 90)) { $nuAPornit = $true; break }
+            } while ((($stare -eq 'Running') -or ($stare -eq 'Queued') -or ($rezultat -eq 267009) -or ($rezultat -eq 267011)) -and ((Get-Date) -lt $limita))
+            if ($nuAPornit -or ($rezultat -ne 0)) { Scrie-Diagnostic -Nume $Nume -De $de -LastRunTimeInainte $inainte }
+            Unregister-ScheduledTask -TaskName $Nume -Confirm:$false
+            if ($nuAPornit) {
+              $cum = if ($info.LastRunTime -eq $inainte) { 'LastRunTime neschimbat, deci Task Scheduler nici nu a încercat pornirea' } else { "LastRunTime $($info.LastRunTime), deci pornirea a fost încercată și a eșuat înainte de node (de obicei la logon)" }
+              throw "Sarcina programată nu a pornit ($Nume): după 90 s e tot Ready, cu LastTaskResult 267011 (0x41303); $cum. Diagnosticul e mai sus și în pas0-lucru/diagnostic-$Nume.txt."
+            }
+            return $rezultat
+          }
+
+          # node scrie singur jurnalul pas0-lucru/<comanda>.log (stdout și stderr se pierd într-o sarcină programată);
+          # la eșec îl afișăm în jurnalul job-ului, iar artefactul îl include oricum.
+          function Afiseaza-Jurnal([string]$Nume) {
+            $jurnal = Join-Path (Join-Path (Get-Location).Path 'pas0-lucru') "$Nume.log"
+            if (Test-Path $jurnal) {
+              Write-Host "::group::Jurnalul $Nume.log"
+              Get-Content $jurnal
+              Write-Host '::endgroup::'
+            } else {
+              Write-Host "Jurnalul $Nume.log nu există (node nu a apucat să pornească)."
+            }
+          }
+
+          $aici = (Get-Location).Path
+          New-Item -ItemType Directory -Force -Path pas0-lucru | Out-Null
+
+          # 1. Sonda: verifică mecanismul înainte de test (utilizatorul și grupul Administratori).
+          $sonda = Join-Path $aici 'pas0-lucru/sonda.json'
+          $cod = Invoke-CaMgtest -Nume 'mg-pas0-sonda' -Argumente @('teste/pas0/vectorizare/compara.mjs', 'sonda', $sonda)
+          if ($cod -ne 0) { Afiseaza-Jurnal 'sonda'; throw "Sonda a ieșit cu $cod." }
+          $s = Get-Content $sonda -Raw | ConvertFrom-Json
+          $s | Format-List
+          if ($s.utilizator -ne 'mgtest') { throw "Sonda a rulat ca $($s.utilizator), nu ca mgtest." }
+          if ($s.in_grup_administratori) { throw 'Sonda a rulat cu grupul Administratori în token.' }
+
+          # 2. Testul: cei trei candidați, raportul JSON.
+          $argumente = @(
+            'teste/pas0/vectorizare/compara.mjs', 'toate',
+            '--lucru', (Join-Path $aici 'pas0-lucru'),
+            '--unelte', (Join-Path $aici 'unelte/vectorizare'),
+            '--instalator', (Join-Path $aici 'descarcari/autotrace-20240129-win64-setup.exe'),
+            '--7z', $env:MG_7Z,
+            '--raport', (Join-Path $aici 'pas0-lucru/raport.json')
+          )
+          $cod = Invoke-CaMgtest -Nume 'mg-pas0-toate' -Argumente $argumente
+          if ($cod -ne 0) { Afiseaza-Jurnal 'toate'; throw "Testul a ieșit cu $cod." }
+
+          # 3. Documentul cu rezultatele, pentru rezumatul job-ului și pentru artefact.
+          Copy-Item docs/teste/pas0-vectorizare.md pas0-lucru/pas0-vectorizare.md
+          node teste/pas0/vectorizare/compara.mjs md pas0-lucru/raport.json pas0-lucru/pas0-vectorizare.md
+          Get-Content pas0-lucru/pas0-vectorizare.md -Raw >> $env:GITHUB_STEP_SUMMARY
+
+      - name: Raportul și jurnalele, ca artefact
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: raport-vectorizare
+          path: |
+            Proiecte Ăîș test/agent-motion/pas0-lucru/
+          if-no-files-found: warn
+
+      - name: Șterge utilizatorul de test
+        if: always()
+        run: net user mgtest /delete

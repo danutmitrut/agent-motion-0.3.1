@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1080, height=1920">
+    <title>text-animat</title>
+    <script src="gsap.min.js"></script>
+    <style>
+@font-face {
+  font-family: "MG Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-display: block;
+  src: url("fonturi/inter-500-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+@font-face {
+  font-family: "MG Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-display: block;
+  src: url("fonturi/inter-500-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+@font-face {
+  font-family: "MG Montserrat";
+  font-style: normal;
+  font-weight: 800;
+  font-display: block;
+  src: url("fonturi/montserrat-800-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+@font-face {
+  font-family: "MG Montserrat";
+  font-style: normal;
+  font-weight: 800;
+  font-display: block;
+  src: url("fonturi/montserrat-800-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+:root { --font-titlu: "MG Montserrat", sans-serif; --font-text: "MG Inter", sans-serif; }
+      :root {
+        --w: 1080px;
+        --h: 1920px;
+        --fundal: #0E0F13;
+        --text: #F2EFEA;
+        --atenuat: #9A9AA3;
+        --accent: #F2B84B;
+        --granulatie: 0.1;
+        --ceata-a: rgba(242, 184, 75, 0.3);
+        --ceata-b: rgba(242, 239, 234, 0.14);
+        --degrade-a: rgba(32, 29, 23, 1);
+        --degrade-b: rgba(28, 28, 32, 1);
+        --eticheta-spatiere: 0.16em;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: var(--w); height: var(--h); overflow: hidden; background: var(--fundal); }
+      #root { position: relative; width: var(--w); height: var(--h); overflow: hidden; background: var(--fundal); hyphens: none; -webkit-hyphens: none; }
+      #stage { position: absolute; inset: 0; }
+
+      #degrade { position: absolute; left: 0; top: 0; width: var(--w); height: calc(var(--h) * 2); background: linear-gradient(180deg, var(--degrade-a) 0%, var(--degrade-b) 50%, var(--degrade-a) 100%); }
+      .glow { position: absolute; border-radius: 50%; filter: blur(90px); }
+      #glow-a { left: -35%; top: -16%; width: 100%; height: 52%; background: var(--ceata-a); }
+      #glow-b { left: -11%; top: 71%; width: 130%; height: 43%; background: var(--ceata-b); }
+      #grain { position: absolute; inset: 0; width: var(--w); height: var(--h); opacity: var(--granulatie); mix-blend-mode: overlay; pointer-events: none; }
+      #root:not(.degrade) #degrade, #root:not(.ceata) .glow, #root.plin #grain { display: none; }
+
+      #compozitie { position: absolute; inset: 0; }
+      .scena { position: absolute; inset: 0; }
+      .bloc { position: absolute; }
+      #root.centru .bloc { text-align: center; }
+      #root.stanga .bloc, #root .bloc.lista { text-align: left; }
+      .rand { display: block; white-space: pre; }
+      .p { display: inline-block; white-space: pre; }
+      .p.accent { color: var(--accent); }
+      .masca { overflow: hidden; padding-bottom: 14px; margin-bottom: -14px; }
+      .cuvinte .masca { position: absolute; left: 0; right: 0; top: 0; }
+      .punct { display: flex; align-items: center; }
+      .marcaj { flex: 0 0 auto; display: inline-flex; align-items: center; color: var(--accent); }
+      .marcaj svg { width: 0.9em; height: 0.9em; overflow: visible; }
+      .marcaj path { fill: none; stroke: var(--accent); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1; }
+      .mare { font-family: var(--font-titlu); font-weight: 800; line-height: 1.08; letter-spacing: -0.02em; color: var(--text); }
+      .cifra { font-family: var(--font-titlu); font-weight: 800; line-height: 1; letter-spacing: 0em; color: var(--accent); font-variant-numeric: tabular-nums; }
+      .mediu { font-family: var(--font-text); font-weight: 500; line-height: 1.2; letter-spacing: 0em; color: var(--text); }
+      .mic { font-family: var(--font-text); font-weight: 500; line-height: 1.3; letter-spacing: 0em; color: var(--atenuat); }
+      .eticheta { letter-spacing: var(--eticheta-spatiere); }
+      .cta { color: var(--accent); }
+      .punct + .punct { margin-top: 22px; }
+    </style>
+  </head>
+  <body>
+    <div id="root" class="degrade stanga" data-composition-id="main" data-start="0" data-duration="32.7" data-width="1080" data-height="1920">
+      <div id="stage" class="clip" data-start="0" data-duration="32.7" data-track-index="0">
+
+        <div id="degrade" data-layout-allow-overflow></div>
+        <div class="glow" id="glow-a" data-layout-allow-overflow></div>
+        <div class="glow" id="glow-b" data-layout-allow-overflow></div>
+
+        <svg id="grain" viewBox="0 0 1080 1920" preserveAspectRatio="none">
+          <filter id="noise"><feTurbulence id="noise-t" type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="1" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter>
+          <rect width="1080" height="1920" filter="url(#noise)"/>
+        </svg>
+
+        <div id="compozitie">
+          <div class="scena" id="s1">
+            <div class="bloc mic eticheta" id="b1-1" style="left:96px;top:747.44px;width:888px;font-size:36px"><div class="rand" id="r1-1"><span class="p" id="t1-1">PENTRU SOLOPRENORI</span></div></div>
+            <div class="bloc mare" id="b1-2" style="left:96px;top:822.24px;width:888px;font-size:102px"><div class="masca" data-layout-allow-overflow><div class="rand" id="r1-2"><span class="p" id="t1-2">Lucrezi 12 ore</span></div></div><div class="masca" data-layout-allow-overflow><div class="rand" id="r1-3"><span class="p" id="t1-3">și tot</span> <span class="p accent" id="t1-4">nu ajungi</span><span class="p" id="t1-5">?</span></div></div></div>
+          </div>
+          <div class="scena" id="s2">
+            <div class="bloc mare" id="b2-1" style="left:96px;top:726.52px;width:888px;font-size:104px"><div class="rand" id="r2-1"><span class="p" id="t2-1">Nu</span> <span class="p" id="t2-2">munca</span> <span class="p" id="t2-3">e</span></div><div class="rand" id="r2-2"><span class="p" id="t2-4">problema.</span></div><div class="rand" id="r2-3"><span class="p accent" id="t2-5">Rutina</span> <span class="p" id="t2-6">e.</span></div></div>
+          </div>
+          <div class="scena" id="s3">
+            <div class="bloc cifra" id="b3-1" style="left:96px;top:685.6px;width:888px;font-size:220px"><div class="rand" id="r3-1"><span class="p" id="t3-1">62%</span></div></div>
+            <div class="bloc mediu" id="b3-2" style="left:96px;top:945.6px;width:888px;font-size:60px"><div class="rand" id="r3-2"><span class="p" id="t3-2">din timp, pe sarcini repetitive</span></div></div>
+            <div class="bloc mic" id="b3-3" style="left:96px;top:1057.6px;width:888px;font-size:36px"><div class="rand" id="r3-3"><span class="p" id="t3-3">sondajul meu, 40 de clienți, 2026</span></div></div>
+          </div>
+          <div class="scena" id="s4">
+            <div class="bloc mare" id="b4-1" style="left:96px;top:688.84px;width:888px;font-size:104px"><div class="masca" data-layout-allow-overflow><div class="rand" id="r4-1"><span class="p" id="t4-1">Unde se pierde:</span></div></div></div>
+            <div class="bloc mediu lista" id="b4-2" style="left:96px;top:841.16px;width:831.03px;font-size:60px"><div class="punct" id="r4-2"><span class="marcaj" style="width:54px;margin-right:27px">1.</span><span class="rand"><span class="p" id="t4-2">E-mailuri de rutină</span></span></div><div class="punct" id="r4-3"><span class="marcaj" style="width:54px;margin-right:27px">2.</span><span class="rand"><span class="p" id="t4-3">Programări și reveniri</span></span></div><div class="punct" id="r4-4"><span class="marcaj" style="width:54px;margin-right:27px">3.</span><span class="rand"><span class="p" id="t4-4">Rapoarte copiate de mână</span></span></div></div>
+          </div>
+          <div class="scena" id="s5">
+            <div class="bloc mare" id="b5-1" style="left:96px;top:764.84px;width:888px;font-size:100px"><div class="masca" data-layout-allow-overflow><div class="rand" id="r5-1"><span class="p" id="t5-1">Un agent le face</span></div></div></div>
+            <div class="bloc mare cuvinte" id="b5-2" style="left:96px;top:912.84px;width:888px;font-size:104px;height:112.32px"><div class="masca" data-layout-allow-overflow><div class="rand" id="r5-2"><span class="p" id="t5-2" data-layout-allow-overlap>zilnic.</span></div></div><div class="masca" data-layout-allow-overflow><div class="rand" id="r5-3"><span class="p" id="t5-3" data-layout-allow-overlap>corect.</span></div></div><div class="masca" data-layout-allow-overflow><div class="rand" id="r5-4"><span class="p accent" id="t5-4" data-layout-allow-overlap>fără tine</span><span class="p" id="t5-5" data-layout-allow-overlap>.</span></div></div></div>
+          </div>
+          <div class="scena" id="s6">
+            <div class="bloc mediu" id="b6-1" style="left:96px;top:711.2px;width:888px;font-size:60px"><div class="masca" data-layout-allow-overflow><div class="rand" id="r6-1"><span class="p" id="t6-1">„Am recuperat o zi</span></div></div><div class="masca" data-layout-allow-overflow><div class="rand" id="r6-2"><span class="p" id="t6-2">pe săptămână încă din prima</span></div></div><div class="masca" data-layout-allow-overflow><div class="rand" id="r6-3"><span class="p" id="t6-3">lună.”</span></div></div></div>
+            <div class="bloc mic" id="b6-2" style="left:96px;top:967.2px;width:888px;font-size:36px"><div class="rand" id="r6-4"><span class="p" id="t6-4">Ioana Pop</span></div></div>
+            <div class="bloc mic" id="b6-3" style="left:96px;top:1032px;width:888px;font-size:36px"><div class="rand" id="r6-5"><span class="p" id="t6-5">fondatoare, Studio Lemn</span></div></div>
+          </div>
+          <div class="scena" id="s7">
+            <div class="bloc mare" id="b7-1" style="left:96px;top:754.4px;width:888px;font-size:90px"><div class="masca" data-layout-allow-overflow><div class="rand" id="r7-1"><span class="p" id="t7-1">Hai să-l construim</span></div></div><div class="masca" data-layout-allow-overflow><div class="rand" id="r7-2"><span class="p accent" id="t7-2">împreună</span><span class="p" id="t7-3">.</span></div></div></div>
+            <div class="bloc mic" id="b7-2" style="left:96px;top:988.8px;width:888px;font-size:36px"><div class="rand" id="r7-3"><span class="p" id="t7-4">exemplu.ro/atelier</span></div></div>
+          </div>
+        </div>
+
+      </div>
+      <audio id="muzica" src="assets/muzica.m4a" data-start="0" data-duration="32.7" data-track-index="10" data-volume="1"></audio>
+    </div>
+
+    <script>/* Mișcările șablonului text-animat: efectele pe timeline-ul GSAP al compoziției (window.__timelines.main).
+ * Regizorul (lib/regizor.js) le cheamă din plan, cu timpi absoluți; aici nu se calculează timpi și nu se iau decizii.
+ * Reguli (ca la linia.js din reel; le verifică teste/runtime.test.mjs): nimic aleator, nimic legat de ceasul sistemului,
+ * tween-uri fromTo cu valori absolute, iar numărarea, tastarea și granulația se calculează din timpul cadrului, în gata().
+ * Comentariile sunt doar de tip bloc.
+ *
+ *   var M = Miscari.start(durata);
+ *   M.atmosfera({ mod, impingere, inaltime });
+ *   M.scena(id, start, sfarsit, ultima, deriva, iesire);
+ *   M.apare(tinta, t, dur, x, y, ease);   M.masca(tinta, t, dur, ease);   M.iese(tinta, t, dur);
+ *   M.scala(tinta, t, dur, de);           M.bifa(tinta, t, dur);
+ *   M.numara(tinta, t, dur, { valoare, zecimale, prefix, sufix });   M.tasteaza(tinta, t, dur, text);
+ *   M.gata();
+ */
+(function () {
+  function clamp(v) { return v < 0 ? 0 : v > 1 ? 1 : v; }
+
+  /* formatarea românească scrisă de mână (copia lui formatRo din cifre.mjs; testul cifre.test.mjs le compară) */
+  function formatRo(x, zecimale) {
+    var parti = Math.abs(x).toFixed(zecimale || 0).split(".");
+    var grupat = parti[0].replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+    return (x < 0 ? "-" : "") + grupat + (parti[1] ? "," + parti[1] : "");
+  }
+
+  function start(durata) {
+    var tl = gsap.timeline({ paused: true });
+    window.__timelines = window.__timelines || {};
+    window.__timelines["main"] = tl;
+    var numaratori = [], tastari = [], api = {};
+
+    /* scena apare la start, derivă lent în sus pe toată fereastra ei, iar blocurile ies (0,45 s) înainte de sfârșit;
+     * după ieșire, autoAlpha 0. Ultima scenă nu iese. */
+    api.scena = function (id, start, sfarsit, ultima, deriva, iesire) {
+      var s = "#" + id;
+      gsap.set(s, { autoAlpha: 0 });
+      tl.set(s, { autoAlpha: 1 }, start);
+      tl.fromTo(s, { y: 0 }, { y: -deriva, duration: sfarsit - start, ease: "none", immediateRender: false }, start);
+      if (!ultima) {
+        tl.fromTo(s + " > .bloc", { y: 0, opacity: 1 }, { y: -24, opacity: 0, duration: iesire, ease: "power2.in", immediateRender: false }, sfarsit - iesire);
+        tl.set(s, { autoAlpha: 0 }, sfarsit);
+      }
+    };
+
+    api.apare = function (tinta, t, dur, x, y, ease) {
+      tl.fromTo(tinta, { autoAlpha: 0, x: x, y: y }, { autoAlpha: 1, x: 0, y: 0, duration: dur, ease: ease }, t);
+    };
+
+    api.masca = function (tinta, t, dur, ease) {
+      tl.fromTo(tinta, { yPercent: 105 }, { yPercent: 0, duration: dur, ease: ease }, t);
+    };
+
+    api.iese = function (tinta, t, dur) {
+      tl.fromTo(tinta, { yPercent: 0, autoAlpha: 1 }, { yPercent: -105, autoAlpha: 0, duration: dur, ease: "power2.in", immediateRender: false }, t);
+    };
+
+    api.scala = function (tinta, t, dur, de) {
+      tl.fromTo(tinta, { scale: de }, { scale: 1, duration: dur, ease: "power2.out" }, t);
+    };
+
+    api.bifa = function (tinta, t, dur) {
+      tl.fromTo(tinta, { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: dur, ease: "power2.out" }, t);
+    };
+
+    api.numara = function (tinta, t, dur, o) {
+      numaratori.push({ el: document.querySelector(tinta), t: t, dur: dur, o: o });
+    };
+
+    api.tasteaza = function (tinta, t, dur, text) {
+      tastari.push({ el: document.querySelector(tinta), t: t, dur: dur, litere: Array.from(text) });
+    };
+
+    /* împingerea lentă a compoziției (1 → impingere pe tot filmul), degradeul care urcă o înălțime de cadru,
+     * ceața care derivă (ca L.atmosfera din reel); pe „plin” rămâne doar împingerea */
+    api.atmosfera = function (o) {
+      tl.fromTo("#compozitie", { scale: 1 }, { scale: o.impingere, transformOrigin: "50% 50%", duration: durata, ease: "none" }, 0);
+      if (o.mod === "degrade") {
+        tl.fromTo("#degrade", { y: 0 }, { y: -o.inaltime, duration: durata, ease: "none" }, 0);
+      }
+      if (o.mod === "ceata") {
+        tl.fromTo("#glow-a", { x: 0, y: 0 }, { x: 60, y: 40, duration: durata / 2, ease: "sine.inOut", yoyo: true, repeat: 1 }, 0);
+        tl.fromTo("#glow-b", { x: 0 }, { x: -80, duration: durata / 2, ease: "sine.inOut", yoyo: true, repeat: 1 }, 0);
+      }
+    };
+
+    /* motorul pur de timp: numărarea, tastarea, granulația; se adaugă ultimul */
+    api.gata = function () {
+      var nt = document.getElementById("noise-t");
+      var cuGranulatie = document.getElementById("root").className.indexOf("plin") < 0;
+      function cadru(t) {
+        numaratori.forEach(function (n) {
+          var p = clamp((t - n.t) / n.dur);
+          var v = p >= 1 ? n.o.valoare : n.o.valoare * (1 - (1 - p) * (1 - p));
+          n.el.textContent = (n.o.prefix || "") + formatRo(v, n.o.zecimale) + (n.o.sufix || "");
+        });
+        tastari.forEach(function (s) {
+          var k = Math.floor(clamp((t - s.t) / s.dur) * s.litere.length);
+          s.el.textContent = s.litere.slice(0, k).join("");
+        });
+        if (nt && cuGranulatie) nt.setAttribute("seed", String(1 + (Math.floor(t * 12) % 8)));
+      }
+      cadru(0);
+      tl.to({}, { duration: durata, onUpdate: function () { cadru(tl.time()); } }, 0);
+    };
+    return api;
+  }
+
+  window.Miscari = { start: start, formatRo: formatRo };
+})();</script>
+    <script>window.__MG_PLAN = {"versiune":1,"sablon":"text-animat","format":"vertical","latime":1080,"inaltime":1920,"fps":30,"durata":32.7,"aliniere":"stanga","iesire":0.45,"atmosfera":{"mod":"degrade","granulatie":0.1,"impingere":1.03},"sigla":null,"scene":[{"n":1,"id":"s1","camp":"scene[0]","tip":"titlu","start":0,"complet":1.35,"sfarsit":4.4,"ultima":false,"deriva":12,"blocuri":[{"id":"b1-1","rol":"mic","fel":"eticheta","camp":"scene[0].eticheta","masca":false,"x":96,"y":747.44,"w":888,"h":46.8,"marime":36,"randuri":[{"id":"r1-1","x":96,"y":747.44,"w":512.67,"h":46.8,"camp":"scene[0].eticheta","parti":[{"tip":"piesa","id":"t1-1","text":"PENTRU SOLOPRENORI","accent":false,"dx":0,"w":512.67,"camp":"scene[0].eticheta","caseta":[96,747.44,512.67,46.8]}]}],"spatiere":0.16},{"id":"b1-2","rol":"mare","fel":"randuri","camp":"scene[0].titlu","masca":true,"x":96,"y":822.24,"w":888,"h":220.32,"marime":102,"randuri":[{"id":"r1-2","x":96,"y":822.24,"w":703.29,"h":110.16,"camp":"scene[0].titlu[0]","parti":[{"tip":"piesa","id":"t1-2","text":"Lucrezi 12 ore","accent":false,"dx":0,"w":703.29,"camp":"scene[0].titlu[0]","caseta":[96,822.24,703.29,110.16]}]},{"id":"r1-3","x":96,"y":932.4,"w":844.87,"h":110.16,"camp":"scene[0].titlu[1]","parti":[{"tip":"piesa","id":"t1-3","text":"și tot","accent":false,"dx":0,"w":262.65,"camp":"scene[0].titlu[1]","caseta":[96,932.4,262.65,110.16]},{"tip":"spatiu","text":" "},{"tip":"piesa","id":"t1-4","text":"nu ajungi","accent":true,"dx":290.29,"w":495.72,"camp":"scene[0].titlu[1]","caseta":[386.29,932.4,495.72,110.16]},{"tip":"piesa","id":"t1-5","text":"?","accent":false,"dx":786.01,"w":58.85,"camp":"scene[0].titlu[1]","caseta":[882.01,932.4,58.85,110.16]}]}]}],"pasi":[{"efect":"apare","tinta":"#r1-1","t":0.1,"dur":0.5,"x":0,"y":16,"ease":"power3.out"},{"efect":"masca","tinta":"#r1-2","t":0.35,"dur":0.7,"ease":"power3.out"},{"efect":"masca","tinta":"#r1-3","t":0.65,"dur":0.7,"ease":"power3.out"}],"texte":[{"id":"t1-1","text":"PENTRU SOLOPRENORI","camp":"scene[0].eticheta","t":1.35,"caseta":[95.45,743.49,513.3,46.86]},{"id":"t1-2","text":"Lucrezi 12 ore","camp":"scene[0].titlu[0]","t":1.35,"caseta":[95.45,818.38,704.16,110.3]},{"id":"t1-3","text":"și tot","camp":"scene[0].titlu[1]","t":1.35,"caseta":[95.45,928.68,262.98,110.3]},{"id":"t1-4","text":"nu ajungi","camp":"scene[0].titlu[1]","t":1.35,"caseta":[386.1,928.68,496.33,110.3]},{"id":"t1-5","text":"?","camp":"scene[0].titlu[1]","t":1.35,"caseta":[882.43,928.68,58.92,110.3]}]},{"n":2,"id":"s2","camp":"scene[1]","tip":"fraza","start":4.4,"complet":5.9,"sfarsit":8.3,"ultima":false,"deriva":12,"blocuri":[{"id":"b2-1","rol":"mare","fel":"rupt","camp":"scene[1].text","masca":false,"x":96,"y":726.52,"w":888,"h":336.96,"marime":104,"randuri":[{"id":"r2-1","x":96,"y":726.52,"w":644.07,"h":112.32,"camp":"scene[1].text","parti":[{"tip":"piesa","id":"t2-1","text":"Nu","accent":false,"dx":0,"w":151.63,"camp":"scene[1].text","caseta":[96,726.52,151.63,112.32]},{"tip":"spatiu","text":" "},{"tip":"piesa","id":"t2-2","text":"munca","accent":false,"dx":179.82,"w":371.38,"camp":"scene[1].text","caseta":[275.82,726.52,371.38,112.32]},{"tip":"spatiu","text":" "},{"tip":"piesa","id":"t2-3","text":"e","accent":false,"dx":579.38,"w":64.69,"camp":"scene[1].text","caseta":[675.38,726.52,64.69,112.32]}]},{"id":"r2-2","x":96,"y":838.84,"w":543.19,"h":112.32,"camp":"scene[1].text","parti":[{"tip":"piesa","id":"t2-4","text":"problema.","accent":false,"dx":0,"w":543.19,"camp":"scene[1].text","caseta":[96,838.84,543.19,112.32]}]},{"id":"r2-3","x":96,"y":951.16,"w":473.41,"h":112.32,"camp":"scene[1].text","parti":[{"tip":"piesa","id":"t2-5","text":"Rutina","accent":true,"dx":0,"w":353.18,"camp":"scene[1].text","caseta":[96,951.16,353.18,112.32]},{"tip":"spatiu","text":" "},{"tip":"piesa","id":"t2-6","text":"e.","accent":false,"dx":381.37,"w":92.04,"camp":"scene[1].text","caseta":[477.37,951.16,92.04,112.32]}]}]}],"pasi":[{"efect":"apare","tinta":"#t2-1","t":4.5,"dur":0.5,"x":0,"y":20,"ease":"power3.out"},{"efect":"apare","tinta":"#t2-2","t":4.68,"dur":0.5,"x":0,"y":20,"ease":"power3.out"},{"efect":"apare","tinta":"#t2-3","t":4.86,"dur":0.5,"x":0,"y":20,"ease":"power3.out"},{"efect":"apare","tinta":"#t2-4","t":5.04,"dur":0.5,"x":0,"y":20,"ease":"power3.out"},{"efect":"apare","tinta":"#t2-5","t":5.22,"dur":0.5,"x":0,"y":20,"ease":"power3.out"},{"efect":"apare","tinta":"#t2-6","t":5.4,"dur":0.5,"x":0,"y":20,"ease":"power3.out"}],"texte":[{"id":"t2-1","text":"Nu","camp":"scene[1].text","t":5.9,"caseta":[93.6,720.62,152.45,112.93]},{"id":"t2-2","text":"munca","camp":"scene[1].text","t":5.9,"caseta":[274.39,720.62,373.39,112.93]},{"id":"t2-3","text":"e","camp":"scene[1].text","t":5.9,"caseta":[676.11,720.62,65.04,112.93]},{"id":"t2-4","text":"problema.","camp":"scene[1].text","t":5.9,"caseta":[93.6,833.54,546.13,112.93]},{"id":"t2-5","text":"Rutina","camp":"scene[1].text","t":5.9,"caseta":[93.6,946.47,355.09,112.93]},{"id":"t2-6","text":"e.","camp":"scene[1].text","t":5.9,"caseta":[477.03,946.47,92.54,112.93]}]},{"n":3,"id":"s3","camp":"scene[2]","tip":"cifra","start":8.3,"complet":10.3,"sfarsit":12.8,"ultima":false,"deriva":12,"blocuri":[{"id":"b3-1","rol":"cifra","fel":"cifra","camp":"scene[2].valoare","masca":false,"x":96,"y":685.6,"w":888,"h":220,"marime":220,"randuri":[{"id":"r3-1","x":96,"y":685.6,"w":498.74,"h":220,"camp":"scene[2].valoare","parti":[{"tip":"piesa","id":"t3-1","text":"62%","accent":false,"dx":0,"w":498.74,"camp":"scene[2].valoare","caseta":[96,685.6,498.74,220]}]}]},{"id":"b3-2","rol":"mediu","fel":"rupt","camp":"scene[2].text","masca":false,"x":96,"y":945.6,"w":888,"h":72,"marime":60,"randuri":[{"id":"r3-2","x":96,"y":945.6,"w":826.82,"h":72,"camp":"scene[2].text","parti":[{"tip":"piesa","id":"t3-2","text":"din timp, pe sarcini repetitive","accent":false,"dx":0,"w":826.82,"camp":"scene[2].text","caseta":[96,945.6,826.82,72]}]}]},{"id":"b3-3","rol":"mic","fel":"mic","camp":"scene[2].sursa","masca":false,"x":96,"y":1057.6,"w":888,"h":46.8,"marime":36,"randuri":[{"id":"r3-3","x":96,"y":1057.6,"w":572.73,"h":46.8,"camp":"scene[2].sursa","parti":[{"tip":"piesa","id":"t3-3","text":"sondajul meu, 40 de clienți, 2026","accent":false,"dx":0,"w":572.73,"camp":"scene[2].sursa","caseta":[96,1057.6,572.73,46.8]}]}]}],"pasi":[{"efect":"apare","tinta":"#r3-1","t":8.4,"dur":0.3,"x":0,"y":0,"ease":"power2.out"},{"efect":"scala","tinta":"#r3-1","t":8.4,"dur":1.4,"de":0.9},{"efect":"numara","tinta":"#t3-1","t":8.4,"dur":1.4,"valoare":62,"zecimale":0,"prefix":"","sufix":"%"},{"efect":"apare","tinta":"#r3-2","t":9,"dur":0.5,"x":0,"y":16,"ease":"power3.out"},{"efect":"apare","tinta":"#r3-3","t":9.8,"dur":0.5,"x":0,"y":16,"ease":"power3.out"}],"texte":[{"id":"t3-1","text":"62%","camp":"scene[2].valoare","t":10.3,"caseta":[91.8,677.62,503.45,222.08]},{"id":"t3-2","text":"din timp, pe sarcini repetitive","camp":"scene[2].text","t":10.3,"caseta":[91.8,940.08,834.63,72.68]},{"id":"t3-3","text":"sondajul meu, 40 de clienți, 2026","camp":"scene[2].sursa","t":10.3,"caseta":[91.8,1053.14,578.14,47.24]}]},{"n":4,"id":"s4","camp":"scene[3]","tip":"lista","start":12.8,"complet":15.1,"sfarsit":17.6,"ultima":false,"deriva":12,"blocuri":[{"id":"b4-1","rol":"mare","fel":"randuri","camp":"scene[3].titlu","masca":true,"x":96,"y":688.84,"w":888,"h":112.32,"marime":104,"randuri":[{"id":"r4-1","x":96,"y":688.84,"w":832.94,"h":112.32,"camp":"scene[3].titlu[0]","parti":[{"tip":"piesa","id":"t4-1","text":"Unde se pierde:","accent":false,"dx":0,"w":832.94,"camp":"scene[3].titlu[0]","caseta":[96,688.84,832.94,112.32]}]}]},{"id":"b4-2","rol":"mediu","fel":"lista","camp":"scene[3].puncte","masca":false,"x":96,"y":841.16,"w":831.03,"h":260,"marime":60,"randuri":[{"id":"r4-2","x":177,"y":841.16,"w":525.73,"h":72,"camp":"scene[3].puncte[0]","parti":[{"tip":"piesa","id":"t4-2","text":"E-mailuri de rutină","accent":false,"dx":0,"w":525.73,"camp":"scene[3].puncte[0]","caseta":[177,841.16,525.73,72]}],"punct":1,"marcajId":null},{"id":"r4-3","x":177,"y":935.16,"w":611.31,"h":72,"camp":"scene[3].puncte[1]","parti":[{"tip":"piesa","id":"t4-3","text":"Programări și reveniri","accent":false,"dx":0,"w":611.31,"camp":"scene[3].puncte[1]","caseta":[177,935.16,611.31,72]}],"punct":2,"marcajId":null},{"id":"r4-4","x":177,"y":1029.16,"w":750.03,"h":72,"camp":"scene[3].puncte[2]","parti":[{"tip":"piesa","id":"t4-4","text":"Rapoarte copiate de mână","accent":false,"dx":0,"w":750.03,"camp":"scene[3].puncte[2]","caseta":[177,1029.16,750.03,72]}],"punct":3,"marcajId":null}],"marcaj":"numere","marcajW":54,"gol":27}],"pasi":[{"efect":"masca","tinta":"#r4-1","t":12.9,"dur":0.7,"ease":"power3.out"},{"efect":"apare","tinta":"#r4-2","t":13.5,"dur":0.7,"x":-24,"y":0,"ease":"power3.out"},{"efect":"apare","tinta":"#r4-3","t":13.95,"dur":0.7,"x":-24,"y":0,"ease":"power3.out"},{"efect":"apare","tinta":"#r4-4","t":14.4,"dur":0.7,"x":-24,"y":0,"ease":"power3.out"}],"texte":[{"id":"t4-1","text":"Unde se pierde:","camp":"scene[3].titlu[0]","t":15.1,"caseta":[89.85,679.25,844.48,113.88]},{"id":"t4-2","text":"E-mailuri de rutină","camp":"scene[3].puncte[0]","t":15.1,"caseta":[171.97,833.68,533.01,73]},{"id":"t4-3","text":"Programări și reveniri","camp":"scene[3].puncte[1]","t":15.1,"caseta":[171.97,928.99,619.78,73]},{"id":"t4-4","text":"Rapoarte copiate de mână","camp":"scene[3].puncte[2]","t":15.1,"caseta":[171.97,1024.29,760.42,73]}]},{"n":5,"id":"s5","camp":"scene[4]","tip":"cuvinte","start":17.6,"complet":21.77,"sfarsit":23.1,"ultima":false,"deriva":12,"blocuri":[{"id":"b5-1","rol":"mare","fel":"randuri","camp":"scene[4].titlu","masca":true,"x":96,"y":764.84,"w":888,"h":108,"marime":100,"randuri":[{"id":"r5-1","x":96,"y":764.84,"w":838.5,"h":108,"camp":"scene[4].titlu[0]","parti":[{"tip":"piesa","id":"t5-1","text":"Un agent le face","accent":false,"dx":0,"w":838.5,"camp":"scene[4].titlu[0]","caseta":[96,764.84,838.5,108]}]}]},{"id":"b5-2","rol":"mare","fel":"cuvinte","camp":"scene[4].cuvinte","masca":true,"x":96,"y":912.84,"w":888,"h":112.32,"marime":104,"randuri":[{"id":"r5-2","x":96,"y":912.84,"w":307.53,"h":112.32,"camp":"scene[4].cuvinte[0]","parti":[{"tip":"piesa","id":"t5-2","text":"zilnic.","accent":false,"dx":0,"w":307.53,"camp":"scene[4].cuvinte[0]","caseta":[96,912.84,307.53,112.32]}]},{"id":"r5-3","x":96,"y":912.84,"w":369.51,"h":112.32,"camp":"scene[4].cuvinte[1]","parti":[{"tip":"piesa","id":"t5-3","text":"corect.","accent":false,"dx":0,"w":369.51,"camp":"scene[4].cuvinte[1]","caseta":[96,912.84,369.51,112.32]}]},{"id":"r5-4","x":96,"y":912.84,"w":476.74,"h":112.32,"camp":"scene[4].cuvinte[2]","parti":[{"tip":"piesa","id":"t5-4","text":"fără tine","accent":true,"dx":0,"w":449.38,"camp":"scene[4].cuvinte[2]","caseta":[96,912.84,449.38,112.32]},{"tip":"piesa","id":"t5-5","text":".","accent":false,"dx":449.38,"w":27.35,"camp":"scene[4].cuvinte[2]","caseta":[545.38,912.84,27.35,112.32]}]}]}],"pasi":[{"efect":"masca","tinta":"#r5-1","t":17.7,"dur":0.7,"ease":"power3.out"},{"efect":"masca","tinta":"#r5-2","t":18.12,"dur":0.45,"ease":"power3.out"},{"efect":"iese","tinta":"#r5-2","t":19.42,"dur":0.3},{"efect":"masca","tinta":"#r5-3","t":19.72,"dur":0.45,"ease":"power3.out"},{"efect":"iese","tinta":"#r5-3","t":21.02,"dur":0.3},{"efect":"masca","tinta":"#r5-4","t":21.32,"dur":0.45,"ease":"power3.out"}],"texte":[{"id":"t5-1","text":"Un agent le face","camp":"scene[4].titlu[0]","t":21.77,"caseta":[87.13,751.66,855.25,110.16]},{"id":"t5-2","text":"zilnic.","camp":"scene[4].cuvinte[0]","t":18.57,"caseta":[88.44,909.88,312.77,114.23]},{"id":"t5-3","text":"corect.","camp":"scene[4].cuvinte[1]","t":20.17,"caseta":[87.78,906.26,376.35,114.4]},{"id":"t5-4","text":"fără tine","camp":"scene[4].cuvinte[2]","t":21.77,"caseta":[87.13,902.62,458.36,114.56]},{"id":"t5-5","text":".","camp":"scene[4].cuvinte[2]","t":21.77,"caseta":[545.49,902.62,27.9,114.56]}]},{"n":6,"id":"s6","camp":"scene[5]","tip":"citat","start":23.1,"complet":25.9,"sfarsit":29.2,"ultima":false,"deriva":12,"blocuri":[{"id":"b6-1","rol":"mediu","fel":"rupt","camp":"scene[5].text","masca":true,"x":96,"y":711.2,"w":888,"h":216,"marime":60,"randuri":[{"id":"r6-1","x":96,"y":711.2,"w":533.55,"h":72,"camp":"scene[5].text","parti":[{"tip":"piesa","id":"t6-1","text":"„Am recuperat o zi","accent":false,"dx":0,"w":533.55,"camp":"scene[5].text","caseta":[96,711.2,533.55,72]}]},{"id":"r6-2","x":96,"y":783.2,"w":823.27,"h":72,"camp":"scene[5].text","parti":[{"tip":"piesa","id":"t6-2","text":"pe săptămână încă din prima","accent":false,"dx":0,"w":823.27,"camp":"scene[5].text","caseta":[96,783.2,823.27,72]}]},{"id":"r6-3","x":96,"y":855.2,"w":159.49,"h":72,"camp":"scene[5].text","parti":[{"tip":"piesa","id":"t6-3","text":"lună.”","accent":false,"dx":0,"w":159.49,"camp":"scene[5].text","caseta":[96,855.2,159.49,72]}]}]},{"id":"b6-2","rol":"mic","fel":"mic","camp":"scene[5].autor","masca":false,"x":96,"y":967.2,"w":888,"h":46.8,"marime":36,"randuri":[{"id":"r6-4","x":96,"y":967.2,"w":170.91,"h":46.8,"camp":"scene[5].autor","parti":[{"tip":"piesa","id":"t6-4","text":"Ioana Pop","accent":false,"dx":0,"w":170.91,"camp":"scene[5].autor","caseta":[96,967.2,170.91,46.8]}]}]},{"id":"b6-3","rol":"mic","fel":"mic","camp":"scene[5].rol","masca":false,"x":96,"y":1032,"w":888,"h":46.8,"marime":36,"randuri":[{"id":"r6-5","x":96,"y":1032,"w":422.72,"h":46.8,"camp":"scene[5].rol","parti":[{"tip":"piesa","id":"t6-5","text":"fondatoare, Studio Lemn","accent":false,"dx":0,"w":422.72,"camp":"scene[5].rol","caseta":[96,1032,422.72,46.8]}]}]}],"pasi":[{"efect":"masca","tinta":"#r6-1","t":23.2,"dur":0.7,"ease":"power3.out"},{"efect":"masca","tinta":"#r6-2","t":23.5,"dur":0.7,"ease":"power3.out"},{"efect":"masca","tinta":"#r6-3","t":23.8,"dur":0.7,"ease":"power3.out"},{"efect":"apare","tinta":"#r6-4","t":24.7,"dur":0.15,"x":0,"y":0,"ease":"none"},{"efect":"tasteaza","tinta":"#t6-4","t":24.7,"dur":0.6,"text":"Ioana Pop"},{"efect":"apare","tinta":"#r6-5","t":25.4,"dur":0.5,"x":0,"y":16,"ease":"power3.out"}],"texte":[{"id":"t6-1","text":"„Am recuperat o zi","camp":"scene[5].text","t":25.9,"caseta":[85.45,699.65,546.23,73.71]},{"id":"t6-2","text":"pe săptămână încă din prima","camp":"scene[5].text","t":25.9,"caseta":[85.45,773.36,842.83,73.71]},{"id":"t6-3","text":"lună.”","camp":"scene[5].text","t":25.9,"caseta":[85.45,847.07,163.28,73.71]},{"id":"t6-4","text":"Ioana Pop","camp":"scene[5].autor","t":25.9,"caseta":[85.45,961.73,174.97,47.91]},{"id":"t6-5","text":"fondatoare, Studio Lemn","camp":"scene[5].rol","t":25.9,"caseta":[85.45,1028.07,432.76,47.91]}]},{"n":7,"id":"s7","camp":"scene[6]","tip":"final","start":29.2,"complet":31.21,"sfarsit":32.7,"ultima":true,"deriva":12,"blocuri":[{"id":"b7-1","rol":"mare","fel":"randuri","camp":"scene[6].titlu","masca":true,"x":96,"y":754.4,"w":888,"h":194.4,"marime":90,"randuri":[{"id":"r7-1","x":96,"y":754.4,"w":836.19,"h":97.2,"camp":"scene[6].titlu[0]","parti":[{"tip":"piesa","id":"t7-1","text":"Hai să-l construim","accent":false,"dx":0,"w":836.19,"camp":"scene[6].titlu[0]","caseta":[96,754.4,836.19,97.2]}]},{"id":"r7-2","x":96,"y":851.6,"w":472.5,"h":97.2,"camp":"scene[6].titlu[1]","parti":[{"tip":"piesa","id":"t7-2","text":"împreună","accent":true,"dx":0,"w":448.83,"camp":"scene[6].titlu[1]","caseta":[96,851.6,448.83,97.2]},{"tip":"piesa","id":"t7-3","text":".","accent":false,"dx":448.83,"w":23.67,"camp":"scene[6].titlu[1]","caseta":[544.83,851.6,23.67,97.2]}]}]},{"id":"b7-2","rol":"mic","fel":"mic","camp":"scene[6].detaliu","masca":false,"x":96,"y":988.8,"w":888,"h":46.8,"marime":36,"randuri":[{"id":"r7-3","x":96,"y":988.8,"w":311.66,"h":46.8,"camp":"scene[6].detaliu","parti":[{"tip":"piesa","id":"t7-4","text":"exemplu.ro/atelier","accent":false,"dx":0,"w":311.66,"camp":"scene[6].detaliu","caseta":[96,988.8,311.66,46.8]}]}]}],"pasi":[{"efect":"masca","tinta":"#r7-1","t":29.3,"dur":0.7,"ease":"power3.out"},{"efect":"masca","tinta":"#r7-2","t":29.6,"dur":0.7,"ease":"power3.out"},{"efect":"apare","tinta":"#r7-3","t":30.4,"dur":0.15,"x":0,"y":0,"ease":"none"},{"efect":"tasteaza","tinta":"#t7-4","t":30.4,"dur":0.81,"text":"exemplu.ro/atelier"}],"texte":[{"id":"t7-1","text":"Hai să-l construim","camp":"scene[6].titlu[0]","t":31.21,"caseta":[83.29,741.42,860.13,99.98]},{"id":"t7-2","text":"împreună","camp":"scene[6].titlu[1]","t":31.21,"caseta":[83.29,841.41,461.68,99.98]},{"id":"t7-3","text":".","camp":"scene[6].titlu[1]","t":31.21,"caseta":[544.97,841.41,24.35,99.98]},{"id":"t7-4","text":"exemplu.ro/atelier","camp":"scene[6].detaliu","t":31.21,"caseta":[83.29,982.54,320.58,48.14]}]}]};</script>
+    <script>/* Regizorul de la randare al lui text-animat: citește planul (window.__MG_PLAN, același conținut cu build/plan.json)
+ * și cheamă Miscari într-o ordine fixă: atmosfera, apoi fiecare scenă cu pașii ei, apoi gata. Nu calculează timpi:
+ * fiecare valoare vine din plan.mjs. */
+(function () {
+  var P = window.__MG_PLAN;
+  var M = window.Miscari.start(P.durata);
+  M.atmosfera({ mod: P.atmosfera.mod, impingere: P.atmosfera.impingere, inaltime: P.inaltime });
+  P.scene.forEach(function (s) {
+    M.scena(s.id, s.start, s.sfarsit, s.ultima, s.deriva, P.iesire);
+    s.pasi.forEach(function (p) {
+      switch (p.efect) {
+        case "apare": M.apare(p.tinta, p.t, p.dur, p.x, p.y, p.ease); break;
+        case "masca": M.masca(p.tinta, p.t, p.dur, p.ease); break;
+        case "iese": M.iese(p.tinta, p.t, p.dur); break;
+        case "scala": M.scala(p.tinta, p.t, p.dur, p.de); break;
+        case "bifa": M.bifa(p.tinta, p.t, p.dur); break;
+        case "numara": M.numara(p.tinta, p.t, p.dur, { valoare: p.valoare, zecimale: p.zecimale, prefix: p.prefix, sufix: p.sufix }); break;
+        case "tasteaza": M.tasteaza(p.tinta, p.t, p.dur, p.text); break;
+        default: throw new Error("Efect necunoscut în plan: " + p.efect);
+      }
+    });
+  });
+  M.gata();
+})();</script>
+  </body>
+</html>

@@ -1,0 +1,176 @@
+{
+  "versiune": 1,
+  "sablon": "date-serie",
+  "format": "vertical",
+  "latime": 1080,
+  "inaltime": 1920,
+  "fps": 30,
+  "durata": 22.4,
+  "fundal": "#0E0F13",
+  "segmente": [
+    {
+      "ref": "Scena 1",
+      "camp": "scene[0]",
+      "tip": "titlu",
+      "start": 0,
+      "complet": 0.6,
+      "sfarsit": 3.6,
+      "zona_text": [
+        80,
+        697,
+        920,
+        400
+      ],
+      "texte": [
+        "PRIMUL SEMESTRU",
+        "Cursul meu online,",
+        "în cifre",
+        "Ianuarie-iunie 2026"
+      ]
+    },
+    {
+      "ref": "Scena 2",
+      "camp": "scene[1]",
+      "tip": "cifra",
+      "start": 3.6,
+      "complet": 4.9,
+      "sfarsit": 7.2,
+      "zona_text": [
+        80,
+        680,
+        920,
+        434
+      ],
+      "texte": [
+        "CURSANȚI",
+        "1.248",
+        "oameni au terminat cel puțin un modul"
+      ]
+    },
+    {
+      "ref": "Scena 3",
+      "camp": "scene[2]",
+      "tip": "bare",
+      "start": 7.2,
+      "complet": 8.333,
+      "sfarsit": 14.6,
+      "zona_text": [
+        80,
+        200,
+        920,
+        1394
+      ],
+      "texte": [
+        "Vânzări pe luni",
+        "lei",
+        "ian",
+        "8.400",
+        "feb",
+        "9.100",
+        "mar",
+        "12.650",
+        "apr",
+        "11.200",
+        "mai",
+        "15.800",
+        "iun",
+        "21.300",
+        "Stripe, export 1 iulie 2026"
+      ]
+    },
+    {
+      "ref": "Scena 4",
+      "camp": "scene[3]",
+      "tip": "comparatie",
+      "start": 14.6,
+      "complet": 15.6,
+      "sfarsit": 18.8,
+      "zona_text": [
+        80,
+        562,
+        920,
+        670
+      ],
+      "texte": [
+        "Față de 2025",
+        "S1 2025",
+        "41.200 lei",
+        "S1 2026",
+        "78.450 lei"
+      ]
+    },
+    {
+      "ref": "Scena 5",
+      "camp": "scene[4]",
+      "tip": "final",
+      "start": 18.8,
+      "complet": 19.2,
+      "sfarsit": 22.4,
+      "zona_text": [
+        80,
+        733,
+        920,
+        328
+      ],
+      "texte": [
+        "Următoarea grupă",
+        "pe 15 octombrie",
+        "Link în bio"
+      ]
+    }
+  ],
+  "ferestre_statice": [],
+  "momente_foaie": [
+    {
+      "t": 0.6,
+      "ref": "Scena 1",
+      "eticheta": "Scena 1, complet"
+    },
+    {
+      "t": 3.6,
+      "ref": "Scena 2",
+      "eticheta": "Tranziția spre scena 2"
+    },
+    {
+      "t": 4.9,
+      "ref": "Scena 2",
+      "eticheta": "Scena 2, complet"
+    },
+    {
+      "t": 7.2,
+      "ref": "Scena 3",
+      "eticheta": "Tranziția spre scena 3"
+    },
+    {
+      "t": 8.333,
+      "ref": "Scena 3",
+      "eticheta": "Scena 3, complet"
+    },
+    {
+      "t": 14.6,
+      "ref": "Scena 4",
+      "eticheta": "Tranziția spre scena 4"
+    },
+    {
+      "t": 15.6,
+      "ref": "Scena 4",
+      "eticheta": "Scena 4, complet"
+    },
+    {
+      "t": 18.8,
+      "ref": "Scena 5",
+      "eticheta": "Tranziția spre scena 5"
+    },
+    {
+      "t": 19.2,
+      "ref": "Scena 5",
+      "eticheta": "Scena 5, complet"
+    },
+    {
+      "t": 22.367,
+      "ref": "Scena 5",
+      "eticheta": "Ultimul cadru"
+    }
+  ],
+  "audio": null
+}

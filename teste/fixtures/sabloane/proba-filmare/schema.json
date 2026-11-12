@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["sablon", "versiune_schema", "format", "filmare"],
+  "properties": {
+    "sablon": { "const": "proba-filmare" },
+    "versiune_schema": { "const": 1 },
+    "format": { "enum": ["vertical", "orizontal"] },
+    "limba": { "type": "string" },
+    "filmare": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["fisier"],
+      "properties": {
+        "fisier": { "type": "string" },
+        "start": { "type": "number" },
+        "sfarsit": { "type": ["number", "null"] },
+        "focus_x": { "type": "number" }
+      }
+    },
+    "stil": { "type": "object", "additionalProperties": true }
+  }
+}

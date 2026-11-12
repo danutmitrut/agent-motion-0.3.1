@@ -1,0 +1,44 @@
+{
+  "sablon": "reel-ilustrat",
+  "versiune_schema": 1,
+  "format": "vertical",
+  "durata": 30,
+  "stil": {
+    "descriere": "liniștit, linie pe întuneric, o singură culoare de accent",
+    "tema": "noapte",
+    "ritm": "normal"
+  },
+  "semnatura": "Ana Pop,\ncoach de carieră",
+  "scene": [
+    {
+      "tip": "desen", "durata": 4.4,
+      "desen": { "id": "od-running", "marime": "mare", "ramane_pana_la": 2 },
+      "eticheta": "Vineri seara, tot aici",
+      "titlu": ["Ții totul minte."]
+    },
+    {
+      "tip": "adunare", "durata": 5.2,
+      "iconite": ["mail", "file-text", "calendar-days", "receipt", "message-square", "clipboard-list"],
+      "eticheta": "De dimineață, mereu",
+      "cuvinte": ["Mesaje.", "Cereri.", "Termene.", "Plăți."]
+    },
+    {
+      "tip": "retea", "durata": 9, "scanteie": true,
+      "eticheta": "Acum",
+      "titlu": ["Dacă rutina merge", "*fără tine?*"]
+    },
+    {
+      "tip": "desen", "durata": 5.8,
+      "desen": { "id": "od-strolling", "marime": "mare" },
+      "eticheta": "Apoi",
+      "titlu": ["Ai timp", "*pentru oameni.*"]
+    },
+    {
+      "tip": "final", "durata": 5.6,
+      "desen": { "id": "od-chilling", "marime": "mediu" },
+      "linie_accent": true,
+      "eticheta": "Tu și sistemul",
+      "titlu": ["Ritmul îl alegi", "*tot tu.*"]
+    }
+  ]
+}

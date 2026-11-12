@@ -1,0 +1,20 @@
+{
+  "name": "agent-motion-nucleu",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Nucleul agentului motion: CLI-ul mg, garda și verificările.",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "verifica-biblioteci": "node ../unelte/import-biblioteci/verifica.mjs"
+  },
+  "dependencies": {
+    "ajv": "8.20.0",
+    "ffmpeg-static": "5.3.0",
+    "ffprobe-static": "3.1.0",
+    "fontkit": "2.0.4",
+    "yaml": "2.9.1"
+  }
+}

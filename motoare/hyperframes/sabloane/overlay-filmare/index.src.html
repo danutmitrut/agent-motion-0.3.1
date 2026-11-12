@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width={{MG_LATIME}}, height={{MG_INALTIME}}">
+    <title>overlay-filmare</title>
+    <script src="gsap.min.js"></script>
+    <style>
+/*MG_FONTURI*/
+/*MG_VARIABILE*/
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: var(--w); height: var(--h); overflow: hidden; background: #000; }
+      #root { position: relative; width: var(--w); height: var(--h); overflow: hidden; background: #000; hyphens: none; -webkit-hyphens: none; }
+      #video { position: absolute; left: 0; top: 0; width: var(--w); height: var(--h); object-fit: cover; object-position: var(--focus-x) 50%; }
+      #strat { position: absolute; inset: 0; }
+      .element { position: absolute; inset: 0; }
+      .card { position: absolute; background: var(--card); border-radius: var(--raza); }
+      .bloc { position: absolute; white-space: pre; }
+      .punct::before { content: ""; position: absolute; left: 0.18em; top: 0.42em; width: 0.36em; height: 0.36em; border-radius: 50%; background: var(--accent); }
+      #subtitrari { position: absolute; inset: 0; }
+      .grup { position: absolute; background: var(--card); border-radius: var(--raza-sub); text-align: center; font-family: var(--font-titlu), sans-serif; font-weight: var(--greutate-titlu); line-height: var(--rand-sub); color: var(--text); }
+      .rand-sub { display: block; white-space: pre; }
+      .c.ev { color: var(--accent); }
+/*MG_ROLURI*/
+    </style>
+  </head>
+  <body>
+    <div id="root" class="{{MG_CLASE}}" data-composition-id="main" data-start="0" data-duration="{{MG_DURATA}}" data-width="{{MG_LATIME}}" data-height="{{MG_INALTIME}}">
+      <video id="video" src="filmare.mp4" muted playsinline data-start="0" data-duration="{{MG_DURATA}}" data-media-start="{{MG_START}}" data-track-index="0"></video>
+      <audio id="voce" src="filmare.mp4" data-start="0" data-duration="{{MG_DURATA}}" data-media-start="{{MG_START}}" data-track-index="1"></audio>
+      <div id="strat">
+<!--MG_ELEMENTE-->
+        <div id="subtitrari" data-layout-allow-caption-zone>
+<!--MG_SUBTITRARI-->
+        </div>
+      </div>
+    </div>
+
+    <script>/*MG_MISCARI*/</script>
+    <script>/*MG_DATE*/</script>
+    <script>/*MG_REGIZOR*/</script>
+  </body>
+</html>

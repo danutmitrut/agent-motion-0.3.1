@@ -1,0 +1,724 @@
+{
+  "versiune": 1,
+  "sablon": "text-animat",
+  "format": "vertical",
+  "latime": 1080,
+  "inaltime": 1920,
+  "fps": 30,
+  "durata": 12.7,
+  "aliniere": "centru",
+  "iesire": 0.45,
+  "atmosfera": {
+    "mod": "ceata",
+    "granulatie": 0.1,
+    "impingere": 1.03
+  },
+  "sigla": null,
+  "scene": [
+    {
+      "n": 1,
+      "id": "s1",
+      "camp": "scene[0]",
+      "tip": "titlu",
+      "start": 0,
+      "complet": 1.35,
+      "sfarsit": 4.4,
+      "ultima": false,
+      "deriva": 12,
+      "blocuri": [
+        {
+          "id": "b1-1",
+          "rol": "mic",
+          "fel": "eticheta",
+          "camp": "scene[0].eticheta",
+          "masca": false,
+          "x": 96,
+          "y": 745.28,
+          "w": 888,
+          "h": 46.8,
+          "marime": 36,
+          "randuri": [
+            {
+              "id": "r1-1",
+              "x": 283.67,
+              "y": 745.28,
+              "w": 512.67,
+              "h": 46.8,
+              "camp": "scene[0].eticheta",
+              "parti": [
+                {
+                  "tip": "piesa",
+                  "id": "t1-1",
+                  "text": "PENTRU SOLOPRENORI",
+                  "accent": false,
+                  "dx": 0,
+                  "w": 512.67,
+                  "camp": "scene[0].eticheta",
+                  "caseta": [
+                    283.67,
+                    745.28,
+                    512.67,
+                    46.8
+                  ]
+                }
+              ]
+            }
+          ],
+          "spatiere": 0.16
+        },
+        {
+          "id": "b1-2",
+          "rol": "mare",
+          "fel": "randuri",
+          "camp": "scene[0].titlu",
+          "masca": true,
+          "x": 96,
+          "y": 820.08,
+          "w": 888,
+          "h": 224.64,
+          "marime": 104,
+          "randuri": [
+            {
+              "id": "r1-2",
+              "x": 205.9,
+              "y": 820.08,
+              "w": 668.21,
+              "h": 112.32,
+              "camp": "scene[0].titlu[0]",
+              "parti": [
+                {
+                  "tip": "piesa",
+                  "id": "t1-2",
+                  "text": "Lucrezi 12 ore",
+                  "accent": false,
+                  "dx": 0,
+                  "w": 668.21,
+                  "camp": "scene[0].titlu[0]",
+                  "caseta": [
+                    205.9,
+                    820.08,
+                    668.21,
+                    112.32
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "r1-3",
+              "x": 158.24,
+              "y": 932.4,
+              "w": 763.53,
+              "h": 112.32,
+              "camp": "scene[0].titlu[1]",
+              "parti": [
+                {
+                  "tip": "piesa",
+                  "id": "t1-3",
+                  "text": "și tot",
+                  "accent": false,
+                  "dx": 0,
+                  "w": 237.52,
+                  "camp": "scene[0].titlu[1]",
+                  "caseta": [
+                    158.24,
+                    932.4,
+                    237.52,
+                    112.32
+                  ]
+                },
+                {
+                  "tip": "spatiu",
+                  "text": " "
+                },
+                {
+                  "tip": "piesa",
+                  "id": "t1-4",
+                  "text": "nu ajungi",
+                  "accent": true,
+                  "dx": 260.07,
+                  "w": 447.35,
+                  "camp": "scene[0].titlu[1]",
+                  "caseta": [
+                    418.31,
+                    932.4,
+                    447.35,
+                    112.32
+                  ]
+                },
+                {
+                  "tip": "piesa",
+                  "id": "t1-5",
+                  "text": "?",
+                  "accent": false,
+                  "dx": 707.42,
+                  "w": 56.12,
+                  "camp": "scene[0].titlu[1]",
+                  "caseta": [
+                    865.66,
+                    932.4,
+                    56.12,
+                    112.32
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "pasi": [
+        {
+          "efect": "apare",
+          "tinta": "#r1-1",
+          "t": 0.1,
+          "dur": 0.5,
+          "x": 0,
+          "y": 16,
+          "ease": "power3.out"
+        },
+        {
+          "efect": "masca",
+          "tinta": "#r1-2",
+          "t": 0.35,
+          "dur": 0.7,
+          "ease": "power3.out"
+        },
+        {
+          "efect": "masca",
+          "tinta": "#r1-3",
+          "t": 0.65,
+          "dur": 0.7,
+          "ease": "power3.out"
+        }
+      ],
+      "texte": [
+        {
+          "id": "t1-1",
+          "text": "PENTRU SOLOPRENORI",
+          "camp": "scene[0].eticheta",
+          "t": 1.35,
+          "caseta": [
+            282.85,
+            740.9,
+            514.3,
+            46.95
+          ]
+        },
+        {
+          "id": "t1-2",
+          "text": "Lucrezi 12 ore",
+          "camp": "scene[0].titlu[0]",
+          "t": 1.35,
+          "caseta": [
+            204.83,
+            815.94,
+            670.34,
+            112.68
+          ]
+        },
+        {
+          "id": "t1-3",
+          "text": "și tot",
+          "camp": "scene[0].titlu[1]",
+          "t": 1.35,
+          "caseta": [
+            157.02,
+            928.62,
+            238.28,
+            112.68
+          ]
+        },
+        {
+          "id": "t1-4",
+          "text": "nu ajungi",
+          "camp": "scene[0].titlu[1]",
+          "t": 1.35,
+          "caseta": [
+            417.92,
+            928.62,
+            448.78,
+            112.68
+          ]
+        },
+        {
+          "id": "t1-5",
+          "text": "?",
+          "camp": "scene[0].titlu[1]",
+          "t": 1.35,
+          "caseta": [
+            866.7,
+            928.62,
+            56.3,
+            112.68
+          ]
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "id": "s2",
+      "camp": "scene[1]",
+      "tip": "lista",
+      "start": 4.4,
+      "complet": 6.7,
+      "sfarsit": 9.2,
+      "ultima": false,
+      "deriva": 12,
+      "blocuri": [
+        {
+          "id": "b2-1",
+          "rol": "mare",
+          "fel": "randuri",
+          "camp": "scene[1].titlu",
+          "masca": true,
+          "x": 96,
+          "y": 688.84,
+          "w": 888,
+          "h": 112.32,
+          "marime": 104,
+          "randuri": [
+            {
+              "id": "r2-1",
+              "x": 157.81,
+              "y": 688.84,
+              "w": 764.39,
+              "h": 112.32,
+              "camp": "scene[1].titlu[0]",
+              "parti": [
+                {
+                  "tip": "piesa",
+                  "id": "t2-1",
+                  "text": "Unde se pierde:",
+                  "accent": false,
+                  "dx": 0,
+                  "w": 764.39,
+                  "camp": "scene[1].titlu[0]",
+                  "caseta": [
+                    157.81,
+                    688.84,
+                    764.39,
+                    112.32
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "b2-2",
+          "rol": "mediu",
+          "fel": "lista",
+          "camp": "scene[1].puncte",
+          "masca": false,
+          "x": 124.49,
+          "y": 841.16,
+          "w": 831.03,
+          "h": 260,
+          "marime": 60,
+          "randuri": [
+            {
+              "id": "r2-2",
+              "x": 205.49,
+              "y": 841.16,
+              "w": 525.73,
+              "h": 72,
+              "camp": "scene[1].puncte[0]",
+              "parti": [
+                {
+                  "tip": "piesa",
+                  "id": "t2-2",
+                  "text": "E-mailuri de rutină",
+                  "accent": false,
+                  "dx": 0,
+                  "w": 525.73,
+                  "camp": "scene[1].puncte[0]",
+                  "caseta": [
+                    205.49,
+                    841.16,
+                    525.73,
+                    72
+                  ]
+                }
+              ],
+              "punct": 1,
+              "marcajId": "m2-1"
+            },
+            {
+              "id": "r2-3",
+              "x": 205.49,
+              "y": 935.16,
+              "w": 611.31,
+              "h": 72,
+              "camp": "scene[1].puncte[1]",
+              "parti": [
+                {
+                  "tip": "piesa",
+                  "id": "t2-3",
+                  "text": "Programări și reveniri",
+                  "accent": false,
+                  "dx": 0,
+                  "w": 611.31,
+                  "camp": "scene[1].puncte[1]",
+                  "caseta": [
+                    205.49,
+                    935.16,
+                    611.31,
+                    72
+                  ]
+                }
+              ],
+              "punct": 2,
+              "marcajId": "m2-2"
+            },
+            {
+              "id": "r2-4",
+              "x": 205.49,
+              "y": 1029.16,
+              "w": 750.03,
+              "h": 72,
+              "camp": "scene[1].puncte[2]",
+              "parti": [
+                {
+                  "tip": "piesa",
+                  "id": "t2-4",
+                  "text": "Rapoarte copiate de mână",
+                  "accent": false,
+                  "dx": 0,
+                  "w": 750.03,
+                  "camp": "scene[1].puncte[2]",
+                  "caseta": [
+                    205.49,
+                    1029.16,
+                    750.03,
+                    72
+                  ]
+                }
+              ],
+              "punct": 3,
+              "marcajId": "m2-3"
+            }
+          ],
+          "marcaj": "bife",
+          "marcajW": 54,
+          "gol": 27
+        }
+      ],
+      "pasi": [
+        {
+          "efect": "masca",
+          "tinta": "#r2-1",
+          "t": 4.5,
+          "dur": 0.7,
+          "ease": "power3.out"
+        },
+        {
+          "efect": "apare",
+          "tinta": "#r2-2",
+          "t": 5.1,
+          "dur": 0.7,
+          "x": -24,
+          "y": 0,
+          "ease": "power3.out"
+        },
+        {
+          "efect": "bifa",
+          "tinta": "#m2-1",
+          "t": 5.25,
+          "dur": 0.35
+        },
+        {
+          "efect": "apare",
+          "tinta": "#r2-3",
+          "t": 5.55,
+          "dur": 0.7,
+          "x": -24,
+          "y": 0,
+          "ease": "power3.out"
+        },
+        {
+          "efect": "bifa",
+          "tinta": "#m2-2",
+          "t": 5.7,
+          "dur": 0.35
+        },
+        {
+          "efect": "apare",
+          "tinta": "#r2-4",
+          "t": 6,
+          "dur": 0.7,
+          "x": -24,
+          "y": 0,
+          "ease": "power3.out"
+        },
+        {
+          "efect": "bifa",
+          "tinta": "#m2-3",
+          "t": 6.15,
+          "dur": 0.35
+        }
+      ],
+      "texte": [
+        {
+          "id": "t2-1",
+          "text": "Unde se pierde:",
+          "camp": "scene[1].titlu[0]",
+          "t": 6.7,
+          "caseta": [
+            151.76,
+            678.71,
+            776.49,
+            114.1
+          ]
+        },
+        {
+          "id": "t2-2",
+          "text": "E-mailuri de rutină",
+          "camp": "scene[1].puncte[0]",
+          "t": 6.7,
+          "caseta": [
+            200.2,
+            833.44,
+            534.05,
+            73.14
+          ]
+        },
+        {
+          "id": "t2-3",
+          "text": "Programări și reveniri",
+          "camp": "scene[1].puncte[1]",
+          "t": 6.7,
+          "caseta": [
+            200.2,
+            928.93,
+            620.99,
+            73.14
+          ]
+        },
+        {
+          "id": "t2-4",
+          "text": "Rapoarte copiate de mână",
+          "camp": "scene[1].puncte[2]",
+          "t": 6.7,
+          "caseta": [
+            200.2,
+            1024.41,
+            761.9,
+            73.14
+          ]
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "id": "s3",
+      "camp": "scene[2]",
+      "tip": "final",
+      "start": 9.2,
+      "complet": 11.21,
+      "sfarsit": 12.7,
+      "ultima": true,
+      "deriva": 12,
+      "blocuri": [
+        {
+          "id": "b3-1",
+          "rol": "mare",
+          "fel": "randuri",
+          "camp": "scene[2].titlu",
+          "masca": true,
+          "x": 96,
+          "y": 739.28,
+          "w": 888,
+          "h": 224.64,
+          "marime": 104,
+          "randuri": [
+            {
+              "id": "r3-1",
+              "x": 131.45,
+              "y": 739.28,
+              "w": 817.1,
+              "h": 112.32,
+              "camp": "scene[2].titlu[0]",
+              "parti": [
+                {
+                  "tip": "piesa",
+                  "id": "t3-1",
+                  "text": "Hai să construim",
+                  "accent": false,
+                  "dx": 0,
+                  "w": 817.1,
+                  "camp": "scene[2].titlu[0]",
+                  "caseta": [
+                    131.45,
+                    739.28,
+                    817.1,
+                    112.32
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "r3-2",
+              "x": 291.85,
+              "y": 851.6,
+              "w": 496.3,
+              "h": 112.32,
+              "camp": "scene[2].titlu[1]",
+              "parti": [
+                {
+                  "tip": "piesa",
+                  "id": "t3-2",
+                  "text": "împreună",
+                  "accent": true,
+                  "dx": 0,
+                  "w": 463.65,
+                  "camp": "scene[2].titlu[1]",
+                  "caseta": [
+                    291.85,
+                    851.6,
+                    463.65,
+                    112.32
+                  ]
+                },
+                {
+                  "tip": "piesa",
+                  "id": "t3-3",
+                  "text": ".",
+                  "accent": false,
+                  "dx": 463.65,
+                  "w": 32.65,
+                  "camp": "scene[2].titlu[1]",
+                  "caseta": [
+                    755.5,
+                    851.6,
+                    32.65,
+                    112.32
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "b3-2",
+          "rol": "mic",
+          "fel": "mic",
+          "camp": "scene[2].detaliu",
+          "masca": false,
+          "x": 96,
+          "y": 1003.92,
+          "w": 888,
+          "h": 46.8,
+          "marime": 36,
+          "randuri": [
+            {
+              "id": "r3-3",
+              "x": 384.17,
+              "y": 1003.92,
+              "w": 311.66,
+              "h": 46.8,
+              "camp": "scene[2].detaliu",
+              "parti": [
+                {
+                  "tip": "piesa",
+                  "id": "t3-4",
+                  "text": "exemplu.ro/atelier",
+                  "accent": false,
+                  "dx": 0,
+                  "w": 311.66,
+                  "camp": "scene[2].detaliu",
+                  "caseta": [
+                    384.17,
+                    1003.92,
+                    311.66,
+                    46.8
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "pasi": [
+        {
+          "efect": "masca",
+          "tinta": "#r3-1",
+          "t": 9.3,
+          "dur": 0.7,
+          "ease": "power3.out"
+        },
+        {
+          "efect": "masca",
+          "tinta": "#r3-2",
+          "t": 9.6,
+          "dur": 0.7,
+          "ease": "power3.out"
+        },
+        {
+          "efect": "apare",
+          "tinta": "#r3-3",
+          "t": 10.4,
+          "dur": 0.15,
+          "x": 0,
+          "y": 0,
+          "ease": "none"
+        },
+        {
+          "efect": "tasteaza",
+          "tinta": "#t3-4",
+          "t": 10.4,
+          "dur": 0.81,
+          "text": "exemplu.ro/atelier"
+        }
+      ],
+      "texte": [
+        {
+          "id": "t3-1",
+          "text": "Hai să construim",
+          "camp": "scene[2].titlu[0]",
+          "t": 11.21,
+          "caseta": [
+            120.63,
+            726.36,
+            838.74,
+            115.29
+          ]
+        },
+        {
+          "id": "t3-2",
+          "text": "împreună",
+          "camp": "scene[2].titlu[1]",
+          "t": 11.21,
+          "caseta": [
+            285.28,
+            841.66,
+            475.93,
+            115.29
+          ]
+        },
+        {
+          "id": "t3-3",
+          "text": ".",
+          "camp": "scene[2].titlu[1]",
+          "t": 11.21,
+          "caseta": [
+            761.21,
+            841.66,
+            33.51,
+            115.29
+          ]
+        },
+        {
+          "id": "t3-4",
+          "text": "exemplu.ro/atelier",
+          "camp": "scene[2].detaliu",
+          "t": 11.21,
+          "caseta": [
+            380.04,
+            998.01,
+            319.91,
+            48.04
+          ]
+        }
+      ]
+    }
+  ]
+}

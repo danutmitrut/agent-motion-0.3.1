@@ -1,0 +1,11 @@
+{
+  "sablon": "proba-elemente",
+  "versiune_schema": 1,
+  "format": "vertical",
+  "brand": null,
+  "stil": { "tema": "noapte" },
+  "elemente": [
+    { "text": "Primul element" },
+    { "text": "Ăîâșț ĂÎÂȘȚ" }
+  ]
+}

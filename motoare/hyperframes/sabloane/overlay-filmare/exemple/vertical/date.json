@@ -1,0 +1,30 @@
+{
+  "sablon": "overlay-filmare",
+  "versiune_schema": 1,
+  "format": "vertical",
+  "filmare": { "fisier": "active/filmare-lucru.mp4" },
+  "stil": { "tema": "noapte" },
+  "corecturi": [
+    { "cuvinte": "w4", "din": "consultantă", "in": "consultant" },
+    { "cuvinte": "w9", "din": "lucrram", "in": "lucram" },
+    { "cuvinte": "w11", "din": "ara", "in": "seara" },
+    { "cuvinte": "w14", "din": "câștib", "in": "câștig" },
+    { "cuvinte": "w29", "din": "e-mauri", "in": "e-mailuri," }
+  ],
+  "subtitrari": { "evidentiaza": ["6 ore"] },
+  "elemente": [
+    { "tip": "nume", "ancora": { "fraza": "sunt andreea" }, "nume": "Andreea Popescu", "rol": "consultant de marketing" },
+    { "tip": "cifra", "ancora": { "fraza": "6 ore" }, "valoare": 6, "sufix": " ore", "text": "câștigate pe săptămână" },
+    {
+      "tip": "lista",
+      "ancora": { "fraza": "trei lucruri" },
+      "titlu": ["Ce face agentul"],
+      "puncte": [
+        { "text": "Răspunde la e-mailuri", "ancora": { "fraza": "e-mailuri" } },
+        { "text": "Programează postările", "ancora": { "fraza": "postările" } },
+        { "text": "Pregătește ofertele", "ancora": { "fraza": "ofertele" } }
+      ]
+    },
+    { "tip": "final", "cta": "Scrie AGENT", "detaliu": "și îți trimit ghidul" }
+  ]
+}

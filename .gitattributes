@@ -1,0 +1,13 @@
+# Sursa are LF peste tot, și pe Windows: CRLF ar strica scripturile și hash-urile din VERSIUNI.json (spec 10.1).
+* text=auto eol=lf
+
+# Fixture-urile CSV (windows-1250) rămân exact cum sunt.
+*.csv -text
+
+# Binarele: fără conversie de capăt de linie și fără diff textual.
+*.woff2 binary
+*.png binary
+*.jpg binary
+*.mp4 binary
+*.gz binary
+*.mp3 binary

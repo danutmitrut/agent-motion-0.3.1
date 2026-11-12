@@ -1,0 +1,308 @@
+{
+  "versiune": 1,
+  "sursa": "parakeet",
+  "limba": "ro",
+  "durata": 22.912,
+  "cuvinte": [
+    {
+      "id": "w0",
+      "text": "Bună,",
+      "start": 0.32,
+      "end": 1.2
+    },
+    {
+      "id": "w1",
+      "text": "sunt",
+      "start": 1.2,
+      "end": 1.44
+    },
+    {
+      "id": "w2",
+      "text": "Andreea",
+      "start": 1.44,
+      "end": 1.92
+    },
+    {
+      "id": "w3",
+      "text": "Popescu,",
+      "start": 1.92,
+      "end": 2.8
+    },
+    {
+      "id": "w4",
+      "text": "consultantă",
+      "start": 2.8,
+      "end": 3.6
+    },
+    {
+      "id": "w5",
+      "text": "de",
+      "start": 3.6,
+      "end": 3.76
+    },
+    {
+      "id": "w6",
+      "text": "marketing.",
+      "start": 3.76,
+      "end": 4.56
+    },
+    {
+      "id": "w7",
+      "text": "Anul",
+      "start": 4.56,
+      "end": 4.96
+    },
+    {
+      "id": "w8",
+      "text": "trecut",
+      "start": 4.96,
+      "end": 5.28
+    },
+    {
+      "id": "w9",
+      "text": "lucrram",
+      "start": 5.36,
+      "end": 5.76
+    },
+    {
+      "id": "w10",
+      "text": "până",
+      "start": 5.76,
+      "end": 6.08
+    },
+    {
+      "id": "w11",
+      "text": "ara",
+      "start": 6.08,
+      "end": 6.32
+    },
+    {
+      "id": "w12",
+      "text": "târziu.",
+      "start": 6.4,
+      "end": 7.04
+    },
+    {
+      "id": "w13",
+      "text": "Acum",
+      "start": 7.04,
+      "end": 7.36
+    },
+    {
+      "id": "w14",
+      "text": "câștib",
+      "start": 7.36,
+      "end": 7.84
+    },
+    {
+      "id": "w15",
+      "text": "6",
+      "start": 7.84,
+      "end": 8.16
+    },
+    {
+      "id": "w16",
+      "text": "ore",
+      "start": 8.16,
+      "end": 8.4
+    },
+    {
+      "id": "w17",
+      "text": "în",
+      "start": 8.4,
+      "end": 8.56
+    },
+    {
+      "id": "w18",
+      "text": "fiecare",
+      "start": 8.56,
+      "end": 9.04
+    },
+    {
+      "id": "w19",
+      "text": "săptămână,",
+      "start": 9.04,
+      "end": 9.84
+    },
+    {
+      "id": "w20",
+      "text": "pentru",
+      "start": 9.84,
+      "end": 10.16
+    },
+    {
+      "id": "w21",
+      "text": "că",
+      "start": 10.16,
+      "end": 10.32
+    },
+    {
+      "id": "w22",
+      "text": "agentul",
+      "start": 10.32,
+      "end": 10.88
+    },
+    {
+      "id": "w23",
+      "text": "meu",
+      "start": 10.88,
+      "end": 11.12
+    },
+    {
+      "id": "w24",
+      "text": "face",
+      "start": 11.12,
+      "end": 11.44
+    },
+    {
+      "id": "w25",
+      "text": "trei",
+      "start": 11.44,
+      "end": 11.68
+    },
+    {
+      "id": "w26",
+      "text": "lucruri.",
+      "start": 11.68,
+      "end": 12.32
+    },
+    {
+      "id": "w27",
+      "text": "răspunde",
+      "start": 12.32,
+      "end": 12.88
+    },
+    {
+      "id": "w28",
+      "text": "la",
+      "start": 12.88,
+      "end": 13.04
+    },
+    {
+      "id": "w29",
+      "text": "e-mauri,",
+      "start": 13.04,
+      "end": 13.84
+    },
+    {
+      "id": "w30",
+      "text": "programează",
+      "start": 13.84,
+      "end": 14.48
+    },
+    {
+      "id": "w31",
+      "text": "postările",
+      "start": 14.48,
+      "end": 15.04
+    },
+    {
+      "id": "w32",
+      "text": "și",
+      "start": 15.12,
+      "end": 15.28
+    },
+    {
+      "id": "w33",
+      "text": "pregătește",
+      "start": 15.28,
+      "end": 16
+    },
+    {
+      "id": "w34",
+      "text": "ofertele.",
+      "start": 16,
+      "end": 16.8
+    },
+    {
+      "id": "w35",
+      "text": "Nu",
+      "start": 16.8,
+      "end": 16.96
+    },
+    {
+      "id": "w36",
+      "text": "mai",
+      "start": 16.96,
+      "end": 17.2
+    },
+    {
+      "id": "w37",
+      "text": "lucrez",
+      "start": 17.2,
+      "end": 17.52
+    },
+    {
+      "id": "w38",
+      "text": "mai",
+      "start": 17.68,
+      "end": 17.84
+    },
+    {
+      "id": "w39",
+      "text": "mult,",
+      "start": 17.84,
+      "end": 18.24
+    },
+    {
+      "id": "w40",
+      "text": "lucrez",
+      "start": 18.24,
+      "end": 18.64
+    },
+    {
+      "id": "w41",
+      "text": "pe",
+      "start": 18.8,
+      "end": 18.96
+    },
+    {
+      "id": "w42",
+      "text": "ce",
+      "start": 18.96,
+      "end": 19.12
+    },
+    {
+      "id": "w43",
+      "text": "contaază,",
+      "start": 19.12,
+      "end": 19.92
+    },
+    {
+      "id": "w44",
+      "text": "scrie",
+      "start": 19.92,
+      "end": 20.32
+    },
+    {
+      "id": "w45",
+      "text": "agent",
+      "start": 20.32,
+      "end": 20.64
+    },
+    {
+      "id": "w46",
+      "text": "și",
+      "start": 20.64,
+      "end": 20.72
+    },
+    {
+      "id": "w47",
+      "text": "îți",
+      "start": 20.88,
+      "end": 21.04
+    },
+    {
+      "id": "w48",
+      "text": "primit",
+      "start": 21.12,
+      "end": 21.52
+    },
+    {
+      "id": "w49",
+      "text": "gidul.",
+      "start": 21.52,
+      "end": 22.32
+    }
+  ]
+}

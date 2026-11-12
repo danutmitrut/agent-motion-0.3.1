@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ro"><head><meta charset="utf-8">
+<meta name="catalog-sha256" content="d55fe281e35e7edf8bf39a956d9d3e6dc1228c53933a9b1c9bfb7a8671e666a8">
+<title>Foaia bibliotecii</title>
+<style>
+body{margin:0;background:var(--fundal);color:var(--text);font:11px/1.2 Helvetica,Arial,sans-serif}
+#grila{display:grid;grid-template-columns:repeat(10,150px);padding:16px}
+.celula{width:150px;height:170px;box-sizing:border-box;padding:6px}
+.desen{width:138px;height:138px}
+.desen svg{width:100%;height:100%}
+.ink{fill:var(--linie)}.fond{fill:var(--fundal)}.acc,.acc2{fill:var(--accent)}
+.traseu path{fill:none;stroke:var(--linie);stroke-width:3;vector-effect:non-scaling-stroke;stroke-linecap:round;stroke-linejoin:round}
+.id{text-align:center;margin-top:6px}
+.evita .id::after{content:" \25CF";color:var(--accent)}
+</style></head>
+<body><div id="grila"></div>
+<script>
+var TEME = {"noapte": {"fundal": "#0E0F13", "text": "#F2EFEA", "accent": "#FF7A59"}, "hartie": {"fundal": "#F3EBDD", "text": "#2A2420", "accent": "#C2410C"}, "curat": {"fundal": "#FFFFFF", "text": "#111418", "accent": "#2563EB"}};
+var PIESE = [{"id": "od-chilling", "tip": "forma", "fisier": "../forme/od-chilling.svg", "noapte": "bun"}, {"id": "od-coffee", "tip": "forma", "fisier": "../forme/od-coffee.svg", "noapte": "bun"}, {"id": "od-dancing", "tip": "forma", "fisier": "../forme/od-dancing.svg", "noapte": "bun"}, {"id": "od-float", "tip": "forma", "fisier": "../forme/od-float.svg", "noapte": "bun"}, {"id": "od-groovy", "tip": "forma", "fisier": "../forme/od-groovy.svg", "noapte": "bun"}, {"id": "od-jumping", "tip": "forma", "fisier": "../forme/od-jumping.svg", "noapte": "bun"}, {"id": "od-laying", "tip": "forma", "fisier": "../forme/od-laying.svg", "noapte": "bun"}, {"id": "od-levitate", "tip": "forma", "fisier": "../forme/od-levitate.svg", "noapte": "bun"}, {"id": "od-loving", "tip": "forma", "fisier": "../forme/od-loving.svg", "noapte": "bun"}, {"id": "od-meditating", "tip": "forma", "fisier": "../forme/od-meditating.svg", "noapte": "bun"}, {"id": "od-plant", "tip": "forma", "fisier": "../forme/od-plant.svg", "noapte": "bun"}, {"id": "od-reading", "tip": "forma", "fisier": "../forme/od-reading.svg", "noapte": "bun"}, {"id": "od-reading-side", "tip": "forma", "fisier": "../forme/od-reading-side.svg", "noapte": "bun"}, {"id": "od-roller-skating", "tip": "forma", "fisier": "../forme/od-roller-skating.svg", "noapte": "bun"}, {"id": "od-running", "tip": "forma", "fisier": "../forme/od-running.svg", "noapte": "bun"}, {"id": "od-selfie", "tip": "forma", "fisier": "../forme/od-selfie.svg", "noapte": "bun"}, {"id": "od-sitting", "tip": "forma", "fisier": "../forme/od-sitting.svg", "noapte": "bun"}, {"id": "od-sitting-reading", "tip": "forma", "fisier": "../forme/od-sitting-reading.svg", "noapte": "bun"}, {"id": "od-sprinting", "tip": "forma", "fisier": "../forme/od-sprinting.svg", "noapte": "bun"}, {"id": "od-strolling", "tip": "forma", "fisier": "../forme/od-strolling.svg", "noapte": "bun"}, {"id": "od-swinging", "tip": "forma", "fisier": "../forme/od-swinging.svg", "noapte": "bun"}, {"id": "od-unboxing", "tip": "forma", "fisier": "../forme/od-unboxing.svg", "noapte": "bun"}, {"id": "op-asezat-genunchi-la-piept", "tip": "forma", "fisier": "../forme/op-asezat-genunchi-la-piept.svg", "noapte": "autocolant"}, {"id": "op-asezat-ghemuit", "tip": "forma", "fisier": "../forme/op-asezat-ghemuit.svg", "noapte": "autocolant"}, {"id": "op-asezat-in-genunchi", "tip": "forma", "fisier": "../forme/op-asezat-in-genunchi.svg", "noapte": "autocolant"}, {"id": "op-asezat-pe-jos", "tip": "forma", "fisier": "../forme/op-asezat-pe-jos.svg", "noapte": "autocolant"}, {"id": "op-asezat-picior-peste-picior", "tip": "forma", "fisier": "../forme/op-asezat-picior-peste-picior.svg", "noapte": "autocolant"}, {"id": "op-asezat-scaun-rotile", "tip": "forma", "fisier": "../forme/op-asezat-scaun-rotile.svg", "noapte": "autocolant"}, {"id": "op-bust-cafea", "tip": "forma", "fisier": "../forme/op-bust-cafea.svg", "noapte": "autocolant"}, {"id": "op-bust-cafea-2", "tip": "forma", "fisier": "../forme/op-bust-cafea-2.svg", "noapte": "autocolant"}, {"id": "op-bust-cafea-3", "tip": "forma", "fisier": "../forme/op-bust-cafea-3.svg", "noapte": "autocolant"}, {"id": "op-bust-explica", "tip": "forma", "fisier": "../forme/op-bust-explica.svg", "noapte": "autocolant"}, {"id": "op-bust-explica-2", "tip": "forma", "fisier": "../forme/op-bust-explica-2.svg", "noapte": "autocolant"}, {"id": "op-bust-explica-3", "tip": "forma", "fisier": "../forme/op-bust-explica-3.svg", "noapte": "autocolant"}, {"id": "op-bust-laptop", "tip": "forma", "fisier": "../forme/op-bust-laptop.svg", "noapte": "autocolant"}, {"id": "op-bust-neutru", "tip": "forma", "fisier": "../forme/op-bust-neutru.svg", "noapte": "autocolant"}, {"id": "op-bust-neutru-2", "tip": "forma", "fisier": "../forme/op-bust-neutru-2.svg", "noapte": "autocolant"}, {"id": "op-bust-neutru-3", "tip": "forma", "fisier": "../forme/op-bust-neutru-3.svg", "noapte": "autocolant"}, {"id": "op-bust-notite", "tip": "forma", "fisier": "../forme/op-bust-notite.svg", "noapte": "autocolant"}, {"id": "op-bust-notite-2", "tip": "forma", "fisier": "../forme/op-bust-notite-2.svg", "noapte": "autocolant"}, {"id": "op-bust-notite-3", "tip": "forma", "fisier": "../forme/op-bust-notite-3.svg", "noapte": "autocolant"}, {"id": "op-bust-notite-4", "tip": "forma", "fisier": "../forme/op-bust-notite-4.svg", "noapte": "autocolant"}, {"id": "op-bust-telefon", "tip": "forma", "fisier": "../forme/op-bust-telefon.svg", "noapte": "autocolant"}, {"id": "op-bust-telefon-2", "tip": "forma", "fisier": "../forme/op-bust-telefon-2.svg", "noapte": "autocolant"}, {"id": "op-picioare-arata", "tip": "forma", "fisier": "../forme/op-picioare-arata.svg", "noapte": "autocolant"}, {"id": "op-picioare-brate-incrucisate", "tip": "forma", "fisier": "../forme/op-picioare-brate-incrucisate.svg", "noapte": "autocolant"}, {"id": "op-picioare-explica-ochelari", "tip": "forma", "fisier": "../forme/op-picioare-explica-ochelari.svg", "noapte": "autocolant"}, {"id": "op-picioare-explica-palarie", "tip": "forma", "fisier": "../forme/op-picioare-explica-palarie.svg", "noapte": "autocolant"}, {"id": "op-picioare-hijab", "tip": "forma", "fisier": "../forme/op-picioare-hijab.svg", "noapte": "autocolant"}, {"id": "op-picioare-merge", "tip": "forma", "fisier": "../forme/op-picioare-merge.svg", "noapte": "autocolant"}, {"id": "op-picioare-proteza", "tip": "forma", "fisier": "../forme/op-picioare-proteza.svg", "noapte": "autocolant"}, {"id": "op-picioare-sacou", "tip": "forma", "fisier": "../forme/op-picioare-sacou.svg", "noapte": "autocolant"}];
+var tema = TEME[new URLSearchParams(location.search).get("tema")] || TEME.noapte;
+var radacina = document.documentElement.style;
+radacina.setProperty("--fundal", tema.fundal); radacina.setProperty("--text", tema.text);
+radacina.setProperty("--linie", tema.text); radacina.setProperty("--accent", tema.accent);
+function citeste(cale) { var r = new XMLHttpRequest(); r.open("GET", cale, false); r.send(); return r.responseText; }
+var grila = document.getElementById("grila");
+PIESE.forEach(function (p) {
+  var c = document.createElement("div"); c.className = "celula" + (p.noapte === "evita" ? " evita" : "");
+  var d = document.createElement("div"); d.className = "desen";
+  if (p.tip === "traseu") {
+    var t = JSON.parse(citeste(p.fisier));
+    d.innerHTML = '<svg class="traseu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ' + t.w + ' ' + t.h + '">' +
+      t.paths.map(function (x) { return '<path d="' + x + '"/>'; }).join("") + "</svg>";
+  } else {
+    d.innerHTML = citeste(p.fisier);
+  }
+  var e = document.createElement("div"); e.className = "id"; e.textContent = p.id;
+  c.appendChild(d); c.appendChild(e); grila.appendChild(c);
+});
+</script></body></html>

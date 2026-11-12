@@ -1,0 +1,10 @@
+{
+  "id": "hartie",
+  "nume": "Hârtie",
+  "culori": { "fundal": "#F3EBDD", "text": "#2A2420", "atenuat": "#6B6157", "accent": "#C2410C" },
+  "font_titlu": "fraunces",
+  "font_text": "inter",
+  "atmosfera": "ceata",
+  "granulatie": 0.06,
+  "eticheta": { "majuscule": true, "spatiere": 0.16, "prefix": "" }
+}

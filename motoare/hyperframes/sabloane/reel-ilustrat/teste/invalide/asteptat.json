@@ -1,0 +1,17 @@
+{
+  "accent-neinchis.json": { "cod": "accent-neinchis", "camp": "scene[1].titlu[1]" },
+  "brand-si-accent.json": { "cod": "stil-contrazice-brand", "camp": "stil.culori.accent" },
+  "culoare-gresita.json": { "cod": "valoare-invalida", "camp": "stil.culori.accent" },
+  "eticheta-cu-stea.json": { "cod": "text-cu-cod", "camp": "scene[0].eticheta" },
+  "muzica.json": { "cod": "valoare-invalida", "camp": "muzica.volum" },
+  "pas-durata.json": { "cod": "valoare-invalida", "camp": "durata" },
+  "prea-multe-scene.json": { "cod": "reel-ilustrat-scene-durate", "camp": "scene" },
+  "prea-repede.json": { "cod": "prea-repede-de-citit", "camp": "scene[1].durata" },
+  "rand-23.json": { "cod": "rand-nu-incape", "camp": "scene[0].titlu[0]" },
+  "scena-prea-scurta.json": { "cod": "reel-ilustrat-scene-durate", "camp": "scene[0].durata" },
+  "sedila.json": { "cod": "sedila", "camp": "scene[0].titlu[0]" },
+  "sigla.json": { "cod": "camp-necunoscut", "camp": "sigla" },
+  "suma-durate.json": { "cod": "durata-in-afara-limitelor", "camp": "durata" },
+  "tip-necunoscut.json": { "cod": "valoare-invalida", "camp": "scene[1].tip" },
+  "versiune-2.json": { "cod": "versiune-schema", "camp": "versiune_schema" }
+}

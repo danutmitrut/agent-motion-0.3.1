@@ -1,0 +1,37 @@
+{
+  "sablon": "reel-ilustrat",
+  "versiune_schema": 1,
+  "brand": "studio-lemn",
+  "stil": {
+    "culori": {
+      "accent": "#D9486A"
+    }
+  },
+  "scene": [
+    {
+      "tip": "desen",
+      "desen": {
+        "id": "op-bust-telefon"
+      },
+      "titlu": [
+        "Faci totul singur."
+      ]
+    },
+    {
+      "tip": "retea",
+      "titlu": [
+        "Un sistem",
+        "*preia rutina.*"
+      ]
+    },
+    {
+      "tip": "final",
+      "desen": {
+        "id": "op-picioare-explica-ochelari"
+      },
+      "titlu": [
+        "Tu decizi."
+      ]
+    }
+  ]
+}

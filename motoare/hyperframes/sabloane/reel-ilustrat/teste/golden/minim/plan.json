@@ -1,0 +1,144 @@
+{
+  "versiune": 1,
+  "durata": 30,
+  "fps": 30,
+  "latime": 1080,
+  "inaltime": 1920,
+  "atmosfera": {
+    "mod": "ceata",
+    "aprinde": 10.5,
+    "impingere": 1.04,
+    "granulatie": 0.1
+  },
+  "desene": [
+    {
+      "g": "g-d1",
+      "scena": 0,
+      "id": "op-bust-laptop",
+      "tip": "forma",
+      "familie": "cerneala",
+      "animatie": "contur-umplere",
+      "x": 225,
+      "y": 779,
+      "s": 2.869,
+      "oglindit": false,
+      "panou": "inversat",
+      "cutie": [
+        225,
+        779,
+        631,
+        703
+      ],
+      "draw": [
+        0.3,
+        3.4
+      ],
+      "undraw": [
+        8.6,
+        1.2
+      ]
+    },
+    {
+      "g": "g-d3",
+      "scena": 2,
+      "id": "od-chilling",
+      "tip": "forma",
+      "familie": "cerneala",
+      "animatie": "contur-umplere",
+      "x": 27,
+      "y": 803,
+      "s": 1.058,
+      "oglindit": false,
+      "panou": null,
+      "cutie": [
+        27,
+        803,
+        1026,
+        654
+      ],
+      "draw": [
+        20.9,
+        3.4
+      ],
+      "undraw": null
+    }
+  ],
+  "iconite": [],
+  "retele": [
+    {
+      "g": "g-r2",
+      "scena": 1,
+      "din": null,
+      "noduri": 6,
+      "nastere": 9.4,
+      "scanteie": null,
+      "retrag": 19.2,
+      "centru": [
+        540,
+        1080
+      ],
+      "raza": 290
+    }
+  ],
+  "linii": [
+    {
+      "id": "linie-accent",
+      "scena": 2,
+      "d": "M-40 1359 C 244 1349, 444 1141, 643 1011 C 815 901, 948 803, 1120 783",
+      "t": 22.6,
+      "dur": 2.2,
+      "clasa": "c"
+    }
+  ],
+  "carduri": [
+    {
+      "id": "c1",
+      "scena": 0,
+      "eticheta": null,
+      "randuri": [
+        {
+          "text": "Faci totul singur.",
+          "accent": false
+        }
+      ],
+      "cuvinte": null,
+      "intra": 0.9,
+      "iese": 8.6
+    },
+    {
+      "id": "c2",
+      "scena": 1,
+      "eticheta": null,
+      "randuri": [
+        {
+          "text": "Un sistem",
+          "accent": false
+        },
+        {
+          "text": "preia rutina.",
+          "accent": true
+        }
+      ],
+      "cuvinte": null,
+      "intra": 9.1,
+      "iese": 19.2
+    },
+    {
+      "id": "c3",
+      "scena": 2,
+      "eticheta": null,
+      "randuri": [
+        {
+          "text": "Tu decizi.",
+          "accent": false
+        }
+      ],
+      "cuvinte": null,
+      "intra": 20,
+      "iese": null
+    }
+  ],
+  "cta": null,
+  "semnatura": null,
+  "panouri": []
+}

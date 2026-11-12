@@ -1,0 +1,65 @@
+name: biblioteci
+
+permissions:
+  contents: read
+
+on:
+  push:
+    paths:
+      - "biblioteci/**"
+      - "unelte/import-biblioteci/**"
+      - "nucleu/lib/desen/**"
+      - "nucleu/lib/fisiere.mjs"
+      - "nucleu/lib/erori.mjs"
+      - "nucleu/lib/cai.mjs"
+      - "nucleu/lib/teme.mjs"
+      - "nucleu/lib/text.mjs"
+      - "nucleu/package.json"
+      - "teste/fixtures/biblioteci-mini/**"
+      - ".github/workflows/biblioteci.yml"
+  pull_request:
+    paths:
+      - "biblioteci/**"
+      - "unelte/import-biblioteci/**"
+      - "nucleu/lib/desen/**"
+      - "nucleu/lib/fisiere.mjs"
+      - "nucleu/lib/erori.mjs"
+      - "nucleu/lib/cai.mjs"
+      - "nucleu/lib/teme.mjs"
+      - "nucleu/lib/text.mjs"
+      - "nucleu/package.json"
+      - "teste/fixtures/biblioteci-mini/**"
+      - ".github/workflows/biblioteci.yml"
+  workflow_dispatch:
+
+jobs:
+  verifica:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        working-directory: "Proiecte Ăîș test/agent-motion"
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          path: "Proiecte Ăîș test/agent-motion"
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Dependențele nucleului, fără descărcarea binarelor ffmpeg
+        run: npm ci --prefix nucleu --ignore-scripts
+      - name: Verificarea bibliotecii din repo
+        run: npm --prefix nucleu run verifica-biblioteci
+      - name: Testele verificării, pe biblioteca mini
+        run: node --test teste/unitar/verifica-biblioteci.test.mjs
+      - name: Testele uneltei Python de import (doar biblioteca standard)
+        env:
+          PYTHONUTF8: "1"
+        run: |
+          python -m unittest discover -s unelte/import-biblioteci/teste

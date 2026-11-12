@@ -1,0 +1,7 @@
+{
+  "fps": 30,
+  "total": { "min": 6, "max": 60 },
+  "durate": { "titlu": 3, "cifra": 4, "bare": 7, "comparatie": 4.5, "final": 3.5 },
+  "plafoane": { "eticheta": 24, "titlu": 24, "subtitlu": 70, "text": 60, "unitate": 12, "eticheta_bare": 14, "eticheta_comparatie": 18, "sursa": 60, "cta": 28 },
+  "sigla_max_octeti": 2097152
+}

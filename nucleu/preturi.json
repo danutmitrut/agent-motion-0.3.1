@@ -1,0 +1,8 @@
+{
+  "versiune": 1,
+  "data": "2026-10-26",
+  "sursa": "https://kie.ai/gpt-image-2",
+  "modele": {
+    "gpt-image-2-image-to-image": { "rezolutie": "1K", "credite": 6, "usd": 0.03 }
+  }
+}

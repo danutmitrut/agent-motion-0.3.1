@@ -1,0 +1,10 @@
+{
+  "formate": {
+    "vertical": { "latime": 1080, "inaltime": 1920, "zona_text": [96, 760, 888, 400] },
+    "patrat": { "latime": 1080, "inaltime": 1080, "zona_text": [96, 340, 888, 400] }
+  },
+  "titlu": { "px": 88, "plafon": 22 },
+  "scene": { "secunde_pe_scena": 3, "complet_dupa": 0.5 },
+  "reguli": { "pauza_finala": 0.5 },
+  "jetoane": {}
+}

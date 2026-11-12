@@ -1,0 +1,7 @@
+exemplu-muzica.mp3: muzică sintetică pentru testele lui mg (planul F, F2). Nu e o înregistrare și nu conține material al altcuiva.
+comanda: ffmpeg -f lavfi -i "aevalsrc=0.5*sin(2*PI*220*t)*(0.75+0.25*sin(2*PI*0.5*t)):s=44100:d=45" -ac 1 -c:a libmp3lame -b:a 32k -map_metadata -1 -fflags +bitexact -flags:a +bitexact exemplu-muzica.mp3
+ffmpeg: ffmpeg-static 6.0 (nucleu/node_modules/ffmpeg-static), macOS arm64
+durata: 45 s, mono, 44,1 kHz, 32 kbps
+sha256: fc6b5d399723f9afc804d6aefa9952ef0e27abadc1d1ffb2356cf5a2b40d18b4
+licenta: CC0 1.0 (generat de Claude pentru agent-motion, 2026-10-14; un ton calculat nu are autor uman)
+De ce e comis și nu generat la test: alt build ffmpeg (Windows, rezerva de pe Mac) poate da alți octeți MP3, deci alte sume, alt cache și alte niveluri. Un singur fișier dă aceleași intrări pe orice sistem.

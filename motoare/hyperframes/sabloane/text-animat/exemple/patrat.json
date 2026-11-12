@@ -1,0 +1,21 @@
+{
+  "sablon": "text-animat",
+  "versiune_schema": 1,
+  "format": "patrat",
+  "sigla": "resurse/sigla-exemplu.svg",
+  "stil": {
+    "descriere": "liniștit, cald, de atelier",
+    "tema": "hartie",
+    "ritm": "calm",
+    "atmosfera": "ceata"
+  },
+  "scene": [
+    { "tip": "titlu", "eticheta": "Atelier", "titlu": ["Ore *înapoi*", "în fiecare zi"] },
+    { "tip": "cifra", "valoare": 3.5, "zecimale": 1, "sufix": " ore",
+      "text": "pe săptămână, în medie", "sursa": "exemplu, fără sursă reală" },
+    { "tip": "lista", "titlu": ["Ce preia:"], "marcaj": "numere",
+      "puncte": ["E-mailurile de rutină", "Programările", "Rapoartele lunare"] },
+    { "tip": "final", "titlu": ["Începe *azi*."], "cta": "Înscrie-te la atelier",
+      "detaliu": "exemplu.ro/atelier" }
+  ]
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width={{MG_LATIME}}, height={{MG_INALTIME}}">
+    <title>text-animat</title>
+    <script src="gsap.min.js"></script>
+    <style>
+/*MG_FONTURI*/
+/*MG_VARIABILE*/
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: var(--w); height: var(--h); overflow: hidden; background: var(--fundal); }
+      #root { position: relative; width: var(--w); height: var(--h); overflow: hidden; background: var(--fundal); hyphens: none; -webkit-hyphens: none; }
+      #stage { position: absolute; inset: 0; }
+
+      #degrade { position: absolute; left: 0; top: 0; width: var(--w); height: calc(var(--h) * 2); background: linear-gradient(180deg, var(--degrade-a) 0%, var(--degrade-b) 50%, var(--degrade-a) 100%); }
+      .glow { position: absolute; border-radius: 50%; filter: blur(90px); }
+      #glow-a { left: -35%; top: -16%; width: 100%; height: 52%; background: var(--ceata-a); }
+      #glow-b { left: -11%; top: 71%; width: 130%; height: 43%; background: var(--ceata-b); }
+      #grain { position: absolute; inset: 0; width: var(--w); height: var(--h); opacity: var(--granulatie); mix-blend-mode: overlay; pointer-events: none; }
+      #root:not(.degrade) #degrade, #root:not(.ceata) .glow, #root.plin #grain { display: none; }
+
+      #compozitie { position: absolute; inset: 0; }
+      .scena { position: absolute; inset: 0; }
+      .bloc { position: absolute; }
+      #root.centru .bloc { text-align: center; }
+      #root.stanga .bloc, #root .bloc.lista { text-align: left; }
+      .rand { display: block; white-space: pre; }
+      .p { display: inline-block; white-space: pre; }
+      .p.accent { color: var(--accent); }
+      .masca { overflow: hidden; padding-bottom: 14px; margin-bottom: -14px; }
+      .cuvinte .masca { position: absolute; left: 0; right: 0; top: 0; }
+      .punct { display: flex; align-items: center; }
+      .marcaj { flex: 0 0 auto; display: inline-flex; align-items: center; color: var(--accent); }
+      .marcaj svg { width: 0.9em; height: 0.9em; overflow: visible; }
+      .marcaj path { fill: none; stroke: var(--accent); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1; }
+/*MG_ROLURI*/
+    </style>
+  </head>
+  <body>
+    <div id="root" class="{{MG_CLASE}}" data-composition-id="main" data-start="0" data-duration="{{MG_DURATA}}" data-width="{{MG_LATIME}}" data-height="{{MG_INALTIME}}">
+      <div id="stage" class="clip" data-start="0" data-duration="{{MG_DURATA}}" data-track-index="0">
+
+        <div id="degrade" data-layout-allow-overflow></div>
+        <div class="glow" id="glow-a" data-layout-allow-overflow></div>
+        <div class="glow" id="glow-b" data-layout-allow-overflow></div>
+
+        <svg id="grain" viewBox="0 0 {{MG_LATIME}} {{MG_INALTIME}}" preserveAspectRatio="none">
+          <filter id="noise"><feTurbulence id="noise-t" type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="1" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter>
+          <rect width="{{MG_LATIME}}" height="{{MG_INALTIME}}" filter="url(#noise)"/>
+        </svg>
+
+        <div id="compozitie">
+<!--MG_SCENE-->
+        </div>
+
+      </div><!--MG_AUDIO-->
+    </div>
+
+    <script>/*MG_MISCARI*/</script>
+    <script>/*MG_DATE*/</script>
+    <script>/*MG_REGIZOR*/</script>
+  </body>
+</html>

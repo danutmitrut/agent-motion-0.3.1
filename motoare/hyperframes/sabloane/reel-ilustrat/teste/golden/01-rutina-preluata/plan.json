@@ -1,0 +1,276 @@
+{
+  "versiune": 1,
+  "durata": 30,
+  "fps": 30,
+  "latime": 1080,
+  "inaltime": 1920,
+  "atmosfera": {
+    "mod": "ceata",
+    "aprinde": 10.5,
+    "impingere": 1.04,
+    "granulatie": 0.1
+  },
+  "desene": [
+    {
+      "g": "g-d1",
+      "scena": 0,
+      "id": "od-running",
+      "tip": "forma",
+      "familie": "cerneala",
+      "animatie": "contur-umplere",
+      "x": 27,
+      "y": 791,
+      "s": 1.065,
+      "oglindit": false,
+      "panou": null,
+      "cutie": [
+        27,
+        791,
+        1026,
+        679
+      ],
+      "draw": [
+        0.3,
+        3.4
+      ],
+      "undraw": [
+        9.4,
+        1.2
+      ]
+    },
+    {
+      "g": "g-d4",
+      "scena": 3,
+      "id": "od-strolling",
+      "tip": "forma",
+      "familie": "cerneala",
+      "animatie": "contur-umplere",
+      "x": 177,
+      "y": 779,
+      "s": 0.941,
+      "oglindit": false,
+      "panou": null,
+      "cutie": [
+        177,
+        779,
+        726,
+        703
+      ],
+      "draw": [
+        19.4,
+        3.4
+      ],
+      "undraw": [
+        24.2,
+        1.2
+      ]
+    },
+    {
+      "g": "g-d5",
+      "scena": 4,
+      "id": "od-chilling",
+      "tip": "forma",
+      "familie": "cerneala",
+      "animatie": "contur-umplere",
+      "x": 135,
+      "y": 872,
+      "s": 0.835,
+      "oglindit": false,
+      "panou": null,
+      "cutie": [
+        135,
+        872,
+        810,
+        516
+      ],
+      "draw": [
+        25.9,
+        2.6
+      ],
+      "undraw": null
+    }
+  ],
+  "iconite": [
+    {
+      "g": "g-i2",
+      "scena": 1,
+      "nume": [
+        "mail",
+        "file-text",
+        "calendar-days",
+        "receipt",
+        "message-square",
+        "clipboard-list"
+      ],
+      "pozitii": [
+        [
+          70,
+          784
+        ],
+        [
+          197,
+          687
+        ],
+        [
+          382,
+          632
+        ],
+        [
+          587,
+          632
+        ],
+        [
+          772,
+          687
+        ],
+        [
+          900,
+          784
+        ]
+      ],
+      "scara": 4.6,
+      "apar": [
+        4.7,
+        5.3,
+        5.9,
+        6.5,
+        7.1,
+        7.7
+      ],
+      "tremura": 8.3,
+      "retrag": 9.2
+    }
+  ],
+  "retele": [
+    {
+      "g": "g-r3",
+      "scena": 2,
+      "din": "g-i2",
+      "noduri": 6,
+      "nastere": 10.2,
+      "scanteie": [
+        14.2,
+        3.6
+      ],
+      "retrag": 18.4,
+      "centru": [
+        540,
+        1080
+      ],
+      "raza": 290
+    }
+  ],
+  "linii": [
+    {
+      "id": "linie-accent",
+      "scena": 4,
+      "d": "M-40 1311 C 236 1301, 428 1152, 621 1022 C 801 912, 940 872, 1120 852",
+      "t": 27.2,
+      "dur": 2.2,
+      "clasa": "c"
+    }
+  ],
+  "carduri": [
+    {
+      "id": "c1",
+      "scena": 0,
+      "eticheta": "VINERI SEARA, TOT AICI",
+      "randuri": [
+        {
+          "text": "Ții totul minte.",
+          "accent": false
+        }
+      ],
+      "cuvinte": null,
+      "intra": 0.9,
+      "iese": 4.2
+    },
+    {
+      "id": "c2",
+      "scena": 1,
+      "eticheta": "DE DIMINEAȚĂ, MEREU",
+      "randuri": null,
+      "cuvinte": [
+        {
+          "text": "Mesaje.",
+          "t": 4.7
+        },
+        {
+          "text": "Cereri.",
+          "t": 5.7
+        },
+        {
+          "text": "Termene.",
+          "t": 6.7
+        },
+        {
+          "text": "Plăți.",
+          "t": 7.7
+        }
+      ],
+      "intra": 4.7,
+      "iese": 9.4
+    },
+    {
+      "id": "c3",
+      "scena": 2,
+      "eticheta": "ACUM",
+      "randuri": [
+        {
+          "text": "Dacă rutina merge",
+          "accent": false
+        },
+        {
+          "text": "fără tine?",
+          "accent": true
+        }
+      ],
+      "cuvinte": null,
+      "intra": 9.9,
+      "iese": 18.4
+    },
+    {
+      "id": "c4",
+      "scena": 3,
+      "eticheta": "APOI",
+      "randuri": [
+        {
+          "text": "Ai timp",
+          "accent": false
+        },
+        {
+          "text": "pentru oameni.",
+          "accent": true
+        }
+      ],
+      "cuvinte": null,
+      "intra": 19.5,
+      "iese": 24.2
+    },
+    {
+      "id": "c5",
+      "scena": 4,
+      "eticheta": "TU ȘI SISTEMUL",
+      "randuri": [
+        {
+          "text": "Ritmul îl alegi",
+          "accent": false
+        },
+        {
+          "text": "tot tu.",
+          "accent": true
+        }
+      ],
+      "cuvinte": null,
+      "intra": 25,
+      "iese": null
+    }
+  ],
+  "cta": null,
+  "semnatura": {
+    "text": "Ana Pop,\ncoach de carieră",
+    "t": 26.5,
+    "dur": 2
+  },
+  "panouri": []
+}

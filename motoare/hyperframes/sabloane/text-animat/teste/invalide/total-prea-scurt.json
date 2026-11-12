@@ -1,0 +1,13 @@
+{
+  "sablon": "text-animat",
+  "versiune_schema": 1,
+  "format": "vertical",
+  "scene": [
+    {
+      "tip": "titlu",
+      "titlu": [
+        "Scurt."
+      ]
+    }
+  ]
+}

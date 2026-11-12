@@ -1,0 +1,11 @@
+{
+  "versiune": 1,
+  "propuneri": [
+    { "cerere": "mai încet, să apuc să citesc", "camp": "scene[i].durata", "variante": ["1-2 s în plus pe scena numită", "o scenă împărțită în două, câte o idee pe ecran"] },
+    { "cerere": "mai mare, să se vadă", "camp": "scene[i].marime", "variante": ["treapta L", "treapta XL, cât încape pe lățime", "mai puțin text în scenă, ca restul să crească"] },
+    { "cerere": "la mijloc", "camp": "scene[i].aliniere", "variante": ["centru, pe scena numită", "centru, pe toate scenele"] },
+    { "cerere": "alte culori", "camp": "stil.tema, stil.culori", "variante": ["tema curat (luminoasă)", "tema hartie (caldă)", "tema noapte (întunecată)", "altă culoare de accent, aleasă de tine"] },
+    { "cerere": "altă cifră sau alt text", "camp": "scene[i] (valoare, titlu, text)", "variante": ["textul tău, cuvânt cu cuvânt", "o formulare mai scurtă, propusă de agent"] },
+    { "cerere": "alt grafic (linie, inel), alt font, alt ritm, alt format", "camp": "nu există în v1", "variante": ["bare pe coloane sau orizontale (decide lungimea etichetelor)", "o scenă cifra sau comparatie în loc de grafic", "o cerere de șablon nou, notată în cerere-sablon.md"] }
+  ]
+}

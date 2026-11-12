@@ -1,0 +1,18 @@
+{
+  "rand-nu-incape": [["rand-nu-incape", "scene[0].titlu[0]"]],
+  "glifa-lipsa": [["glifa-lipsa", "scene[0].titlu[0]"]],
+  "contrast-slab": [["contrast-slab", "stil.culori.accent"]],
+  "final-nu-e-ultimul": [["text-animat-final-nu-e-ultimul", "scene[0].tip"]],
+  "ghilimele-in-citat": [["text-animat-ghilimele-in-citat", "scene[1].text"]],
+  "accent-neinchis": [["accent-neinchis", "scene[0].titlu[1]"]],
+  "prea-repede-de-citit": [["prea-repede-de-citit", "scene[1].durata"]],
+  "text-cu-cod": [["text-cu-cod", "scene[0].eticheta"]],
+  "stil-contrazice-brand": [["stil-contrazice-brand", "stil.tema"]],
+  "camp-necunoscut": [["camp-necunoscut", "scene[1].text"]],
+  "sedila": [["sedila", "scene[0].titlu[1]"]],
+  "trei-accente": [["text-animat-accent", "scene[0]"]],
+  "fraza-un-cuvant": [["valoare-invalida", "scene[1].text"]],
+  "sigla-lipsa": [["resursa-lipsa", "sigla"]],
+  "total-prea-scurt": [["durata-in-afara-limitelor", "scene"]],
+  "versiune-schema": [["versiune-schema", "versiune_schema"]]
+}

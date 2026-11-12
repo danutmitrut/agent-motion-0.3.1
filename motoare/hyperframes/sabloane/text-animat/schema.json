@@ -1,0 +1,150 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "mg:text-animat/1",
+  "title": "date.json pentru text-animat, versiunea 1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["sablon", "versiune_schema", "scene"],
+  "x-mesaj": {
+    "additionalProperties": "Câmpul nu există în text-animat (durata videoului rezultă din scene; semnătura nu există).",
+    "required": "Lipsește un câmp obligatoriu: sablon, versiune_schema sau scene."
+  },
+  "properties": {
+    "sablon": { "const": "text-animat", "x-mesaj": { "const": "Câmpul sablon trebuie să fie exact „text-animat”." } },
+    "versiune_schema": { "type": "integer", "const": 1, "x-mesaj": { "const": "date.json e scris pentru altă versiune a șablonului; text-animat acceptă doar versiune_schema 1." } },
+    "format": { "enum": ["vertical", "patrat"], "x-mesaj": { "enum": "Formatul e vertical sau patrat (orizontalul nu există în v1; propune pătratul)." } },
+    "brand": { "type": ["string", "null"], "pattern": "^[a-z0-9-]{2,40}$", "x-mesaj": { "pattern": "Numele brandului are 2-40 de caractere: litere mici, cifre și cratimă." } },
+    "sigla": { "type": "string", "pattern": "^resurse/[^/\\\\]+\\.(svg|png)$", "x-mesaj": { "pattern": "Sigla e un fișier .svg sau .png direct în resurse/, de exemplu „resurse/sigla.svg”." } },
+    "stil": { "$ref": "#/$defs/stil" },
+    "muzica": { "$ref": "#/$defs/muzica" },
+    "scene": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 12,
+      "items": { "$ref": "#/$defs/scena" },
+      "x-mesaj": { "minItems": "Videoul are cel puțin o scenă.", "maxItems": "Videoul are cel mult 12 scene; păstrează ideile principale sau fă două videouri." }
+    }
+  },
+  "$defs": {
+    "marime": { "enum": ["M", "L", "XL"], "x-mesaj": { "enum": "Mărimea e una dintre: M (implicit), L, XL; în pixeli nu se dă." } },
+    "hex": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$", "x-mesaj": { "pattern": "Culoarea se scrie în hex, cu 6 cifre: #RRGGBB.", "type": "Culoarea se scrie în hex, ca text: \"#RRGGBB\"." } },
+    "stil": {
+      "type": "object",
+      "additionalProperties": false,
+      "x-mesaj": { "additionalProperties": "Câmpul nu există în stil la text-animat (granulația, fontul textului mic și stilul etichetelor vin din temă)." },
+      "properties": {
+        "descriere": { "type": "string", "maxLength": 300, "x-mesaj": { "maxLength": "Descrierea stilului are cel mult 300 de caractere." } },
+        "tema": { "enum": ["noapte", "hartie", "curat", "contrast"], "x-mesaj": { "enum": "Tema e una dintre: noapte, hartie, curat, contrast." } },
+        "culori": {
+          "type": "object",
+          "additionalProperties": false,
+          "x-mesaj": { "additionalProperties": "În culori se pot da doar fundal, text și accent; culoarea atenuată vine din temă." },
+          "properties": {
+            "fundal": { "$ref": "#/$defs/hex" },
+            "text": { "$ref": "#/$defs/hex" },
+            "accent": { "$ref": "#/$defs/hex" }
+          }
+        },
+        "font_titlu": { "enum": ["instrument-sans", "inter", "montserrat", "playfair-display"], "x-mesaj": { "enum": "Fontul titlului e unul dintre: instrument-sans, inter, montserrat, playfair-display." } },
+        "ritm": { "enum": ["calm", "normal", "alert"], "default": "normal", "x-mesaj": { "enum": "Ritmul e calm, normal sau alert." } },
+        "atmosfera": { "enum": ["plin", "degrade", "ceata"], "x-mesaj": { "enum": "Atmosfera e plin, degrade sau ceata." } },
+        "aliniere": { "enum": ["centru", "stanga"], "x-mesaj": { "enum": "Alinierea e centru sau stanga." } }
+      }
+    },
+    "muzica": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "required": ["fisier"],
+      "x-mesaj": { "additionalProperties": "Muzica are doar fisier, volum și incepe_de_la.", "required": "Muzica are nevoie de fisier." },
+      "properties": {
+        "fisier": { "type": "string", "minLength": 1 },
+        "volum": { "type": "number", "minimum": 0.1, "maximum": 1, "x-mesaj": { "minimum": "Volumul e între 0,1 și 1.", "maximum": "Volumul e între 0,1 și 1." } },
+        "incepe_de_la": { "type": "number", "minimum": 0 }
+      }
+    },
+    "durata": { "type": "number", "minimum": 1.5, "maximum": 8, "x-mesaj": { "minimum": "O scenă durează cel puțin 1,5 s.", "maximum": "O scenă durează cel mult 8 s (finalul, cel mult 10 s)." } },
+    "durataFinal": { "type": "number", "minimum": 2.5, "maximum": 10, "x-mesaj": { "minimum": "Scena final durează cel puțin 2,5 s.", "maximum": "Scena final durează cel mult 10 s." } },
+    "eticheta": { "type": "string", "minLength": 1, "maxLength": 120, "x-mesaj": { "minLength": "Eticheta nu poate fi goală; scoate câmpul dacă nu o vrei." } },
+    "text": { "type": "string", "minLength": 1, "maxLength": 240, "x-mesaj": { "minLength": "Textul nu poate fi gol." } },
+    "rand": { "type": "string", "minLength": 1, "maxLength": 120, "x-mesaj": { "minLength": "Un rând nu poate fi gol." } },
+    "titlu3": { "type": "array", "minItems": 1, "maxItems": 3, "items": { "$ref": "#/$defs/rand" }, "x-mesaj": { "minItems": "Titlul are cel puțin un rând.", "maxItems": "Titlul are cel mult 3 rânduri; împarte textul în două scene." } },
+    "titlu2": { "type": "array", "minItems": 1, "maxItems": 2, "items": { "$ref": "#/$defs/rand" }, "x-mesaj": { "minItems": "Titlul are cel puțin un rând.", "maxItems": "Titlul finalului are cel mult 2 rânduri." } },
+    "titlu1": { "type": "array", "minItems": 1, "maxItems": 1, "items": { "$ref": "#/$defs/rand" }, "x-mesaj": { "minItems": "Titlul are un rând.", "maxItems": "Aici titlul are un singur rând." } },
+    "scena": {
+      "type": "object",
+      "required": ["tip"],
+      "x-mesaj": { "required": "Fiecare scenă are un tip: titlu, fraza, cuvinte, lista, cifra, citat sau final." },
+      "properties": {
+        "tip": { "enum": ["titlu", "fraza", "cuvinte", "lista", "cifra", "citat", "final"], "x-mesaj": { "enum": "Tipul scenei e unul dintre: titlu, fraza, cuvinte, lista, cifra, citat, final." } }
+      },
+      "allOf": [
+        { "if": { "type": "object", "properties": { "tip": { "const": "titlu" } }, "required": ["tip"] }, "then": { "$ref": "#/$defs/scenaTitlu" } },
+        { "if": { "type": "object", "properties": { "tip": { "const": "fraza" } }, "required": ["tip"] }, "then": { "$ref": "#/$defs/scenaFraza" } },
+        { "if": { "type": "object", "properties": { "tip": { "const": "cuvinte" } }, "required": ["tip"] }, "then": { "$ref": "#/$defs/scenaCuvinte" } },
+        { "if": { "type": "object", "properties": { "tip": { "const": "lista" } }, "required": ["tip"] }, "then": { "$ref": "#/$defs/scenaLista" } },
+        { "if": { "type": "object", "properties": { "tip": { "const": "cifra" } }, "required": ["tip"] }, "then": { "$ref": "#/$defs/scenaCifra" } },
+        { "if": { "type": "object", "properties": { "tip": { "const": "citat" } }, "required": ["tip"] }, "then": { "$ref": "#/$defs/scenaCitat" } },
+        { "if": { "type": "object", "properties": { "tip": { "const": "final" } }, "required": ["tip"] }, "then": { "$ref": "#/$defs/scenaFinal" } }
+      ]
+    },
+    "scenaTitlu": {
+      "type": "object", "additionalProperties": false, "required": ["tip", "titlu"],
+      "x-mesaj": { "additionalProperties": "Scena titlu are doar tip, durata, marime, eticheta și titlu.", "required": "Scena titlu are nevoie de titlu (1-3 rânduri)." },
+      "properties": { "tip": { "const": "titlu" }, "durata": { "$ref": "#/$defs/durata" }, "marime": { "$ref": "#/$defs/marime" }, "eticheta": { "$ref": "#/$defs/eticheta" }, "titlu": { "$ref": "#/$defs/titlu3" } }
+    },
+    "scenaFraza": {
+      "type": "object", "additionalProperties": false, "required": ["tip", "text"],
+      "x-mesaj": { "additionalProperties": "Scena fraza are doar tip, durata, marime, eticheta și text.", "required": "Scena fraza are nevoie de text." },
+      "properties": { "tip": { "const": "fraza" }, "durata": { "$ref": "#/$defs/durata" }, "marime": { "$ref": "#/$defs/marime" }, "eticheta": { "$ref": "#/$defs/eticheta" }, "text": { "$ref": "#/$defs/text" } }
+    },
+    "scenaCuvinte": {
+      "type": "object", "additionalProperties": false, "required": ["tip", "cuvinte"],
+      "x-mesaj": { "additionalProperties": "Scena cuvinte are doar tip, durata, marime, eticheta, titlu și cuvinte.", "required": "Scena cuvinte are nevoie de cuvinte (2-4)." },
+      "properties": {
+        "tip": { "const": "cuvinte" }, "durata": { "$ref": "#/$defs/durata" }, "marime": { "$ref": "#/$defs/marime" }, "eticheta": { "$ref": "#/$defs/eticheta" }, "titlu": { "$ref": "#/$defs/titlu1" },
+        "cuvinte": { "type": "array", "minItems": 2, "maxItems": 4, "items": { "$ref": "#/$defs/rand" }, "x-mesaj": { "minItems": "Scena cuvinte are cel puțin 2 cuvinte.", "maxItems": "Scena cuvinte are cel mult 4 cuvinte; cu mai multe nu mai încape în 8 secunde." } }
+      }
+    },
+    "scenaLista": {
+      "type": "object", "additionalProperties": false, "required": ["tip", "puncte"],
+      "x-mesaj": { "additionalProperties": "Scena lista are doar tip, durata, marime, eticheta, titlu, puncte și marcaj.", "required": "Scena lista are nevoie de puncte (2-5)." },
+      "properties": {
+        "tip": { "const": "lista" }, "durata": { "$ref": "#/$defs/durata" }, "marime": { "$ref": "#/$defs/marime" }, "eticheta": { "$ref": "#/$defs/eticheta" }, "titlu": { "$ref": "#/$defs/titlu1" },
+        "puncte": { "type": "array", "minItems": 2, "maxItems": 5, "items": { "$ref": "#/$defs/rand" }, "x-mesaj": { "minItems": "Lista are cel puțin 2 puncte.", "maxItems": "Lista are cel mult 5 puncte." } },
+        "marcaj": { "enum": ["bife", "numere"], "default": "bife", "x-mesaj": { "enum": "Marcajul listei e bife sau numere." } }
+      }
+    },
+    "scenaCifra": {
+      "type": "object", "additionalProperties": false, "required": ["tip", "valoare", "text"],
+      "x-mesaj": { "additionalProperties": "Scena cifra are doar tip, durata, marime, eticheta, valoare, zecimale, prefix, sufix, text și sursa.", "required": "Scena cifra are nevoie de valoare și text." },
+      "properties": {
+        "tip": { "const": "cifra" }, "durata": { "$ref": "#/$defs/durata" }, "marime": { "$ref": "#/$defs/marime" }, "eticheta": { "$ref": "#/$defs/eticheta" },
+        "valoare": { "type": "number", "minimum": 0, "maximum": 999999999, "x-mesaj": { "minimum": "Valoarea cifrei e între 0 și 999.999.999.", "maximum": "Valoarea cifrei e între 0 și 999.999.999.", "type": "Valoarea cifrei e un număr, fără ghilimele." } },
+        "zecimale": { "type": "integer", "minimum": 0, "maximum": 2, "x-mesaj": { "minimum": "Zecimalele sunt 0, 1 sau 2.", "maximum": "Zecimalele sunt 0, 1 sau 2." } },
+        "prefix": { "type": "string", "minLength": 1, "maxLength": 4, "x-mesaj": { "maxLength": "Prefixul are cel mult 4 caractere." } },
+        "sufix": { "type": "string", "minLength": 1, "maxLength": 6, "x-mesaj": { "maxLength": "Sufixul are cel mult 6 caractere." } },
+        "text": { "$ref": "#/$defs/text" },
+        "sursa": { "$ref": "#/$defs/text" }
+      }
+    },
+    "scenaCitat": {
+      "type": "object", "additionalProperties": false, "required": ["tip", "text", "autor"],
+      "x-mesaj": { "additionalProperties": "Scena citat are doar tip, durata, marime, text, autor și rol (fără etichetă).", "required": "Scena citat are nevoie de text și autor." },
+      "properties": {
+        "tip": { "const": "citat" }, "durata": { "$ref": "#/$defs/durata" }, "marime": { "$ref": "#/$defs/marime" },
+        "text": { "type": "string", "minLength": 20, "maxLength": 160, "x-mesaj": { "minLength": "Citatul are cel puțin 20 de caractere.", "maxLength": "Citatul are cel mult 160 de caractere; scurtează-l sau împarte-l." } },
+        "autor": { "$ref": "#/$defs/text" },
+        "rol": { "$ref": "#/$defs/text" }
+      }
+    },
+    "scenaFinal": {
+      "type": "object", "additionalProperties": false, "required": ["tip", "titlu"],
+      "x-mesaj": { "additionalProperties": "Scena final are doar tip, durata, marime, titlu, detaliu și cta (fără etichetă; sigla e la nivelul videoului).", "required": "Scena final are nevoie de titlu (1-2 rânduri)." },
+      "properties": {
+        "tip": { "const": "final" }, "durata": { "$ref": "#/$defs/durataFinal" }, "marime": { "$ref": "#/$defs/marime" }, "titlu": { "$ref": "#/$defs/titlu2" },
+        "detaliu": { "$ref": "#/$defs/text" },
+        "cta": { "$ref": "#/$defs/text" }
+      }
+    }
+  }
+}

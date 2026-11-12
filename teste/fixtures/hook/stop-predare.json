@@ -1,0 +1,11 @@
+{
+  "session_id": "abc123",
+  "transcript_path": "/Users/x/.claude/projects/agent-motion/abc123.jsonl",
+  "cwd": "/Users/x/agent motion",
+  "permission_mode": "default",
+  "hook_event_name": "Stop",
+  "stop_hook_active": false,
+  "last_assistant_message": "Predare: video/programari/programari.mp4\nCadre de control: video/programari/cadre/predare-1.png, video/programari/cadre/predare-2.png\nAm ales un reel ilustrat de 25 s, vertical; durata, formatul și textele din scenariu sunt confirmate.",
+  "background_tasks": [],
+  "session_crons": []
+}

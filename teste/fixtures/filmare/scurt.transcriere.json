@@ -1,0 +1,50 @@
+{
+  "versiune": 1,
+  "sursa": "parakeet",
+  "limba": "ro",
+  "durata": 6.506,
+  "cuvinte": [
+    {
+      "id": "w0",
+      "text": "Bună,",
+      "start": 0.32,
+      "end": 1.2
+    },
+    {
+      "id": "w1",
+      "text": "sunt",
+      "start": 1.2,
+      "end": 1.52
+    },
+    {
+      "id": "w2",
+      "text": "Andrea.",
+      "start": 1.52,
+      "end": 2.16
+    },
+    {
+      "id": "w3",
+      "text": "Lurez",
+      "start": 2.16,
+      "end": 2.56
+    },
+    {
+      "id": "w4",
+      "text": "pe",
+      "start": 2.72,
+      "end": 2.88
+    },
+    {
+      "id": "w5",
+      "text": "ce",
+      "start": 2.88,
+      "end": 3.04
+    },
+    {
+      "id": "w6",
+      "text": "contaază.",
+      "start": 3.04,
+      "end": 4.32
+    }
+  ]
+}

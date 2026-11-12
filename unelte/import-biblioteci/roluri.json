@@ -1,0 +1,7 @@
+{
+  "versiune": 1,
+  "surse": {
+    "open-doodles": { "#000000": "ink", "#ff5678": "acc", "#cf536d": "acc2" },
+    "open-peeps": { "#000000": "ink", "#221e1f": "ink", "#231f20": "ink", "#ffffff": "fond", "#4f66af": "acc" }
+  }
+}

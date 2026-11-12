@@ -1,0 +1,18 @@
+npm error code 1
+npm error path /Users/cursant/agent-motion/nucleu/node_modules/ffmpeg-static
+npm error command failed
+npm error command sh -c node install.js
+npm error /Users/cursant/agent-motion/nucleu/node_modules/ffmpeg-static/install.js:1
+npm error require('node:dns').lookup('nu-exista.invalid', (e) => { if (e) throw e; });
+npm error                                                                 ^
+npm error
+npm error Error: getaddrinfo ENOTFOUND nu-exista.invalid
+npm error     at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:110:26) {
+npm error   errno: -3008,
+npm error   code: 'ENOTFOUND',
+npm error   syscall: 'getaddrinfo',
+npm error   hostname: 'nu-exista.invalid'
+npm error }
+npm error
+npm error Node.js v25.9.0
+npm error A complete log of this run can be found in: /Users/cursant/.npm/_logs/2026-10-04T10_22_44_405Z-debug-0.log

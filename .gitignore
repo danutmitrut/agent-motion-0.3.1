@@ -1,0 +1,27 @@
+# Fișierele cursantului (spec 5.2, harta 3). Se creează la rulare și nu intră niciodată în git:
+# un fișier intrat o dată în git ar opri mg actualizeaza cu un conflict pe laptopul cursantului.
+/USER.md
+/MEMORY.md
+/CLAUDE.local.md
+/.claude/settings.local.json
+/.instalat
+/nucleu/.stare.json
+/nucleu/.canar
+/nucleu/.canar-refuzuri
+/nucleu/.actualizare.json
+/video/
+/branduri/
+/proprii/
+/unelte/ffmpeg/
+/unelte/vectorizare/
+/unelte/python/
+
+# Dependențele, la orice adâncime (nucleu/, motoare/hyperframes/).
+node_modules/
+
+# Fișierele puse de sistemul de operare.
+.DS_Store
+Thumbs.db
+
+# Cache-ul Python lăsat de testele uneltei de import (unelte/import-biblioteci).
+__pycache__/

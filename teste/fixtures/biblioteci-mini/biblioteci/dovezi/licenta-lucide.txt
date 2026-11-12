@@ -1,0 +1,2 @@
+Text sintetic de test, în locul licenței ISC a iconițelor Lucide.
+Generat de genereaza.mjs; nu e o dovadă reală de licență.

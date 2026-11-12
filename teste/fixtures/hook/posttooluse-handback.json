@@ -1,0 +1,15 @@
+{
+  "session_id": "abc123",
+  "transcript_path": "/Users/x/.claude/projects/agent-motion/abc123.jsonl",
+  "cwd": "/Users/x/agent motion",
+  "permission_mode": "default",
+  "hook_event_name": "PostToolUse",
+  "agent_id": "def456",
+  "agent_type": "revizor-cadre",
+  "tool_name": "SubagentHandback",
+  "tool_input": {
+    "message": "Verdict: TRECE\nToate scenele se citesc, finalul e clar, nu am găsit elemente tăiate."
+  },
+  "tool_response": {},
+  "tool_use_id": "toolu_01ABC125"
+}

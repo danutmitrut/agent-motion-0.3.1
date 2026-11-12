@@ -1,0 +1,41 @@
+{
+  "sablon": "overlay-filmare",
+  "versiune_schema": 1,
+  "format": "vertical",
+  "limba": "ro",
+  "filmare": { "fisier": "active/filmare-lucru.mp4", "start": 0.4, "sfarsit": 26.8, "focus_x": 50 },
+  "brand": null,
+  "stil": {
+    "descriere": "curat, prietenos, cu un violet cald, nimic țipător",
+    "tema": "curat",
+    "culori": { "accent": "#8B5CF6", "text": "#FFFFFF", "fundal": "#0B0B10" },
+    "opacitate_fundal": 0.72,
+    "font_titlu": "instrument-sans",
+    "ritm": "normal"
+  },
+  "subtitrari": { "activ": true, "animatie": "cuvant-activ", "pozitie": "jos", "marime": "M",
+                  "cuvinte_max": 4, "evidentiaza": ["agent", "șase ore"], "majuscule": false },
+  "corecturi": [
+    { "cuvinte": "w21-w22", "din": "cloud cod", "in": "Claude Code" },
+    { "cuvinte": "w48", "din": "practic", "in": "" }
+  ],
+  "elemente": [
+    { "id": "carlig", "tip": "titlu", "la": 0.2, "durata": 2.6,
+      "eticheta": "Soloprenor + AI", "titlu": ["6 ore pe săptămână înapoi"] },
+    { "id": "cine", "tip": "nume", "ancora": { "fraza": "sunt andreea" }, "durata": 3.2,
+      "nume": "Andreea Popescu", "rol": "consultant de marketing" },
+    { "id": "ore", "tip": "cifra", "ancora": { "fraza": "șase ore" }, "durata": 2.8,
+      "valoare": 6, "sufix": " ore", "text": "câștigate în fiecare săptămână" },
+    { "id": "ce-face", "tip": "lista", "ancora": { "fraza": "trei lucruri" },
+      "titlu": ["Agentul meu:"],
+      "puncte": [
+        { "text": "răspunde la e-mailuri", "ancora": { "fraza": "e-mailurile" } },
+        { "text": "programează postări", "ancora": { "fraza": "postările" } },
+        { "text": "pregătește oferte", "ancora": { "fraza": "ofertele" } }
+      ] },
+    { "id": "ideea", "tip": "citat", "ancora": { "fraza": "nu mai lucrez" }, "durata": 3.6,
+      "text": "Nu mai lucrez mai mult. Lucrez pe ce contează." },
+    { "id": "final", "tip": "final", "la": 23.4,
+      "cta": "Scrie „AGENT” și îți trimit ghidul", "detaliu": "gratuit, în mesaj privat" }
+  ]
+}

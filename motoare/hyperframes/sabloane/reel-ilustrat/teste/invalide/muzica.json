@@ -1,0 +1,36 @@
+{
+  "sablon": "reel-ilustrat",
+  "versiune_schema": 1,
+  "muzica": {
+    "fisier": "resurse/muzica.mp3",
+    "volum": 2,
+    "incepe_de_la": 4
+  },
+  "scene": [
+    {
+      "tip": "desen",
+      "desen": {
+        "id": "op-bust-telefon"
+      },
+      "titlu": [
+        "Faci totul singur."
+      ]
+    },
+    {
+      "tip": "retea",
+      "titlu": [
+        "Un sistem",
+        "*preia rutina.*"
+      ]
+    },
+    {
+      "tip": "final",
+      "desen": {
+        "id": "op-picioare-explica-ochelari"
+      },
+      "titlu": [
+        "Tu decizi."
+      ]
+    }
+  ]
+}

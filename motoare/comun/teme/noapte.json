@@ -1,0 +1,10 @@
+{
+  "id": "noapte",
+  "nume": "Noapte",
+  "culori": { "fundal": "#0E0F13", "text": "#F2EFEA", "atenuat": "#9A9AA3", "accent": "#FF7A59" },
+  "font_titlu": "inter",
+  "font_text": "inter",
+  "atmosfera": "ceata",
+  "granulatie": 0.1,
+  "eticheta": { "majuscule": true, "spatiere": 0.16, "prefix": "" }
+}

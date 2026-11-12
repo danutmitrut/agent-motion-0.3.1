@@ -1,0 +1,7 @@
+{
+  "sablon": "proba",
+  "versiune_schema": 1,
+  "scene": [
+    { "tip": "titlu", "titlu": ["Salut"] },
+  ]
+}

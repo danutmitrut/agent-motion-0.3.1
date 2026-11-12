@@ -1,0 +1,10 @@
+{
+  "id": "contrast",
+  "nume": "Contrast",
+  "culori": { "fundal": "#0A0A0A", "text": "#FFFFFF", "atenuat": "#B3B3B3", "accent": "#FFD60A" },
+  "font_titlu": "montserrat",
+  "font_text": "inter",
+  "atmosfera": "plin",
+  "granulatie": 0,
+  "eticheta": { "majuscule": true, "spatiere": 0.16, "prefix": "" }
+}
